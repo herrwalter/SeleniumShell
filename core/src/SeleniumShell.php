@@ -6,23 +6,24 @@
  * and open the template in the editor.
  */
 
-class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase{
+require_once 'handlers/ProjectActionsInitiator.php';
+require_once 'handlers/ProjectHandlersInitiator.php';
+
+class SeleniumShell {
     
     public $actions;
+    public $handlers;
     
-    public function __construct($name = NULL, array $data = array(), $dataName = ''){
+
+    public function __construct($name = NULL, array $data = array(), $dataName = '')
+    {
         
-        $this->actions = new ActionHandler();
-        parent::__construct($name, $data, $dataName);
+        $this->actions = new ProjectActionsInitiator();
+        $this->handlers = new ProjectHandlersInitiator();
+        //parent::__construct($name, $data, $dataName);
         
         
     }
-    /**
-     * 
-     */
-    function setUp() {
-        new ProjectActionHandler();
-        parent::setUp();
-    }
+
     
 }
