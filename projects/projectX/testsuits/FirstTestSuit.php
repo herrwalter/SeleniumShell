@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+include('C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Assert.php');
 require_once '../../../core/src/SeleniumShell.php';
 
 class FirstTestSuit extends SeleniumShell{

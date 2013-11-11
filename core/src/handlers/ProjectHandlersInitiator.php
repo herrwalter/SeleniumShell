@@ -15,12 +15,12 @@ class ProjectHandlersInitiator
     }
     
     private function _setProjectActions(){
-        if ($handle = opendir('../handlers')) {
+        if ($handle = opendir( PROJECT_NAME . '\handlers' )) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
                     try{
                         $file = explode( '.php', $entry ); 
-                        require_once( '../handlers/' .$entry);
+                        require_once( PROJECT_NAME . '\handlers\\' . $entry );
                         $this->__set($file[0], eval( 'return new ' . $file[0] . '();' ));
                     }
                     catch( Exeption $e ){}
