@@ -19,7 +19,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
 
     public function setUp(){
         $this->setBrowser('chrome');
-        $this->setBrowserUrl('https://www.brachyacademy.com/contact/');
+        $this->setBrowserUrl('http://www.google.nl');
         parent::setUp();
     }
     
