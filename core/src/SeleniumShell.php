@@ -7,7 +7,7 @@
  */
 
 
-require_once('C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php');
+include('D:\wamp\bin\php\php5.4.3\pear\PHPUnit\Autoload.php');
 
 class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     
@@ -15,7 +15,10 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     public $actions;
     /** @var ProjectHandlersInitiator */
     public $handlers;
-    
+    /** @var array childClasses all instances of selenium */
+    public $childClasses;
+    /** @var boolean initialized Indicates if SeleniumShell is initialized */
+    public $initialized = false;
 
     public function setUp(){
         $this->setBrowser('chrome');
@@ -25,13 +28,46 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     
     public function __construct($name = NULL, array $data = array(), $dataName = '')
     {
+        if( !$this->initialized ){
+            $this->_bootstrap();
+            $this->_setInitialisation();
+        }
         
-        $this->actions = new ProjectActionsInitiator();
-        $this->handlers = new ProjectHandlersInitiator();
+        $this->_includeProjectTests();
+
+        //$this->actions = new ProjectActionsInitiator();
+        //$this->handlers = new ProjectHandlersInitiator();
         parent::__construct($name, $data, $dataName);
         
         
     }
+    
+    /**
+     * Sets initialisation state
+     */
+    private function _setInitialisation()
+    {
+        $this->initialized = true;
+    }
+    
+    /**
+     * Bootstraps the projects
+     */
+    private function _bootstrap()
+    {
+        $rel_path = substr(str_replace('\\', '/', realpath(dirname(__FILE__))), strlen(str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']))));
+        require_once( $rel_path . '/../bootstrap.php' );
+    }
 
     
+    /**
+     * Will get the tests of the current
+     * project
+     */
+    final protected function _includeProjectTests()
+    {
+        require_once( PROJECTS_FOLDER . $projectFolder . '/testsuits/FirstTestSuit.php' );
+    }
+    
 }
+

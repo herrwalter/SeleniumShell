@@ -1,10 +1,10 @@
 <?php
 
-$current_relative_path = substr(str_replace('\\', '/', realpath(dirname(__FILE__))), strlen(str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']))));
+$rel_path = substr(str_replace('\\', '/', realpath(dirname(__FILE__))), strlen(str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']))));
 
 // Constants
-define('CORE_CONFIG_PATH', $current_relative_path );
-define('CORE_PATH', $current_relative_path . '/../');
-define('CORE_SRC_PATH', $current_relative_path . '/../src/');
-define('CORE_HANDLERS_PATH', $current_relative_path . '/../src/handlers/');
-define('PHPUNIT' , 'C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php');
+define('CORE_CONFIG_PATH', $rel_path );
+define('CORE_PATH', $rel_path . '/..');
+define('CORE_SRC_PATH', $rel_path . '/../src');
+define('CORE_HANDLERS_PATH', $rel_path . '/../src/handlers');
+define('PROJECTS_FOLDER', CORE_PATH . '/../projects');

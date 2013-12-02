@@ -1,14 +1,13 @@
 <?php
 
-$current_relative_path = substr(str_replace('\\', '/', realpath(dirname(__FILE__))), strlen(str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']))));
-
-define( 'PROJECT_NAME', dirname(dirname(__FILE__)) );
+$rel_path = substr(str_replace('\\', '/', realpath(dirname(__FILE__))), strlen(str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']))));
 
 
-require_once( $current_relative_path . '/../../../core/config/constants.php' ); //get constants paths
-require_once( PHPUNIT ); // get PHPUnit
+function __autoload( $className ){
+    echo $className . ' not found.. ';
+}
 
-require_once( CORE_PATH . '/src/SeleniumShell.php' ); // get SeleniumShell
+require_once( $rel_path. '/config/path-constants.php' );
 
 require_once( CORE_HANDLERS_PATH . '/ProjectActionsInitiator.php' );
 require_once( CORE_HANDLERS_PATH . '/ProjectHandlersInitiator.php' );
