@@ -3,9 +3,10 @@
 
 class SeleniumShell_Test extends PHPUnit_Extensions_Selenium2TestCase
 {
+    public $projectName;
+    
     public function setUp()
     {
-        
         $this->setBrowser('iexplore');
         $this->setBrowserUrl('http://www.google.nl');
         $this->setHost('127.0.0.1');

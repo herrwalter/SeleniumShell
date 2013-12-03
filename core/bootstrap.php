@@ -27,7 +27,6 @@ require_once( CORE_HANDLERS_PATH . '/ProjectHandlersInitiator.php' );
 require_once( CORE_HANDLERS_PATH . '/ConfigHandler.php' );
 
 require_once( UTILS_PATH . '/Request.php' );
-require_once( UTILS_PATH . '/TestFileScanner.php' );
 require_once( UTILS_PATH . '/Response.php' );
 
 require_once( CLASSHELPERS_PATH . '/ClassInstantiator.php');

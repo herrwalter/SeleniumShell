@@ -3,8 +3,8 @@
 class FirstTestSuit extends SeleniumShell_Test {
     
     public function __construct() {
-        var_dump('FirstTestSuit extended');
-        parent::__construct('Wouter');
+        
+        parent::__construct();
     }
     
     public function testSeleniumShell()
