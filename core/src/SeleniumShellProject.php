@@ -15,22 +15,15 @@ abstract class SeleniumShellProject extends SeleniumShell
     /** @var string projectFolder */
     public $projectFolder;
     
-    public function __construct( $config )
+    private $_projects = array();
+    
+    public function __construct()
     {
-        
     }
     
-    abstract function _setConfig( $array );
+    //abstract function _setConfig( $array );
     
-    public function setUp()
-    {
-        $this->_includeProjectTests();
-    }
     
-    protected function _includeProjectTests()
-    {
-        
-    }
     
     
 }

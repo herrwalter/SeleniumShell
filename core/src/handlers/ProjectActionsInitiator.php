@@ -30,7 +30,9 @@ class ProjectActionsInitiator
         }
     }
     
-    public function __set($key, $val) {
+    
+    public function __set($key, $val)
+    {
         /** @var $key */
         return $this->$key = $val;
     }

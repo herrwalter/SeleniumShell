@@ -1,18 +1,33 @@
 <?php
+$rel_path = getcwd();
+// Constants
+$sep = DIRECTORY_SEPARATOR;
 
-$rel_path = substr(str_replace('\\', '/', realpath(dirname(__FILE__))), strlen(str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']))));
+define('SELENIUM_SHELL', str_replace('core', '', $rel_path));
+define('CORE_CONFIG_PATH', $rel_path. $sep.'config' );
+define('CORE_PATH', $rel_path . $sep);
+define('CORE_SRC_PATH', $rel_path . $sep . 'src');
+define('CORE_HANDLERS_PATH', $rel_path . $sep .'src'.$sep.'handlers');
+define('UTILS_PATH', $rel_path . $sep . 'utils');
+
+define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
 
 
 function __autoload( $className ){
     echo $className . ' not found.. ';
 }
 
-require_once( $rel_path. '/config/path-constants.php' );
+
 
 require_once( CORE_HANDLERS_PATH . '/ProjectActionsInitiator.php' );
 require_once( CORE_HANDLERS_PATH . '/ProjectHandlersInitiator.php' );
+require_once( CORE_HANDLERS_PATH . '/ConfigHandler.php' );
 
 require_once( CORE_PATH . '/utils/Request.php' );
+require_once( CORE_PATH . '/utils/DirectoryScanner.php' );
 require_once( CORE_PATH . '/utils/Response.php' );
 
+
+require_once( CORE_SRC_PATH . '/SeleniumShell_Test.php' );
+require_once( CORE_SRC_PATH . '/Application.php' );
 

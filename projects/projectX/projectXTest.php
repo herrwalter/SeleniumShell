@@ -2,9 +2,9 @@
 
 // include SeleniumShell
 $rel_path = substr(str_replace('\\', '/', realpath(dirname(__FILE__))), strlen(str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']))));
-require( $rel_path . '/../../core/src/SeleniumShellProject.php' );
+require( $rel_path . '/../../core/src/SeleniumShell.php' );
 
-class projectXText extends SeleniumShellProject{
+class projectX extends SeleniumShell{
     
     public $config = array(
         'projectName' => 'Project X',
@@ -12,10 +12,10 @@ class projectXText extends SeleniumShellProject{
         'emailResults' => 'fake@email.com'
     );    
     
-    
     public function testProjectX()
     {
         // leave blank to trigger phpunit 
     }
+    
     
 }
