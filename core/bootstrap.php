@@ -9,6 +9,7 @@ define('CORE_PATH', $rel_path . $sep);
 define('CORE_SRC_PATH', $rel_path . $sep . 'src');
 define('CORE_HANDLERS_PATH', $rel_path . $sep .'src'.$sep.'handlers');
 define('UTILS_PATH', $rel_path . $sep . 'utils');
+define('FILEINCLUDERS_PATH', UTILS_PATH . '/FileIncluders');
 
 define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
 
@@ -23,9 +24,13 @@ require_once( CORE_HANDLERS_PATH . '/ProjectActionsInitiator.php' );
 require_once( CORE_HANDLERS_PATH . '/ProjectHandlersInitiator.php' );
 require_once( CORE_HANDLERS_PATH . '/ConfigHandler.php' );
 
-require_once( CORE_PATH . '/utils/Request.php' );
-require_once( CORE_PATH . '/utils/DirectoryScanner.php' );
-require_once( CORE_PATH . '/utils/Response.php' );
+require_once( UTILS_PATH . '/Request.php' );
+require_once( UTILS_PATH . '/DirectoryScanner.php' );
+require_once( UTILS_PATH . '/Response.php' );
+
+require_once( FILEINCLUDERS_PATH . '/FileIncluder.php');
+require_once( FILEINCLUDERS_PATH . '/PHPFileIncluder.php');
+require_once( FILEINCLUDERS_PATH . '/TestFileIncluder.php');
 
 
 require_once( CORE_SRC_PATH . '/SeleniumShell_Test.php' );

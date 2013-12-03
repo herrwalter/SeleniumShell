@@ -1,7 +1,7 @@
 <?php
 
-include('C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php');
-include('C:\wamp\bin\php\php5.3.13\pear\PHPUnit\TestSuite.php');
+include('D:\wamp\bin\php\php5.4.3\pear\PHPUnit\Autoload.php');
+//include('D:\wamp\bin\php\php5.4.3\pear\PHPUnit\TestSuite.php');
 
 
 class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
@@ -34,10 +34,6 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
             $this->_setInitialisation();
         }
         
-        //$this->_includeProjectTests(get_class($this));
-
-        //$this->actions = new ProjectActionsInitiator();
-        //$this->handlers = new ProjectHandlersInitiator();
         parent::__construct();//$name, $data, $dataName);
         
         
@@ -61,28 +57,12 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
         include( 'bootstrap.php' );
     }
 
-    /**
-     * Will get the tests of the current
-     * project
-     */
-    final protected function _includeProjectTests( $projectName )
-    {
-        
-//        include( PROJECTS_FOLDER . '/' . $projectName . '/testsuits/FirstTest.php' );
-//        $suite = new PHPUnit_TestSuite();
-//        $suite->addTestSuite('FirstTestSuit');
-        
-        
-        //$test = new FirstTestSuit();
-        //$test->testSeleniumShell();
-    }
     
     public static function suite($suite) {
         //include( PROJECTS_FOLDER . '/' . 'projectX' . '/testsuits/FirstTest.php' );
         self::_bootstrap();
         $app = new Application();
         $config = parse_ini_file('/config/config.ini');
-        include( '..\projects\projectX\testsuits\FirstTest.php' );
         $suite = new PHPUnit_Framework_TestSuite();
         $suite->addTestSuite('FirstTestSuit');
         return $suite;

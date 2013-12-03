@@ -22,9 +22,8 @@ class Application
         foreach($projects as $project )
         {
             $path = PROJECTS_FOLDER . '\\' . $project . '\testsuits';
-            
-            $dir = new DirectoryScanner($path);
-            var_dump($dir->getFiles());
+            $fileIncluder = new PHPFileIncluder($path);
+            $fileIncluder->includeFiles();
         }
     }
     
