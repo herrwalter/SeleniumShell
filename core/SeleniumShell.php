@@ -62,9 +62,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
         //include( PROJECTS_FOLDER . '/' . 'projectX' . '/testsuits/FirstTest.php' );
         self::_bootstrap();
         $app = new Application();
-        $config = parse_ini_file('/config/config.ini');
-        $suite = new PHPUnit_Framework_TestSuite();
-        $suite->addTestSuite('FirstTestSuit');
+        $suite = $app->getTestSuite();
         return $suite;
     }
     

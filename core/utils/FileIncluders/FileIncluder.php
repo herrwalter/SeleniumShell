@@ -1,15 +1,18 @@
 <?php
 
+/**
+ * Will include the files by given directory
+ */
 class FileIncluder 
 {
     /** @var string Directory to include */
     protected $_dir;
     /** @var array files  */
     protected $_files;
-    /** @var DirectoryScanner */
+    /** @var FileScanner */
     protected $_scanner;
     
-    
+    protected $_includedFiles = array();
     
     public function __construct( $dir )
     {
@@ -31,7 +34,7 @@ class FileIncluder
     
     protected function _setScanner()
     {
-        $this->_scanner = new DirectoryScanner( $this->_dir );
+        $this->_scanner = new FileScanner( $this->_dir );
     }
     
     protected function _setFiles()
@@ -39,16 +42,31 @@ class FileIncluder
         $foundFiles = $this->_scanner->getFiles();
         foreach( $foundFiles as $dir => $filenames ){
             foreach( $filenames as $filename ){
-                $this->_files[] = $dir . DIRECTORY_SEPARATOR . $filename;
+                $this->_files[] = $dir . $filename;
             }
         }
+    }
+    
+    protected function _includeFile( $file )
+    {
+        require_once($file);
+        $this->_addToIncludedFiles($file);
+    }
+    
+    private function _addToIncludedFiles( $file )
+    {
+        $this->_includedFiles[] = $file;
     }
     
     public function includeFiles()
     {
         foreach( $this->_files as $file ){
-            require_once($file);
+            $this->_includeFile($file);
         }
     }
     
+    public function getInlcudedFiles()
+    {
+        return $this->_includedFiles;
+    }
 }

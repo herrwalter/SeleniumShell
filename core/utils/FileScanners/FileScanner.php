@@ -1,7 +1,7 @@
 <?php
 
 
-class DirectoryScanner
+class FileScanner
 {
     protected $_dir;
     protected $_phpFiles;
@@ -36,5 +36,18 @@ class DirectoryScanner
     public function getFiles()
     {
         return $this->_files;
+    }
+    
+    public function getFilesInOneDimensionalArray()
+    {
+        $files = array();
+        foreach( $this->_files as $dir => $files )
+        {
+            foreach( $files as $file )
+            {
+                $files[] = $dir.$file;
+            }
+        }
+        return $files;
     }
 }

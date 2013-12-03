@@ -2,26 +2,27 @@
 
 
 
-class PHPFileIncluder extends FileIncluder
+
+
+class HandlerFileIncluder extends FileIncluder
 {
-    
     public function __construct($dir) {
         parent::__construct($dir);
     }
     
-    private function _isPhpFile( $file )
+    private function _isHandlerFile( $file )
     {
         $check = pathinfo($file);
-        return $check['extension'] === 'php';
+        $filename = $check['filename'];
+        return strpos($filename, 'Handler') > 0;
     }
     
     public function includeFiles()
     {
         foreach( $this->_files as $file ){
-            if( $this->_isPhpFile($file) ){
+            if( $this->_isHandlerFile($file) ){
                 $this->_includeFile($file);
             }
         }
     }
-    
 }
