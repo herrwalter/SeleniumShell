@@ -15,4 +15,8 @@ class OneTest extends SeleniumShell_Test {
         $this->assertTrue( true );
     }
     
+    public function testSecondTest()
+    {
+        $this->assertFalse( true );
+    }
 }

@@ -6,3 +6,8 @@
  * and open the template in the editor.
  */
 
+
+class TwoTest extends SeleniumShell_Test
+{
+    
+}

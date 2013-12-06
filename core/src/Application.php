@@ -31,14 +31,14 @@ class Application
      */
     private function _setConfig()
     {
-        $this->_config = new ConfigHandler();
+        $this->_config = new ConfigHandler( CORE_CONFIG_PATH . '/config.ini');
     }
     
     
     private function _setProjects()
     {
         $projects = array();
-        $projectNames = $this->_config->getProjects();
+        $projectNames = $this->_config->getAttribute('projects');
         foreach($projectNames as $projectName)
         {
             $projects[$projectName] = new Project($projectName);

@@ -19,11 +19,7 @@ abstract class SeleniumShellProject extends SeleniumShell
     
     public function __construct()
     {
-    }
-    
-    //abstract function _setConfig( $array );
-    
-    
+    }  
     
     
 }

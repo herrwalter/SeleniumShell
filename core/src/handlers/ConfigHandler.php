@@ -4,20 +4,37 @@ class ConfigHandler
 {
     private $_projects;
     
-    public function __construct()
+    private $_path;
+    
+    private $_config;
+    
+    public function __construct( $path )
     {
-        $this->_setProjects();
+        $this->_setConfigPath( $path );
+        $this->_setConfig();
     }
     
-    private function _setProjects()
+    private function _setConfigPath( $path )
     {
-        $config = parse_ini_file(CORE_CONFIG_PATH . '/config.ini');
-        $this->_projects = $config['projects'];
+        $this->_path = $path;
     }
     
-    public function getProjects()
+    private function _setConfig()
     {
-        return $this->_projects;
+        $this->_config = parse_ini_file($this->_path);
     }
-            
+    
+    /**
+     * returns the attribute of the config
+     * @param type $attr
+     * @return boolean
+     */
+    public function getAttribute( $attr )
+    {
+        if(array_key_exists($attr, $this->_config) ){
+            return $this->_config[$attr];
+        }
+        return false;
+    }
+    
 }

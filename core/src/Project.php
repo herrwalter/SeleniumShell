@@ -10,10 +10,13 @@ class Project
     
     private $_testClassNames;
     
+    private $_config;
+    
     public function __construct( $projectName )
     {
         $this->_setProjectName($projectName);
         $this->_setProjectPath();
+        $this->_setProjectConfig();
         $this->_setProjectsTestClassNames();
     }
     
@@ -24,7 +27,7 @@ class Project
     
     private function _setProjectPath()
     {
-        $this->_path = PROJECTS_FOLDER . '\\' . $this->_name . '\testsuits';;
+        $this->_path = PROJECTS_FOLDER . '\\' . $this->_name;;
     }
     
     public function getProjectName()
@@ -41,11 +44,15 @@ class Project
     {
         return $this->_testClassNames;
     }
+    private function _setProjectConfig()
+    {
+        $this->_config = new ConfigHandler($this->_path . '\config\project.ini');
+    }
     
     private function _setProjectsTestClassNames()
     {
         // first include the files
-        $testFiles = new TestFileIncluder($this->_path);
+        $testFiles = new TestFileIncluder($this->_path . '\testsuits');
         $testFiles->includeFiles();
         
         // then get the files that got included

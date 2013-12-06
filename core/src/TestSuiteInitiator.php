@@ -44,6 +44,7 @@ class TestSuiteInitiator
     {
         foreach($classNames as $className )
         {
+            
             $this->_suite->addTestSuite($className);
         }
     }
