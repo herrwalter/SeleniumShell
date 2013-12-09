@@ -17,7 +17,10 @@ $damnImweird = 0; class TestClass{
             
         }
     }
-    
+    /**
+     * @SoloRun true
+     * @curl_only true
+     */
     public $blaat = 'asdf';
     
     private function _blabla()

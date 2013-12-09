@@ -14,38 +14,164 @@ class CreateNewClass
         
     }
     
+    
+    
 }
 
-for($i = 0; $i < count($tokens); $i++){
-    $token = $tokens[$i];
-    // checks if the token is a curly open
-    if( is_string($token) && $token == '{' ){
-        $opens ++;
-    // checks if the token is a curly close
-    } else if( is_string($token) && $token == '}' ){
-        $closes++;
+class TokenReader 
+{
+    private $_token;
+    
+    public function __construct( $token )
+    {
+        $this->_token = $token;
+    }        
+    /**
+     * Checks if the token is a curly open
+     * @return boolean
+     */
+    public function isCurlyOpen()
+    {
+        return is_string($this->_token) && $this->_token == '{';
+    }
+    /**
+     * Checks if token is a curly close
+     * @return boolean
+     */
+    public function isCurlyClose()
+    {
+        return is_string($this->_token) && $this->_token == '}';
+    }
+    /**
+     * Checks if type is a Class
+     * @return boolean
+     */
+    public function isClassDefinition()
+    {
+        return is_array($this->_token) && $this->_token[0] === T_CLASS;
+    }
+    /**
+     * Checks if the type is a variable
+     * @return boolean
+     */
+    public function isVariable()
+    {
+        return is_array($this->_token) && $this->_token[0] === T_VARIABLE;
     }
     
-    // if the token is a class string start counting
-    if( is_array($token) && $token[0] === T_CLASS ){
-        $begin = $token[2];
-        $className = $tokens[$i+2][1];
-        $opens = 0; // start counting
-        $closes = 0; // start counting
+    public function isDocumentationBlock()
+    {
+        return is_array($this->_token) && $this->_token[0] === T_DOC_COMMENT;
+    }
+    /**
+     * Gets the annotations from a doc block
+     * @param string $doc
+     * @return array with annotations
+     */
+    public function getAnnotations( $doc )
+    {
+        $annotations = array();
+        preg_match_all('#@(.*?)\n#s', $doc, $annotations);
+        return $annotations;
+    }    
+}
+/**
+ * The TestClassReader can read a file based on a SeleniumShell_Test
+ * You may ask conditions of the state of this testclass.
+ */
+class TestClassReader
+{
+    /**
+     * @var string _file File to read
+     */
+    private $_file;
+    private $_fileTokens;
+    private $_nrOfClasses = 0;
+    private $_nrOfTestsMethods = 0;
+    private $_nrOfMethods = 0;
+    private $_className = '';
+    private $_counting = false;
+    private $_curlyOpens = 0;
+    private $_curlyCloses = 0;
+    
+    public function __construct( $file )
+    {
+        $this->_setFile($file);
+        $this->_setFileTokens();
+        $this->_readFile();
+    }
+         
+    protected function _setFile($file)
+    {
+        $this->_file = $file;
+    }
+    /**
+     * Sets the tokens of the give file.
+     */
+    protected function _setFileTokens()
+    {
+        $this->_fileTokens = token_get_all($this->_file);
     }
     
-    if( is_array($token) && $token[0] === T_VARIABLE ){
-        var_dump($tokens[$i+4]);
+    private function _isClassClosed()
+    {
+        return $this->_counting && $this->_curlyOpens == $this->_curlyCloses;
     }
     
-    // if the token is a curly close and the counted curly closes and opens are equal
-    if( $opens > 0 && $opens == $closes ){
-        $arr = get_previous_token_containing_a_line_number($tokens, $i); // get previous token with array to get the closing line.
-        $end = ($arr[2] + 1);
-        var_dump(re_create_class($tokens, $begin, $end, 'wouter'.$className));
-        break;
+    private function _addCurlyOpen()
+    {
+        if( $this->_counting ){
+            $this->_curlyOpens ++;
+        }
+    }
+    
+    private function _addCurlyClose()
+    {
+        if( $this->_counting ){
+            $this->_curlyOpens++;
+        }
+    }
+    protected function _readFile()
+    {
+        for($i = 0; $i < count($this->_tokens); $i++){
+            $token = $this->_tokens[$i];
+            $tokenRdr = new TokenReader($token);
+            if( $tokenRdr->isCurlyOpen() ){
+                $this->_addCurlyOpen();
+            }
+            if( $tokenRdr->isCurlyClose() ){
+                $this->_addCurlyClose();
+            }    
+            if( $tokenRdr->isClassDefinition() ){
+                $this->_nrOfClasses ++;
+                $this->_className = $tokens[$i+2][1];
+                $this->_counting = true;
+            }
+            // if the token is a curly close and the counted curly closes and opens are equal
+            if( $opens > 0 && $opens == $closes ){
+                $arr = get_previous_token_containing_a_line_number($tokens, $i); // get previous token with array to get the closing line.
+                $end = ($arr[2] + 1);
+                var_dump(re_create_class($tokens, $begin, $end, 'wouter'.$className));
+                break;
+            }
+        }
+    }
+    
+    
+}
+/**
+ * Creates a new test class based on an existing file.
+ * Will change the given name of the class and will handle
+ * some of the browser settings of the testclass. 
+ */
+class TestClassCreator
+{
+    public function __construct()
+    {
+        
     }
 }
+
 
 /**
  * Will recreate the class from tokens.
