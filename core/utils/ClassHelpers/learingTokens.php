@@ -6,18 +6,8 @@ $opens = 0;
 $closes = 0;
 $className;
 
-
-class CreateNewClass
-{
-    public function __construct( $file, $browser )
-    {
-        
-    }
-    
-    
-    
-}
-
+$tcr = new TestClassReader(__dir__ . '/tokenClass.php');
+var_dump( $tcr->getFileRapport() );
 class TokenReader 
 {
     private $_token;
@@ -50,6 +40,11 @@ class TokenReader
     {
         return is_array($this->_token) && $this->_token[0] === T_CLASS;
     }
+    
+    public function isMethod()
+    {
+        return is_array($this->_token) && $this->_token[0] == T_FUNCTION;
+    }
     /**
      * Checks if the type is a variable
      * @return boolean
@@ -74,6 +69,18 @@ class TokenReader
         preg_match_all('#@(.*?)\n#s', $doc, $annotations);
         return $annotations;
     }    
+    /**
+     * Gets the line number of the token
+     * @return mixed integer if accessible, false if not
+     */
+    public function getLineNumber()
+    {
+        $token = $this->_token;
+        if( is_array( $this->_token )){
+            return $this->_token[2];
+        }
+        return false;
+    }
 }
 /**
  * The TestClassReader can read a file based on a SeleniumShell_Test
@@ -85,14 +92,17 @@ class TestClassReader
      * @var string _file File to read
      */
     private $_file;
-    private $_fileTokens;
+    private $_tokens;
     private $_nrOfClasses = 0;
     private $_nrOfTestsMethods = 0;
     private $_nrOfMethods = 0;
     private $_className = '';
+    private $_classContents = '';
     private $_counting = false;
     private $_curlyOpens = 0;
     private $_curlyCloses = 0;
+    private $_begin;
+    private $_end;
     
     public function __construct( $file )
     {
@@ -110,7 +120,7 @@ class TestClassReader
      */
     protected function _setFileTokens()
     {
-        $this->_fileTokens = token_get_all($this->_file);
+        $this->_tokens = token_get_all(file_get_contents($this->_file));
     }
     
     private function _isClassClosed()
@@ -118,43 +128,89 @@ class TestClassReader
         return $this->_counting && $this->_curlyOpens == $this->_curlyCloses;
     }
     
-    private function _addCurlyOpen()
+    private function _setBegin()
+    {
+        if( !$this->_begin && $this->_counting ){
+            
+        }
+    }
+    
+    private function _addCurlyOpens()
     {
         if( $this->_counting ){
+            $this->_setBegin();
             $this->_curlyOpens ++;
         }
     }
     
-    private function _addCurlyClose()
+    private function _addCurlyCloses()
     {
         if( $this->_counting ){
+            $this->_setEnd();
             $this->_curlyOpens++;
         }
     }
+    /**
+     * 
+     * @param integer $currentIndex current index of tokens
+     * @return boolean
+     */
+    protected function _getLineNumber( $currentIndex )
+    {
+        $rdr = new TokenReader($this->_tokens[$currentIndex]);
+        if( $rdr->getLineNumber() ){
+            return $rdr->getLineNumber();
+        }
+        do{
+            $currentIndex--;
+            if( is_array($this->_tokens[$currentIndex]) )
+            {
+                return $this->_tokens[$currentIndex];
+            }
+        }while($i > 0);
+        return false;
+    }
+    
     protected function _readFile()
     {
+        var_dump(count( $this->_tokens ));
         for($i = 0; $i < count($this->_tokens); $i++){
+            var_dump($i);
             $token = $this->_tokens[$i];
             $tokenRdr = new TokenReader($token);
             if( $tokenRdr->isCurlyOpen() ){
-                $this->_addCurlyOpen();
+                $this->_addCurlyOpens();
             }
             if( $tokenRdr->isCurlyClose() ){
-                $this->_addCurlyClose();
+                $this->_addCurlyCloses();
             }    
             if( $tokenRdr->isClassDefinition() ){
                 $this->_nrOfClasses ++;
-                $this->_className = $tokens[$i+2][1];
+                $this->_className = $this->_tokens[$i+2][1];
                 $this->_counting = true;
             }
+                var_dump($tokenRdr->isMethod());
+            if( $tokenRdr->isMethod() ){
+                var_dump($this->_tokens[$i+2]);
+            }
             // if the token is a curly close and the counted curly closes and opens are equal
-            if( $opens > 0 && $opens == $closes ){
-                $arr = get_previous_token_containing_a_line_number($tokens, $i); // get previous token with array to get the closing line.
-                $end = ($arr[2] + 1);
-                var_dump(re_create_class($tokens, $begin, $end, 'wouter'.$className));
-                break;
+            if( $this->_isClassClosed() ){
+                $this->_counting = false;
+                $end = $this->_getLineNumber($i); // get previous token with array to get the closing line.
+                $this->_end = $end; // set the end of the class
             }
         }
+    }
+    
+    public function getFileRapport()
+    {
+        return array(
+            'classes' => $this->_nrOfClasses,
+            'methods' => $this->_nrOfMethods,
+            'testMethods' => $this->_nrOfTestsMethods,
+            'classStart' => $this->_begin,
+            'classEnd' => $this->_end,
+        ); 
     }
     
     
