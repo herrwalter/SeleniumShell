@@ -70,6 +70,16 @@ class TokenReader
         return $annotations;
     }    
     /**
+     * Gets the string from the token;
+     */
+    public function getString()
+    {
+        if( is_array($this->_token) ){
+            return $this->_token[1];
+        }
+        return $this->_token;
+    }
+    /**
      * Gets the line number of the token
      * @return mixed integer if accessible, false if not
      */
@@ -96,6 +106,9 @@ class TestClassReader
     private $_nrOfClasses = 0;
     private $_nrOfTestsMethods = 0;
     private $_nrOfMethods = 0;
+    private $_methods = array();
+    private $_testMethods = array();
+    private $_invalidTestMethods = array();
     private $_className = '';
     private $_classContents = '';
     private $_counting = false;
@@ -121,6 +134,11 @@ class TestClassReader
     protected function _setFileTokens()
     {
         $this->_tokens = token_get_all(file_get_contents($this->_file));
+    }
+    
+    private function _isTestMethod($method)
+    {
+        return substr($method, 0, 4) == 'test';
     }
     
     private function _isClassClosed()
@@ -173,9 +191,7 @@ class TestClassReader
     
     protected function _readFile()
     {
-        var_dump(count( $this->_tokens ));
         for($i = 0; $i < count($this->_tokens); $i++){
-            var_dump($i);
             $token = $this->_tokens[$i];
             $tokenRdr = new TokenReader($token);
             if( $tokenRdr->isCurlyOpen() ){
@@ -184,14 +200,23 @@ class TestClassReader
             if( $tokenRdr->isCurlyClose() ){
                 $this->_addCurlyCloses();
             }    
+            if( $token[0] === T_VARIABLE){
+                var_dump($token);
+            }
             if( $tokenRdr->isClassDefinition() ){
                 $this->_nrOfClasses ++;
                 $this->_className = $this->_tokens[$i+2][1];
                 $this->_counting = true;
             }
-                var_dump($tokenRdr->isMethod());
             if( $tokenRdr->isMethod() ){
-                var_dump($this->_tokens[$i+2]);
+                $rdr = new TokenReader($this->_tokens[$i + 2]);
+                if( $this->_isTestMethod($rdr->getString()) ){
+                    $this->_testMethods[] = $this->_getMethod($i);
+                }
+                else{
+                    $this->_methods[] = $this->_getMethod($i);
+                }
+                
             }
             // if the token is a curly close and the counted curly closes and opens are equal
             if( $this->_isClassClosed() ){
@@ -202,19 +227,45 @@ class TestClassReader
         }
     }
     
+    protected function _getMethod($currentIndex)
+    {
+        $opens = 0;
+        $closes = 0;
+        $method = '';
+        // we will start 2 tokens back to get the 'public', 'protected' or 'private; string
+        for( $i = ($currentIndex - 2); $i < count($this->_tokens); $i++ )
+        {
+            $token = $this->_tokens[$i];
+            $tokenRdr = new TokenReader($token);
+            $method .= $tokenRdr->getString(); // get each string of the token.
+            if( $tokenRdr->isCurlyOpen() ){
+                $opens ++;
+            }
+            if( $tokenRdr->isCurlyClose() ){
+                $closes ++;
+            }
+            if( $opens > 0 && $opens == $closes ){
+                break;
+            }
+        }
+        return $method;
+    }
+    
     public function getFileRapport()
     {
         return array(
             'classes' => $this->_nrOfClasses,
-            'methods' => $this->_nrOfMethods,
-            'testMethods' => $this->_nrOfTestsMethods,
+            'nrOfMethods' => count($this->_methods),
+            'nrOfTestMethods' => count($this->_nrOfTestsMethods),
+            'methods' => $this->_methods,
+            'testMethods' => $this->_testMethods,
             'classStart' => $this->_begin,
             'classEnd' => $this->_end,
         ); 
     }
-    
-    
 }
+
+
 /**
  * Creates a new test class based on an existing file.
  * Will change the given name of the class and will handle

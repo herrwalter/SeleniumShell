@@ -9,13 +9,21 @@
 $weird = '';
 array();
 
-$damnImweird = 0; class TestClass{
+$damnImweird = 0; 
+class TestClass{
     
     public function __construct()
     {
         if(true){
-            
+            $dezeOok = '';
         }
+    }
+    
+    public function testSomthing()
+    {
+        return function(){
+            
+        };
     }
     /**
      * @SoloRun true
