@@ -7,7 +7,11 @@ $closes = 0;
 $className;
 
 $tcr = new TestClassReader(__dir__ . '/tokenClass.php');
-var_dump( $tcr->getFileRapport() );
+print '<pre>';
+print_r( $tcr->getTestMethods() );
+print_r( $tcr->getFileRapport() );
+
+
 class TokenReader 
 {
     private $_token;
@@ -63,11 +67,18 @@ class TokenReader
      * @param string $doc
      * @return array with annotations
      */
-    public function getAnnotations( $doc )
+    public function getAnnotations()
     {
-        $annotations = array();
-        preg_match_all('#@(.*?)\n#s', $doc, $annotations);
-        return $annotations;
+        if( $this->isDocumentationBlock() ){
+            preg_match_all('#@(.*?)\n#s', $this->_token[1], $annotations);
+            $niceFormat = array();
+            foreach( $annotations[1] as $annotation){
+                $anno = explode(' ', $annotation);
+                $niceFormat[] = array($anno[0] => $anno[1]);
+            }
+            return $niceFormat;
+        }
+        return;
     }    
     /**
      * Gets the string from the token;
@@ -92,6 +103,90 @@ class TokenReader
         return false;
     }
 }
+/**
+ * Will keep track if your still in the samen closure 
+ * while iterating file tokens.
+ */
+class TokenClosure
+{
+    /** @var TokenReader */
+    protected $_tokenRdr;
+    protected $_opens = 0;
+    protected $_closes = 0;
+    protected $_inClosure = false;
+    protected $_done = false;
+    protected $tracking = false;
+    protected $track = '';
+    protected $name = '';
+    
+    public function __construct( $name ){
+        $this->name = $name;
+    }
+    
+    public function track( $token )
+    {
+        if( $this->tracking ){
+            $this->_tokenRdr = new TokenReader($token);
+            $this->_addCurlyOpen();
+            $this->_addCurlyClose();
+            $this->_isInClosure();
+            $this->_addTrack();
+        }
+    }
+    
+    protected function _addCurlyOpen()
+    {
+        if( $this->_tokenRdr->isCurlyOpen() ){
+            $this->_opens++;
+        }
+    }
+    
+    protected function _addCurlyClose()
+    {
+        if( $this->_tokenRdr->isCurlyClose() ){
+            $this->_closes++;
+        }       
+    }
+    
+    protected function _addTrack(){
+        $this->track .= $this->_tokenRdr->getString();
+    }
+    
+    protected function _isInClosure(){
+        if( $this->_opens > 0 && $this->_opens > $this->_closes ){
+            $this->_inClosure = true;
+        } else if($this->_opens > 0 && $this->_opens == $this->_closes) {
+            $this->_done = true;
+            $this->_tracking = false;
+            $this->_inClosure = false;
+        }
+    }
+    
+    public function startTracking(){
+        $this->tracking = true;
+    }
+    
+    public function inClosure(){
+        return $this->_inClosure;
+    }
+    
+    public function isDone(){
+        return $this->_done;
+    }
+    
+    public function getTrack(){
+        return $this->track;
+    }
+    
+    public function reset(){
+        $this->_closes = 0;
+        $this->_opens = 0;
+        $this->track = '';
+        $this->tracking = false;
+        $this->_done = false;
+    }
+}
+
 /**
  * The TestClassReader can read a file based on a SeleniumShell_Test
  * You may ask conditions of the state of this testclass.
@@ -136,8 +231,12 @@ class TestClassReader
         $this->_tokens = token_get_all(file_get_contents($this->_file));
     }
     
-    private function _isTestMethod($method)
+    private function _isTestMethod($token)
     {
+        $method = $token;
+        if( is_array($token) ){
+            $method = $token[1];
+        }
         return substr($method, 0, 4) == 'test';
     }
     
@@ -167,6 +266,53 @@ class TestClassReader
             $this->_setEnd();
             $this->_curlyOpens++;
         }
+    }
+    
+    protected function getPossibleAnnotations( $curIndex ){
+        //look back 4 tokens max (doc/whitespace/public/whitespace)
+        if( $this->_tokens[$curIndex -1][0] == T_WHITESPACE &&
+            $this->_tokens[$curIndex -2][0] == T_PUBLIC &&
+            $this->_tokens[$curIndex -3][0] == T_WHITESPACE &&
+            $this->_tokens[$curIndex -4][0] == T_DOC_COMMENT ){
+            $tokenRdr = new TokenReader($this->_tokens[$curIndex -4]);
+            return $tokenRdr->getAnnotations();
+        }
+        return false;
+    }
+    
+    public function getTestMethods()
+    {
+        $class = new TokenClosure('class');
+        $test = new TokenClosure('test');
+        $tests = array();
+        $testNr = 0;
+        
+        for( $i = 0; $i < count($this->_tokens); $i ++ ){
+            $token = $this->_tokens[$i];
+            $tokenRdr = new TokenReader($token);
+            
+            
+            if( $tokenRdr->isClassDefinition() ){
+                $class->startTracking();
+            }
+            $class->track($token);
+            
+            if( $class->inClosure() && $tokenRdr->isMethod( $token ) && $this->_isTestMethod($this->_tokens[$i+2]) ){
+                $testNr++;
+                $tests[$testNr] = array();
+                $tests[$testNr]['annotations'] = $this->getPossibleAnnotations($i);
+                $test->startTracking();
+            }
+            
+            if( $test->isDone() ){
+                $tests[$testNr]['test'] = $test->getTrack();
+                $test->reset();
+            }
+            
+            $test->track($token);
+        }
+        
+        return $tests;
     }
     /**
      * 
@@ -201,7 +347,6 @@ class TestClassReader
                 $this->_addCurlyCloses();
             }    
             if( $token[0] === T_VARIABLE){
-                var_dump($token);
             }
             if( $tokenRdr->isClassDefinition() ){
                 $this->_nrOfClasses ++;

@@ -10,7 +10,7 @@ $weird = '';
 array();
 
 $damnImweird = 0; 
-class TestClass{
+class testClass{
     
     public function __construct()
     {
@@ -19,11 +19,23 @@ class TestClass{
         }
     }
     
-    public function testSomthing()
+    /**
+     * @solo-run true
+     * @browser firefox
+     * @return type
+     */
+    public function testSomething()
     {
         return function(){
             
         };
+    }
+    
+    public function testTwo()
+    {
+        if(){
+            
+        }
     }
     /**
      * @SoloRun true
