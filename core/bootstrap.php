@@ -12,6 +12,7 @@ define('UTILS_PATH', $rel_path . $sep . 'utils');
 define('FILEINCLUDERS_PATH', UTILS_PATH . '/FileIncluders');
 define('FILESCANNERS_PATH', UTILS_PATH . '/FileScanners');
 define('CLASSHELPERS_PATH', UTILS_PATH . '/ClassHelpers');
+define('TOKENHELPERS_PATH', UTILS_PATH . '/TokenHelpers');
 
 define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
 
@@ -28,8 +29,10 @@ require_once( CORE_HANDLERS_PATH . '/ConfigHandler.php' );
 
 require_once( UTILS_PATH . '/Request.php' );
 require_once( UTILS_PATH . '/Response.php' );
+require_once( UTILS_PATH . '/AnnotationReader.php' );
 
 require_once( CLASSHELPERS_PATH . '/ClassInstantiator.php');
+require_once( CLASSHELPERS_PATH . '/TestClassReader.php');
 
 require_once( FILEINCLUDERS_PATH . '/FileIncluder.php');
 require_once( FILEINCLUDERS_PATH . '/PHPFileIncluder.php');
@@ -42,4 +45,7 @@ require_once( CORE_SRC_PATH . '/SeleniumShell_Test.php' );
 require_once( CORE_SRC_PATH . '/TestSuiteInitiator.php');
 require_once( CORE_SRC_PATH . '/Project.php' );
 require_once( CORE_SRC_PATH . '/Application.php' );
+
+require_once( TOKENHELPERS_PATH . '/TokenClosure.php' );
+require_once( TOKENHELPERS_PATH . '/TokenReader.php' );
 

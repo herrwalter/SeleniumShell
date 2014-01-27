@@ -1,7 +1,7 @@
 <?php
 
-include('D:\wamp\bin\php\php5.4.3\pear\PHPUnit\Autoload.php');
-//include('D:\wamp\bin\php\php5.4.3\pear\PHPUnit\TestSuite.php');
+include('C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php');
+include('C:\wamp\bin\php\php5.3.13\pear\PHPUnit\TestSuite.php');
 
 
 class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
@@ -24,7 +24,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
         $this->setPort(4444);
         $this->setSeleniumServerRequestsTimeout(5000);
         $this->setDesiredCapabilities(array());
-        //$this->_includeProjectTests(get_class($this));
+        $this->_includeProjectTests(get_class($this));
     }
     
     public function __construct()//$name = NULL, array $data = array(), $dataName = '')
@@ -35,8 +35,6 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
         }
         
         parent::__construct();//$name, $data, $dataName);
-        
-        
     }
     
     /**

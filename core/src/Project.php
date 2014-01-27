@@ -55,12 +55,35 @@ class Project
         $testFiles = new TestFileIncluder($this->_path . '\testsuits');
         $testFiles->includeFiles();
         
+        
         // then get the files that got included
         $includedFiles = $testFiles->getInlcudedFiles();
+        $refinedFiles = false;
+        
+        /**
+         * TODO: come up with a design to implement changes by the annotations
+         */
+        foreach( $includedFiles as $key => $file ){
+            $tcr = new TestClassReader($file);
+            $tests = $tcr->getTestMethods();
+            foreach( $tests as $testMethod ){
+                $annotationsOnTestMethod = new AnnotationReader($testMethod);
+                if( $annotationsOnTestMethod->hasSoloRun() ){
+                    $refinedFiles = array($file);
+                    break;
+                }
+            }
+        }
+        
+        if( $refinedFiles ){
+            $includedFiles = $refinedFiles;
+        }
         
         // get their classnames
         $classInstantiator =  new ClassInstantiator($includedFiles);
         $this->_testClassNames = $classInstantiator->getClassNames();
+        
+        
         
     }
     

@@ -7,6 +7,9 @@ class FirstTestSuit extends SeleniumShell_Test {
         parent::__construct();
     }
     
+    /**
+     * @browsers firefox, chrome
+     */
     public function testSeleniumShell()
     {
         $this->assertTrue( true );
