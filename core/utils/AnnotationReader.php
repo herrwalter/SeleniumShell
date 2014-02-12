@@ -28,10 +28,10 @@ class AnnotationReader
             $annotationName = key($annotation);
             $annotationValue = $annotation[$annotationName];
             switch( key($annotation) ){
-                case 'solo-run':
+                case 'ss-solo-run':
                     $this->_soloRun = true;
                     break;
-                case 'browsers':
+                case 'ss-browsers':
                     $this->_browsers = explode(', ', $annotationValue);
                     break;
             }

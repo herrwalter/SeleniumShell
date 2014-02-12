@@ -10,6 +10,10 @@ $weird = '';
 array();
 
 $damnImweird = 0; 
+/**
+ * @solo-run true
+ * @browsers firefox, chrome
+ */
 class testClass{
     
     public function __construct()

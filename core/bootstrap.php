@@ -13,6 +13,7 @@ define('FILEINCLUDERS_PATH', UTILS_PATH . '/FileIncluders');
 define('FILESCANNERS_PATH', UTILS_PATH . '/FileScanners');
 define('CLASSHELPERS_PATH', UTILS_PATH . '/ClassHelpers');
 define('TOKENHELPERS_PATH', UTILS_PATH . '/TokenHelpers');
+define('GENERATED_PATH', $rel_path. $sep. 'generated');
 
 define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
 
@@ -33,6 +34,7 @@ require_once( UTILS_PATH . '/AnnotationReader.php' );
 
 require_once( CLASSHELPERS_PATH . '/ClassInstantiator.php');
 require_once( CLASSHELPERS_PATH . '/TestClassReader.php');
+require_once( CLASSHELPERS_PATH . '/TestClassRecreator.php');
 
 require_once( FILEINCLUDERS_PATH . '/FileIncluder.php');
 require_once( FILEINCLUDERS_PATH . '/PHPFileIncluder.php');

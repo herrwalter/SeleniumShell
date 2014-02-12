@@ -1,7 +1,10 @@
 <?php
 
 
-
+/**
+ * Will include all the testfiles to the session 
+ * of the give directory.
+ */
 class TestFileIncluder extends FileIncluder
 {
     public function __construct($dir) {

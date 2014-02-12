@@ -72,9 +72,11 @@ class TokenReader
         if( $this->isDocumentationBlock() ){
             preg_match_all('#@(.*?)\n#s', $this->_token[1], $annotations);
             $niceFormat = array();
-            foreach( $annotations[1] as $annotation){
-                $anno = explode(' ', $annotation);
-                $niceFormat[] = array($anno[0] => $anno[1]);
+            if( count($annotations) > 1){
+                foreach( $annotations[1] as $annotation){
+                    $anno = explode(' ', $annotation);
+                    $niceFormat[] = array($anno[0] => $anno[1]);
+                }
             }
             return $niceFormat;
         }

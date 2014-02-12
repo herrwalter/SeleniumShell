@@ -30,6 +30,7 @@ class TestClassReader
         $this->_setFileTokens();
         $this->_readFile();
     }
+    
          
     protected function _setFile($file)
     {
@@ -82,6 +83,7 @@ class TestClassReader
     
     protected function _getPossibleAnnotations( $curIndex ){
         //look back 4 tokens max (doc/whitespace/public/whitespace)
+        // when it is a test method.. 
         if( $this->_tokens[$curIndex -1][0] == T_WHITESPACE &&
             $this->_tokens[$curIndex -2][0] == T_PUBLIC &&
             $this->_tokens[$curIndex -3][0] == T_WHITESPACE &&
@@ -109,7 +111,7 @@ class TestClassReader
             }
             $class->track($token);
             
-            if( $class->inClosure() && $tokenRdr->isMethod( $token ) && $this->_isTestMethod($this->_tokens[$i+2]) ){
+            if( $class->inClosure() && $tokenRdr->isMethod() && $this->_isTestMethod($this->_tokens[$i+2]) ){
                 $testNr++;
                 $tests[$testNr] = array();
                 $tests[$testNr]['annotations'] = $this->_getPossibleAnnotations($i);
@@ -117,7 +119,7 @@ class TestClassReader
             }
             
             if( $test->isDone() ){
-                $tests[$testNr]['test'] = $test->getTrack();
+                $tests[$testNr]['test'] = 'public ' . $test->getTrack();
                 $test->reset();
             }
             
@@ -140,11 +142,10 @@ class TestClassReader
         }
         do{
             $currentIndex--;
-            if( is_array($this->_tokens[$currentIndex]) )
-            {
+            if( is_array($this->_tokens[$currentIndex]) ){
                 return $this->_tokens[$currentIndex];
             }
-        }while($i > 0);
+        } while($i > 0);
         return false;
     }
     
@@ -153,14 +154,15 @@ class TestClassReader
         for($i = 0; $i < count($this->_tokens); $i++){
             $token = $this->_tokens[$i];
             $tokenRdr = new TokenReader($token);
+
             if( $tokenRdr->isCurlyOpen() ){
                 $this->_addCurlyOpens();
             }
+            
             if( $tokenRdr->isCurlyClose() ){
                 $this->_addCurlyCloses();
             }    
-            if( $token[0] === T_VARIABLE){
-            }
+            
             if( $tokenRdr->isClassDefinition() ){
                 $this->_nrOfClasses ++;
                 $this->_className = $this->_tokens[$i+2][1];
@@ -214,7 +216,7 @@ class TestClassReader
         return array(
             'classes' => $this->_nrOfClasses,
             'nrOfMethods' => count($this->_methods),
-            'nrOfTestMethods' => count($this->_nrOfTestsMethods),
+            'nrOfTestMethods' => count($this->_testsMethods),
             'methods' => $this->_methods,
             'testMethods' => $this->_testMethods,
             'classStart' => $this->_begin,

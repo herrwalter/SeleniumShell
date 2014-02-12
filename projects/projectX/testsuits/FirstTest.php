@@ -8,7 +8,8 @@ class FirstTestSuit extends SeleniumShell_Test {
     }
     
     /**
-     * @browsers firefox, chrome
+     * @solo-run true
+     * @ss-browsers firefox,chrome
      */
     public function testSeleniumShell()
     {

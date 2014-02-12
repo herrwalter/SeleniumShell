@@ -10,6 +10,10 @@ class OneTest extends SeleniumShell_Test {
         parent::__construct('Wouter');
     }
     
+    /**
+     * @ss-solo-run true
+     * @ss-browsers FireFox,Chrome
+     */
     public function testAutoLoad()
     {
         $this->assertTrue( true );

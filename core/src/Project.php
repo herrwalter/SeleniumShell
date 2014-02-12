@@ -63,12 +63,45 @@ class Project
         /**
          * TODO: come up with a design to implement changes by the annotations
          */
+        
+        /**
+         * De bedoeling is dat ik elke testfile inlees en op basis
+         * van elke annotation de juist testfile ga creeëren.
+         * 
+         * Er zullen verschillende annotation codes zijn die invloed hebben
+         * op hoe de testclass moet worden geïnterpreteert
+         * 
+         * De logica van de annotations moet makkelijk beheerbaar zijn.
+         * 
+         * Bij een solo-run stop zou alles moeten stoppen en alleen deze
+         * testmethode geïsoleerd worden uit de class. De rest van de classes
+         * horen er niet meer bij. Ook eerder geïnstatiëerde classes niet.
+         * 
+         * Het framework moet ook de testen in meerdere browsers draaien.
+         * Dit moet voor elke test anders ingesteld kunnen met een annotation.
+         * De default waarden moeten uit de configfile komen en ook overschrijf
+         * baar zijn voor een complete testclass.
+         * 
+         * De data beheerbaarheid moet toepasbaar kunnen zijn voor meerder omgevingen
+         * (development, testing, accpetance en production).
+         * 
+         * De solo-run annotation rule:
+         *  Kan toegepast worden op elke testmethode.
+         *  Wanneer toegepast moeten alle overige testmethoden verwijderd worden.
+         *  normale methoden moeten wel blijven bestaan. Ook eventuele variablen.
+         *  Eerst gevonden solo-run annotation wordt direct toegepast.
+         *  Voor elke browser test moet een nieuwe file komen. 
+         * 
+         */
         foreach( $includedFiles as $key => $file ){
             $tcr = new TestClassReader($file);
             $tests = $tcr->getTestMethods();
+            
+            $solorun = false;
             foreach( $tests as $testMethod ){
                 $annotationsOnTestMethod = new AnnotationReader($testMethod);
                 if( $annotationsOnTestMethod->hasSoloRun() ){
+                    new TestClassRecreator($file);
                     $refinedFiles = array($file);
                     break;
                 }
