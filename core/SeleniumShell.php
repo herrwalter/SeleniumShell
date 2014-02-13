@@ -18,7 +18,9 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     public $project;
 
     public function setUp(){
-        $this->setBrowser('iexplore');
+        $browser = $this->browser;
+        
+        $this->setBrowser($this->browser);
         $this->setBrowserUrl('http://www.google.nl');
         $this->setHost('127.0.0.1');
         $this->setPort(4444);
@@ -63,6 +65,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
         $suite = $app->getTestSuite();
         return $suite;
     }
+    
     
     
     

@@ -44,6 +44,7 @@ class Project
     {
         return $this->_testClassNames;
     }
+    
     private function _setProjectConfig()
     {
         $this->_config = new ConfigHandler($this->_path . '\config\project.ini');
@@ -51,72 +52,50 @@ class Project
     
     private function _setProjectsTestClassNames()
     {
-        // first include the files
-        $testFiles = new TestFileIncluder($this->_path . '\testsuits');
-        $testFiles->includeFiles();
         
         
-        // then get the files that got included
-        $includedFiles = $testFiles->getInlcudedFiles();
-        $refinedFiles = false;
+        // first find the testfiles in this project.
+        $testFileScanner = new TestFileScanner( $this->_path . '\testsuits');
+        $testFiles = $testFileScanner->getFilesInOneDimensionalArray();
         
-        /**
-         * TODO: come up with a design to implement changes by the annotations
-         */
+        // get default browsers
+        $config = new ConfigHandler(CORE_CONFIG_PATH . '\config.ini');
+        $browsers = $config->getAttribute('browsers');
         
-        /**
-         * De bedoeling is dat ik elke testfile inlees en op basis
-         * van elke annotation de juist testfile ga creeëren.
-         * 
-         * Er zullen verschillende annotation codes zijn die invloed hebben
-         * op hoe de testclass moet worden geïnterpreteert
-         * 
-         * De logica van de annotations moet makkelijk beheerbaar zijn.
-         * 
-         * Bij een solo-run stop zou alles moeten stoppen en alleen deze
-         * testmethode geïsoleerd worden uit de class. De rest van de classes
-         * horen er niet meer bij. Ook eerder geïnstatiëerde classes niet.
-         * 
-         * Het framework moet ook de testen in meerdere browsers draaien.
-         * Dit moet voor elke test anders ingesteld kunnen met een annotation.
-         * De default waarden moeten uit de configfile komen en ook overschrijf
-         * baar zijn voor een complete testclass.
-         * 
-         * De data beheerbaarheid moet toepasbaar kunnen zijn voor meerder omgevingen
-         * (development, testing, accpetance en production).
-         * 
-         * De solo-run annotation rule:
-         *  Kan toegepast worden op elke testmethode.
-         *  Wanneer toegepast moeten alle overige testmethoden verwijderd worden.
-         *  normale methoden moeten wel blijven bestaan. Ook eventuele variablen.
-         *  Eerst gevonden solo-run annotation wordt direct toegepast.
-         *  Voor elke browser test moet een nieuwe file komen. 
-         * 
-         */
-        foreach( $includedFiles as $key => $file ){
-            $tcr = new TestClassReader($file);
-            $tests = $tcr->getTestMethods();
-            
-            $solorun = false;
-            foreach( $tests as $testMethod ){
-                $annotationsOnTestMethod = new AnnotationReader($testMethod);
-                if( $annotationsOnTestMethod->hasSoloRun() ){
-                    new TestClassRecreator($file);
-                    $refinedFiles = array($file);
-                    break;
-                }
+        // overwrite browsers with project default
+        $projectBrowserSettings = $this->_config->getAttribute('browsers');
+        if( !empty($projectBrowserSettings)){
+            $browsers = $projectBrowserSettings;
+        }
+        
+        $generatedTestsuitPath = GENERATED_PATH . DIRECTORY_SEPARATOR . 'testsuits' . DIRECTORY_SEPARATOR;
+        
+        // delete old testfiles
+        $fileScanner = new FileScanner($generatedTestsuitPath );
+        $generatedTestFiles = $fileScanner->getFilesInOneDimensionalArray();
+        foreach( $generatedTestFiles as $testFile ){
+            if( is_file($testFile)){
+            unlink($testFile);
             }
         }
         
-        if( $refinedFiles ){
-            $includedFiles = $refinedFiles;
+        
+        foreach( $testFiles as $key => $file ){
+            $tcr = new TestClassRecreator($file);
+            $tcr->setSavePath($generatedTestsuitPath);
+            foreach( $browsers as $browser ){
+                $tcr->createFileForBrowser( $browser );
+            }
         }
         
-        // get their classnames
-        $classInstantiator =  new ClassInstantiator($includedFiles);
+        
+        $testFileIncluder = new TestFileIncluder($generatedTestsuitPath);
+        $testFileIncluder->includeFiles();
+        $includedFiles = $testFileIncluder->getInlcudedFiles();
+        
+        $classInstantiator = new ClassInstantiator($includedFiles);
         $this->_testClassNames = $classInstantiator->getClassNames();
-        
-        
+        // get their classnames
         
     }
     

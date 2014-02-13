@@ -216,7 +216,7 @@ class TestClassReader
         return array(
             'classes' => $this->_nrOfClasses,
             'nrOfMethods' => count($this->_methods),
-            'nrOfTestMethods' => count($this->_testsMethods),
+            'nrOfTestMethods' => count($this->_testMethods),
             'methods' => $this->_methods,
             'testMethods' => $this->_testMethods,
             'classStart' => $this->_begin,

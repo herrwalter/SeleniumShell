@@ -7,8 +7,11 @@
  */
 
 
-class TwoTest extends SeleniumShell_Test
+class FirefoxTwoTest extends SeleniumShell_Test
 {
+
+	public $browser = "Firefox";
+
     
     public function testNew(){
     

@@ -1,6 +1,9 @@
 <?php
 
-class FirstTestSuit extends SeleniumShell_Test {
+class FirefoxFirstTestSuit extends SeleniumShell_Test {
+
+	public $browser = "Firefox";
+
     
     public function __construct() {
         
@@ -17,7 +20,5 @@ class FirstTestSuit extends SeleniumShell_Test {
     /**
      * @ss-browsers chrome,ie8
      */
-    public function testSecond() {
-        $this->assertTrue(true);
-    }
+    
 }

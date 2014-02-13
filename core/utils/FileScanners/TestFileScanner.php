@@ -9,21 +9,23 @@ class TestFileScanner extends FileScanner
     {
         $check = pathinfo($file);
         $filename = $check['filename'];
-        return strpos($filename, 'Test') > 0;
+        return strpos($file, 'Test') !== false;
     }
     
     public function getFilesInOneDimensionalArray()
     {
-        $files = array();
+        $testFiles = array();
         foreach( $this->_files as $dir => $files )
         {
             foreach( $files as $file )
             {
+                var_dump( $file );
+                var_dump( $this->_isTestFile($file));
                 if( $this->_isTestFile($file) ){
-                    $files[] = $dir.$file;
+                    $testFiles[] = $dir.$file;
                 }
             }
         }
-        return $files;
+        return $testFiles;
     }
 }
