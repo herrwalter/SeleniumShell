@@ -11,8 +11,7 @@ class OneTest extends SeleniumShell_Test {
     }
     
     /**
-     * @ss-solo-run true
-     * @ss-browsers FireFox,Chrome
+     * @ss-browsers FireFox
      */
     public function testAutoLoad()
     {

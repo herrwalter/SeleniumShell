@@ -13,17 +13,14 @@ class ChromeTwoTest extends SeleniumShell_Test
 	public $browser = "Chrome";
 
     
-    public function testNew(){
     
-        $this->assertTrue(true);
-    }
+    /**
+     * @ss-solo-run true
+     */
     public function testNew2(){
     
         $this->assertTrue(true);
         
     }
-    public function testNew4(){
     
-        
-    }
 }

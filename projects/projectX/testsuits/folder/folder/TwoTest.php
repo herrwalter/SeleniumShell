@@ -14,6 +14,9 @@ class TwoTest extends SeleniumShell_Test
     
         $this->assertTrue(true);
     }
+    /**
+     * @ss-solo-run true
+     */
     public function testNew2(){
     
         $this->assertTrue(true);

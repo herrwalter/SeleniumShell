@@ -52,8 +52,6 @@ class Project
     
     private function _setProjectsTestClassNames()
     {
-        
-        
         // first find the testfiles in this project.
         $testFileScanner = new TestFileScanner( $this->_path . '\testsuits');
         $testFiles = $testFileScanner->getFilesInOneDimensionalArray();
@@ -68,36 +66,59 @@ class Project
             $browsers = $projectBrowserSettings;
         }
         
-        $generatedTestsuitPath = GENERATED_PATH . DIRECTORY_SEPARATOR . 'testsuits' . DIRECTORY_SEPARATOR;
-        
-        // delete old testfiles
-        $fileScanner = new FileScanner($generatedTestsuitPath );
-        $generatedTestFiles = $fileScanner->getFilesInOneDimensionalArray();
-        foreach( $generatedTestFiles as $testFile ){
-            if( is_file($testFile)){
-            unlink($testFile);
-            }
-        }
+        // delete old testsuits
+        $this->_deleteGeneratedTestFiles();
         
         
+        // for every file, create the new browser tests.
         foreach( $testFiles as $key => $file ){
-            $tcr = new TestClassRecreator($file);
-            $tcr->setSavePath($generatedTestsuitPath);
-            foreach( $browsers as $browser ){
-                $tcr->createFileForBrowser( $browser );
+            $reader = new TestClassReader($file);
+            
+            //if ss-solo-run has been applied to one of the test. Then only this file should be processed.
+            if( $reader->fileHasSolorunAnnotation() ){
+                $this->_deleteGeneratedTestFiles();
+                $this->_createBrowserTestFiles($file, $browsers);
+                $testFiles = array($file);
+                break;
             }
+            
+            $this->_createBrowserTestFiles($file, $browsers);
         }
         
-        
-        $testFileIncluder = new TestFileIncluder($generatedTestsuitPath);
+        // include the generated browsertest
+        $testFileIncluder = new TestFileIncluder(GENERATED_TESTSUITS_PATH);
         $testFileIncluder->includeFiles();
         $includedFiles = $testFileIncluder->getInlcudedFiles();
         
+        // Instantiate classes and save their classNames for test initialisation.
         $classInstantiator = new ClassInstantiator($includedFiles);
         $this->_testClassNames = $classInstantiator->getClassNames();
-        // get their classnames
         
     }
+    
+    /**
+     * deletes the Generated test files.
+     * 
+     */
+    protected function _deleteGeneratedTestFiles(){
+        // delete old testfiles
+        $fileScanner = new FileScanner( GENERATED_TESTSUITS_PATH );
+        $generatedTestFiles = $fileScanner->getFilesInOneDimensionalArray();
+        foreach( $generatedTestFiles as $testFile ){
+            if( is_file($testFile)){
+                unlink($testFile);
+            }
+        }
+    }
+    
+    protected function _createBrowserTestFiles($file, $browsers){
+        $tcr = new TestClassRecreator($file);
+        $tcr->setSavePath(GENERATED_TESTSUITS_PATH);
+        foreach( $browsers as $browser ){
+            $tcr->createFileForBrowser( $browser );
+        }
+    }
+    
     
     
     

@@ -14,6 +14,7 @@ define('FILESCANNERS_PATH', UTILS_PATH . '/FileScanners');
 define('CLASSHELPERS_PATH', UTILS_PATH . '/ClassHelpers');
 define('TOKENHELPERS_PATH', UTILS_PATH . '/TokenHelpers');
 define('GENERATED_PATH', $rel_path. $sep. 'generated');
+define('GENERATED_TESTSUITS_PATH', GENERATED_PATH . $sep . 'testsuits' .$sep );
 
 define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
 

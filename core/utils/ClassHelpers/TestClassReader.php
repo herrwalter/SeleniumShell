@@ -223,4 +223,17 @@ class TestClassReader
             'classEnd' => $this->_end,
         ); 
     }
+    
+    public function fileHasSolorunAnnotation()
+    {
+        $methods = $this->getTestMethods();
+        foreach( $methods as $method ){
+            $annotation = new AnnotationReader($method);
+            if( $annotation->hasSoloRun() ){
+                return true;
+            }
+        }
+        return false;
+    }
+    
 }
