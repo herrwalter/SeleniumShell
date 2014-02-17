@@ -19,8 +19,6 @@ class TestFileScanner extends FileScanner
         {
             foreach( $files as $file )
             {
-                var_dump( $file );
-                var_dump( $this->_isTestFile($file));
                 if( $this->_isTestFile($file) ){
                     $testFiles[] = $dir.$file;
                 }
