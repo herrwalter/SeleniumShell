@@ -27,7 +27,12 @@ class Project
     
     private function _setProjectPath()
     {
-        $this->_path = PROJECTS_FOLDER . '\\' . $this->_name;;
+        $path = PROJECTS_FOLDER . '\\' . $this->_name;
+        if( is_dir($path) ){
+            $this->_path = $path;
+        }else{
+            throw new ErrorException('Project not found.');
+        }
     }
     
     public function getProjectName()

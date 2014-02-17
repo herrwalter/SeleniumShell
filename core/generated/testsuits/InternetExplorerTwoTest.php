@@ -16,11 +16,8 @@ class InternetExplorerTwoTest extends SeleniumShell_Test
     
     /**
      * @ss-solo-run true
+     * @ss-browsers chrome
      */
-    public function testNew2(){
     
-        $this->assertTrue(true);
-        
-    }
     
 }

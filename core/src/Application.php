@@ -39,9 +39,15 @@ class Application
     {
         $projects = array();
         $projectNames = $this->_config->getAttribute('projects');
-        foreach($projectNames as $projectName)
-        {
+        
+        if( $this->_config->isParameterSet('--ss-project') ){
+            $projectName = $this->_config->getParameter('--ss-project');
             $projects[$projectName] = new Project($projectName);
+        }
+        else{
+            /**
+             * @TODO: crawl projects in projects folder
+             */
         }
         $this->_projects = $projects;
     }

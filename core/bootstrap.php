@@ -27,6 +27,7 @@ function __autoload( $className ){
 
 require_once( CORE_HANDLERS_PATH . '/ProjectActionsInitiator.php' );
 require_once( CORE_HANDLERS_PATH . '/ProjectHandlersInitiator.php' );
+require_once( CORE_HANDLERS_PATH . '/PHPUnitParameterReader.php' );
 require_once( CORE_HANDLERS_PATH . '/ConfigHandler.php' );
 
 require_once( UTILS_PATH . '/Request.php' );

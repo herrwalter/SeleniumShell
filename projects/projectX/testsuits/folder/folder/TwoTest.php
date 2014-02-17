@@ -16,6 +16,7 @@ class TwoTest extends SeleniumShell_Test
     }
     /**
      * @ss-solo-run true
+     * @ss-browsers chrome
      */
     public function testNew2(){
     
