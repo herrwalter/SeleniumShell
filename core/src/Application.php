@@ -13,7 +13,7 @@ class Application
     public function __construct()
     {
         $this->_setConfig();
-        $this->_setProjects();
+        $this->_initializeProjects();
         $this->_setSuite();
     }
     /**
@@ -35,19 +35,30 @@ class Application
     }
     
     
-    private function _setProjects()
+    private function _initializeProjects()
     {
         $projects = array();
         $projectNames = $this->_config->getAttribute('projects');
         
+        /* if --ss-project parameter is set, initialize that project */
+        /* elseif the seleniumshell config contains the projects parameter,  use those */
+        /* else initialize all projects in the project folder */
         if( $this->_config->isParameterSet('--ss-project') ){
             $projectName = $this->_config->getParameter('--ss-project');
             $projects[$projectName] = new Project($projectName);
         }
+        elseif( $projectNames ){
+            foreach( $projectNames as $projectName ){
+                $projects[$projectName] = new Project($projectName);
+            }
+        }
         else{
-            /**
-             * @TODO: crawl projects in projects folder
-             */
+            $folder = scandir( PROJECTS_FOLDER );
+            foreach( $folder as $dir ){
+                if( !( $dir == '.' || $dir == '..' ) && !is_file($dir) ){
+                    $projects[$dir] = new Project($dir);
+                }
+            }
         }
         $this->_projects = $projects;
     }
