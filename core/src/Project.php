@@ -12,12 +12,20 @@ class Project
     
     private $_config;
     
-    public function __construct( $projectName )
+    private $_testFiles;
+    
+    private $_browsers;
+    
+    public function __construct($projectName)
     {
         $this->_setProjectName($projectName);
         $this->_setProjectPath();
         $this->_setProjectConfig();
-        $this->_setProjectsTestClassNames();
+        $this->_setTestFiles();
+        $this->_setBrowserSettings();
+        $this->_deleteGeneratedTestFiles();
+        $this->_generateTestFilesForAllBrowsers();
+        $this->_prepareProjectsTestClassNamesForSuite();
     }
     
     private function _setProjectName( $projectName )
@@ -55,13 +63,15 @@ class Project
         $this->_config = new ConfigHandler($this->_path . '\config\project.ini');
     }
     
-    private function _setProjectsTestClassNames()
+    private function _setTestFiles()
     {
         // first find the testfiles in this project.
         $testFileScanner = new TestFileScanner( $this->_path . '\testsuits');
-        $testFiles = $testFileScanner->getFilesInOneDimensionalArray();
-        
-        // get default browsers
+        $this->_testFiles = $testFileScanner->getFilesInOneDimensionalArray();
+    }
+    
+    private function _setBrowserSettings()
+    {// get default browsers
         $config = new ConfigHandler(CORE_CONFIG_PATH . '\config.ini');
         $browsers = $config->getAttribute('browsers');
         
@@ -71,25 +81,30 @@ class Project
             $browsers = $projectBrowserSettings;
         }
         
-        // delete old testsuits
-        $this->_deleteGeneratedTestFiles();
-        
-        
+        $this->_browsers = $browsers;
+    }
+    
+    private function _generateTestFilesForAllBrowsers()
+    {
         // for every file, create the new browser tests.
-        foreach( $testFiles as $key => $file ){
+        foreach( $this->_testFiles as $key => $file ){
             $reader = new TestClassReader($file);
             
             //if ss-solo-run has been applied to one of the test. Then only this file should be processed.
             if( $reader->fileHasSolorunAnnotation() ){
                 $this->_deleteGeneratedTestFiles();
-                $this->_createBrowserTestFiles($file, $browsers);
-                $testFiles = array($file);
+                $this->_createBrowserTestsForTestFile($file);
+                $this->_testFiles = array($file);
                 break;
             }
             
-            $this->_createBrowserTestFiles($file, $browsers);
+            $this->_createBrowserTestsForTestFile($file);
         }
-        
+    }
+    
+    
+    private function _prepareProjectsTestClassNamesForSuite()
+    {
         // include the generated browsertest
         $testFileIncluder = new TestFileIncluder(GENERATED_TESTSUITS_PATH);
         $testFileIncluder->includeFiles();
@@ -98,12 +113,10 @@ class Project
         // Instantiate classes and save their classNames for test initialisation.
         $classInstantiator = new ClassInstantiator($includedFiles);
         $this->_testClassNames = $classInstantiator->getClassNames();
-        
     }
     
     /**
      * deletes the Generated test files.
-     * 
      */
     protected function _deleteGeneratedTestFiles(){
         // delete old testfiles
@@ -116,10 +129,10 @@ class Project
         }
     }
     
-    protected function _createBrowserTestFiles($file, $browsers){
+    protected function _createBrowserTestsForTestFile($file){
         $tcr = new TestClassRecreator($file);
         $tcr->setSavePath(GENERATED_TESTSUITS_PATH);
-        foreach( $browsers as $browser ){
+        foreach( $this->_browsers as $browser ){
             $tcr->createFileForBrowser( $browser );
         }
     }
