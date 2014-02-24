@@ -7,13 +7,13 @@
  */
 
 
-class TwoTest extends SeleniumShell_Test
+class projectXChromeTwoTest extends SeleniumShell_Test
 {
+
+	public $browser = "Chrome";
+
     
-    public function testNew(){
     
-        $this->assertTrue(true);
-    }
     /**
      * @ss-solo-run true
      * @ss-browsers chrome
@@ -24,8 +24,5 @@ class TwoTest extends SeleniumShell_Test
         $this->assertTrue(true);
         
     }
-    public function testNew4(){
     
-        
-    }
 }

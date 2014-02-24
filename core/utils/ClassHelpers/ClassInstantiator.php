@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * Provide it with an array of filenames
  * and it will give you functionality to 

@@ -131,8 +131,10 @@ class Project
     
     protected function _createBrowserTestsForTestFile($file){
         $tcr = new TestClassRecreator($file);
-        $tcr->setSavePath(GENERATED_TESTSUITS_PATH);
+        $tcr->setSavePath(GENERATED_TESTSUITS_PATH  . $this->_name. DIRECTORY_SEPARATOR);
+        $tcr->setProjectName($this->_name);
         foreach( $this->_browsers as $browser ){
+            
             $tcr->createFileForBrowser( $browser );
         }
     }

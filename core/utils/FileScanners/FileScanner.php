@@ -40,14 +40,14 @@ class FileScanner
     
     public function getFilesInOneDimensionalArray()
     {
-        $files = array();
+        $foundFiles = array();
         foreach( $this->_files as $dir => $files )
         {
             foreach( $files as $file )
             {
-                $files[] = $dir.$file;
+                $foundFiles[] = $dir.$file;
             }
         }
-        return $files;
+        return $foundFiles;
     }
 }

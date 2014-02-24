@@ -9,7 +9,7 @@ class TestFileScanner extends FileScanner
     {
         $check = pathinfo($file);
         $filename = $check['filename'];
-        return strpos($file, 'Test') !== false;
+        return substr_compare($filename, 'Test', -4) === 0;
     }
     
     public function getFilesInOneDimensionalArray()

@@ -6,18 +6,8 @@
  * and open the template in the editor.
  */
 
-
-class InternetExplorerTwoTest extends SeleniumShell_Test
-{
-
-	public $browser = "InternetExplorer";
-
+class BlaBlaTestAutoload {
     
-    
-    /**
-     * @ss-solo-run true
-     * @ss-browsers chrome
-     */
-    
-    
+    public function __construct(){
+    }
 }

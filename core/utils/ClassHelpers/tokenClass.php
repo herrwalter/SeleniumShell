@@ -9,7 +9,7 @@
 $weird = '';
 array();
 
-$damnImweird = 0; 
+$damnImweird = 0;
 /**
  * @solo-run true
  * @browsers firefox, chrome

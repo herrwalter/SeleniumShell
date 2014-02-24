@@ -7,10 +7,10 @@
  */
 
 
-class FirefoxTwoTest extends SeleniumShell_Test
+class projectXInternetExplorerTwoTest extends SeleniumShell_Test
 {
 
-	public $browser = "Firefox";
+	public $browser = "InternetExplorer";
 
     
     

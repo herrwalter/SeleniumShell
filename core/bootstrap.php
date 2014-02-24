@@ -15,41 +15,71 @@ define('CLASSHELPERS_PATH', UTILS_PATH . '/ClassHelpers');
 define('TOKENHELPERS_PATH', UTILS_PATH . '/TokenHelpers');
 define('GENERATED_PATH', $rel_path. $sep. 'generated');
 define('GENERATED_TESTSUITS_PATH', GENERATED_PATH . $sep . 'testsuits' .$sep );
-
 define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
 
-
-function __autoload( $className ){
-    echo $className . ' not found.. ';
-}
-
-
-
-require_once( CORE_HANDLERS_PATH . '/ProjectActionsInitiator.php' );
-require_once( CORE_HANDLERS_PATH . '/ProjectHandlersInitiator.php' );
-require_once( CORE_HANDLERS_PATH . '/PHPUnitParameterReader.php' );
-require_once( CORE_HANDLERS_PATH . '/ConfigHandler.php' );
-
-require_once( UTILS_PATH . '/Request.php' );
-require_once( UTILS_PATH . '/Response.php' );
-require_once( UTILS_PATH . '/AnnotationReader.php' );
-
-require_once( CLASSHELPERS_PATH . '/ClassInstantiator.php');
-require_once( CLASSHELPERS_PATH . '/TestClassReader.php');
-require_once( CLASSHELPERS_PATH . '/TestClassRecreator.php');
-
-require_once( FILEINCLUDERS_PATH . '/FileIncluder.php');
-require_once( FILEINCLUDERS_PATH . '/PHPFileIncluder.php');
-require_once( FILEINCLUDERS_PATH . '/TestFileIncluder.php');
 
 require_once( FILESCANNERS_PATH . '/FileScanner.php');
 require_once( FILESCANNERS_PATH . '/TestFileScanner.php');
 
 require_once( CORE_SRC_PATH . '/SeleniumShell_Test.php' );
-require_once( CORE_SRC_PATH . '/TestSuiteInitiator.php');
-require_once( CORE_SRC_PATH . '/Project.php' );
-require_once( CORE_SRC_PATH . '/Application.php' );
 
-require_once( TOKENHELPERS_PATH . '/TokenClosure.php' );
-require_once( TOKENHELPERS_PATH . '/TokenReader.php' );
+
+
+function SeleniumShellAutoloadFunction( $className ){
+    $files = array();
+    
+    $backtrace = debug_backtrace();
+    $file = $backtrace[1]['file'];
+    $explodedFile = explode(DIRECTORY_SEPARATOR, $file);
+    // check if the last function called contains the projects path
+    // then we should crawlup that project file..
+    if(strpos( $file, GENERATED_TESTSUITS_PATH ) !== false ){
+        $projectName = $explodedFile[count($explodedFile) - 2];
+        $projectPath = PROJECTS_FOLDER . DIRECTORY_SEPARATOR . $projectName;
+        $projectScanner = new FileScanner($projectPath);
+        $projectTestFileScanner = new TestFileScanner($projectPath);
+        $projectTestFiles = $projectTestFileScanner->getFilesInOneDimensionalArray();
+        // find our lost classes in the projectfolder
+        foreach( $projectScanner->getFilesInOneDimensionalArray() as $projectFile ){
+            // we should not include the testfiles.
+            if( !in_array($projectFile, $projectTestFiles)){
+                $explodedProjectFile = explode( DIRECTORY_SEPARATOR, $projectFile);
+                $projectFileName = $explodedProjectFile[count($explodedProjectFile) - 1];
+                $projectFileName = str_replace('.php', '', $projectFileName);
+                if( strtolower($projectFileName) === strtolower($className) ){
+                    require_once $projectFile;
+                }
+            }
+        }
+    } else { // find seleniumShell Core.
+        // crawl source..
+        $seleniumSource = new FileScanner( CORE_SRC_PATH );
+        foreach( $seleniumSource->getFilesInOneDimensionalArray() as $projectFile ){
+            $explodedProjectFile = explode( DIRECTORY_SEPARATOR, $projectFile);
+            $projectFileName = $explodedProjectFile[count($explodedProjectFile) - 1];
+            $projectFileName = str_replace('.php', '', $projectFileName);
+            if( strtolower($projectFileName) === strtolower($className) ){
+                require_once $projectFile;
+                return;
+            }
+        }
+        // crawl utils
+        $seleniumUtils = new FileScanner( UTILS_PATH );
+        foreach( $seleniumUtils->getFilesInOneDimensionalArray() as $projectFile ){
+            $explodedProjectFile = explode( DIRECTORY_SEPARATOR, $projectFile);
+            $projectFileName = $explodedProjectFile[count($explodedProjectFile) - 1];
+            $projectFileName = str_replace('.php', '', $projectFileName);
+            if( strtolower($projectFileName) === strtolower($className) ){
+                require_once $projectFile;
+                return;
+            }
+        }
+        
+    }
+}
+
+spl_autoload_register('SeleniumShellAutoloadFunction');
+
+
+
 

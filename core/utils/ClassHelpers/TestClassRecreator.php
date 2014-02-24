@@ -15,6 +15,7 @@ class TestClassRecreator {
     private $_testClassFileName;
     private $_filePath;
     private $_savePath;
+    private $_projectName = '';
     
     public function __construct( $testClassFile ){
         $this->_savePath = GENERATED_PATH . DIRECTORY_SEPARATOR . 'testsuits' . DIRECTORY_SEPARATOR;
@@ -25,12 +26,19 @@ class TestClassRecreator {
         
         $this->_testClassFile = $testClassFile;
         $this->_testClassFileName = basename($testClassFile);
+    }
 
-        
+    public function setProjectName( $projectName )
+    {
+        $projectName = str_replace(' ', '', $projectName);
+        $this->_projectName = $projectName;
     }
     
     public function setSavePath( $path ){
         if( is_dir( $path ) ){
+            $this->_savePath = $path;
+        }else{
+            mkdir($path);
             $this->_savePath = $path;
         }
     }
@@ -57,11 +65,11 @@ class TestClassRecreator {
      * @param type $name
      */
     protected function _changeTestFileClassName( $name ){
-        $this->_file = str_replace(  'class ', 'class '.$name, $this->_file );
+        $this->_file = str_replace(  'class ', 'class '.$this->_projectName.$name, $this->_file );
     }
     
     protected function _saveFile($name){
-        file_put_contents($this->_savePath . $name . $this->_testClassFileName, $this->_file);
+        file_put_contents($this->_savePath .$this->_projectName. $name . $this->_testClassFileName, $this->_file);
     }
     
     protected function _deleteTestsThatShouldNotRunInThisBrowser($browser){
