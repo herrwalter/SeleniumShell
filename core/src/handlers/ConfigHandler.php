@@ -10,10 +10,12 @@ class ConfigHandler
     
     private $_parameters;
     
-    public function __construct( $path )
+    public function __construct( $path = false )
     {
-        $this->_setConfigPath( $path );
-        $this->_setConfig();
+        if( $path ){
+            $this->_setConfigPath( $path );
+            $this->_setConfig();
+        }
         $this->_setParameters();
     }
     

@@ -46,13 +46,11 @@ class Application
         if( $this->_config->isParameterSet('--ss-project') ){
             $projectName = $this->_config->getParameter('--ss-project');
             $projects[$projectName] = new Project($projectName);
-        }
-        elseif( $projectNames ){
+        }elseif( $projectNames ){
             foreach( $projectNames as $projectName ){
                 $projects[$projectName] = new Project($projectName);
             }
-        }
-        else{
+        }else{
             $folder = scandir( PROJECTS_FOLDER );
             foreach( $folder as $dir ){
                 if( !( $dir == '.' || $dir == '..' ) && !is_file($dir) ){

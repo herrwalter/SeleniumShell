@@ -3,6 +3,8 @@ $rel_path = getcwd();
 // Constants
 $sep = DIRECTORY_SEPARATOR;
 
+error_reporting(E_ALL);
+
 define('SELENIUM_SHELL', str_replace('core', '', $rel_path));
 define('CORE_CONFIG_PATH', $rel_path. $sep.'config' );
 define('CORE_PATH', $rel_path . $sep);
@@ -15,7 +17,6 @@ define('CLASSHELPERS_PATH', UTILS_PATH . '/ClassHelpers');
 define('TOKENHELPERS_PATH', UTILS_PATH . '/TokenHelpers');
 define('GENERATED_PATH', $rel_path. $sep. 'generated');
 define('GENERATED_TESTSUITS_PATH', GENERATED_PATH . $sep . 'testsuits' .$sep );
-define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
 
 
 require_once( FILESCANNERS_PATH . '/FileScanner.php');
@@ -26,15 +27,20 @@ require_once( CORE_SRC_PATH . '/SeleniumShell_Test.php' );
 
 
 function SeleniumShellAutoloadFunction( $className ){
-    $files = array();
-    
     $backtrace = debug_backtrace();
     $file = $backtrace[1]['file'];
+    $file = str_replace(PROJECTS_FOLDER, '', $file);
+    $file = str_replace(GENERATED_TESTSUITS_PATH, '', $file);
+    if( $file[0] == DIRECTORY_SEPARATOR ){
+        $file = substr($file, 1);
+    }
     $explodedFile = explode(DIRECTORY_SEPARATOR, $file);
+    
+    
     // check if the last function called contains the projects path
     // then we should crawlup that project file..
-    if(strpos( $file, GENERATED_TESTSUITS_PATH ) !== false ){
-        $projectName = $explodedFile[count($explodedFile) - 2];
+    if(strpos( $file, CORE_PATH ) === false ){
+        $projectName = $explodedFile[0];
         $projectPath = PROJECTS_FOLDER . DIRECTORY_SEPARATOR . $projectName;
         $projectScanner = new FileScanner($projectPath);
         $projectTestFileScanner = new TestFileScanner($projectPath);
@@ -82,4 +88,20 @@ spl_autoload_register('SeleniumShellAutoloadFunction');
 
 
 
+$config = new ConfigHandler(CORE_CONFIG_PATH . DIRECTORY_SEPARATOR . 'config.ini');
+$projectPath = $config->getAttribute('projects-path');
+/** Define the project path. */
+if( $projectPath ){
+    define('PROJECTS_FOLDER', $projectPath);
+}else{
+    define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
+}
+
+define( 'PHPUNIT_PATH', $config->getAttribute('phpunit-path'));
+
+try{
+    require_once PHPUNIT_PATH . DIRECTORY_SEPARATOR . 'Autoload.php';
+} catch(Exception $e){
+    throw new Exception('PHPUNIT path not set in core/config/config.ini. Set it as "phpunit-path". It should be the full path to the location of phpunit');
+}
 

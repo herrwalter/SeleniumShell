@@ -1,8 +1,5 @@
 <?php
 
-include('C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php');
-include('C:\wamp\bin\php\php5.3.13\pear\PHPUnit\TestSuite.php');
-
 
 class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     

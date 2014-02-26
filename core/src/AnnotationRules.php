@@ -10,8 +10,6 @@ class AnnotationRules{
         $this->_testMethod = $testMethod;
     }
     
-    public function 
-    
     
     
 }

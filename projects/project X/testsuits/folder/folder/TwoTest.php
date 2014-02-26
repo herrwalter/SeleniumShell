@@ -16,13 +16,13 @@ class TwoTest extends SeleniumShell_Test
     }
     /**
      * @ss-solo-run true
-     * @ss-browsers chrome
+     * @ss-browsers firefox
      */
     public function testNew2(){
     
         new BlaBlaTestAutoload();
         $this->assertTrue(true);
-        
+        $this->url('https://www.google.nl');
     }
     public function testNew4(){
     

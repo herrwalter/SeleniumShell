@@ -22,6 +22,7 @@ class Project
         $this->_setProjectPath();
         $this->_setProjectConfig();
         $this->_setTestFiles();
+        $this->_filterTestSuitesIfSeleniumShellParameterIsSet();
         $this->_setBrowserSettings();
         $this->_deleteGeneratedTestFiles();
         $this->_generateTestFilesForAllBrowsers();
@@ -35,7 +36,7 @@ class Project
     
     private function _setProjectPath()
     {
-        $path = PROJECTS_FOLDER . '\\' . $this->_name;
+        $path = PROJECTS_FOLDER . DIRECTORY_SEPARATOR . $this->_name;
         if( is_dir($path) ){
             $this->_path = $path;
         }else{
@@ -68,6 +69,24 @@ class Project
         // first find the testfiles in this project.
         $testFileScanner = new TestFileScanner( $this->_path . '\testsuits');
         $this->_testFiles = $testFileScanner->getFilesInOneDimensionalArray();
+    }
+    
+    private function _filterTestSuitesIfSeleniumShellParameterIsSet()
+    
+    {
+        $config = new ConfigHandler();
+        $testSuite = $config->isParameterSet('--ss-testsuite');
+        if( $testSuite ){
+            foreach( $this->_testFiles as $dir => $file ){
+                $pathInfo = pathinfo($file);
+                $filename = $pathInfo['filename'];
+                var_dump($filename);
+                if( $filename === $testSuite . '.php' ){
+                    $this->_testFiles = array( $dir => $file );
+                    return;
+                }
+            }
+        }
     }
     
     private function _setBrowserSettings()
@@ -109,7 +128,6 @@ class Project
         $testFileIncluder = new TestFileIncluder(GENERATED_TESTSUITS_PATH);
         $testFileIncluder->includeFiles();
         $includedFiles = $testFileIncluder->getInlcudedFiles();
-        
         // Instantiate classes and save their classNames for test initialisation.
         $classInstantiator = new ClassInstantiator($includedFiles);
         $this->_testClassNames = $classInstantiator->getClassNames();
