@@ -86,6 +86,12 @@ class TestClassRecreator {
             }
         }
         
+        // if --ss-browsers is set, this should overrule. and the browsers annotation rule should be ignored 
+        $config = new ConfigHandler();
+        if( $config->isParameterSet('--ss-browsers') ){
+            return;
+        }
+        
         // check for the browsers annotation. if found,
         // check if it contains the current browser, else use default.
         foreach( $this->_testMethods as $testMethod ){

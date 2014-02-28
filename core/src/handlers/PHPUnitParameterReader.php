@@ -11,7 +11,8 @@ class  PHPUnitParameterReader {
     protected $seleniumShellVariables = array(
         '--ss-project' => false,
         '--ss-email-results' => false,
-        '--ss-testsuite' => false
+        '--ss-testsuite' => false,
+        '--ss-browsers' => false
     );
     
     public function __construct(){

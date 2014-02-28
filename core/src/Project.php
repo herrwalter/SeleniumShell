@@ -80,7 +80,6 @@ class Project
             foreach( $this->_testFiles as $dir => $file ){
                 $pathInfo = pathinfo($file);
                 $filename = $pathInfo['filename'];
-                var_dump($filename);
                 if( $filename === $testSuite . '.php' ){
                     $this->_testFiles = array( $dir => $file );
                     return;
@@ -99,6 +98,14 @@ class Project
         if( !empty($projectBrowserSettings)){
             $browsers = $projectBrowserSettings;
         }
+        
+        var_dump($browsers);
+        // overwrite browsers from phpunit paramter
+        if( $config->isParameterSet('--ss-browsers') ){
+            $browsers = $config->getParameter('--ss-browsers');
+            $browsers = explode(', ', $browsers);
+        }
+        var_dump($browsers);
         
         $this->_browsers = $browsers;
     }
