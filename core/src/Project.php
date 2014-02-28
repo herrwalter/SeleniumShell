@@ -99,13 +99,11 @@ class Project
             $browsers = $projectBrowserSettings;
         }
         
-        var_dump($browsers);
         // overwrite browsers from phpunit paramter
         if( $config->isParameterSet('--ss-browsers') ){
             $browsers = $config->getParameter('--ss-browsers');
             $browsers = explode(', ', $browsers);
         }
-        var_dump($browsers);
         
         $this->_browsers = $browsers;
     }
