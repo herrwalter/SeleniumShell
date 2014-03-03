@@ -1,140 +1,229 @@
-[28-Feb-2014 09:06:21 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:06:21 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:06:21 UTC] PHP Warning:  parse_ini_file(C:\SeleniumTests\projects\nbproject\config\project.ini): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 46
-[28-Feb-2014 09:06:21 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits,C:\SeleniumTests\projects\nbproject\testsuits): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:06:21 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:06:21 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:06:21 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 56
-[28-Feb-2014 09:06:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php on line 23
-[28-Feb-2014 09:06:21 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:07:30 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:07:30 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:07:30 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '{' in C:\SeleniumTests\SeleniumShell\core\generated\testsuits\eLeads\eLeadsfirefox,chrome,iexploreEleadsAdministratorTest.php on line 5
-[28-Feb-2014 09:07:40 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:07:40 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:07:40 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '{' in C:\SeleniumTests\SeleniumShell\core\generated\testsuits\eLeads\eLeadsfirefox,chrome,iexploreEleadsAdministratorTest.php on line 5
-[28-Feb-2014 09:08:37 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:08:37 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:08:38 UTC] PHP Parse error:  syntax error, unexpected ',', expecting '{' in C:\SeleniumTests\SeleniumShell\core\generated\testsuits\eLeads\eLeadsfirefox,EleadsAdministratorTest.php on line 5
-[28-Feb-2014 09:08:45 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:08:45 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:08:45 UTC] PHP Warning:  parse_ini_file(C:\SeleniumTests\projects\nbproject\config\project.ini): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 46
-[28-Feb-2014 09:08:45 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits,C:\SeleniumTests\projects\nbproject\testsuits): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:08:45 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:08:45 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:08:45 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 56
-[28-Feb-2014 09:08:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php on line 23
-[28-Feb-2014 09:08:45 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:08:45 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:08:45 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:16:26 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:16:26 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:16:27 UTC] PHP Parse error:  syntax error, unexpected 'EleadsAdministratorTest' (T_STRING), expecting '{' in C:\SeleniumTests\SeleniumShell\core\generated\testsuits\eLeads\eLeadsiexplore3 EleadsAdministratorTest.php on line 5
-[28-Feb-2014 09:16:32 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:16:32 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:16:32 UTC] PHP Warning:  parse_ini_file(C:\SeleniumTests\projects\nbproject\config\project.ini): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 46
-[28-Feb-2014 09:16:32 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits,C:\SeleniumTests\projects\nbproject\testsuits): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:16:32 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:16:32 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:16:32 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 56
-[28-Feb-2014 09:16:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php on line 23
-[28-Feb-2014 09:16:32 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:16:32 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:16:32 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:17:18 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:17:18 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
-[28-Feb-2014 09:17:18 UTC] PHP Warning:  parse_ini_file(C:\SeleniumTests\projects\nbproject\config\project.ini): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 46
-[28-Feb-2014 09:17:18 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits,C:\SeleniumTests\projects\nbproject\testsuits): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:17:18 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:17:18 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:17:18 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 56
-[28-Feb-2014 09:17:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php on line 23
-[28-Feb-2014 09:17:18 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:21:07 UTC] PHP Fatal error:  Class 'PHPUnitParameterReader' not found in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 29
-[28-Feb-2014 09:22:12 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:22:13 UTC] PHP Warning:  parse_ini_file(C:\SeleniumTests\projects\nbproject\config\project.ini): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 46
-[28-Feb-2014 09:22:13 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits,C:\SeleniumTests\projects\nbproject\testsuits): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:22:13 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:22:13 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:22:13 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 56
-[28-Feb-2014 09:22:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php on line 23
-[28-Feb-2014 09:22:13 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:22:23 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:22:23 UTC] PHP Warning:  require_once(\Autoload.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 103
-[28-Feb-2014 09:22:23 UTC] PHP Fatal error:  require_once(): Failed opening required '\Autoload.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 103
-[28-Feb-2014 09:22:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:22:33 UTC] PHP Warning:  require_once(\Autoload.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 103
-[28-Feb-2014 09:22:33 UTC] PHP Fatal error:  require_once(): Failed opening required '\Autoload.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 103
-[28-Feb-2014 09:22:41 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:22:41 UTC] PHP Warning:  parse_ini_file(C:\SeleniumTests\projects\nbproject\config\project.ini): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 46
-[28-Feb-2014 09:22:41 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits,C:\SeleniumTests\projects\nbproject\testsuits): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:22:41 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:22:41 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:22:41 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 56
-[28-Feb-2014 09:22:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php on line 23
-[28-Feb-2014 09:22:41 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:23:05 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:23:05 UTC] PHP Warning:  require_once(\Autoload.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 103
-[28-Feb-2014 09:23:05 UTC] PHP Fatal error:  require_once(): Failed opening required '\Autoload.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 103
-[28-Feb-2014 09:23:26 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:23:26 UTC] PHP Warning:  parse_ini_file(C:\SeleniumTests\projects\nbproject\config\project.ini): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 46
-[28-Feb-2014 09:23:26 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits,C:\SeleniumTests\projects\nbproject\testsuits): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:23:26 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:23:26 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:23:26 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 56
-[28-Feb-2014 09:23:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php on line 23
-[28-Feb-2014 09:23:26 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:24:02 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:24:02 UTC] PHP Warning:  parse_ini_file(C:\SeleniumTests\projects\nbproject\config\project.ini): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 46
-[28-Feb-2014 09:24:02 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits,C:\SeleniumTests\projects\nbproject\testsuits): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:24:02 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\nbproject\testsuits): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:24:02 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[28-Feb-2014 09:24:02 UTC] PHP Warning:  array_key_exists() expects parameter 2 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\handlers\ConfigHandler.php on line 56
-[28-Feb-2014 09:24:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php on line 23
-[28-Feb-2014 09:24:02 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:25:14 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:25:14 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 09:25:21 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 09:25:21 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 14:26:13 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 14:26:13 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 14:26:13 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 14:26:42 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[28-Feb-2014 14:26:42 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[28-Feb-2014 14:26:42 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 08:31:11 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\,C:\SeleniumTests\SeleniumShell\core\generated\testsuites\): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\,C:\SeleniumTests\SeleniumShell\core\generated\testsuites\): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  mkdir(): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 41
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  file_put_contents(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadsiexploreEleadsAdministratorTest.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 72
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  file_put_contents(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsAdministratorTest.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 72
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  filetype(): Lstat failed for C:\SeleniumTests\SeleniumShell\core\generated\testsuites\ in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php on line 27
-[03-Mar-2014 08:31:11 UTC] PHP Warning:  filetype(): Lstat failed for C:\SeleniumTests\SeleniumShell\core\generated\testsuites\ in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php on line 31
-[03-Mar-2014 08:31:11 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'The following path is not a dir: C:\SeleniumTests\SeleniumShell\core\generated\testsuites\ it is read a an: ' in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php:31
+[03-Mar-2014 10:06:10 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:07:08 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:07:17 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:07:34 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:07:41 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:07:50 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:09:12 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:09:39 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:09:50 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:17:29 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:17:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:17:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:17:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:17:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:17:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:17:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:24:00 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:24:01 UTC] PHP Fatal error:  Call to undefined method LoginController::_setLoginData() in C:\SeleniumTests\projects\Dealit\controllers\LoginController.php on line 21
+[03-Mar-2014 10:24:16 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:24:17 UTC] PHP Fatal error:  Call to undefined method LoginController::_setLoginData() in C:\SeleniumTests\projects\Dealit\controllers\LoginController.php on line 21
+[03-Mar-2014 10:24:40 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:24:42 UTC] PHP Warning:  Uncaught exception 'PHPUnit_Framework_Error_Notice' with message 'Undefined variable: csv' in C:\SeleniumTests\projects\Dealit\controllers\LoginController.php:31
 Stack trace:
-#0 C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php(19): FileIncluder->_setDir('C:\SeleniumTest...')
-#1 C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php(11): FileIncluder->__construct('C:\SeleniumTest...')
-#2 C:\SeleniumTests\SeleniumShell\core\src\Project.php(132): TestFileIncluder->__construct('C:\SeleniumTest...')
-#3 C:\SeleniumTests\SeleniumShell\core\src\Project.php(29): Project->_prepareProjectsTestClassNamesForSuite()
-#4 C:\SeleniumTests\SeleniumShell\core\src\Application.php(51): Project->__construct('eLeads')
-#5 C:\SeleniumTests\SeleniumShell\core\src\Application.php(16): Application->_initializeProjects()
-#6 C:\SeleniumTests\SeleniumShell\core\SeleniumShell.php(60): Application->__construct()
-#7 [internal  in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php on line 31
-[03-Mar-2014 08:32:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[03-Mar-2014 08:32:33 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 08:32:33 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 08:45:14 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[03-Mar-2014 08:45:14 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 08:45:14 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 09:51:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[03-Mar-2014 09:51:43 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 09:51:43 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 09:51:43 UTC] PHP Fatal error:  Call to undefined method Application::_setEnvironmentConstant() in C:\SeleniumTests\SeleniumShell\core\src\Application.php on line 18
-[03-Mar-2014 09:52:41 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
-[03-Mar-2014 09:52:41 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 09:52:41 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
-[03-Mar-2014 09:52:41 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\SeleniumShell\core\src\Application.php on line 76
+#0 C:\SeleniumTests\projects\Dealit\controllers\LoginController.php(31): PHPUnit_Util_ErrorHandler::handleError(8, 'Undefined varia...', 'C:\SeleniumTest...', 31, Array)
+#1 C:\SeleniumTests\projects\Dealit\controllers\LoginController.php(21): LoginController->_setLoginData()
+#2 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitChromeLoginTest.php(18): LoginController->__construct()
+#3 [internal function]: DealitChromeLoginTest->testLogin()
+#4 C:\php\pear\PHPUnit\Framework\TestCase.php(983): ReflectionMethod->invokeArgs(Object(DealitChromeLoginTest), Array)
+#5 C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php(296): PHPUnit_Framework_TestCase->runTest()
+#6 C:\php\pear\PHPUnit\Framework\TestCase.php(838): PHPUnit_Extensions_Selenium2TestCase->runTest()
+#7 C:\php\pear\PHPUnit\Framework\TestResult.php(648): PHPUnit_Fram in C:\SeleniumTests\projects\Dealit\controllers\LoginController.php on line 31
+[03-Mar-2014 10:24:42 UTC] PHP Fatal error:  Call to a member function getCsvData() on a non-object in C:\SeleniumTests\projects\Dealit\controllers\LoginController.php on line 31
+[03-Mar-2014 10:24:55 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:24:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:24:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:24:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:24:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:24:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:24:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:25:26 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:25:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:25:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:25:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:25:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:25:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:25:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:25:42 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:25:57 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:26:32 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:27:37 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:28:10 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:30:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:31:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:31:56 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:31:58 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:31:58 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:31:58 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:31:58 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:31:58 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:31:58 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:33:15 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:33:17 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:33:17 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:33:17 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:33:17 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:33:17 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:33:17 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:34:01 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:34:03 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:34:03 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:34:03 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:34:03 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:34:04 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:34:04 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:35:25 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:35:28 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:35:28 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:35:28 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:35:28 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:35:28 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:35:28 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:39:41 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:39:42 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\SeleniumTests\projects\Dealit\controllers\LoginController.php on line 35
+[03-Mar-2014 10:39:56 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:39:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:39:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:39:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:39:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:39:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:39:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:40:32 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:40:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:40:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:40:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:40:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:40:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:40:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:44:44 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:44:46 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:44:46 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:44:46 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:44:46 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:44:46 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:44:46 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:45:56 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:46:11 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:46:28 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:46:51 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:46:51 UTC] PHP Parse error:  syntax error, unexpected ''LoginTest extends SeleniumShe' (T_CONSTANT_ENCAPSED_STRING), expecting '{' in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\Dealitchrome'LoginTest.php on line 11
+[03-Mar-2014 10:47:08 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:47:08 UTC] PHP Parse error:  syntax error, unexpected ''LoginTest extends SeleniumShe' (T_CONSTANT_ENCAPSED_STRING), expecting '{' in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\Dealitchrome'LoginTest.php on line 11
+[03-Mar-2014 10:47:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:51:31 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:54:38 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:56:48 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:56:51 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:56:51 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:56:51 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:56:51 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:56:51 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:56:51 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:57:46 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 10:57:49 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:57:49 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:57:49 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:57:49 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:57:49 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 10:57:49 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 10:59:08 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:12:22 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:12:23 UTC] PHP Fatal error:  Call to a member function getURL() on a non-object in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php on line 32
+[03-Mar-2014 12:15:11 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:15:12 UTC] PHP Fatal error:  Call to a member function getURL() on a non-object in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php on line 32
+[03-Mar-2014 12:16:16 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:16:18 UTC] PHP Fatal error:  Call to a member function getURL() on a non-object in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php on line 33
+[03-Mar-2014 12:16:35 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:16:35 UTC] PHP Fatal error:  Class 'URLHandler' not found in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php on line 22
+[03-Mar-2014 12:17:17 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:17:17 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 33
+[03-Mar-2014 12:17:17 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 34
+[03-Mar-2014 12:17:17 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 24
+[03-Mar-2014 12:17:17 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:17:17 UTC] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php:27
+Stack trace:
+#0 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(34): URLHandler->_setBaseUrlByEnvironment('SS_ENVIRONMENT')
+#1 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(20): URLHandler->_setBaseUrl()
+#2 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php(22): URLHandler->__construct()
+#3 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): DealitchromeLoginTest->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLogin')
+#5 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(69): PHPUnit_Framework_TestSuite->addTestMethod(Object(ReflectionClass), Object(ReflectionMethod))
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(150): PHPUnit_Extensions_SeleniumTestSuite->addTestMethod(Object(ReflectionCl in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:18:19 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:18:19 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 33
+[03-Mar-2014 12:18:19 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 34
+[03-Mar-2014 12:18:19 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:18:19 UTC] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php:27
+Stack trace:
+#0 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(34): URLHandler->_setBaseUrlByEnvironment('SS_ENVIRONMENT')
+#1 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(20): URLHandler->_setBaseUrl()
+#2 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php(22): URLHandler->__construct()
+#3 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): DealitchromeLoginTest->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLogin')
+#5 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(69): PHPUnit_Framework_TestSuite->addTestMethod(Object(ReflectionClass), Object(ReflectionMethod))
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(150): PHPUnit_Extensions_SeleniumTestSuite->addTestMethod(Object(ReflectionCl in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:19:31 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:19:31 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 33
+[03-Mar-2014 12:19:31 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 34
+[03-Mar-2014 12:19:31 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:19:31 UTC] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php:27
+Stack trace:
+#0 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(34): URLHandler->_setBaseUrlByEnvironment('SS_ENVIRONMENT')
+#1 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(20): URLHandler->_setBaseUrl()
+#2 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php(22): URLHandler->__construct()
+#3 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): DealitchromeLoginTest->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLogin')
+#5 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(69): PHPUnit_Framework_TestSuite->addTestMethod(Object(ReflectionClass), Object(ReflectionMethod))
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(150): PHPUnit_Extensions_SeleniumTestSuite->addTestMethod(Object(ReflectionCl in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:21:22 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:21:22 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 19
+[03-Mar-2014 12:21:22 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:21:22 UTC] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php:27
+Stack trace:
+#0 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(34): URLHandler->_setBaseUrlByEnvironment('SS_ENVIRONMENT')
+#1 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(20): URLHandler->_setBaseUrl('SS_ENVIRONMENT')
+#2 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php(22): URLHandler->__construct()
+#3 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): DealitchromeLoginTest->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLogin')
+#5 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(69): PHPUnit_Framework_TestSuite->addTestMethod(Object(ReflectionClass), Object(ReflectionMethod))
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(150): PHPUnit_Extensions_SeleniumTestSuite->addTestMethod(Obj in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:22:04 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:22:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:22:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:22:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:22:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:22:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:22:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:22:53 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:23:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:23:00 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:23:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:23:00 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:23:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:23:00 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:23:28 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:27:58 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:27:58 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 19
+[03-Mar-2014 12:27:58 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:27:58 UTC] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php:27
+Stack trace:
+#0 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(34): URLHandler->_setBaseUrlByEnvironment('SS_ENVIRONMENT')
+#1 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(20): URLHandler->_setBaseUrl('SS_ENVIRONMENT')
+#2 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php(22): URLHandler->__construct()
+#3 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): DealitchromeLoginTest->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLogin')
+#5 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(69): PHPUnit_Framework_TestSuite->addTestMethod(Object(ReflectionClass), Object(ReflectionMethod))
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(150): PHPUnit_Extensions_SeleniumTestSuite->addTestMethod(Obj in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:28:47 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:28:47 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 19
+[03-Mar-2014 12:28:47 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:28:47 UTC] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: SS_ENVIRONMENT' in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php:27
+Stack trace:
+#0 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(34): URLHandler->_setBaseUrlByEnvironment('SS_ENVIRONMENT')
+#1 C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php(20): URLHandler->_setBaseUrl('SS_ENVIRONMENT')
+#2 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php(22): URLHandler->__construct()
+#3 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): DealitchromeLoginTest->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLogin')
+#5 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(69): PHPUnit_Framework_TestSuite->addTestMethod(Object(ReflectionClass), Object(ReflectionMethod))
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(150): PHPUnit_Extensions_SeleniumTestSuite->addTestMethod(Obj in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
+[03-Mar-2014 12:29:10 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
