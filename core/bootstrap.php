@@ -16,13 +16,14 @@ define('FILESCANNERS_PATH', UTILS_PATH . '/FileScanners');
 define('CLASSHELPERS_PATH', UTILS_PATH . '/ClassHelpers');
 define('TOKENHELPERS_PATH', UTILS_PATH . '/TokenHelpers');
 define('GENERATED_PATH', $rel_path. $sep. 'generated');
-define('GENERATED_TESTSUITS_PATH', GENERATED_PATH . $sep . 'testsuits' .$sep );
+define('GENERATED_TESTSUITES_PATH', GENERATED_PATH . $sep . 'testsuites' .$sep );
 
 
 require_once( FILESCANNERS_PATH . '/FileScanner.php');
 require_once( FILESCANNERS_PATH . '/TestFileScanner.php');
-
+require_once( CORE_HANDLERS_PATH . '/ConfigHandler.php');
 require_once( CORE_SRC_PATH . '/SeleniumShell_Test.php' );
+
 
 
 
@@ -30,7 +31,7 @@ function SeleniumShellAutoloadFunction( $className ){
     $backtrace = debug_backtrace();
     $file = $backtrace[1]['file'];
     $file = str_replace(PROJECTS_FOLDER, '', $file);
-    $file = str_replace(GENERATED_TESTSUITS_PATH, '', $file);
+    $file = str_replace(GENERATED_TESTSUITES_PATH, '', $file);
     if( $file[0] == DIRECTORY_SEPARATOR ){
         $file = substr($file, 1);
     }
@@ -85,7 +86,6 @@ function SeleniumShellAutoloadFunction( $className ){
 }
 
 spl_autoload_register('SeleniumShellAutoloadFunction');
-
 
 
 $config = new ConfigHandler(CORE_CONFIG_PATH . DIRECTORY_SEPARATOR . 'config.ini');

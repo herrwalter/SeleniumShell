@@ -15,7 +15,6 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     public $project;
 
     public function setUp(){
-        $browser = $this->browser;
         
         $this->setBrowser($this->browser);
         $this->setBrowserUrl('http://www.google.nl');
@@ -56,7 +55,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
 
     
     public static function suite($suite) {
-        //include( PROJECTS_FOLDER . '/' . 'projectX' . '/testsuits/FirstTest.php' );
+        //include( PROJECTS_FOLDER . '/' . 'projectX' . '/testsuites/FirstTest.php' );
         self::_bootstrap();
         $app = new Application();
         $suite = $app->getTestSuite();

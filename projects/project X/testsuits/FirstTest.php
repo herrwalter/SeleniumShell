@@ -1,6 +1,6 @@
 <?php
 
-class FirstTestSuit extends SeleniumShell_Test {
+class FirstTestSuite extends SeleniumShell_Test {
     
     public function __construct() {
         

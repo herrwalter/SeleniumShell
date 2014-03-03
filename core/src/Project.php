@@ -67,7 +67,7 @@ class Project
     private function _setTestFiles()
     {
         // first find the testfiles in this project.
-        $testFileScanner = new TestFileScanner( $this->_path . '\testsuits');
+        $testFileScanner = new TestFileScanner( $this->_path . '\testsuites');
         $this->_testFiles = $testFileScanner->getFilesInOneDimensionalArray();
     }
     
@@ -121,7 +121,6 @@ class Project
                 $this->_testFiles = array($file);
                 break;
             }
-            
             $this->_createBrowserTestsForTestFile($file);
         }
     }
@@ -130,7 +129,7 @@ class Project
     private function _prepareProjectsTestClassNamesForSuite()
     {
         // include the generated browsertest
-        $testFileIncluder = new TestFileIncluder(GENERATED_TESTSUITS_PATH);
+        $testFileIncluder = new TestFileIncluder(GENERATED_TESTSUITES_PATH);
         $testFileIncluder->includeFiles();
         $includedFiles = $testFileIncluder->getInlcudedFiles();
         // Instantiate classes and save their classNames for test initialisation.
@@ -143,7 +142,7 @@ class Project
      */
     protected function _deleteGeneratedTestFiles(){
         // delete old testfiles
-        $fileScanner = new FileScanner( GENERATED_TESTSUITS_PATH );
+        $fileScanner = new FileScanner( GENERATED_TESTSUITES_PATH );
         $generatedTestFiles = $fileScanner->getFilesInOneDimensionalArray();
         foreach( $generatedTestFiles as $testFile ){
             if( is_file($testFile)){
@@ -154,7 +153,7 @@ class Project
     
     protected function _createBrowserTestsForTestFile($file){
         $tcr = new TestClassRecreator($file);
-        $tcr->setSavePath(GENERATED_TESTSUITS_PATH  . $this->_name. DIRECTORY_SEPARATOR);
+        $tcr->setSavePath(GENERATED_TESTSUITES_PATH  . $this->_name. DIRECTORY_SEPARATOR);
         $tcr->setProjectName($this->_name);
         foreach( $this->_browsers as $browser ){
             

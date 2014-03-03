@@ -36,11 +36,11 @@ class TestSuiteInitiator
     {
         foreach( $this->_projects as $project )
         {
-            $this->_addTestSuitsByClassNames($project->getProjectsTestClassNames());
+            $this->_addTestSuitesByClassNames($project->getProjectsTestClassNames());
         }
     }
     
-    private function _addTestSuitsByClassNames( $classNames )
+    private function _addTestSuitesByClassNames( $classNames )
     {
         foreach($classNames as $className )
         {

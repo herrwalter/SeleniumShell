@@ -18,7 +18,7 @@ class TestClassRecreator {
     private $_projectName = '';
     
     public function __construct( $testClassFile ){
-        $this->_savePath = GENERATED_PATH . DIRECTORY_SEPARATOR . 'testsuits' . DIRECTORY_SEPARATOR;
+        $this->_savePath = GENERATED_PATH . DIRECTORY_SEPARATOR . 'testsuites' . DIRECTORY_SEPARATOR;
         
         $testClassReader = new TestClassReader($testClassFile);
         $this->_rapport =  $testClassReader->getFileRapport();
