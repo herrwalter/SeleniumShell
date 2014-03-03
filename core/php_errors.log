@@ -130,3 +130,11 @@ Stack trace:
 [03-Mar-2014 08:45:14 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
 [03-Mar-2014 08:45:14 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
 [03-Mar-2014 08:45:14 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 09:51:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 09:51:43 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 09:51:43 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 09:51:43 UTC] PHP Fatal error:  Call to undefined method Application::_setEnvironmentConstant() in C:\SeleniumTests\SeleniumShell\core\src\Application.php on line 18
+[03-Mar-2014 09:52:41 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 09:52:41 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 09:52:41 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 09:52:41 UTC] PHP Notice:  Use of undefined constant SS_ENVIRONMENT - assumed 'SS_ENVIRONMENT' in C:\SeleniumTests\SeleniumShell\core\src\Application.php on line 76

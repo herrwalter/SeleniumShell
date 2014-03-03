@@ -40,7 +40,6 @@ class Application
     {
         $projects = array();
         $projectNames = $this->_config->getAttribute('projects');
-        
         /* if --ss-project parameter is set, initialize that project */
         /* elseif the seleniumshell config contains the projects parameter,  use those */
         /* else initialize all projects in the project folder */
@@ -63,13 +62,11 @@ class Application
     }
     
     
-    public function getTestSuite()
-    {
+    public function getTestSuite(){
         return $this->_suite;
     }
     
-    public function _setEnvironmentGlobal(){
-        
+    public function _setEnvironmentConstant(){
         if( $this->_config->isParameterSet('--ss-env') ){
             define( SS_ENVIRONMENT, $this->_config->getParameter('--ss-env') );
         } else {
