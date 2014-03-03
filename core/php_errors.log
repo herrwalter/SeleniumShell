@@ -102,3 +102,25 @@
 [28-Feb-2014 14:26:42 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
 [28-Feb-2014 14:26:42 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
 [28-Feb-2014 14:26:42 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 08:31:11 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\,C:\SeleniumTests\SeleniumShell\core\generated\testsuites\): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\,C:\SeleniumTests\SeleniumShell\core\generated\testsuites\): The system cannot find the file specified. (code: 2) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  mkdir(): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 41
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  file_put_contents(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadsiexploreEleadsAdministratorTest.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 72
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  file_put_contents(C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsAdministratorTest.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 72
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  filetype(): Lstat failed for C:\SeleniumTests\SeleniumShell\core\generated\testsuites\ in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php on line 27
+[03-Mar-2014 08:31:11 UTC] PHP Warning:  filetype(): Lstat failed for C:\SeleniumTests\SeleniumShell\core\generated\testsuites\ in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php on line 31
+[03-Mar-2014 08:31:11 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'The following path is not a dir: C:\SeleniumTests\SeleniumShell\core\generated\testsuites\ it is read a an: ' in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php:31
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php(19): FileIncluder->_setDir('C:\SeleniumTest...')
+#1 C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\TestFileIncluder.php(11): FileIncluder->__construct('C:\SeleniumTest...')
+#2 C:\SeleniumTests\SeleniumShell\core\src\Project.php(132): TestFileIncluder->__construct('C:\SeleniumTest...')
+#3 C:\SeleniumTests\SeleniumShell\core\src\Project.php(29): Project->_prepareProjectsTestClassNamesForSuite()
+#4 C:\SeleniumTests\SeleniumShell\core\src\Application.php(51): Project->__construct('eLeads')
+#5 C:\SeleniumTests\SeleniumShell\core\src\Application.php(16): Application->_initializeProjects()
+#6 C:\SeleniumTests\SeleniumShell\core\SeleniumShell.php(60): Application->__construct()
+#7 [internal  in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php on line 31
