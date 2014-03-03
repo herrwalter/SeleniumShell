@@ -15,6 +15,7 @@ class Application
         $this->_setConfig();
         $this->_initializeProjects();
         $this->_setSuite();
+        $this->_setEnvironmentConstant();
     }
     /**
      * Sets the testsuite
@@ -65,5 +66,14 @@ class Application
     public function getTestSuite()
     {
         return $this->_suite;
+    }
+    
+    public function _setEnvironmentGlobal(){
+        
+        if( $this->_config->isParameterSet('--ss-env') ){
+            define( SS_ENVIRONMENT, $this->_config->getParameter('--ss-env') );
+        } else {
+            define( SS_ENVIRONMENT, false );
+        }
     }
 }

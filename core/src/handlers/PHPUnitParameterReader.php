@@ -12,7 +12,8 @@ class  PHPUnitParameterReader {
         '--ss-project' => false,
         '--ss-email-results' => false,
         '--ss-testsuite' => false,
-        '--ss-browsers' => false
+        '--ss-browsers' => false,
+        '--ss-env' => false
     );
     
     public function __construct(){

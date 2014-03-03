@@ -124,3 +124,9 @@ Stack trace:
 #5 C:\SeleniumTests\SeleniumShell\core\src\Application.php(16): Application->_initializeProjects()
 #6 C:\SeleniumTests\SeleniumShell\core\SeleniumShell.php(60): Application->__construct()
 #7 [internal  in C:\SeleniumTests\SeleniumShell\core\utils\FileIncluders\FileIncluder.php on line 31
+[03-Mar-2014 08:32:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 08:32:33 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 08:32:33 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 08:45:14 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 08:45:14 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 08:45:14 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
