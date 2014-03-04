@@ -10,11 +10,15 @@ class SeleniumShell_Test extends PHPUnit_Extensions_Selenium2TestCase
     /** @var _config ConfigHandler */
     private $_config ;
     
+    public function __construct($name = NULL, array $data = array(), $dataName = '') {
+        parent::__construct($name, $data, $dataName);
+    }
+    
     public function setUp()
     {
         $this->_config = new ConfigHandler( CORE_CONFIG_PATH . '/config.ini');
         $this->setBrowser(strtolower($this->browser));
-        $this->setBrowserUrl('http://www.google.nl');
+        $this->setBrowserUrl('/');
         $this->setHost($this->getSeleniumHost());
         $this->setPort($this->getSeleniumPort());
         $this->setSeleniumServerRequestsTimeout(5000);

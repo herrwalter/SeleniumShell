@@ -1213,3 +1213,131 @@ Stack trace:
 [04-Mar-2014 14:52:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
 [04-Mar-2014 14:52:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
 [04-Mar-2014 14:52:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:55:38 Europe/Amsterdam] PHP Warning:  require_once(C:\SeleniumTests\SeleniumShell\core\utils/FileScanners/TestFileScanner.yphp): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 24
+[04-Mar-2014 14:55:38 Europe/Amsterdam] PHP Fatal error:  require_once(): Failed opening required 'C:\SeleniumTests\SeleniumShell\core\utils/FileScanners/TestFileScanner.yphp' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 24
+[04-Mar-2014 14:55:55 Europe/Amsterdam] PHP Warning:  require_once(C:\SeleniumTests\SeleniumShell\core\utils/FileScanners/TestFileScanner.yphp): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 24
+[04-Mar-2014 14:55:55 Europe/Amsterdam] PHP Fatal error:  require_once(): Failed opening required 'C:\SeleniumTests\SeleniumShell\core\utils/FileScanners/TestFileScanner.yphp' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 24
+[04-Mar-2014 14:56:44 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:56:44 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:56:44 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:59:35 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:59:35 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:59:35 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:01:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:01:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:01:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:01:34 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 37
+[04-Mar-2014 15:01:34 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 37
+[04-Mar-2014 15:01:34 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 37
+[04-Mar-2014 15:04:40 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 37
+[04-Mar-2014 15:04:40 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 37
+[04-Mar-2014 15:04:40 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 37
+[04-Mar-2014 15:06:48 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:06:48 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:06:48 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:46 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:53 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:11:53 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:53 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:11:53 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:11:53 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:11:53 Europe/Amsterdam] PHP Notice:  Use of undefined constant file - assumed 'file' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 42
+[04-Mar-2014 15:12:00 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:12:00 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:12:00 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:12:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:12:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:12:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:13:05 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:13:05 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:13:05 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:14:33 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:14:33 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:14:33 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:15:28 Europe/Amsterdam] PHP Fatal error:  Cannot make static method PHPUnit_Framework_TestCase::setUpBeforeClass() non static in class eLeadschromeProviderTest in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeProviderTest.php on line 33
+[04-Mar-2014 15:19:01 Europe/Amsterdam] PHP Parse error:  syntax error, unexpected '}' in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeProviderTest.php on line 13
+[04-Mar-2014 15:19:15 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:19:15 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:19:15 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:21:40 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:21:40 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:21:40 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:23:59 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:23:59 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:23:59 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:24:14 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:24:14 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:24:14 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:24:46 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:24:46 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:24:46 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:26:21 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:26:21 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:26:21 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:27:26 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:27:27 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:27:27 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant SELENIUM_SHELL already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 8
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant CORE_CONFIG_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 9
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant CORE_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 10
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant CORE_SRC_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 11
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant CORE_HANDLERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 12
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant UTILS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 13
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant FILEINCLUDERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 14
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant FILESCANNERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 15
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant CLASSHELPERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 16
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant TOKENHELPERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 17
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant GENERATED_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 18
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant GENERATED_TESTSUITES_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 19
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant PROJECTS_FOLDER already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 103
+[04-Mar-2014 15:29:54 Europe/Amsterdam] PHP Notice:  Constant PHPUNIT_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 108
+[04-Mar-2014 15:30:21 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'Exception' with message 'Serialization of 'Closure' is not allowed' in C:\Users\wwessendorp\AppData\Local\Temp\PHPD562.tmp:49
+Stack trace:
+#0 C:\Users\wwessendorp\AppData\Local\Temp\PHPD562.tmp(49): serialize(Array)
+#1 C:\Users\wwessendorp\AppData\Local\Temp\PHPD562.tmp(189): __phpunit_run_isolated_test()
+#2 -(1): require_once('C:\Users\wwesse...')
+#3 {main}
+  thrown in C:\Users\wwessendorp\AppData\Local\Temp\PHPD562.tmp on line 49
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant SELENIUM_SHELL already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 8
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant CORE_CONFIG_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 9
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant CORE_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 10
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant CORE_SRC_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 11
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant CORE_HANDLERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 12
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant UTILS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 13
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant FILEINCLUDERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 14
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant FILESCANNERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 15
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant CLASSHELPERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 16
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant TOKENHELPERS_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 17
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant GENERATED_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 18
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant GENERATED_TESTSUITES_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 19
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant PROJECTS_FOLDER already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 103
+[04-Mar-2014 15:30:45 Europe/Amsterdam] PHP Notice:  Constant PHPUNIT_PATH already defined in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 108
+[04-Mar-2014 15:32:16 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:32:16 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:32:16 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 15:36:41 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 15:36:41 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 15:36:41 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 15:38:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 15:38:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 15:38:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
