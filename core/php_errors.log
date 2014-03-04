@@ -1165,3 +1165,51 @@ Stack trace:
 [04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 492
 [04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 495
 [04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 47
+[04-Mar-2014 13:30:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:31:10 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:31:31 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:31:36 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:31:36 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:31:36 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:31:36 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:31:36 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:31:36 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:32:31 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:32:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:32:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:32:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:32:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:32:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:32:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:34:18 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:34:39 UTC] PHP Fatal error:  Class 'FormHandler2' not found in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsDetailPage2Test.php on line 92
+[04-Mar-2014 13:39:22 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:39:55 UTC] PHP Fatal error:  Class 'FormHandler2' not found in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsDetailPage2Test.php on line 92
+[04-Mar-2014 13:40:37 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:41:09 UTC] PHP Fatal error:  Class 'FormHandler2' not found in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsDetailPage2Test.php on line 92
+[04-Mar-2014 13:44:40 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:45:04 UTC] PHP Fatal error:  Class 'FormHandler2' not found in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsDetailPage2Test.php on line 92
+[04-Mar-2014 13:45:16 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:45:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:45:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:45:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:45:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:45:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:45:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 13:47:38 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:48:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:48:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 13:48:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 14:49:42 Europe/Amsterdam] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 14:50:05 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 14:50:05 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 14:50:05 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 14:51:07 Europe/Amsterdam] PHP Parse error:  syntax error, unexpected '}' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 34
+[04-Mar-2014 14:51:13 Europe/Amsterdam] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:51:36 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 14:51:36 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 14:51:36 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 14:51:41 Europe/Amsterdam] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 37
+[04-Mar-2014 14:52:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:52:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36
+[04-Mar-2014 14:52:03 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 36

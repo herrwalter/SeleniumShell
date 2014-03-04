@@ -22,6 +22,7 @@ define('GENERATED_TESTSUITES_PATH', GENERATED_PATH . $sep . 'testsuites' .$sep )
 require_once( FILESCANNERS_PATH . '/FileScanner.php');
 require_once( FILESCANNERS_PATH . '/TestFileScanner.php');
 require_once( CORE_HANDLERS_PATH . '/ConfigHandler.php');
+require_once( CORE_HANDLERS_PATH . '/PHPUnitParameterReader.php');
 require_once( CORE_SRC_PATH . '/SeleniumShell_Test.php' );
 
 
@@ -29,10 +30,13 @@ require_once( CORE_SRC_PATH . '/SeleniumShell_Test.php' );
 
 function SeleniumShellAutoloadFunction( $className ){
     $backtrace = debug_backtrace();
+    if( !isset($backtrace[1]) && !isset( $backtrace[1]['file'] )){
+        return;
+    }
     $file = $backtrace[1]['file'];
     $file = str_replace(PROJECTS_FOLDER, '', $file);
     $file = str_replace(GENERATED_TESTSUITES_PATH, '', $file);
-    if( $file[0] == DIRECTORY_SEPARATOR ){
+    if( isset( $file[0] ) && $file[0] == DIRECTORY_SEPARATOR ){
         $file = substr($file, 1);
     }
     $explodedFile = explode(DIRECTORY_SEPARATOR, $file);
