@@ -47,6 +47,11 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     }
     
     
+    public static function tearDownAfterClass()
+    {
+        var_dump('KLAAR MET TESTEN');
+    }
+    
     
     
     

@@ -10,12 +10,12 @@ class  PHPUnitParameterReader {
     
     protected $seleniumShellVariables = array(
         '--ss-project' => false,
-        '--ss-email-results' => false,
         '--ss-testsuite' => false,
         '--ss-browsers' => false,
         '--ss-env' => false,
         '--ss-host' => false,
-        '--ss-port' => false
+        '--ss-port' => false,
+        '--ss-mail-results' => false
     );
     
     public function __construct(){

@@ -986,3 +986,182 @@ Stack trace:
 [04-Mar-2014 10:38:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
 [04-Mar-2014 10:38:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
 [04-Mar-2014 10:38:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:49:29 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:49:39 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:49:39 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:49:39 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:49:39 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:49:39 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:49:39 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:51:31 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:53:06 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:53:24 UTC] PHP Fatal error:  Call to undefined method EleadsActions::fail() in C:\SeleniumTests\projects\eLeads\actions\EleadsActions.php on line 166
+[04-Mar-2014 11:06:09 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 11:06:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:06:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:06:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:06:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:06:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:06:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:06:55 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 11:07:25 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:07:25 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:07:25 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:07:25 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:07:26 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:07:26 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:54:41 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 11:55:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:55:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:55:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:55:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:55:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:55:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:56:07 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 11:56:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:56:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:56:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:56:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:56:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:56:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:57:54 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 11:57:54 UTC] PHP Parse error:  syntax error, unexpected '$value' (T_VARIABLE) in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsDetailPage2Test.php on line 71
+[04-Mar-2014 11:58:04 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 11:58:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:58:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:58:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:58:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 11:58:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 11:58:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:00:29 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:01:25 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:01:39 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:01:39 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:01:40 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:01:40 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:01:40 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:01:40 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:09:37 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:09:43 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:09:43 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:09:43 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:09:43 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:09:43 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:09:43 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:11:03 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:11:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:11:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:11:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:11:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:11:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:11:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:12:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:12:50 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:12:50 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:12:50 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:12:50 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:12:50 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:12:50 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:14:31 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:14:37 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:14:37 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:14:37 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:14:37 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:14:37 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 12:14:37 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 12:20:44 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:21:18 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:21:56 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:23:57 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:26:50 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:27:53 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:34:34 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:39:18 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:40:55 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:41:16 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:42:13 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:42:58 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:43:08 UTC] PHP Warning:  mail(): Failed to connect to mailserver at "localhost" port 25, verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set() in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 38
+[04-Mar-2014 12:59:39 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 12:59:48 UTC] PHP Fatal error:  Class 'Mail' not found in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 35
+[04-Mar-2014 13:01:48 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:01:48 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:,C:\SeleniumTests\projects\C:): The filename, directory name, or volume label syntax is incorrect. (code: 123) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:01:48 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:01:48 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:01:48 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:,C:\SeleniumTests\projects\C:): The filename, directory name, or volume label syntax is incorrect. (code: 123) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:01:48 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:01:48 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:01:48 UTC] PHP Fatal error:  Class 'Mail' not found in C:\php\pear\Mail\mail.php on line 51
+[04-Mar-2014 13:02:08 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:02:08 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:,C:\SeleniumTests\projects\C:): The filename, directory name, or volume label syntax is incorrect. (code: 123) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:08 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:08 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:08 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:,C:\SeleniumTests\projects\C:): The filename, directory name, or volume label syntax is incorrect. (code: 123) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:08 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:08 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:08 UTC] PHP Fatal error:  Class 'Mail' not found in C:\php\pear\Mail\mail.php on line 51
+[04-Mar-2014 13:02:30 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:02:30 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:,C:\SeleniumTests\projects\C:): The filename, directory name, or volume label syntax is incorrect. (code: 123) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:30 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:30 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:30 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:,C:\SeleniumTests\projects\C:): The filename, directory name, or volume label syntax is incorrect. (code: 123) in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:30 UTC] PHP Warning:  scandir(C:\SeleniumTests\projects\C:): failed to open dir: No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:30 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in C:\SeleniumTests\SeleniumShell\core\utils\FileScanners\FileScanner.php on line 19
+[04-Mar-2014 13:02:30 UTC] PHP Fatal error:  Class 'Mail' not found in C:\php\pear\Mail\mail.php on line 51
+[04-Mar-2014 13:03:11 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:03:11 UTC] PHP Warning:  require_once(C:\php\pear\Mail\*): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 9
+[04-Mar-2014 13:03:11 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\php\pear\Mail\*' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 9
+[04-Mar-2014 13:14:28 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method Mail::factory() should not be called statically, assuming $this from incompatible context in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 37
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Mail\smtp.php on line 365
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 448
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::raiseError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 449
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::raiseError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Mail\smtp.php on line 369
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Mail\smtp.php on line 249
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 47
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 489
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:14:38 UTC] PHP Strict Standards:  Non-static method PEAR::raiseError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 265
+[04-Mar-2014 13:17:09 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method Mail::factory() should not be called statically, assuming $this from incompatible context in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 37
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Mail\smtp.php on line 365
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 448
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 465
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 472
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 515
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 519
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Mail\smtp.php on line 376
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 621
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 802
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 806
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 814
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 818
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 822
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:18 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 827
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 649
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Mail\smtp.php on line 249
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Mail\smtp.php on line 285
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 945
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 948
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method Mail_RFC822::parseAddressList() should not be called statically, assuming $this from incompatible context in C:\php\pear\Mail.php on line 253
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 975
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 978
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 1054
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 1057
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 1117
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 1127
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 1132
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 489
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 263
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 492
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\php\pear\Net\SMTP.php on line 495
+[04-Mar-2014 13:17:19 UTC] PHP Strict Standards:  Non-static method PEAR::isError() should not be called statically, assuming $this from incompatible context in C:\SeleniumTests\SeleniumShell\core\src\ApplicationTearDown.php on line 47
