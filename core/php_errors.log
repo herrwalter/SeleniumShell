@@ -227,3 +227,762 @@ Stack trace:
 #5 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(69): PHPUnit_Framework_TestSuite->addTestMethod(Object(ReflectionClass), Object(ReflectionMethod))
 #6 C:\php\pear\PHPUnit\Extensions\SeleniumTestSuite.php(150): PHPUnit_Extensions_SeleniumTestSuite->addTestMethod(Obj in C:\SeleniumTests\projects\Dealit\helpers\URLHandler.php on line 27
 [03-Mar-2014 12:29:10 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:34:57 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:42:13 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:42:13 UTC] PHP Fatal error:  Cannot redeclare DealitActions::$_session in C:\SeleniumTests\projects\Dealit\actions\DealitActions.php on line 14
+[03-Mar-2014 12:43:01 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:43:04 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:43:04 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:43:04 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:43:04 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:43:04 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:43:04 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:43:49 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:43:51 UTC] PHP Fatal error:  Class 'FormHandler' not found in C:\SeleniumTests\projects\Dealit\actions\DealitActions.php on line 23
+[03-Mar-2014 12:45:22 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:45:24 UTC] PHP Fatal error:  Call to undefined method DealitActions::byCssSelector() in C:\SeleniumTests\projects\Dealit\actions\DealitActions.php on line 23
+[03-Mar-2014 12:45:54 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:46:20 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:46:27 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:46:27 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:46:27 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:46:27 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:46:27 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:46:27 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:48:47 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:48:58 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:49:44 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:51:29 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:55:13 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:55:55 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in C:\SeleniumTests\SeleniumShell\core\SeleniumShell.php on line 23
+[03-Mar-2014 12:56:02 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:56:31 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:57:53 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:58:07 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:58:07 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:58:07 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:58:07 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:58:08 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 12:58:08 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 12:58:15 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 12:59:08 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:00:07 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:00:52 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:01:22 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:01:37 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:01:37 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:01:37 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:01:37 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:01:37 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:01:37 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:01:57 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:03:21 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:09:39 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:09:39 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:09:39 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:09:39 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:09:39 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:09:39 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:09:39 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:10:59 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:10:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:10:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:11:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:11:00 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:11:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:11:00 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:11:34 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:11:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:11:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:11:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:11:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:11:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:11:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:13:39 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:13:39 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:13:39 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:13:40 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:13:40 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:13:40 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:13:40 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:13:59 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:13:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:13:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:13:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:13:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:13:59 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:13:59 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:14:55 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:14:55 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:14:55 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:14:55 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:14:55 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:14:56 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:14:56 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:15:08 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:15:08 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:15:08 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:15:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:15:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:15:09 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:15:09 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:15:24 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:15:24 UTC] PHP Parse error:  syntax error, unexpected '$config' (T_VARIABLE) in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeLoginTest.php on line 16
+[03-Mar-2014 13:15:55 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:15:56 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:15:56 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:15:56 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:15:56 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:15:56 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:15:56 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:16:12 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:16:54 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:21:13 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:21:13 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:21:13 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:21:13 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:21:13 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:21:13 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:21:13 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:22:14 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:23:07 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:24:04 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:24:27 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:24:35 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:24:53 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:24:53 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:24:53 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:24:53 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:24:53 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:24:53 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:24:55 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:40:27 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:40:41 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:40:41 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:40:41 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:40:41 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:40:41 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:40:41 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:41:04 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:41:24 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:41:24 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:41:24 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:41:24 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:41:24 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:41:24 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:41:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:42:19 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:42:19 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:42:19 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:42:19 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:42:20 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:42:20 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:44:04 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:44:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:44:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:44:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:44:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:44:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:44:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:44:50 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:45:23 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:45:23 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:45:23 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:45:23 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:45:23 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:45:23 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:46:55 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:51:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:56:53 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:57:26 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:58:47 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 13:59:07 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:59:07 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:59:07 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:59:07 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:59:07 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 13:59:07 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 13:59:36 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 14:00:25 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:31:54 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:34:01 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:37:54 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:38:20 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:39:19 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:40:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:41:54 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:43:06 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:43:06 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:43:06 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:43:06 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:43:06 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:43:06 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:44:25 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:45:36 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:45:36 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:45:36 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:45:36 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:45:36 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:45:36 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:46:41 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:47:15 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:48:23 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:48:23 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:48:23 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:48:23 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:48:23 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:48:23 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:48:49 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:50:02 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:50:02 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:50:02 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:50:02 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:50:03 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:50:03 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:50:52 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:51:36 UTC] PHP Warning:  Uncaught exception 'PHPUnit_Framework_Error_Notice' with message 'Undefined variable: opvolgtijdWidgetInside' in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeEleadsWidgetsTest.php:46
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeEleadsWidgetsTest.php(46): PHPUnit_Util_ErrorHandler::handleError(8, 'Undefined varia...', 'C:\SeleniumTest...', 46, Array)
+#1 [internal function]: DealitchromeEleadsWidgetsTest->testLeadConversieWidget()
+#2 C:\php\pear\PHPUnit\Framework\TestCase.php(983): ReflectionMethod->invokeArgs(Object(DealitchromeEleadsWidgetsTest), Array)
+#3 C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php(296): PHPUnit_Framework_TestCase->runTest()
+#4 C:\php\pear\PHPUnit\Framework\TestCase.php(838): PHPUnit_Extensions_Selenium2TestCase->runTest()
+#5 C:\php\pear\PHPUnit\Framework\TestResult.php(648): PHPUnit_Framework_TestCase->runBare()
+#6 C:\php\pear\PHPUnit\Framework\TestCase.php(783): PHPUnit_Framework_TestResult->run(Object(D in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeEleadsWidgetsTest.php on line 46
+[03-Mar-2014 15:51:36 UTC] PHP Fatal error:  Call to a member function attribute() on a non-object in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeEleadsWidgetsTest.php on line 46
+[03-Mar-2014 15:52:02 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:52:33 UTC] PHP Fatal error:  Call to undefined function isEmpty() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeEleadsWidgetsTest.php on line 35
+[03-Mar-2014 15:54:13 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:54:45 UTC] PHP Fatal error:  Call to undefined function isEmpty() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeEleadsWidgetsTest.php on line 35
+[03-Mar-2014 15:55:13 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:56:25 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:56:25 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:56:26 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:56:26 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:56:26 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 15:56:26 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 15:56:59 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 15:59:51 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:00:29 UTC] PHP Fatal error:  Call to undefined function isEmpty() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\Dealit\DealitchromeEleadsWidgetsTest.php on line 35
+[03-Mar-2014 16:03:22 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:03:49 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:03:49 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:03:53 UTC] PHP Fatal error:  Call to undefined function isEmpty() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsAdministratorTest.php on line 37
+[03-Mar-2014 16:05:23 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:05:23 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:05:30 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:05:30 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:05:30 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:05:30 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:05:30 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:05:30 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:05:45 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:05:45 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:05:52 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:05:52 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:05:52 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:05:52 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:05:52 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:05:52 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:06:23 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:06:23 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:06:30 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:06:30 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:06:30 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:06:30 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:06:30 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:06:30 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:07:38 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:07:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:09:22 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:10:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:11:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:40 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:13:57 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:15 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:16 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:16:53 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:06 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:38 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:18:55 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:18:55 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:18:55 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:18:55 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:18:55 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:18:55 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:18:55 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:19:00 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:19:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:19:00 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:19:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:19:00 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:19:00 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:19:00 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:19:35 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:19:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:19:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:19:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:19:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:19:35 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:19:35 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:20:38 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:20:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:20:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:20:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:20:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:20:38 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:20:38 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Undefined index: browserName in C:\php\pear\PHPUnit\Extensions\Selenium2TestCase.php on line 394
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:21:15 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:21:31 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:21:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:21:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:21:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:21:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:21:31 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:21:31 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:23:06 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:25:58 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[03-Mar-2014 16:26:54 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:26:54 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:26:55 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:26:55 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[03-Mar-2014 16:26:55 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[03-Mar-2014 16:26:55 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 08:32:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 08:33:57 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 08:33:57 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 08:33:58 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 08:33:58 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 08:33:58 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 08:33:58 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 08:37:59 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 08:38:20 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 08:38:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 08:39:21 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 08:40:10 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 08:41:48 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 08:42:36 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 09:26:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 09:31:43 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 09:31:43 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 09:31:43 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 09:31:43 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 09:31:43 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 09:31:43 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 09:31:43 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 09:32:00 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 09:33:25 UTC] PHP Fatal error:  Class 'FormHandler2' not found in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsDetailPage2Test.php on line 76
+[04-Mar-2014 10:12:13 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:12:13 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:12:13 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:12:50 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:12:50 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:12:50 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:12:50 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:12:50 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:12:50 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:18:54 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:18:54 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:18:54 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:19:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:19:33 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:19:33 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:19:40 UTC] PHP Fatal error:  Call to undefined method EleadsActions::using() in C:\SeleniumTests\projects\eLeads\actions\EleadsActions.php on line 170
+[04-Mar-2014 10:20:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:20:33 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:20:33 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:21:06 UTC] PHP Fatal error:  Class 'FormHandler2' not found in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\eLeads\eLeadschromeEleadsDetailPage2Test.php on line 67
+[04-Mar-2014 10:21:50 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:21:50 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:21:50 UTC] PHP Notice:  Undefined offset: 1 in C:\SeleniumTests\SeleniumShell\core\utils\TokenHelpers\TokenReader.php on line 78
+[04-Mar-2014 10:22:20 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:22:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:22:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:22:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:22:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:22:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:22:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:31:24 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:31:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:31:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:31:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:31:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:31:34 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:31:34 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:31:47 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:31:56 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:31:56 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:31:56 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:31:56 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:31:56 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:31:56 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:33:14 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:33:24 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:33:24 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:33:24 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:33:24 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:33:24 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:33:24 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:36:45 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:36:57 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:36:57 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:36:57 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:36:57 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:36:57 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:36:57 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:37:33 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:38:04 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:38:15 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:38:19 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:38:19 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:38:19 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:38:19 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:38:19 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:38:19 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:38:27 UTC] PHP Notice:  Use of undefined constant PROJECTS_FOLDER - assumed 'PROJECTS_FOLDER' in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[04-Mar-2014 10:38:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:38:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:38:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:38:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35
+[04-Mar-2014 10:38:29 UTC] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 10:38:29 UTC] PHP Notice:  Uninitialized string offset: 0 in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 35

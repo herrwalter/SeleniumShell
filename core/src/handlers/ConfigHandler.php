@@ -22,6 +22,7 @@ class ConfigHandler
     private function _setConfigPath( $path )
     {
         $this->_path = $path;
+        chmod( $this->_path, 0644 );
     }
     
     private function _setParameters()

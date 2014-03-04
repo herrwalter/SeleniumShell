@@ -3,27 +3,11 @@
 
 class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     
-    /** @var ProjectActionsInitiator */
-    public $actions;
-    /** @var ProjectHandlersInitiator */
-    public $handlers;
-    /** @var array childClasses all instances of selenium */
-    public $childClasses;
     /** @var boolean initialized Indicates if SeleniumShell is initialized */
     public $initialized = false;
     
     public $project;
-
-    public function setUp(){
-        
-        $this->setBrowser($this->_browser);
-        $this->setBrowserUrl('http://www.google.nl');
-        $this->setHost('127.0.0.1');
-        $this->setPort(4444);
-        $this->setSeleniumServerRequestsTimeout(5000);
-        $this->setDesiredCapabilities(array());
-        $this->_includeProjectTests(get_class($this));
-    }
+    
     
     public function __construct()//$name = NULL, array $data = array(), $dataName = '')
     {

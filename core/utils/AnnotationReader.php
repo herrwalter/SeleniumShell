@@ -39,7 +39,7 @@ class AnnotationReader
     }
     
     public function hasSoloRun(){
-        return $this->_soloRun;
+        return $this->_soloRun === true;
     }
     
     public function getBrowsers(){

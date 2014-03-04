@@ -108,7 +108,9 @@ class TestClassRecreator {
         $classDefenitionPosition = strpos( $this->_file, 'class ' );
         $openingBracketClassPosition = strpos( $this->_file, '{', $classDefenitionPosition);
         $this->_file = substr_replace($this->_file, PHP_EOL . PHP_EOL . "\t" . 'public $browser = "' . $browser .'";' .PHP_EOL, $openingBracketClassPosition + 1, 0);
+        
     }
+    
     
     protected function _checkForSolorun( )
     {

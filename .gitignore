@@ -1,1 +1,4 @@
-/nbproject
+# ignore all generated testsuites
+core/generated/testsuites/*
+
+nbproject

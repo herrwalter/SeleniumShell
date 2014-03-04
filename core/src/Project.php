@@ -78,9 +78,10 @@ class Project
         $testSuite = $config->isParameterSet('--ss-testsuite');
         if( $testSuite ){
             foreach( $this->_testFiles as $dir => $file ){
+                $testSuite = $config->getParameter('--ss-testsuite');
                 $pathInfo = pathinfo($file);
                 $filename = $pathInfo['filename'];
-                if( $filename === $testSuite . '.php' ){
+                if( $filename === $testSuite  ){
                     $this->_testFiles = array( $dir => $file );
                     return;
                 }
