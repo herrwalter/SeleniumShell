@@ -29,7 +29,7 @@ class TestSuiteInitiator
     
     private function _setSuite()
     {
-        $this->_suite = new ApplicationTearDown();
+        $this->_suite = new PHPUnit_Framework_TestSuite();
     }
     
     private function _addTestsToSuite()
