@@ -1,4 +1,5 @@
 # ignore all generated testsuites
 core/generated/testsuites/*
+!core/generated/testsuites/mandatory_folder.txt
 
 nbproject
