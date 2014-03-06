@@ -69,6 +69,8 @@ class Application
     public function _setEnvironmentConstant(){
         if( $this->_config->isParameterSet('--ss-env') ){
             define( 'SS_ENVIRONMENT', $this->_config->getParameter('--ss-env') );
+        } else if( $this->_config->getAttribute('project-environment') ) {
+            define( 'SS_ENVIRONMENT', $this->_config->getAttribute('project-environment'));
         } else {
             define( 'SS_ENVIRONMENT', false );
         }

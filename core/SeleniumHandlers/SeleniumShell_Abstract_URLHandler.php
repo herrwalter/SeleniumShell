@@ -26,7 +26,7 @@ abstract class SeleniumShell_Abstract_URLHandler {
     }
     
     private function _setBaseUrl( $env ){
-        $config = new ConfigHandler( PROJECTS_FOLDER . '/Dealit/config/project.ini' );
+        $config = new ConfigHandler( PROJECTS_FOLDER . '/kwt/config/project.ini' );
         if( $env ){
             $this->_setBaseUrlByEnvironment( $env );
         } else if($config->getAttribute('project-environment')) {

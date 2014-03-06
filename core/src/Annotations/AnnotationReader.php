@@ -10,9 +10,8 @@ class AnnotationReader
     private $_soloRun = false;
     private $_browsers = array();
     
-    public function __construct( $testMethod ) {
-        $this->_testMethod = $testMethod;
-        $this->_annotations = $testMethod['annotations'];
+    public function __construct( $annotations ) {
+        $this->_annotations = $annotations;
         $this->_readAnnotations();
     }
     
@@ -40,6 +39,15 @@ class AnnotationReader
     
     public function hasSoloRun(){
         return $this->_soloRun === true;
+    }
+    
+    public function hasBrowser($browser){
+        foreach($this->_browsers as $browserName ){
+            if( $browser == $browserName){
+                return true;
+            }
+        }
+        return false;
     }
     
     public function getBrowsers(){
