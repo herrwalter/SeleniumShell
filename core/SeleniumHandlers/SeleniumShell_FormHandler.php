@@ -21,7 +21,7 @@ class SeleniumShell_FormHandler {
     public function __construct( $session, $form = false )
     {
         $this->_setSession( $session );
-        $this->_helpers = new FormHelpers( $this->_session );
+        $this->_helpers = new SeleniumShell_FormHelpers( $this->_session );
         $this->_setForm( $form );
     }
     /**

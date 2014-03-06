@@ -1,17 +1,19 @@
 <?php
 
-abstract class SeleniumShell_URLHandler {
+abstract class SeleniumShell_Abstract_URLHandler {
  
     private $_baseUrl = '';
     
     /**
      * Base urls. key === environment
      */
-    private $baseUrls = array();
+    private $_baseUrls;
     
-    private $uris = array();
+    private $_uris;
        
     public function __construct( $env = SS_ENVIRONMENT ){
+        $this->_baseUrls = $this->getBaseUrls();
+        $this->_uris = $this->getUris();
         $this->_setBaseUrl( $env );
     }
     

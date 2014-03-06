@@ -1341,3 +1341,78 @@ Stack trace:
 [04-Mar-2014 15:38:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
 [04-Mar-2014 15:38:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
 [04-Mar-2014 15:38:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 32
+[04-Mar-2014 17:32:38 Europe/Amsterdam] PHP Warning:  require_once(C:\SeleniumTests\SeleniumShell\core/lib/FormHandler.php): failed to open stream: No such file or directory in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 3
+[04-Mar-2014 17:32:38 Europe/Amsterdam] PHP Fatal error:  require_once(): Failed opening required 'C:\SeleniumTests\SeleniumShell\core/lib/FormHandler.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 3
+[04-Mar-2014 17:32:48 Europe/Amsterdam] PHP Warning:  Missing argument 1 for KWTHelpers::__construct(), called in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php on line 15 and defined in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 19
+[04-Mar-2014 17:32:48 Europe/Amsterdam] PHP Notice:  Undefined variable: session in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 20
+[04-Mar-2014 17:32:48 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Abstract_URLHandler' not found in C:\SeleniumTests\projects\kwt\helpers\KWT_URLHandler.php on line 4
+[04-Mar-2014 17:33:13 Europe/Amsterdam] PHP Warning:  Missing argument 1 for KWTHelpers::__construct(), called in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php on line 15 and defined in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 19
+[04-Mar-2014 17:33:13 Europe/Amsterdam] PHP Notice:  Undefined variable: session in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 20
+[04-Mar-2014 17:33:13 Europe/Amsterdam] PHP Notice:  Undefined property: KWT_URLHandler::$_baseUrls in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 19
+[04-Mar-2014 17:33:13 Europe/Amsterdam] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 19
+[04-Mar-2014 17:33:13 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: ' in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php:22
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(31): SeleniumShell_Abstract_URLHandler->_setBaseUrlByEnvironment('acceptance')
+#1 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(15): SeleniumShell_Abstract_URLHandler->_setBaseUrl(false)
+#2 C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php(22): SeleniumShell_Abstract_URLHandler->__construct()
+#3 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php(15): KWTHelpers->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): kwtchromeLoginTest->__construct()
+#5 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLoginAsBPM')
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTe in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 22
+[04-Mar-2014 17:34:46 Europe/Amsterdam] PHP Warning:  Missing argument 1 for KWTHelpers::__construct(), called in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php on line 15 and defined in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 19
+[04-Mar-2014 17:34:46 Europe/Amsterdam] PHP Notice:  Undefined variable: session in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 20
+[04-Mar-2014 17:34:46 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: ' in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php:24
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(33): SeleniumShell_Abstract_URLHandler->_setBaseUrlByEnvironment('acceptance')
+#1 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(15): SeleniumShell_Abstract_URLHandler->_setBaseUrl(false)
+#2 C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php(22): SeleniumShell_Abstract_URLHandler->__construct()
+#3 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php(15): KWTHelpers->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): kwtchromeLoginTest->__construct()
+#5 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLoginAsBPM')
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTe in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 24
+[04-Mar-2014 17:36:26 Europe/Amsterdam] PHP Warning:  Missing argument 1 for KWTHelpers::__construct(), called in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php on line 15 and defined in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 18
+[04-Mar-2014 17:36:26 Europe/Amsterdam] PHP Notice:  Undefined variable: session in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 19
+[04-Mar-2014 17:36:26 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: ' in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php:25
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(34): SeleniumShell_Abstract_URLHandler->_setBaseUrlByEnvironment('acceptance')
+#1 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(15): SeleniumShell_Abstract_URLHandler->_setBaseUrl(false)
+#2 C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php(21): SeleniumShell_Abstract_URLHandler->__construct()
+#3 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php(15): KWTHelpers->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): kwtchromeLoginTest->__construct()
+#5 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLoginAsBPM')
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTe in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 25
+[04-Mar-2014 17:36:43 Europe/Amsterdam] PHP Warning:  Missing argument 1 for KWTHelpers::__construct(), called in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php on line 15 and defined in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 18
+[04-Mar-2014 17:36:43 Europe/Amsterdam] PHP Notice:  Undefined variable: session in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 19
+[04-Mar-2014 17:36:43 Europe/Amsterdam] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 22
+[04-Mar-2014 17:36:43 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: ' in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php:25
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(34): SeleniumShell_Abstract_URLHandler->_setBaseUrlByEnvironment('acceptance')
+#1 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(15): SeleniumShell_Abstract_URLHandler->_setBaseUrl(false)
+#2 C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php(21): SeleniumShell_Abstract_URLHandler->__construct()
+#3 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php(15): KWTHelpers->__construct()
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): kwtchromeLoginTest->__construct()
+#5 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLoginAsBPM')
+#6 C:\php\pear\PHPUnit\Extensions\SeleniumTe in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 25
+[04-Mar-2014 17:37:10 Europe/Amsterdam] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 22
+[04-Mar-2014 17:37:10 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: ' in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php:25
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(34): SeleniumShell_Abstract_URLHandler->_setBaseUrlByEnvironment('acceptance')
+#1 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(15): SeleniumShell_Abstract_URLHandler->_setBaseUrl(false)
+#2 C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php(21): SeleniumShell_Abstract_URLHandler->__construct()
+#3 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php(15): KWTHelpers->__construct(Object(kwtchromeLoginTest))
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): kwtchromeLoginTest->__construct()
+#5 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLoginAsBPM')
+#6 C:\php\pear\PHP in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 25
+[04-Mar-2014 17:37:44 Europe/Amsterdam] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 21
+[04-Mar-2014 17:37:44 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: acceptance' in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php:24
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(31): SeleniumShell_Abstract_URLHandler->_setBaseUrlByEnvironment('acceptance')
+#1 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(15): SeleniumShell_Abstract_URLHandler->_setBaseUrl('acceptance')
+#2 C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php(21): SeleniumShell_Abstract_URLHandler->__construct()
+#3 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeLoginTest.php(15): KWTHelpers->__construct(Object(kwtchromeLoginTest))
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): kwtchromeLoginTest->__construct()
+#5 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(ReflectionClass), 'testLoginAsBPM')
+# in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 24
+[04-Mar-2014 17:38:12 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_LoginController::_setLoginDataByFunction() in C:\SeleniumTests\projects\kwt\controllers\KWT_LoginController.php on line 25
+[04-Mar-2014 17:39:18 Europe/Amsterdam] PHP Fatal error:  Class 'FormHelpers' not found in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_FormHandler.php on line 24
+[04-Mar-2014 17:39:54 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_FormHelpers' not found in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_FormHandler.php on line 24
