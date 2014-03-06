@@ -19,17 +19,20 @@ define('TOKENHELPERS_PATH', UTILS_PATH . $sep .'TokenHelpers');
 define('GENERATED_PATH', $rel_path. $sep. 'generated');
 define('GENERATED_TESTSUITES_PATH', GENERATED_PATH . $sep . 'testsuites' .$sep );
 
-
 require_once( FILESCANNERS_PATH . $sep . 'FileScanner.php');
 require_once( FILESCANNERS_PATH . $sep . 'TestFileScanner.php');
 require_once( CORE_HANDLERS_PATH . $sep . 'ConfigHandler.php');
 require_once( CORE_HANDLERS_PATH . $sep . 'PHPUnitParameterReader.php');
+require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_HelperMethods.php' );
+require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_Asserts.php' );
 require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_Test.php' );
-
 
 
 function SeleniumShellAutoloadFunction( $className ){
     $backtrace = debug_backtrace();
+    if( !isset($backtrace[1]['file']) ){
+        return;
+    }
     $file = $backtrace[1]['file'];
     $file = str_replace(PROJECTS_FOLDER, '', $file);
     $file = str_replace(GENERATED_TESTSUITES_PATH, '', $file);
@@ -73,6 +76,7 @@ function SeleniumShellAutoloadFunction( $className ){
         // crawl utils.. 
         else if( scan_folder_for_class(UTILS_PATH, $className) ){}
         
+        else if( scan_folder_for_class(SELENIUM_SHELL_HANDLERS, $className)){}
         
     }
 }

@@ -1416,3 +1416,104 @@ Stack trace:
 [04-Mar-2014 17:38:12 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_LoginController::_setLoginDataByFunction() in C:\SeleniumTests\projects\kwt\controllers\KWT_LoginController.php on line 25
 [04-Mar-2014 17:39:18 Europe/Amsterdam] PHP Fatal error:  Class 'FormHelpers' not found in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_FormHandler.php on line 24
 [04-Mar-2014 17:39:54 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_FormHelpers' not found in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_FormHandler.php on line 24
+[06-Mar-2014 09:39:16 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_FormHelpers' not found in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_FormHandler.php on line 24
+[06-Mar-2014 09:41:23 Europe/Amsterdam] PHP Fatal error:  Class 'FunctionalHelpers' not found in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_FormHelpers.php on line 14
+[06-Mar-2014 10:14:18 Europe/Amsterdam] PHP Fatal error:  Call to undefined method SeleniumShell_FormHandler::mapValuesToElements() in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 39
+[06-Mar-2014 10:15:25 Europe/Amsterdam] PHP Fatal error:  Call to undefined method SeleniumShell_FormHandler::submit() in C:\SeleniumTests\projects\kwt\actions\KWTHelpers.php on line 44
+[06-Mar-2014 11:17:52 Europe/Amsterdam] PHP Warning:  require_once(C:\SeleniumTests\SeleniumShell\core/lib/Grabber.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_Test.php on line 3
+[06-Mar-2014 11:17:52 Europe/Amsterdam] PHP Fatal error:  require_once(): Failed opening required 'C:\SeleniumTests\SeleniumShell\core/lib/Grabber.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_Test.php on line 3
+[06-Mar-2014 11:18:52 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:18:52 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:18:52 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:21:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:21:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:21:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:33:06 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:33:06 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:33:06 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:38:26 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:38:26 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:38:26 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:40:50 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:40:50 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:40:50 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:41:39 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:41:39 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:41:39 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:26 Europe/Amsterdam] PHP Warning:  array_combine() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_CSVReader.php on line 33
+[06-Mar-2014 11:43:32 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:43:32 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:43:32 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:44:18 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:44:18 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:44:18 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 11:45:42 Europe/Amsterdam] PHP Fatal error:  Call to a member function submit() on a non-object in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_FormHandler.php on line 177
+[06-Mar-2014 12:07:06 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Could not find the base url for the env: acceptance'' in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php:24
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(31): SeleniumShell_Abstract_URLHandler->_setBaseUrlByEnvironment('acceptance'')
+#1 C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php(17): SeleniumShell_Abstract_URLHandler->_setBaseUrl('acceptance'')
+#2 C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php(21): SeleniumShell_Abstract_URLHandler->__construct()
+#3 C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_HuisstijlTest.php(20): KWT_Actions->__construct(Object(kwtchromeKWTHuisstijlTest))
+#4 C:\php\pear\PHPUnit\Framework\TestSuite.php(473): kwtchromeKWTHuisstijlTest->__construct()
+#5 C:\php\pear\PHPUnit\Framework\TestSuite.php(834): PHPUnit_Framework_TestSuite::createTest(Object(Reflection in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_URLHandler.php on line 24
+[06-Mar-2014 12:07:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:07:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:07:51 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:42:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:42:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:42:42 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:44:16 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:44:16 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:44:16 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:46:09 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:46:10 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:46:10 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:54:43 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:54:43 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:54:43 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:55:39 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:55:40 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 12:55:40 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 13:20:54 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:21:26 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:22:46 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:23:29 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:23:34 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:23:36 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:23:37 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:27:02 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:27:09 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:27:17 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:30:27 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:31:01 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 6
+[06-Mar-2014 13:31:23 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:31:57 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Asserts' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 5
+[06-Mar-2014 13:32:07 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_HelperMethods' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Asserts.php on line 9
+[06-Mar-2014 13:32:12 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_HelperMethods' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Asserts.php on line 9
+[06-Mar-2014 13:32:46 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_HelperMethods' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Asserts.php on line 9
+[06-Mar-2014 13:34:20 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 13:34:20 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 13:34:20 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 13:36:20 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 13:36:20 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 13:36:20 Europe/Amsterdam] PHP Notice:  Undefined index: file in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 33
+[06-Mar-2014 13:58:53 Europe/Amsterdam] PHP Warning:  require_once(C:\SeleniumTests\SeleniumShell\core/lib/Grabber.php): failed to open stream: No such file or directory in C:\SeleniumTests\projects\kwt\helpers\KWT_TestSetup.php on line 3
+[06-Mar-2014 13:58:53 Europe/Amsterdam] PHP Fatal error:  require_once(): Failed opening required 'C:\SeleniumTests\SeleniumShell\core/lib/Grabber.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\projects\kwt\helpers\KWT_TestSetup.php on line 3
+[06-Mar-2014 14:44:52 Europe/Amsterdam] PHP Parse error:  syntax error, unexpected ';' in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Asserts.php on line 76
+[06-Mar-2014 14:58:28 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_Actions::assertEquals() in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 48
+[06-Mar-2014 20:44:20 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_TestFilesHandler::getPathToFilesFolder() in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_TestFilesHandler.php on line 18
+[06-Mar-2014 20:45:06 Europe/Amsterdam] PHP Fatal error:  Call to undefined function path_info() in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_TestFilesHandler.php on line 46

@@ -3,15 +3,12 @@
 class SeleniumShell_FormHelpers{
     private $_session;
     
-    /* @var FunctionalHelpers*/
-    public $helpers;
     /**
      * 
      * @param PHPUnit_Extensions_Selenium2TestCase $session
      */   
     public function __construct( $session ){
         $this->_session = $session;
-        $this->helpers = new FunctionalHelpers($session);
     }
     
     private function _getTagNameCode($attribute, $attributeValue ){
@@ -49,9 +46,9 @@ class SeleniumShell_FormHelpers{
         // delete 'Selecteer een optie';
         unset($possibleOptions[array_search('Selecteer een optie', $possibleOptions)]);
         
-        //array_pop($possibleOptions);
         
-        $randomPossibleOption = $this->helpers->getRandomArrayValue($possibleOptions);
+        
+        $randomPossibleOption = $possibleOptions[array_rand($possibleOptions, 1)];
         //select a random possible option.
         
         $select->selectOptionByLabel($randomPossibleOption);

@@ -1,7 +1,7 @@
 <?php
 
 
-class SeleniumShell_Test extends PHPUnit_Extensions_Selenium2TestCase
+class SeleniumShell_Test extends SeleniumShell_Asserts
 {
     public $projectName;
     
@@ -44,4 +44,6 @@ class SeleniumShell_Test extends PHPUnit_Extensions_Selenium2TestCase
             return 4444;
         }
     }
+   
+    
 }

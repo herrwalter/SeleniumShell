@@ -6,6 +6,7 @@ class SeleniumShell_CSVReader {
     private $_filename;
     private $_delimiter;
     private $_csvData = array();
+    private $_headers = false;
 
     public function __construct($filename = '', $delimiter = ';') {
         $this->_setFilename($filename);
@@ -20,21 +21,18 @@ class SeleniumShell_CSVReader {
             throw new ErrorException( $filename . ' does not exists or is not readable');
         }
     }
-
+    
     protected function _setCsvData() {
-        $header = false;
-        $data = array();
         if( ($handle = fopen($this->_filename, 'r')) !== false) {
             while (($row = fgetcsv($handle, 0, $this->_delimiter)) !== false) {
-                if(!$header){
-                    $header = $row;
+                if(!$this->_headers){
+                    $this->_headers = $row;
                 } else {
-                    $this->_csvData[] = array_combine($header, $row);
+                    $this->_csvData[] = array_combine($this->_headers, $row);
                 }
             }
             fclose($handle);
         }
-        return $data;
     }
     
     public function getCsvData(){
@@ -42,7 +40,7 @@ class SeleniumShell_CSVReader {
     }
     
     public function getHeaders(){
-        return array_keys($this->_csvData[0]);
+        return $this->_headers;
     }
 
 }

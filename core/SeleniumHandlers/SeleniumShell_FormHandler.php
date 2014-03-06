@@ -11,7 +11,7 @@ class SeleniumShell_FormHandler {
     /** @var PHPUnit_Extensions_Selenium2TestCase_Element */
     protected $_form;
     
-    /** @var FormHelpers */
+    /** @var SeleniumShell_FormHelpers */
     protected $_helpers;
     
     /**
