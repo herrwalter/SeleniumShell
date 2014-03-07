@@ -1517,3 +1517,38 @@ Stack trace:
 [06-Mar-2014 14:58:28 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_Actions::assertEquals() in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 48
 [06-Mar-2014 20:44:20 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_TestFilesHandler::getPathToFilesFolder() in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_TestFilesHandler.php on line 18
 [06-Mar-2014 20:45:06 Europe/Amsterdam] PHP Fatal error:  Call to undefined function path_info() in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_Abstract_TestFilesHandler.php on line 46
+[07-Mar-2014 09:45:34 Europe/Amsterdam] PHP Fatal error:  Class 'KWT_TestDataFileHandler' not found in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_ImportGereedmeldingenTest.php on line 45
+[07-Mar-2014 10:00:42 Europe/Amsterdam] PHP Fatal error:  Call to undefined function wait() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_ImportGereedmeldingenTest.php on line 50
+[07-Mar-2014 10:09:51 Europe/Amsterdam] PHP Fatal error:  Call to a member function text() on a non-object in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_ImportGereedmeldingenTest.php on line 53
+[07-Mar-2014 11:21:09 Europe/Amsterdam] PHP Fatal error:  Call to undefined function wait() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_ImportGereedmeldingenTest.php on line 23
+[07-Mar-2014 13:43:44 Europe/Amsterdam] PHP Warning:  require_once(\Autoload.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 113
+[07-Mar-2014 13:43:44 Europe/Amsterdam] PHP Fatal error:  require_once(): Failed opening required '\Autoload.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 113
+[07-Mar-2014 14:05:52 Europe/Amsterdam] PHP Fatal error:  Access level to KWT_Database::getHost() must be public (as in class SeleniumShell_Abstract_PDO_Database) in C:\SeleniumTests\projects\kwt\helpers\KWT_Database.php on line 9
+[07-Mar-2014 14:06:52 Europe/Amsterdam] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_PDO\SeleniumShell_Abstract_PDO_Database.php on line 48
+[07-Mar-2014 14:08:42 Europe/Amsterdam] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_PDO\SeleniumShell_Abstract_PDO_Database.php on line 52
+[07-Mar-2014 14:08:50 Europe/Amsterdam] PHP Fatal error:  Call to undefined function var_dumpo() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_ImportGereedmeldingenTest.php on line 23
+[07-Mar-2014 14:09:29 Europe/Amsterdam] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_PDO\SeleniumShell_Abstract_PDO_Database.php on line 52
+[07-Mar-2014 14:10:44 Europe/Amsterdam] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_PDO\SeleniumShell_Abstract_PDO_Database.php on line 53
+[07-Mar-2014 14:12:56 Europe/Amsterdam] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_PDO\SeleniumShell_Abstract_PDO_Database.php on line 52
+[07-Mar-2014 14:16:59 Europe/Amsterdam] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_PDO\SeleniumShell_Abstract_PDO_Database.php on line 52
+[07-Mar-2014 14:57:15 Europe/Amsterdam] PHP Fatal error:  Call to undefined function array_serach() in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Asserts.php on line 69
+[07-Mar-2014 15:32:34 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_Actions::assertEquals() in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 36
+[07-Mar-2014 16:41:30 Europe/Amsterdam] PHP Parse error:  syntax error, unexpected '{' in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 117
+[07-Mar-2014 16:41:55 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Mailbox' not found in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 33
+[07-Mar-2014 16:42:21 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_MailInbox' not found in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 33
+[07-Mar-2014 16:42:39 Europe/Amsterdam] PHP Fatal error:  Call to undefined function imap_open() in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_MailInbox.php on line 27
+[07-Mar-2014 16:44:01 Europe/Amsterdam] PHP Notice:  Unknown: Can't open mailbox imap.trimm.local: no such mailbox (errflg=2) in Unknown on line 0
+[07-Mar-2014 16:44:13 Europe/Amsterdam] PHP Notice:  Unknown: Can't open mailbox https://imap.trimm.local: no such mailbox (errflg=2) in Unknown on line 0
+[07-Mar-2014 16:44:45 Europe/Amsterdam] PHP Notice:  Unknown: Can't open mailbox https://exchange-01.trimm.local: no such mailbox (errflg=2) in Unknown on line 0
+[07-Mar-2014 16:45:23 Europe/Amsterdam] PHP Notice:  Unknown: Can't open mailbox exchange-01.trimm.local: no such mailbox (errflg=2) in Unknown on line 0
+[07-Mar-2014 16:45:33 Europe/Amsterdam] PHP Notice:  Unknown: Can't open mailbox exchange-01.trimm.nl: no such mailbox (errflg=2) in Unknown on line 0
+[07-Mar-2014 16:45:41 Europe/Amsterdam] PHP Notice:  Unknown: Can't open mailbox imap.trimm.nl: no such mailbox (errflg=2) in Unknown on line 0
+[07-Mar-2014 16:48:18 Europe/Amsterdam] PHP Notice:  Unknown: LOGIN failed. (errflg=1) in Unknown on line 0
+[07-Mar-2014 16:48:18 Europe/Amsterdam] PHP Notice:  Unknown: LOGIN failed. (errflg=1) in Unknown on line 0
+[07-Mar-2014 16:48:18 Europe/Amsterdam] PHP Notice:  Unknown: LOGIN failed. (errflg=1) in Unknown on line 0
+[07-Mar-2014 16:48:18 Europe/Amsterdam] PHP Notice:  Unknown: Too many login failures (errflg=2) in Unknown on line 0
+[07-Mar-2014 16:48:52 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_Actions::byId() in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 103
+[07-Mar-2014 16:52:49 Europe/Amsterdam] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 107
+[07-Mar-2014 16:55:50 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_MailInbox' not found in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 33
+[07-Mar-2014 16:56:22 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_MailInbox' not found in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 33
+[07-Mar-2014 16:56:39 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_MailInbox' not found in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 33

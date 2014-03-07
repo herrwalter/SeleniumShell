@@ -64,4 +64,8 @@ class SeleniumShell_Asserts extends SeleniumShell_HelperMethods{
         $attributeValue = $element->attribute( $attribute );
         $this->assertEquals( $attributeValue, $value );
     }
+    
+    public function assertInArray($value, $array, $message = ''){
+        $this->assertTrue(array_search($value, $array) !== false, $message);
+    }
 }
