@@ -98,7 +98,7 @@ class TestClassReader
     {
         $class = new TokenClosure('class');
         $test = new TokenClosure('test');
-        $tests = array();
+        $testMethods = array();
         $testNr = 0;
         
         for( $i = 0; $i < count($this->_tokens); $i ++ ){
@@ -113,20 +113,20 @@ class TestClassReader
             
             if( $class->inClosure() && $tokenRdr->isMethod() && $this->_isTestMethod($this->_tokens[$i+2]) ){
                 $testNr++;
-                $tests[$testNr] = array();
-                $tests[$testNr]['annotations'] = $this->_getPossibleAnnotations($i);
+                $testMethods[$testNr] = new SeleniumShell_TestMethod();
+                $testMethods[$testNr]->setAnnotations($this->_getPossibleAnnotations($i));
                 $test->startTracking();
             }
             
             if( $test->isDone() ){
-                $tests[$testNr]['test'] = 'public ' . $test->getTrack();
+                $testMethods[$testNr]->setMethod('public ' . $test->getTrack());
                 $test->reset();
             }
             
             $test->track($token);
         }
         
-        return $tests;
+        return $testMethods;
     }
     
     /**
@@ -228,7 +228,7 @@ class TestClassReader
     {
         $methods = $this->getTestMethods();
         foreach( $methods as $method ){
-            $annotation = new AnnotationReader($method);
+            $annotation = $method->getAnnotations();
             if( $annotation->hasSoloRun() ){
                 return true;
             }

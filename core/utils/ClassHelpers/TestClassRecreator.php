@@ -10,6 +10,7 @@ class TestClassRecreator {
     
     private $_rapport;
     private $_file;
+    /** @var SeleniumShell_TestMethod */
     private $_testMethods;
     private $_testClassFile;
     private $_testClassFileName;
@@ -74,32 +75,16 @@ class TestClassRecreator {
     
     protected function _deleteTestsThatShouldNotRunInThisBrowser($browser){
         // check the annotations of the testmethods
+        $commandChain = new Annotations_ChainOfCommand();
+        $commandChain->addCommand(new Browsers_AnnotationCommand());
+        $commandChain->addCommand(new SoloRun_AnnotationCommand());
         
-        // check for the solorun annotations. if found,
-        // all other testmethods should be stripped from the class.
-        $solorun = $this->_checkForSolorun();
-        if( $solorun ){
-            foreach( $this->_testMethods as $testMethod ){
-                if( $solorun !== $testMethod ){
-                    $this->_stripMethod($testMethod);
-                }
-            }
-        }
+        $this->_testMethods = $commandChain->runCommand('solo-run', array('testMethods' => $this->_testMethods) );
+        $this->_testMethods = $commandChain->runCommand('browsers', array('testMethods' => $this->_testMethods, 'browser' => $browser) );
         
-        // if --ss-browsers is set, this should overrule. and the browsers annotation rule should be ignored 
-        $config = new ConfigHandler();
-        if( $config->isParameterSet('--ss-browsers') ){
-            return;
-        }
-        
-        // check for the browsers annotation. if found,
-        // check if it contains the current browser, else use default.
-        foreach( $this->_testMethods as $testMethod ){
-            $annotations = new AnnotationReader($testMethod);
-            $browsers = $annotations->getBrowsers();
-            // strip method is browsers is set and one is not in the ss-browsers annotation
-            if( !empty($browsers) && strpos( strtolower($browsers[0]), strtolower($browser) ) === false ){
-                $this->_stripMethod($testMethod);
+        foreach($this->_testMethods as $testMethod ){
+            if( $testMethod ){
+                $this->_stripMethod($testMethod->getMethod());
             }
         }
     }
@@ -116,7 +101,7 @@ class TestClassRecreator {
     {
         //loop over testmethods for solorun annotation
         foreach( $this->_testMethods as $testMethod){
-            $annotations = new AnnotationReader($testMethod);
+            $annotations = new AnnotationReader($testMethod->getAnnotations());
             $solorun = $annotations->hasSoloRun();
             if( $solorun ){
                 // if found, we will return the test method.
@@ -127,6 +112,6 @@ class TestClassRecreator {
     }
     
     protected function _stripMethod( $testMethod ){
-        $this->_file = str_replace( $testMethod['test'], '', $this->_file );
+        $this->_file = str_replace( $testMethod, '', $this->_file );
     }
 }
