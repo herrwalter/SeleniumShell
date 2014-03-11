@@ -1904,3 +1904,17 @@ Stack trace:
 [11-Mar-2014 12:15:25 Europe/Amsterdam] PHP Fatal error:  Cannot use object of type SeleniumShell_TestMethod as array in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 33
 [11-Mar-2014 12:17:16 Europe/Amsterdam] PHP Notice:  Undefined variable: testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationCommand.php on line 26
 [11-Mar-2014 12:17:16 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 14:10:02 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Project not found.' in C:\SeleniumTests\SeleniumShell\core\src\Project.php:43
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\src\Project.php(22): Project->_setProjectPath()
+#1 C:\SeleniumTests\SeleniumShell\core\src\Application.php(48): Project->__construct('kwt')
+#2 C:\SeleniumTests\SeleniumShell\core\src\Application.php(16): Application->_initializeProjects()
+#3 C:\SeleniumTests\SeleniumShell\core\SeleniumShell.php(42): Application->__construct()
+#4 [internal function]: SeleniumShell::suite('SeleniumShell')
+#5 C:\php\pear\PHPUnit\Runner\BaseTestRunner.php(124): ReflectionMethod->invoke(NULL, 'SeleniumShell')
+#6 C:\php\pear\PHPUnit\TextUI\Command.php(150): PHPUnit_Runner_BaseTestRunner->getTest('SeleniumShell', 'C:\SeleniumTest...', Array)
+#7 C:\php\pear\PHPUnit\TextUI\Command.php(129): PHPUnit_TextUI_Command->run(Array, true)
+#8 C:\php\phpunit(46): PHPUnit_TextUI_Command::main()
+#9 {main}
+  thrown in C:\SeleniumTests\SeleniumShell\core\src\Project.php on line 43
+[11-Mar-2014 14:59:51 Europe/Amsterdam] PHP Fatal error:  Class 'FormHandler' not found in C:\SeleniumTests\BizappsSeleniumTests\projects\kwt\actions\KWT_Actions.php on line 178

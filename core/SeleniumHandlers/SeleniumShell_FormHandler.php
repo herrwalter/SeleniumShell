@@ -64,7 +64,7 @@ class SeleniumShell_FormHandler {
     protected function _setElementByName( $name )
     {
         try{
-            $this->_elements[ $name ] = $this->_session->byId( $name );
+            $this->_elements[ $name ] = $this->_session->byName( $name );
         }
         catch(Exception $e ){
             $this->_elements[ $name ] = false;
@@ -164,7 +164,7 @@ class SeleniumShell_FormHandler {
     public function mapValuesToElementsByName( $namesVsValues )
     {
         foreach( $namesVsValues as $name => $value ){
-            $this->_setElementById( $name );
+            $this->_setElementByName( $name );
             $this->_setElementValue( $name, $value );
         }
     }
