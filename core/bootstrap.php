@@ -34,16 +34,19 @@ function SeleniumShellAutoloadFunction( $className ){
         return;
     }
     $file = $backtrace[1]['file'];
-    $file = str_replace(PROJECTS_FOLDER, '', $file);
-    $file = str_replace(GENERATED_TESTSUITES_PATH, '', $file);
+
+    $file = str_ireplace(PROJECTS_FOLDER, '', $file);
+     
+    $file = str_ireplace(GENERATED_TESTSUITES_PATH, '', $file);
+    
     if( isset( $file[0] ) && $file[0] == DIRECTORY_SEPARATOR ){
         $file = substr($file, 1);
     }
+    
     if( !$file ){
         return;
     }
     $explodedFile = explode(DIRECTORY_SEPARATOR, $file);
-    
     
     // check if the last function called contains the projects path
     // then we should crawlup that project file..
@@ -71,6 +74,7 @@ function SeleniumShellAutoloadFunction( $className ){
         
     } else { // find seleniumShell Core.
         // crawl source..
+        
         if( scan_folder_for_class(CORE_SRC_PATH, $className) ){} 
         // crawl utils.. 
         else if( scan_folder_for_class(UTILS_PATH, $className) ){}
