@@ -14,15 +14,19 @@ class Browsers_AnnotationRule implements Interface_AnnotationRule {
         $this->browser = $browser;
     }
     /**
+     * if a method is set to false, it will not be deleted.
      * @param SeleniumShell_TestMethod $testMethods
      */
     public function filterMethods($testMethods) {
-        foreach($testMethods as $key => $testMethod ){
-            if( $testMethod !== false ){
-                $annotations = $testMethod->getAnnotations();
-                if( $annotations->hasBrowser($this->browser) ){
-                    $testMethods[$key] = false;
-                }
+        // loop over testmethods
+        foreach($testMethods as $key =>$testMethod ){
+            // get method's annotations
+            $annotations = $testMethod->getAnnotations();
+            // if the browser annotation is set and it contains te browser, set it to false.
+            if( $annotations && 
+                    $annotations->hasBrowsersAnnotationSet() && 
+                    !$annotations->hasBrowser($this->browser) ){
+                $testMethod->stripMethod();
             }
         }
         return $testMethods;

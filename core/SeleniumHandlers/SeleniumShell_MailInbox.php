@@ -1,7 +1,7 @@
 <?php
 
 
-class SeleniumShell_Mailbox {
+class SeleniumShell_MailInbox {
 
     protected $_stream;
     private $_password;
@@ -45,9 +45,26 @@ class SeleniumShell_Mailbox {
     public function getMailboxState() {
         return imap_mailboxmsginfo($this->_stream);
     }
+    
+    private function _getUnseenMails( $nrOfAttempts ){
+        $attempts = 0;
+        do{
+            sleep(1);
+            $mails = imap_search($this->_stream, 'UNSEEN');
+            $attempts++;
+            if( $nrOfAttempts == $attempts ){
+                break;
+            }
+        } while ( !$mails );
+        return $mails;
+    }
 
-    public function getUnreadEmails() {
-        $mailNumbers = imap_search($this->_stream, 'UNSEEN');
+    public function getUnreadEmails( $nrOfAttempts = 10 ) {
+        
+        $mailNumbers = $this->_getUnseenMails( $nrOfAttempts );
+        if( !$mailNumbers ){
+            throw new ErrorException( 'No unseen mails found.' );
+        }
         $mails = array();
         foreach ($mailNumbers as $mailNr) {
             $mail = imap_headerinfo($this->_stream, $mailNr);

@@ -10,8 +10,11 @@ class ConfigHandler
     
     private $_parameters;
     
-    public function __construct( $path = false )
+    private $_process_section;
+    
+    public function __construct( $path = false, $process_section = false )
     {
+        $this->_process_section = $process_section;
         if( $path ){
             $this->_setConfigPath( $path );
             $this->_setConfig();
@@ -44,7 +47,11 @@ class ConfigHandler
     
     private function _setConfig()
     {
-        $this->_config = parse_ini_file($this->_path);
+        $this->_config = parse_ini_file($this->_path, $this->_process_section);
+    }
+    
+    public function getConfig(){
+        return $this->_config;
     }
     
     /**
@@ -52,13 +59,28 @@ class ConfigHandler
      * @param type $attr
      * @return boolean
      */
-    public function getAttribute( $attr )
+    public function getAttribute( $attr, $section = false )
     {
-        if(array_key_exists($attr, $this->_config) ){
+        if( $section && !array_key_exists($section, $this->_config)){
+            throw new ErrorException( 'Section is not found in config or, config is not processed with process_section set to true' );
+        } else if( 
+            $section && 
+            array_key_exists($section, $this->_config) && 
+            array_key_exists($attr, $this->_config[$section]) 
+            ){
+            return $this->_config[$section][$attr];
+        } else if( array_key_exists($attr, $this->_config ) ){
             return $this->_config[$attr];
+        } else {
+            throwException('Could not find attribute in .ini file.');
         }
-        return false;
     }
+    
+
+    public function sectionExists( $section ){
+        return isset($this->_config[$section]);
+    }
+    
     /**
      * 
      * @return PHPUnitParameterReader 

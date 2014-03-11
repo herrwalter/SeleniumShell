@@ -157,7 +157,6 @@ class Project
         $tcr->setSavePath(GENERATED_TESTSUITES_PATH  . $this->_name. DIRECTORY_SEPARATOR);
         $tcr->setProjectName($this->_name);
         foreach( $this->_browsers as $browser ){
-            
             $tcr->createFileForBrowser( $browser );
         }
     }

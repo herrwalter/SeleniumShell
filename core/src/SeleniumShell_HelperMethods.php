@@ -21,6 +21,7 @@ class SeleniumShell_HelperMethods extends PHPUnit_Extensions_Selenium2TestCase {
     /**
      * Gets an anchor by text, will return false if not found.
      * @param type $text
+     * @return PHPUnit_Extensions_Selenium2TestCase_Element
      */
     public function selectAnchorByText( $text ){
         $anchors = $this->selectElementsByCssSelector('a');

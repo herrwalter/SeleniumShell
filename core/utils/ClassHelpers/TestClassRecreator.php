@@ -79,11 +79,12 @@ class TestClassRecreator {
         $commandChain->addCommand(new Browsers_AnnotationCommand());
         $commandChain->addCommand(new SoloRun_AnnotationCommand());
         
-        $this->_testMethods = $commandChain->runCommand('solo-run', array('testMethods' => $this->_testMethods) );
-        $this->_testMethods = $commandChain->runCommand('browsers', array('testMethods' => $this->_testMethods, 'browser' => $browser) );
+        $testMethods = $this->_testMethods;
+        $testMethods = $commandChain->runCommand('solo-run', array('testMethods' => $testMethods) );
+        $testMethods = $commandChain->runCommand('browsers', array('testMethods' => $testMethods, 'browser' => $browser) );
         
-        foreach($this->_testMethods as $testMethod ){
-            if( $testMethod ){
+        foreach($testMethods as $testMethod ){
+            if( $testMethod->getStripMethodState() ){
                 $this->_stripMethod($testMethod->getMethod());
             }
         }
@@ -96,20 +97,6 @@ class TestClassRecreator {
         
     }
     
-    
-    protected function _checkForSolorun( )
-    {
-        //loop over testmethods for solorun annotation
-        foreach( $this->_testMethods as $testMethod){
-            $annotations = new AnnotationReader($testMethod->getAnnotations());
-            $solorun = $annotations->hasSoloRun();
-            if( $solorun ){
-                // if found, we will return the test method.
-                return $testMethod;
-            }
-        }
-        return false;
-    }
     
     protected function _stripMethod( $testMethod ){
         $this->_file = str_replace( $testMethod, '', $this->_file );
