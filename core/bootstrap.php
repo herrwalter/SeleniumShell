@@ -47,8 +47,7 @@ function SeleniumShellAutoloadFunction( $className ){
     
     // check if the last function called contains the projects path
     // then we should crawlup that project file..
-    
-    if(strpos( $file, CORE_PATH ) === false ){
+    if(stripos( $file, CORE_PATH ) === false ){
         $projectName = $explodedFile[0];
         $projectPath = PROJECTS_FOLDER . DIRECTORY_SEPARATOR . $projectName;
         $projectScanner = new FileScanner($projectPath);
