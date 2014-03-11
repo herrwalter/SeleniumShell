@@ -8,12 +8,28 @@
 class SoloRun_AnnotationCommand  implements Interface_Command{
     
     public function onCommand($name, $args) {
-        if( $name !== 'solo-run' ){
+        if( $name !== 'solo-run'  ){
             return false;
+        }
+        if( !isset($args['testMethods']) ){
+            throw new ErrorException( 'Annotation command needs "testMethods" in the args ' );
         }
         
         $soloRun = new SoloRun_AnnotationRule();
-        return $soloRun->filterMethods($args['testMethods']);
+        
+        
+        // check if solo_run is applied on one of the methods.
+        foreach( $args['testMethods'] as $testMethod){
+            if( $testMethod ){
+                $annotations = $testMethod->getAnnotations();
+                if( $testMethod->hasAnnotations() && $annotations->hasSoloRun() ){
+                    return $soloRun->filterMethods($args['testMethods']);
+                }
+            }
+        }
+        
+        return $args['testMethods'];
+        
         
     }
 

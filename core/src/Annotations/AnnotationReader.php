@@ -6,7 +6,7 @@
  */
 class AnnotationReader
 {
-    private $_testMethod;
+    private $_annotations;
     private $_soloRun = false;
     private $_browsers = array();
     
@@ -21,6 +21,7 @@ class AnnotationReader
     
     private function _readAnnotations(){
         if( !$this->_annotations ){
+            $this->_annotations = false;
             return;
         }
         foreach( $this->_annotations as $annotation ){
@@ -31,7 +32,9 @@ class AnnotationReader
                     $this->_soloRun = true;
                     break;
                 case 'ss-browsers':
-                    $this->_browsers = explode(', ', $annotationValue);
+                    $browsers = explode(',', $annotationValue);
+                    $trimmedBrowsers = array_map('trim', $browsers);
+                    $this->_browsers = $trimmedBrowsers;
                     break;
             }
         }
@@ -43,11 +46,15 @@ class AnnotationReader
     
     public function hasBrowser($browser){
         foreach($this->_browsers as $browserName ){
-            if( $browser == $browserName){
+            if( strtolower($browser) == strtolower($browserName)){
                 return true;
             }
         }
         return false;
+    }
+    
+    public function hasBrowsersAnnotationSet(){
+        return count($this->_browsers) !== 0;
     }
     
     public function getBrowsers(){

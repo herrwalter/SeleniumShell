@@ -1552,3 +1552,355 @@ Stack trace:
 [07-Mar-2014 16:55:50 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_MailInbox' not found in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 33
 [07-Mar-2014 16:56:22 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_MailInbox' not found in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 33
 [07-Mar-2014 16:56:39 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_MailInbox' not found in C:\SeleniumTests\projects\kwt\actions\KWT_Actions.php on line 33
+[11-Mar-2014 09:16:18 Europe/Amsterdam] PHP Warning:  require_once(C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 113
+[11-Mar-2014 09:16:18 Europe/Amsterdam] PHP Fatal error:  require_once(): Failed opening required 'C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 113
+[11-Mar-2014 09:18:26 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Project not found.' in C:\SeleniumTests\SeleniumShell\core\src\Project.php:43
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\src\Project.php(22): Project->_setProjectPath()
+#1 C:\SeleniumTests\SeleniumShell\core\src\Application.php(48): Project->__construct('kwt')
+#2 C:\SeleniumTests\SeleniumShell\core\src\Application.php(16): Application->_initializeProjects()
+#3 C:\SeleniumTests\SeleniumShell\core\SeleniumShell.php(42): Application->__construct()
+#4 [internal function]: SeleniumShell::suite('SeleniumShell')
+#5 C:\php\pear\PHPUnit\Runner\BaseTestRunner.php(124): ReflectionMethod->invoke(NULL, 'SeleniumShell')
+#6 C:\php\pear\PHPUnit\TextUI\Command.php(150): PHPUnit_Runner_BaseTestRunner->getTest('SeleniumShell', 'C:\SeleniumTest...', Array)
+#7 C:\php\pear\PHPUnit\TextUI\Command.php(129): PHPUnit_TextUI_Command->run(Array, true)
+#8 C:\php\phpunit(46): PHPUnit_TextUI_Command::main()
+#9 {main}
+  thrown in C:\SeleniumTests\SeleniumShell\core\src\Project.php on line 43
+[11-Mar-2014 09:33:55 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:33:55 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:33:55 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:33:55 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:33:55 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:33:55 Europe/Amsterdam] PHP Fatal error:  Call to undefined function is_empty() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 54
+[11-Mar-2014 09:34:54 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:34:54 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:34:54 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:34:54 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:34:54 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:34:54 Europe/Amsterdam] PHP Fatal error:  Call to undefined function isEmpty() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 54
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:35:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:35 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 30
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:37:36 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, null given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Notice:  Undefined index:  in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 28
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 27
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  key() expects parameter 1 to be array, boolean given in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 29
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 104
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 09:41:00 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 09:43:25 Europe/Amsterdam] PHP Notice:  Undefined variable: annotations in C:\SeleniumTests\SeleniumShell\core\src\Annotations\AnnotationReader.php on line 23
+[11-Mar-2014 09:55:58 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasSoloRun() on a non-object in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassReader.php on line 232
+[11-Mar-2014 10:01:13 Europe/Amsterdam] PHP Notice:  Undefined variable: annotation in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassReader.php on line 234
+[11-Mar-2014 10:02:57 Europe/Amsterdam] PHP Notice:  Undefined property: TestClassReader::$fileHasSolorunAnnotation in C:\SeleniumTests\SeleniumShell\core\src\Project.php on line 119
+[11-Mar-2014 10:03:57 Europe/Amsterdam] PHP Notice:  Undefined property: TestClassReader::$fileHasSolorunAnnotation in C:\SeleniumTests\SeleniumShell\core\src\Project.php on line 119
+[11-Mar-2014 10:06:30 Europe/Amsterdam] PHP Notice:  Undefined property: TestClassReader::$fileHasSolorunAnnotation in C:\SeleniumTests\SeleniumShell\core\src\Project.php on line 119
+[11-Mar-2014 10:11:50 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 10:11:50 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 87
+[11-Mar-2014 10:13:47 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 10:13:47 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 87
+[11-Mar-2014 10:15:55 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 10:15:55 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 87
+[11-Mar-2014 10:16:07 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 21
+[11-Mar-2014 10:16:07 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 87
+[11-Mar-2014 10:18:23 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasBrowsersAnnotationSet() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 27
+[11-Mar-2014 10:19:00 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasBrowsersAnnotationSet() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 27
+[11-Mar-2014 10:21:54 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasBrowsersAnnotationSet() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 27
+[11-Mar-2014 10:29:59 Europe/Amsterdam] PHP Parse error:  syntax error, unexpected ')' in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationCommand.php on line 19
+[11-Mar-2014 10:30:09 Europe/Amsterdam] PHP Parse error:  syntax error, unexpected ')' in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationCommand.php on line 19
+[11-Mar-2014 10:52:39 Europe/Amsterdam] PHP Warning:  array_walk() expects parameter 2 to be a valid callback, function 'trim_value' not found or invalid function name in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationCommand.php on line 24
+[11-Mar-2014 10:52:39 Europe/Amsterdam] PHP Warning:  array_walk() expects parameter 2 to be a valid callback, function 'trim_value' not found or invalid function name in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationCommand.php on line 24
+[11-Mar-2014 10:55:58 Europe/Amsterdam] PHP Fatal error:  Call to a member function getAnnotations() on a non-object in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 106
+[11-Mar-2014 10:57:12 Europe/Amsterdam] PHP Fatal error:  Call to a member function getAnnotations() on a non-object in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 106
+[11-Mar-2014 10:59:05 Europe/Amsterdam] PHP Fatal error:  Call to a member function getAnnotations() on a non-object in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 105
+[11-Mar-2014 10:59:22 Europe/Amsterdam] PHP Fatal error:  Call to a member function getAnnotations() on a non-object in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 106
+[11-Mar-2014 11:02:20 Europe/Amsterdam] PHP Fatal error:  Call to undefined method TestClassRecreator::_checkForSolorun() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 83
+[11-Mar-2014 11:02:49 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:02:49 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:02:49 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:02:49 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:03:31 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:03:31 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:03:31 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:03:31 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:03:31 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:03:31 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:09 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:09 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:09 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:09 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:09 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:09 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:21 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:21 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:21 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:21 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:21 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:21 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:27 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:27 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:27 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:04:27 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:05:33 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:05:33 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:05:33 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:05:33 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:05:33 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:05:33 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:06:06 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:06:06 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:06:06 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:06:06 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:06:06 Europe/Amsterdam] PHP Notice:  Undefined property: SoloRun_AnnotationCommand::$_testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:06:06 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 21
+[11-Mar-2014 11:07:10 Europe/Amsterdam] PHP Fatal error:  Call to a member function getAnnotations() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 22
+[11-Mar-2014 11:07:42 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasAnnotations() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 26
+[11-Mar-2014 11:08:26 Europe/Amsterdam] PHP Fatal error:  Call to a member function getAnnotations() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 23
+[11-Mar-2014 11:09:52 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasBrowsersAnnotationSet() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 29
+[11-Mar-2014 11:10:17 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasBrowsersAnnotationSet() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 28
+[11-Mar-2014 11:10:42 Europe/Amsterdam] PHP Fatal error:  Call to a member function getAnnotations() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationCommand.php on line 23
+[11-Mar-2014 12:12:23 Europe/Amsterdam] PHP Fatal error:  Call to a member function getStripMethodState() on a non-object in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 87
+[11-Mar-2014 12:13:27 Europe/Amsterdam] PHP Fatal error:  Cannot use object of type SeleniumShell_TestMethod as array in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 29
+[11-Mar-2014 12:14:14 Europe/Amsterdam] PHP Fatal error:  Cannot use object of type SeleniumShell_TestMethod as array in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 31
+[11-Mar-2014 12:14:32 Europe/Amsterdam] PHP Fatal error:  Cannot use object of type SeleniumShell_TestMethod as array in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 32
+[11-Mar-2014 12:14:58 Europe/Amsterdam] PHP Fatal error:  Cannot use object of type SeleniumShell_TestMethod as array in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 30
+[11-Mar-2014 12:15:25 Europe/Amsterdam] PHP Fatal error:  Cannot use object of type SeleniumShell_TestMethod as array in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationRule.php on line 33
+[11-Mar-2014 12:17:16 Europe/Amsterdam] PHP Notice:  Undefined variable: testMethods in C:\SeleniumTests\SeleniumShell\core\src\Annotations\Browsers_AnnotationCommand.php on line 26
+[11-Mar-2014 12:17:16 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86

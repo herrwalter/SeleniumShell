@@ -105,7 +105,7 @@ class TestClassReader
             $token = $this->_tokens[$i];
             $tokenRdr = new TokenReader($token);
             
-            
+            // if we found the test class definition we start tracking..
             if( $tokenRdr->isClassDefinition() ){
                 $class->startTracking();
             }
@@ -229,7 +229,7 @@ class TestClassReader
         $methods = $this->getTestMethods();
         foreach( $methods as $method ){
             $annotation = $method->getAnnotations();
-            if( $annotation->hasSoloRun() ){
+            if( $method->hasAnnotations() && $annotation->hasSoloRun() ){
                 return true;
             }
         }

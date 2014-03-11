@@ -93,4 +93,5 @@ abstract class SeleniumShell_Abstract_PDO_Database{
     abstract protected function getUser();
     abstract protected function getPassword();
     abstract protected function getDatabaseName();
+    
 }

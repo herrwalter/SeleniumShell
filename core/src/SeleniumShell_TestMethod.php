@@ -8,9 +8,12 @@
 
 class SeleniumShell_TestMethod {
     
+    /** @var AnnotationReader*/
     private $_annotations;
     
     private $_method;
+    
+    private $_stripMethod = false;
     
     public function setAnnotations( $annotations ){
         $this->_annotations = new AnnotationReader($annotations);
@@ -19,7 +22,14 @@ class SeleniumShell_TestMethod {
      * @return AnnotationReader
      */
     public function getAnnotations( ){
-        return $this->_annotations;
+        if( $this->hasAnnotations() ){
+            return $this->_annotations;
+        }
+        return false;
+    }
+    
+    public function hasAnnotations(){
+        return $this->_annotations->hasAnnotations();
     }
     
     public function setMethod( $method ){
@@ -29,5 +39,14 @@ class SeleniumShell_TestMethod {
     public function getMethod(){
         return $this->_method;
     } 
+    
+    public function stripMethod(){
+        $this->_stripMethod = true;
+    }
+    
+    public function getStripMethodState(){
+        return $this->_stripMethod;
+    }
+    
     
 }
