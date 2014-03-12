@@ -49,7 +49,7 @@ class SeleniumShell_MailInbox {
     private function _getUnseenMails( $nrOfAttempts ){
         $attempts = 0;
         do{
-            sleep(1);
+            sleep(5);
             $mails = imap_search($this->_stream, 'UNSEEN');
             $attempts++;
             if( $nrOfAttempts == $attempts ){
@@ -58,8 +58,13 @@ class SeleniumShell_MailInbox {
         } while ( !$mails );
         return $mails;
     }
-
-    public function getUnreadEmails( $nrOfAttempts = 10 ) {
+    /**
+     * 
+     * @param type $nrOfAttempts
+     * @return imap_stream
+     * @throws ErrorException
+     */
+    public function getUnreadEmails( $nrOfAttempts = 10, $emailStructure = '') {
         
         $mailNumbers = $this->_getUnseenMails( $nrOfAttempts );
         if( !$mailNumbers ){
@@ -109,12 +114,27 @@ class SeleniumShell_MailInbox {
             if (count($attachments) != 0) {
                 foreach ($attachments as $at) {
                     if ($at['is_attachment'] == 1) {
-                        file_put_contents('D:/wamp/www/seleniumtests/attachments/' .$at['filename'], $at['attachment']);
-                        echo '<a href="'.'D:/wamp/www/seleniumtests/attachments/' .$at['filename'] . '" >'.$at['name'].'</a>';
+                        //file_put_contents('D:/wamp/www/seleniumtests/attachments/' .$at['filename'], $at['attachment']);
+                        //echo '<a href="'.'D:/wamp/www/seleniumtests/attachments/' .$at['filename'] . '" >'.$at['name'].'</a>';
                     }
                 }
             }
-            $mails[] = $mail;
+            
+            switch($emailStructure){
+                case 'html':
+                    $mails[] = quoted_printable_decode(imap_fetchtext($this->_stream, $mailNr));
+                    break;
+                case 'text':
+                    $mails[] = strip_tags(quoted_printable_decode(imap_fetchtext($this->_stream, $mailNr)));
+                    break;
+                case 'headerinfo':
+                    $mails[] = $mail;
+                    break;
+                default:
+                    $mails[] = strip_tags(quoted_printable_decode(imap_fetchtext($this->_stream, $mailNr)));
+                    break;
+                
+            }
         }
         return $mails;
     }

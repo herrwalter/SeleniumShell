@@ -1918,3 +1918,25 @@ Stack trace:
 #9 {main}
   thrown in C:\SeleniumTests\SeleniumShell\core\src\Project.php on line 43
 [11-Mar-2014 14:59:51 Europe/Amsterdam] PHP Fatal error:  Class 'FormHandler' not found in C:\SeleniumTests\BizappsSeleniumTests\projects\kwt\actions\KWT_Actions.php on line 178
+[11-Mar-2014 15:38:02 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_Actions::fillAanvraagFormByIds() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_FlowTest.php on line 19
+[11-Mar-2014 16:01:50 Europe/Amsterdam] PHP Fatal error:  Call to undefined method stdClass::getMessageNumber() in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_FlowTest.php on line 25
+[11-Mar-2014 16:05:11 Europe/Amsterdam] PHP Fatal error:  Call to a member function getMessageNumber() on a non-object in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_FlowTest.php on line 25
+[11-Mar-2014 16:12:00 Europe/Amsterdam] PHP Fatal error:  Call to undefined function fetch_body() in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_MailInbox.php on line 122
+[11-Mar-2014 16:13:00 Europe/Amsterdam] PHP Fatal error:  Call to undefined function fetch_body() in C:\SeleniumTests\SeleniumShell\core\SeleniumHandlers\SeleniumShell_MailInbox.php on line 122
+[11-Mar-2014 17:03:11 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 17:03:15 Europe/Amsterdam] PHP Warning:  Invalid argument supplied for foreach() in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassRecreator.php on line 86
+[11-Mar-2014 17:26:22 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasSoloRun() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationRule.php on line 11
+[11-Mar-2014 17:27:38 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasSoloRun() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationRule.php on line 11
+[11-Mar-2014 17:27:59 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasSoloRun() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationRule.php on line 11
+[11-Mar-2014 17:28:20 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasSoloRun() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationRule.php on line 11
+[11-Mar-2014 17:29:14 Europe/Amsterdam] PHP Fatal error:  Call to a member function hasSoloRun() on a non-object in C:\SeleniumTests\SeleniumShell\core\src\Annotations\SoloRun_AnnotationRule.php on line 11
+[12-Mar-2014 14:01:53 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_Actions::doAanvraagAction() in C:\SeleniumTests\BizappsSeleniumTests\projects\kwt\actions\KWT_Actions.php on line 202
+[12-Mar-2014 14:44:07 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
+[12-Mar-2014 14:47:24 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
+[12-Mar-2014 15:02:32 Europe/Amsterdam] PHP Fatal error:  Call to undefined method KWT_Actions::fillUitbetalingsVeldenAan() in C:\SeleniumTests\BizappsSeleniumTests\projects\kwt\actions\KWT_Actions.php on line 222
+[12-Mar-2014 15:08:31 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
+[12-Mar-2014 15:09:03 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
+[12-Mar-2014 15:10:15 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
+[12-Mar-2014 15:11:50 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
+[12-Mar-2014 15:12:17 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
+[12-Mar-2014 15:12:45 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0

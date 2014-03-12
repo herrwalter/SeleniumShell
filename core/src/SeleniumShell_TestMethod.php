@@ -22,10 +22,10 @@ class SeleniumShell_TestMethod {
      * @return AnnotationReader
      */
     public function getAnnotations( ){
-        if( $this->hasAnnotations() ){
+        //if( $this->hasAnnotations() ){
             return $this->_annotations;
-        }
-        return false;
+        //}
+        //return false;
     }
     
     public function hasAnnotations(){

@@ -169,6 +169,11 @@ class SeleniumShell_FormHandler {
         }
     }
     
+    public function mapValuesToElementsByNameAndId( $arrayWithTwoArraysNamedIdAndName ){
+        $this->mapValuesToElementsById($arrayWithTwoArraysNamedIdAndName['id']);
+        $this->mapValuesToElementsByName($arrayWithTwoArraysNamedIdAndName['name']);
+    }
+    
     /**
      * @desc Will submit the form.
      */
