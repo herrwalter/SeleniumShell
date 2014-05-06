@@ -8,16 +8,19 @@
 class SoloRun_AnnotationCommand  implements Interface_Command{
     
     public function onCommand($name, $args) {
+        
+        $config = new ConfigHandler();
         if( $name !== 'solo-run'  ){
             return false;
         }
         if( !isset($args['testMethods']) ){
             throw new ErrorException( 'Annotation command needs "testMethods" in the args ' );
         }
+        if( $config->isParameterSet('--ss-ignore-solo-run') ){
+            return $args['testMethods'];
+        }
         
         $soloRun = new SoloRun_AnnotationRule();
-        
-        
         // check if solo_run is applied on one of the methods.
         foreach( $args['testMethods'] as $testMethod){
             if( $testMethod ){

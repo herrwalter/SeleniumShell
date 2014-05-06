@@ -25,6 +25,7 @@ require_once( CORE_HANDLERS_PATH . $sep . 'ConfigHandler.php');
 require_once( CORE_HANDLERS_PATH . $sep . 'PHPUnitParameterReader.php');
 require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_HelperMethods.php' );
 require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_Asserts.php' );
+require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_ErrorCatchingOverrides.php' );
 require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_Test.php' );
 
 

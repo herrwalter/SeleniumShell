@@ -9,7 +9,7 @@
 class SeleniumShell_Asserts extends SeleniumShell_HelperMethods{
     
     
-    public function assertElementExists( $selector, $message = '' ){
+    public function assertElementExists( $selector, $message = ' could not find the element with given selector'){
         $element = $this->selectElementsByCssSelector($selector);
         $this->assertTrue( count($element) !== 0, $message );
     }
@@ -17,6 +17,10 @@ class SeleniumShell_Asserts extends SeleniumShell_HelperMethods{
     public function assertElementNotExists( $selector, $message = '' ){
         $element = $this->selectElementsByCssSelector($selector);
         $this->assertTrue( count($element) === 0, $message );
+    }
+    
+    public function assertElementText( $element, $text, $message ){
+        $this->assertEquals($text, $element->text(), $message);
     }
     
     /**

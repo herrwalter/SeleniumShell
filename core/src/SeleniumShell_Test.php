@@ -1,7 +1,7 @@
 <?php
 
 
-class SeleniumShell_Test extends SeleniumShell_Asserts
+class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
 {
     public $projectName;
     
@@ -44,6 +44,5 @@ class SeleniumShell_Test extends SeleniumShell_Asserts
             return 4444;
         }
     }
-   
-    
+
 }

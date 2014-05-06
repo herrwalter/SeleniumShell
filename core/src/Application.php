@@ -67,8 +67,20 @@ class Application
     }
     
     public function _setEnvironmentConstant(){
+        
+        /**
+         * If --ss-project is set, we will only run that project, so we have to check
+         * if we need to use that config for setting the project environment.
+         */
+        $project = $this->_config->getParameter('--ss-project');
+        if( $project ){
+            $projectConfig = new ConfigHandler(PROJECTS_FOLDER . '\\' . $project . '\\config\\project.ini');
+        }
+        
         if( $this->_config->isParameterSet('--ss-env') ){
             define( 'SS_ENVIRONMENT', $this->_config->getParameter('--ss-env') );
+        } else if( $projectConfig !== null && $projectConfig->getAttribute('project-environment') ){
+            define( 'SS_ENVIRONMENT', $projectConfig->getAttribute('project-environment'));
         } else if( $this->_config->getAttribute('project-environment') ) {
             define( 'SS_ENVIRONMENT', $this->_config->getAttribute('project-environment'));
         } else {

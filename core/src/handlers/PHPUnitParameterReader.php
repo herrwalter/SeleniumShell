@@ -15,6 +15,7 @@ class  PHPUnitParameterReader {
         '--ss-env' => false,
         '--ss-host' => false,
         '--ss-port' => false,
+        '--ss-ignore-solo-run' => false,
         '--ss-mail-results' => false
     );
     

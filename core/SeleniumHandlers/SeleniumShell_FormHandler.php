@@ -5,7 +5,7 @@ class SeleniumShell_FormHandler {
     
     protected $_elements;
     
-    /** @var PHPUnit_Extensions_Selenium2TestCase  */
+    /** @var SeleniumShell_Test  */
     protected $_session;
     
     /** @var PHPUnit_Extensions_Selenium2TestCase_Element */

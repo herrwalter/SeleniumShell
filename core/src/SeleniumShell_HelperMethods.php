@@ -41,4 +41,12 @@ class SeleniumShell_HelperMethods extends PHPUnit_Extensions_Selenium2TestCase {
         ));
     }
     
+    public function selectPopupWindow()
+    {
+        $currentWindow = $this->windowHandle();
+        $windowHandles = $this->windowHandles();
+        unset($windowHandles[$currentWindow]);
+        $this->window(end($windowHandles));
+    }
+    
 }
