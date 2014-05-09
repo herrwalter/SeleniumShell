@@ -1940,3 +1940,27 @@ Stack trace:
 [12-Mar-2014 15:11:50 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
 [12-Mar-2014 15:12:17 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
 [12-Mar-2014 15:12:45 Europe/Amsterdam] PHP Notice:  Unknown: Can't connect to mail01-prod-trimm.trimm.nl,143: Timed out (errflg=2) in Unknown on line 0
+[12-Mar-2014 16:18:04 Europe/Amsterdam] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Project not found.' in C:\SeleniumTests\SeleniumShell\core\src\Project.php:43
+Stack trace:
+#0 C:\SeleniumTests\SeleniumShell\core\src\Project.php(22): Project->_setProjectPath()
+#1 C:\SeleniumTests\SeleniumShell\core\src\Application.php(48): Project->__construct('kwt')
+#2 C:\SeleniumTests\SeleniumShell\core\src\Application.php(16): Application->_initializeProjects()
+#3 C:\SeleniumTests\SeleniumShell\core\SeleniumShell.php(42): Application->__construct()
+#4 [internal function]: SeleniumShell::suite('SeleniumShell')
+#5 C:\php\pear\PHPUnit\Runner\BaseTestRunner.php(124): ReflectionMethod->invoke(NULL, 'SeleniumShell')
+#6 C:\php\pear\PHPUnit\TextUI\Command.php(150): PHPUnit_Runner_BaseTestRunner->getTest('SeleniumShell', 'C:\SeleniumTest...', Array)
+#7 C:\php\pear\PHPUnit\TextUI\Command.php(129): PHPUnit_TextUI_Command->run(Array, true)
+#8 C:\php\phpunit(46): PHPUnit_TextUI_Command::main()
+#9 {main}
+  thrown in C:\SeleniumTests\SeleniumShell\core\src\Project.php on line 43
+[07-Apr-2014 17:15:38 Europe/Amsterdam] PHP Fatal error:  Call to a member function implicitWait() on a non-object in C:\SeleniumTests\BizappsSeleniumTests\projects\kwt\actions\KWT_Actions.php on line 94
+[07-Apr-2014 17:25:42 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_ErrorException' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 52
+[08-Apr-2014 08:30:40 Europe/Amsterdam] PHP Warning:  require_once(C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Overrides.php): failed to open stream: No such file or directory in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 28
+[08-Apr-2014 08:30:40 Europe/Amsterdam] PHP Fatal error:  require_once(): Failed opening required 'C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Overrides.php' (include_path='.;C:\php\pear') in C:\SeleniumTests\SeleniumShell\core\bootstrap.php on line 28
+[08-Apr-2014 08:32:13 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Overrides' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 9
+[08-Apr-2014 08:32:19 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Overrides' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 9
+[08-Apr-2014 08:39:32 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_Overrides' not found in C:\SeleniumTests\SeleniumShell\core\src\SeleniumShell_Test.php on line 9
+[08-Apr-2014 08:39:52 Europe/Amsterdam] PHP Fatal error:  Class 'SeleniumShell_TestMethod' not found in C:\SeleniumTests\SeleniumShell\core\utils\ClassHelpers\TestClassReader.php on line 116
+[08-Apr-2014 09:29:17 Europe/Amsterdam] PHP Fatal error:  Call to a member function text() on a non-object in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_MailTest.php on line 217
+[08-Apr-2014 09:35:13 Europe/Amsterdam] PHP Fatal error:  Call to a member function text() on a non-object in C:\SeleniumTests\SeleniumShell\core\generated\testsuites\kwt\kwtchromeKWT_MailTest.php on line 218
+[08-Apr-2014 10:41:17 Europe/Amsterdam] PHP Fatal error:  Call to a member function click() on a non-object in C:\SeleniumTests\BizappsSeleniumTests\projects\kwt\actions\KWT_Actions.php on line 269
