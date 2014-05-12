@@ -45,4 +45,22 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
         }
     }
 
+    public function getStatusRepresentation(){
+        switch($this->getStatus()){
+            case 0:
+                return '.';
+            case 1:
+                return 'S';
+            case 2:
+                return 'I';
+            case 3:
+                return 'F';
+            case 4:
+                return 'E';
+            default:
+                throw new ErrorException( 'Unknows status found' );
+        }
+    }
+       
+    
 }

@@ -59,6 +59,7 @@ class TestClassRecreator {
         $this->_setBrowserVariable($browser);
         $this->_deleteTestsThatShouldNotRunInThisBrowser($browser);
         $this->_saveFile($browser);
+        return $this->_savePath .$this->_projectName. $browser . $this->_testClassFileName;
     }
     
     /**

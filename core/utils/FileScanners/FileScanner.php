@@ -15,10 +15,11 @@ class FileScanner
     
     private function _readDirRecursive( $dir )
     {
-        try{
+        $curDirFiles = false;
+        if( is_dir($dir) ){
             $curDirFiles = scandir($dir);
-        } catch( Exeption $e ) {
-            return $files;
+        } else {
+            DebugLog::write($dir . ' is not a directory. ');
         }
         if( $curDirFiles ){
             foreach( $curDirFiles as $file ){

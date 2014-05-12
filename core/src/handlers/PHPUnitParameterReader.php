@@ -16,7 +16,10 @@ class  PHPUnitParameterReader {
         '--ss-host' => false,
         '--ss-port' => false,
         '--ss-ignore-solo-run' => false,
-        '--ss-mail-results' => false
+        '--ss-mail-results' => false,
+        '--ss-session' => false,
+        '--ss-print-tests' => false,
+        '--ss-generate' => false
     );
     
     public function __construct(){

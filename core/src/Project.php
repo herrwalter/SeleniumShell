@@ -14,6 +14,8 @@ class Project
     
     private $_testFiles;
     
+    private $_generatedFiles = array();
+    
     private $_browsers;
     
     public function __construct($projectName)
@@ -24,7 +26,7 @@ class Project
         $this->_setTestFiles();
         $this->_filterTestSuitesIfSeleniumShellParameterIsSet();
         $this->_setBrowserSettings();
-        $this->_deleteGeneratedTestFiles();
+        //$this->_deleteGeneratedTestFiles();
         $this->_generateTestFilesForAllBrowsers();
         $this->_prepareProjectsTestClassNamesForSuite();
     }
@@ -42,6 +44,10 @@ class Project
         }else{
             throw new ErrorException('Project not found.');
         }
+    }
+    
+    public function getGeneratedFiles(){
+        return $this->_generatedFiles;
     }
     
     public function getProjectName()
@@ -117,7 +123,7 @@ class Project
             
             //if ss-solo-run has been applied to one of the test. Then only this file should be processed.
             if( $reader->fileHasSolorunAnnotation() ){
-                $this->_deleteGeneratedTestFiles();
+                //$this->_deleteGeneratedTestFiles();
                 $this->_createBrowserTestsForTestFile($file);
                 $this->_testFiles = array($file);
                 break;
@@ -130,11 +136,11 @@ class Project
     private function _prepareProjectsTestClassNamesForSuite()
     {
         // include the generated browsertest
-        $testFileIncluder = new TestFileIncluder(GENERATED_TESTSUITES_PATH);
-        $testFileIncluder->includeFiles();
-        $includedFiles = $testFileIncluder->getInlcudedFiles();
+        foreach( $this->_generatedFiles as $file ){
+            require_once($file);
+        }
         // Instantiate classes and save their classNames for test initialisation.
-        $classInstantiator = new ClassInstantiator($includedFiles);
+        $classInstantiator = new ClassInstantiator($this->_generatedFiles);
         $this->_testClassNames = $classInstantiator->getClassNames();
     }
     
@@ -143,7 +149,7 @@ class Project
      */
     protected function _deleteGeneratedTestFiles(){
         // delete old testfiles
-        $fileScanner = new FileScanner( GENERATED_TESTSUITES_PATH );
+        $fileScanner = new FileScanner( GENERATED_TESTSUITES_PATH . session_id() );
         $generatedTestFiles = $fileScanner->getFilesInOneDimensionalArray();
         foreach( $generatedTestFiles as $testFile ){
             if( is_file($testFile)){
@@ -154,12 +160,13 @@ class Project
     
     protected function _createBrowserTestsForTestFile($file){
         $tcr = new TestClassRecreator($file);
-        $tcr->setSavePath(GENERATED_TESTSUITES_PATH  . $this->_name. DIRECTORY_SEPARATOR);
+        $tcr->setSavePath(GENERATED_TESTSUITES_PATH . session_id() . DIRECTORY_SEPARATOR . $this->_name . DIRECTORY_SEPARATOR );
         $tcr->setProjectName($this->_name);
         foreach( $this->_browsers as $browser ){
-            $tcr->createFileForBrowser( $browser );
+            $this->_generatedFiles[] = $tcr->createFileForBrowser( $browser );
         }
     }
+    
     
     
     

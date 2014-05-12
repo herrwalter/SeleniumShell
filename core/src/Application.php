@@ -8,11 +8,14 @@ class Application
     /** @var PHPUnit_Framework_TestSuite*/
     private $_suite;
     
+    private $_sessionId;
+    
     private $_projects;
     
     public function __construct()
     {
         $this->_setConfig();
+        $this->_setSession();
         $this->_initializeProjects();
         $this->_setEnvironmentConstant();
         $this->_setSuite();
@@ -23,8 +26,47 @@ class Application
      */
     private function _setSuite()
     {
+        if( $this->_config->isParameterSet('--ss-generate') ){
+            die( 'Only generated the files. ' );
+        }
         $testsuiteInitiator = new TestSuiteInitiator($this->_projects);
+        if( $this->_config->isParameterSet('--ss-print-tests')){
+            $testsuite = $testsuiteInitiator->getTestSuite();
+            $testClases = $testsuite->tests();
+            foreach( $testClases as $testClass ){
+                $testMethods = $testClass->tests();
+                foreach($testMethods as $testMethod ){
+                    echo $testClass->getName() . '::' . $testMethod->getName() . PHP_EOL;
+                }
+            }
+            die();
+        }
         $this->_suite = $testsuiteInitiator->getTestSuite();
+        
+    }
+    
+    private function _setSession()
+    {
+        if( $this->_config->isParameterSet('--ss-session') ){
+            $sessionId = $this->_config->getParameter('--ss-session');
+            session_id($sessionId);
+        } else {
+            session_id(time() . rand(1,123123));
+        }
+        $sessionFolder = GENERATED_TESTSUITES_PATH . session_id();
+        if( !file_exists($sessionFolder) ){
+            mkdir( GENERATED_TESTSUITES_PATH . session_id(), '0777');
+        }
+        if( !file_exists(GENERATED_RESULTS_PATH . session_id() )){
+            mkdir(GENERATED_RESULTS_PATH . session_id(), '0777');
+        }
+        if( !file_exists(GENERATED_DEBUG_PATH.session_id()) ){
+            mkdir(GENERATED_DEBUG_PATH.session_id(), '0777');
+        }
+        if( !file_exists(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'results.txt') ){
+            file_put_contents(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'results.txt', PHP_EOL . "PHPUnit by Sebastian Bergmann. \nSeleniumShell by Wouter Wessendorp \n\n" );
+        }
+         
     }
     
     /**
@@ -61,6 +103,10 @@ class Application
         $this->_projects = $projects;
     }
     
+    public function getProjects(){
+        return $this->_projects;
+    }
+    
     
     public function getTestSuite(){
         return $this->_suite;
@@ -72,6 +118,7 @@ class Application
          * If --ss-project is set, we will only run that project, so we have to check
          * if we need to use that config for setting the project environment.
          */
+        $projectConfig = null;
         $project = $this->_config->getParameter('--ss-project');
         if( $project ){
             $projectConfig = new ConfigHandler(PROJECTS_FOLDER . '\\' . $project . '\\config\\project.ini');
@@ -87,4 +134,5 @@ class Application
             define( 'SS_ENVIRONMENT', false );
         }
     }
+    
 }

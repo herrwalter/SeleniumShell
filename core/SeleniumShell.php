@@ -8,6 +8,8 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     
     public $project;
     
+    /* @var Application */
+    private static $_app;
     
     public function __construct()//$name = NULL, array $data = array(), $dataName = '')
     {
@@ -15,7 +17,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
             $this->_bootstrap();
             $this->_setInitialisation();
         }
-        
+        $this->_app = new Application();
         parent::__construct();//$name, $data, $dataName);
     }
     
@@ -37,6 +39,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     }
 
     
+    
     public static function suite($suite) {
         self::_bootstrap();
         $app = new Application();
@@ -46,9 +49,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     
     
     
-    
-    
-    
+      
     
 }
 

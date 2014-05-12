@@ -8,7 +8,9 @@ error_reporting(E_ALL);
 define('SELENIUM_SHELL', str_replace('core', '', $rel_path));
 define('CORE_CONFIG_PATH', $rel_path. $sep.'config' );
 define('CORE_PATH', $rel_path . $sep);
-define('SELENIUM_SHELL_HANDLERS', CORE_PATH . $sep . 'SeleniumHandlers');
+define('SELENIUM_SHELL_PUBLIC', SELENIUM_SHELL . 'public' );
+define('SELENIUM_SHELL_TOOLS', SELENIUM_SHELL_PUBLIC. DIRECTORY_SEPARATOR . 'seleniumshell-tools');
+define('SELENIUM_SHELL_TESTCASE', SELENIUM_SHELL_PUBLIC . DIRECTORY_SEPARATOR . 'seleniumshell-testcase');
 define('CORE_SRC_PATH', $rel_path . $sep . 'src');
 define('CORE_HANDLERS_PATH', $rel_path . $sep .'src'.$sep.'handlers');
 define('UTILS_PATH', $rel_path . $sep . 'utils');
@@ -16,24 +18,30 @@ define('FILEINCLUDERS_PATH', UTILS_PATH . $sep . 'FileIncluders');
 define('FILESCANNERS_PATH', UTILS_PATH . $sep . 'FileScanners');
 define('CLASSHELPERS_PATH', UTILS_PATH . $sep . 'ClassHelpers');
 define('TOKENHELPERS_PATH', UTILS_PATH . $sep .'TokenHelpers');
-define('GENERATED_PATH', $rel_path. $sep. 'generated');
+define('GENERATED_PATH', SELENIUM_SHELL . 'generated');
 define('GENERATED_TESTSUITES_PATH', GENERATED_PATH . $sep . 'testsuites' .$sep );
+define('GENERATED_RESULTS_PATH', GENERATED_PATH . $sep . 'results' .$sep );
+define('GENERATED_DEBUG_PATH', GENERATED_PATH . $sep . 'debug' .$sep );
+
 
 require_once( FILESCANNERS_PATH . $sep . 'FileScanner.php');
 require_once( FILESCANNERS_PATH . $sep . 'TestFileScanner.php');
 require_once( CORE_HANDLERS_PATH . $sep . 'ConfigHandler.php');
+require_once( UTILS_PATH . $sep . 'DebugLog.php');
 require_once( CORE_HANDLERS_PATH . $sep . 'PHPUnitParameterReader.php');
-require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_HelperMethods.php' );
-require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_Asserts.php' );
-require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_ErrorCatchingOverrides.php' );
-require_once( CORE_SRC_PATH . $sep . 'SeleniumShell_Test.php' );
+require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_HelperMethods.php' );
+require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_Asserts.php' );
+require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ErrorCatchingOverrides.php' );
+require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_Test.php' );
 
 
 function SeleniumShellAutoloadFunction( $className ){
+    
     $backtrace = debug_backtrace();
     if( !isset($backtrace[1]['file']) ){
         return;
     }
+    
     $file = $backtrace[1]['file'];
     // try to strip serveral paths from file to determine if its a project class or a SeleniumShell class.
     $file = str_ireplace(PROJECTS_FOLDER, '', $file);
@@ -53,6 +61,14 @@ function SeleniumShellAutoloadFunction( $className ){
     // then we should crawlup that project file..
     if(stripos( $file, CORE_PATH ) === false ){
         $projectName = $explodedFile[0];
+        if( $projectName == session_id() ){
+            $projectName = $explodedFile[1];
+        }
+        if( substr($projectName, -1) == ':' ){
+            scan_folder_for_class(SELENIUM_SHELL_TOOLS, $className);
+            return;
+        }
+        
         $projectPath = PROJECTS_FOLDER . DIRECTORY_SEPARATOR . $projectName;
         $projectScanner = new FileScanner($projectPath);
         $projectTestFileScanner = new TestFileScanner($projectPath);
@@ -71,7 +87,7 @@ function SeleniumShellAutoloadFunction( $className ){
             }
         }
         // if it isnt in the project folder, we assume the want to use a SeleniumShell Handler..
-        scan_folder_for_class(SELENIUM_SHELL_HANDLERS, $className);
+        scan_folder_for_class(SELENIUM_SHELL_TOOLS, $className);
         
     } else { // find seleniumShell Core.
         // crawl source..
@@ -80,7 +96,7 @@ function SeleniumShellAutoloadFunction( $className ){
         // crawl utils.. 
         else if( scan_folder_for_class(UTILS_PATH, $className) ){}
         
-        else if( scan_folder_for_class(SELENIUM_SHELL_HANDLERS, $className)){}
+        else if( scan_folder_for_class(SELENIUM_SHELL_TOOLS, $className)){}
         
     }
 }

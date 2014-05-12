@@ -1,7 +1,10 @@
 <?php
 
 
-
+/**
+ * Will add the Tests from every defined project to a newly 
+ * created PHPUnit_Framework_TestSuite.
+ */
 class TestSuiteInitiator
 {
     /** @var PHPUnit_Framework_TestSuite */
@@ -16,20 +19,10 @@ class TestSuiteInitiator
      */
     public function __construct( $projects )
     {
-        $this->_setSuite();
-        $this->_setProjects( $projects );
+        $this->_suite = new SeleniumShell_TestSuite();
+        $this->_projects = $projects;
         $this->_addTestsToSuite();
                 
-    }
-    
-    private function _setProjects( $projects )
-    {
-        $this->_projects = $projects;
-    }
-    
-    private function _setSuite()
-    {
-        $this->_suite = new PHPUnit_Framework_TestSuite();
     }
     
     private function _addTestsToSuite()
@@ -44,7 +37,6 @@ class TestSuiteInitiator
     {
         foreach($classNames as $className )
         {
-            
             $this->_suite->addTestSuite($className);
         }
     }

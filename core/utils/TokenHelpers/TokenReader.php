@@ -75,6 +75,9 @@ class TokenReader
             if( count($annotations) > 1){
                 foreach( $annotations[1] as $annotation){
                     $anno = explode(' ', $annotation);
+                    if( count($anno) === 1){
+                        $anno[] = true;
+                    }
                     $niceFormat[] = array($anno[0] => $anno[1]);
                 }
             }
