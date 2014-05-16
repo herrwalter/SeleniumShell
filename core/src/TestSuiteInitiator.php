@@ -22,7 +22,6 @@ class TestSuiteInitiator
         $this->_suite = new SeleniumShell_TestSuite();
         $this->_projects = $projects;
         $this->_addTestsToSuite();
-                
     }
     
     private function _addTestsToSuite()

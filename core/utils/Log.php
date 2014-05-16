@@ -25,6 +25,11 @@ class Log
         $this->_file = $file;
     }
 
+    public function getLog()
+    {
+        return file_get_contents($this->_file);
+    }
+    
     public function write($text)
     {
         file_put_contents($this->_file, $text, FILE_APPEND);

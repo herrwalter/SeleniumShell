@@ -13,6 +13,10 @@ class SeleniumShell_TestSuite extends PHPUnit_Framework_TestSuite{
         parent::__construct($theClass, $name);
     }
     
+    public function getData(){
+        return $this->data;
+    }
+    
     public function run(\PHPUnit_Framework_TestResult $result = NULL, $filter = FALSE, array $groups = array(), array $excludeGroups = array(), $processIsolation = FALSE)
     {
         $result->addListener(new SeleniumShell_TestListener());

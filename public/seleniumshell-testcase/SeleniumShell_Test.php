@@ -44,6 +44,8 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
             return 4444;
         }
     }
+    
+    
 
     public function getStatusRepresentation(){
         switch($this->getStatus()){
@@ -61,6 +63,29 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
                 throw new ErrorException( 'Unknows status found' );
         }
     }
-       
+        
+    public function onNotSuccessfulTest(\Exception $e) {
+        
+        $subject = 'SeleniumShell Error on test: ' . $this->getTestId();
+        $headers   = array();
+        $headers[] = "MIME-Version: 1.0";
+        $headers[] = "Content-type: text/plain; charset=iso-8859-1";
+        $headers[] = "From: SeleniumShell <herrwalter@gmail.com>";
+        $headers[] = "Reply-To: No replay <noreplay@google.nl>";
+        $headers[] = "Subject: {$subject}";
+        $headers[] = "X-Mailer: PHP/".phpversion();
+        
+        $message  = 'Failure of the test: ' . $this->getTestId() . PHP_EOL;
+        $message .= 'Errorcode: ' . $e->getCode() . PHP_EOL;
+        $message .= 'ErrMessge: ' . $e->getMessage() . PHP_EOL;
+        $message .= 'Strace: ' . $e->getTraceAsString() . PHP_EOL;
+        $message .= PHP_EOL;
+        try{
+            mail( 'herrwalter@gmail.com' , $subject, $message, implode("\r\n", $headers));
+        } catch (Exception $ex) {
+            throw new Exception('Could not send the darn mail: ' . $ex->getMessage());;
+        }
+        parent::onNotSuccessfulTest($e);
+    }
     
 }

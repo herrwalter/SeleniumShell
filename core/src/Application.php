@@ -36,7 +36,19 @@ class Application
             foreach( $testClases as $testClass ){
                 $testMethods = $testClass->tests();
                 foreach($testMethods as $testMethod ){
-                    echo $testClass->getName() . '::' . $testMethod->getName() . PHP_EOL;
+                    if(get_class($testMethod) == 'PHPUnit_Framework_TestSuite_DataProvider' ){
+                        $testMethodName = explode('::', $testMethod->getName());
+                        $data = PHPUnit_Util_Test::getProvidedData(
+                            $testClass->getName(), $testMethodName[1]
+                        );
+                        foreach( $data as $key => $value ){
+                            echo $testClass->getName() . '::' . $testMethodName[1] . ' with data set #' . $key . PHP_EOL;
+                        }
+                    } else {
+                        echo $testClass->getName() . '::' . $testMethod->getName() . PHP_EOL;
+                        
+                    }
+                        
                 }
             }
             die();
@@ -63,6 +75,7 @@ class Application
         if( !file_exists(GENERATED_DEBUG_PATH.session_id()) ){
             mkdir(GENERATED_DEBUG_PATH.session_id(), '0777');
         }
+            DebugLog::write($sessionFolder);
         if( !file_exists(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'results.txt') ){
             file_put_contents(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'results.txt', PHP_EOL . "PHPUnit by Sebastian Bergmann. \nSeleniumShell by Wouter Wessendorp \n\n" );
         }

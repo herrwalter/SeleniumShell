@@ -1,68 +1,16 @@
-#!/usr/bin/env php
 <?php
 
-class Process
-{
-
-    public $cmd = '';
-    public $descriptors = array(
-        0 => array('pipe', 'r'),
-        1 => array('pipe', 'w'),
-        2 => array('pipe', 'a')
-    );
-    public $pipes = null;
-    public $desc = '';
-    private $strt_tm = 0;
-    public $resource = null;
-    public $status = null;
-    private $exitcode = null;
-
-    function __construct($cmd = '', $desc = '')
-    {
-        $this->cmd = $cmd;
-        $this->desc = $desc;
-
-        $this->resource = proc_open($this->cmd, $this->descriptors, $this->pipes, null, null);
-
-        $this->strt_tm = microtime(true);
-    }
-
-    public function isRunning()
-    {
-        $status = proc_get_status($this->resource);
-
-        /**
-         * proc_get_status will only pull valid exitcode one
-         * time after process has ended, so cache the exitcode
-         * if the process is finished and $exitcode is uninitialized
-         */
-        if ($status['running'] === false && $this->exitcode === null) {
-            $this->exitcode = $status['exitcode'];
-            $this->status = $status;
-        }
-
-        return $status['running'];
-    }
-
-    public function getExitcode()
-    {
-        return $this->exitcode;
-    }
-
-    public function get_elapsed()
-    {
-        return microtime(TRUE) - $this->strt_tm;
-    }
-
-}
 
 $dir = dirname(__DIR__);
-chdir($dir . '/core');
+chdir('C:\SeleniumTests\SeleniumShell\core');
+
+require_once('Process.php');
 
 
 $options = getopt('', array('env:', 'host:', 'port:', 'project:', 'browsers:', 'testsuite:', 'session:', 'ignore-solo-run'));
+
 $ssOptions = '';
-foreach ($options as $key => $value) {
+foreach ($_GET as $key => $value) {
     if (!$value) {
         $value = 'true';
     }
@@ -79,23 +27,44 @@ echo 'Executing SeleniumShell with options: ' . $ssOptions;
 echo 'Sessionname=' . $sessionName;
 
 exec('phpunit SeleniumShell.php ' .$ssOptions. ' --ss-print-tests true --ss-session "'.$sessionName. '"', $tests, $exitcode);
+
+$i = 0;
+
+function myFlush() {
+    echo(str_repeat(' ', 256));
+    if (@ob_get_contents()) {
+        @ob_end_flush();
+    }
+    flush();
+}
+
 $processes = array();
 $finishedProcesses = array();
 $start = microtime(true);
 $runningInstances = 0;
+
+file_put_contents(dirname(__FILE__). DIRECTORY_SEPARATOR . 'progress.txt', '');
 while (true) {
     $finished = 0;
     
     foreach($tests as $key => $test ){
-        if( count($processes) < 100 ){
-            $processes[] = new Process('phpunit --filter "' . $test . '" SeleniumShell.php --ss-session "'.$sessionName. '" ' . $ssOptions);
+        if( count($processes) < 30 ){
+            $processes[] = array(
+                'command' => new Process('phpunit --filter "' . $test . '" SeleniumShell.php --ss-session "'.$sessionName. '" ' . $ssOptions),
+                'test' => $test 
+                );
             unset($tests[$key]);
         }
     }
     
     foreach ($processes as $key => $process) {
-        if (!$process->isRunning()) {
+        if (!$process['command']->isRunning()) {
             $finishedProcesses[] = $process;
+            
+            
+            file_put_contents(dirname(__FILE__). DIRECTORY_SEPARATOR . 'progress.txt', 'Finished test: '. $process['test'] . '<br />', FILE_APPEND);
+            
+            
             unset($processes[$key]);
             $finished ++;
         }
@@ -115,13 +84,13 @@ foreach ($finishedProcesses as $process) {
     //var_dump(stream_get_contents($process->pipes[1]));
     //var_dump(stream_get_contents($process->pipes[0]));
     //var_dump($process->status);
-    if($process->getExitcode() !== 0){
+    if($process['command']->getExitcode() !== 0){
         $exitcode = 1;
     }
 }
 
 
-$resultsPath = dirname(__DIR__ ) . DIRECTORY_SEPARATOR . 'generated' . DIRECTORY_SEPARATOR . 'results' .DIRECTORY_SEPARATOR . $sessionName .DIRECTORY_SEPARATOR;
+$resultsPath = 'C:\\SeleniumTests\\SeleniumShell\\' . DIRECTORY_SEPARATOR . 'generated' . DIRECTORY_SEPARATOR . 'results' .DIRECTORY_SEPARATOR . $sessionName .DIRECTORY_SEPARATOR;
 $results = file_get_contents($resultsPath . 'results.txt');
 $errors = file_get_contents($resultsPath. 'errors.txt');
 $failures = file_get_contents($resultsPath. 'failures.txt');

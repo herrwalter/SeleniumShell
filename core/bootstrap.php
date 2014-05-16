@@ -36,7 +36,6 @@ require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_Test.php' );
 
 
 function SeleniumShellAutoloadFunction( $className ){
-    
     $backtrace = debug_backtrace();
     if( !isset($backtrace[1]['file']) ){
         return;
