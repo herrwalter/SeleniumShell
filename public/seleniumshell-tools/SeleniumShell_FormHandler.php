@@ -148,13 +148,20 @@ class SeleniumShell_FormHandler {
     }
     /**
      * @desc Sets all the elements based on Id selector
-     * @param idsVsValues Array the key needs to be the ID, value needs to be the value to set.
+     * @param   idsVsValues Array the key needs to be the ID, value needs to be the value to set.
+     * @param   sleep       integer the sleep time between fields in microseconds
      */
-    public function mapValuesToElementsById( $idsVsValues )
+    public function mapValuesToElementsById( $idsVsValues, $sleep = 0 )
     {
         foreach( $idsVsValues as $id => $value ){
-            $this->_setElementById($id);
-            $this->_setElementValue( $id, $value );
+            if(strpos($id, 'click') === 0) {
+                $button = $this->_session->byId($value);
+                $button->click();
+            } else {
+                $this->_setElementById($id);
+                $this->_setElementValue( $id, $value );
+            }
+            usleep($sleep);
         }
     }
     /**
