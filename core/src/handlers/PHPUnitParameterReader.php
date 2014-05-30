@@ -19,6 +19,7 @@ class  PHPUnitParameterReader {
         '--ss-mail-results' => false,
         '--ss-session' => false,
         '--ss-print-tests' => false,
+        '--ss-setup-before-project' => false,
         '--ss-generate' => false
     );
     

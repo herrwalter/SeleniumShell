@@ -32,6 +32,12 @@ define('PROGRESS_PATH', $progressPath);
 echo 'Executing SeleniumShell with options: ' . $ssOptions . PHP_EOL;
 echo 'Sessionname=' . $sessionName . PHP_EOL;
 
+
+$setupBeforeProject = new Process('phpunit SeleniumShell.php ' .$ssOptions. ' --ss-setup-before-project true');
+// wait for process to end..
+while($setupBeforeProject->isRunning()){}
+
+
 exec('phpunit SeleniumShell.php ' .$ssOptions. ' --ss-print-tests true --ss-session "'.$sessionName. '"', $tests, $exitcode);
 
 foreach($tests as $test ){

@@ -27,7 +27,10 @@ class Application
 
     private function _runBeforeProjectTests()
     {
-        $test = $this->_setupSuite->run(new PHPUnit_Framework_TestResult());
+        if($this->_config->isParameterSet('--ss-setup-before-project')){
+            $test = $this->_setupSuite->run(new PHPUnit_Framework_TestResult());
+            die($test->wasSuccessful());
+        }
     }
     /**
      * Sets the testsuite
