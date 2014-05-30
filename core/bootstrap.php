@@ -6,7 +6,7 @@ $sep = DIRECTORY_SEPARATOR;
 error_reporting(E_ALL);
 
 define('SELENIUM_SHELL', str_replace('core', '', $rel_path));
-define('CORE_CONFIG_PATH', $rel_path. $sep.'config' );
+define('CORE_CONFIG_PATH', SELENIUM_SHELL . $sep.'config' );
 define('CORE_PATH', $rel_path . $sep);
 define('SELENIUM_SHELL_PUBLIC', SELENIUM_SHELL . 'public' );
 define('SELENIUM_SHELL_TOOLS', SELENIUM_SHELL_PUBLIC. DIRECTORY_SEPARATOR . 'seleniumshell-tools');
@@ -22,6 +22,7 @@ define('GENERATED_PATH', SELENIUM_SHELL . 'generated');
 define('GENERATED_TESTSUITES_PATH', GENERATED_PATH . $sep . 'testsuites' .$sep );
 define('GENERATED_RESULTS_PATH', GENERATED_PATH . $sep . 'results' .$sep );
 define('GENERATED_DEBUG_PATH', GENERATED_PATH . $sep . 'debug' .$sep );
+define('GENERATED_SETUP_BEFORE_PROJECT_PATH', GENERATED_PATH . $sep . 'setup-before-project' .$sep );
 
 
 require_once( FILESCANNERS_PATH . $sep . 'FileScanner.php');

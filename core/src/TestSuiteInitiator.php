@@ -8,10 +8,10 @@
 class TestSuiteInitiator
 {
     /** @var PHPUnit_Framework_TestSuite */
-    private $_suite;
+    protected $_suite;
     
     /** @var Project*/
-    private $_projects;
+    protected $_projects;
     /**
      * 
      * @param PHPUnit_Framework_TestSuite $suite
@@ -24,7 +24,7 @@ class TestSuiteInitiator
         $this->_addTestsToSuite();
     }
     
-    private function _addTestsToSuite()
+    protected function _addTestsToSuite()
     {
         foreach( $this->_projects as $project )
         {
@@ -32,7 +32,7 @@ class TestSuiteInitiator
         }
     }
     
-    private function _addTestSuitesByClassNames( $classNames )
+    protected function _addTestSuitesByClassNames( $classNames )
     {
         foreach($classNames as $className )
         {

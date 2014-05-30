@@ -8,15 +8,15 @@
 
 class TestClassRecreator {
     
-    private $_rapport;
-    private $_file;
+    protected $_rapport;
+    protected $_file;
     /** @var SeleniumShell_TestMethod */
-    private $_testMethods;
-    private $_testClassFile;
+    protected $_testMethods;
+    protected $_testClassFile;
     private $_testClassFileName;
-    private $_filePath;
-    private $_savePath;
-    private $_projectName = '';
+    protected $_filePath;
+    protected $_savePath;
+    protected $_projectName = '';
     
     public function __construct( $testClassFile ){
         $this->_savePath = GENERATED_PATH . DIRECTORY_SEPARATOR . 'testsuites' . DIRECTORY_SEPARATOR;
@@ -44,7 +44,7 @@ class TestClassRecreator {
         }
     }
     
-    private function _setFile(){
+    protected function _setFile(){
         if( is_file($this->_testClassFile) ){
             $this->_file = file_get_contents($this->_testClassFile);
         }
@@ -79,8 +79,10 @@ class TestClassRecreator {
         $commandChain = new Annotations_ChainOfCommand();
         $commandChain->addCommand(new Browsers_AnnotationCommand());
         $commandChain->addCommand(new SoloRun_AnnotationCommand());
+        $commandChain->addCommand(new SetupBeforeProject_AnnotationCommand);
         
         $testMethods = $this->_testMethods;
+        $testMethods = $commandChain->runCommand('setup-before-project', array('testMethods' => $testMethods) );
         $testMethods = $commandChain->runCommand('solo-run', array('testMethods' => $testMethods) );
         $testMethods = $commandChain->runCommand('browsers', array('testMethods' => $testMethods, 'browser' => $browser) );
         

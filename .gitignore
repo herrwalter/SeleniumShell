@@ -3,3 +3,10 @@ core/generated/testsuites/*
 !core/generated/testsuites/mandatory_folder.txt
 
 nbproject
+/generated/debug/
+/generated/results/
+/generated/setup-before-project/
+/generated/testsuites/
+/webinterface/progress.txt
+/webinterface/tests.txt
+/webinterface/progress.html

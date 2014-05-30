@@ -1,100 +1,67 @@
 #!/usr/bin/env php
 <?php
 
-class Process
-{
-
-    public $cmd = '';
-    public $descriptors = array(
-        0 => array('pipe', 'r'),
-        1 => array('pipe', 'w'),
-        2 => array('pipe', 'a')
-    );
-    public $pipes = null;
-    public $desc = '';
-    private $strt_tm = 0;
-    public $resource = null;
-    public $status = null;
-    private $exitcode = null;
-
-    function __construct($cmd = '', $desc = '')
-    {
-        $this->cmd = $cmd;
-        $this->desc = $desc;
-
-        $this->resource = proc_open($this->cmd, $this->descriptors, $this->pipes, null, null);
-
-        $this->strt_tm = microtime(true);
-    }
-
-    public function isRunning()
-    {
-        $status = proc_get_status($this->resource);
-
-        /**
-         * proc_get_status will only pull valid exitcode one
-         * time after process has ended, so cache the exitcode
-         * if the process is finished and $exitcode is uninitialized
-         */
-        if ($status['running'] === false && $this->exitcode === null) {
-            $this->exitcode = $status['exitcode'];
-            $this->status = $status;
-        }
-
-        return $status['running'];
-    }
-
-    public function getExitcode()
-    {
-        return $this->exitcode;
-    }
-
-    public function get_elapsed()
-    {
-        return microtime(TRUE) - $this->strt_tm;
-    }
-
-}
-
 $dir = dirname(__DIR__);
 chdir($dir . '/core');
+require_once '../core/utils/Process.php';
+require_once '../core/src/decorators/testresult/TestResult.php';
+require_once '../core/src/decorators/testresult/HtmlTestResult.php';
 
 
 $options = getopt('', array('env:', 'host:', 'port:', 'project:', 'browsers:', 'testsuite:', 'session:', 'ignore-solo-run'));
 $ssOptions = '';
-foreach ($options as $key => $value) {
-    if (!$value) {
-        $value = 'true';
-    }
-    $ssOptions .= '--ss-' . $key . ' ';
-    $ssOptions .= '"' . $value . '" ';
-}
 $project = '';
+$processes = array();
+$finishedProcesses = array();
+$testUpdates = array();
+
+foreach ($options as $key => $value) {
+    if (!$value) { $value = 'true'; }
+    $ssOptions .= '--ss-' . $key . ' ' . '"' . $value . '" ';
+}
+
 if( isset($options['project']) ){
     $project = $options['project'];
 }
-$sessionName = trim(date('Y.m.d h.i.s', time()) . $project);
 
-echo 'Executing SeleniumShell with options: ' . $ssOptions;
-echo 'Sessionname=' . $sessionName;
+$sessionName = trim(date('Y.m.d.h.i.s') . $project);
+$resultsPath = dirname(__DIR__ ) . DIRECTORY_SEPARATOR . 'generated' . DIRECTORY_SEPARATOR . 'results' .DIRECTORY_SEPARATOR . $sessionName .DIRECTORY_SEPARATOR;
+$progressPath = $resultsPath.'progress.html';
+define('PROGRESS_PATH', $progressPath);
+
+echo 'Executing SeleniumShell with options: ' . $ssOptions . PHP_EOL;
+echo 'Sessionname=' . $sessionName . PHP_EOL;
 
 exec('phpunit SeleniumShell.php ' .$ssOptions. ' --ss-print-tests true --ss-session "'.$sessionName. '"', $tests, $exitcode);
-$processes = array();
-$finishedProcesses = array();
-$start = microtime(true);
+
+foreach($tests as $test ){
+    $testUpdates[$test] = new HtmlTestResult($test,-1);
+}
+writeTestProgress($testUpdates);
+$webinterfacePath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'webinterface' . DIRECTORY_SEPARATOR . 'interface.html#progressPath=' . PROGRESS_PATH ;
+
+exec('openbrowser.vbs '. $webinterfacePath );
+
+
 $runningInstances = 0;
+$start = microtime(true);
 while (true) {
     $finished = 0;
     
     foreach($tests as $key => $test ){
-        if( count($processes) < 100 ){
-            $processes[] = new Process('phpunit --filter "' . $test . '" SeleniumShell.php --ss-session "'.$sessionName. '" ' . $ssOptions);
+        if( count($processes) < 20 ){
+            $processes[] = array(
+                'command' => new Process('phpunit --filter "' . $test . '" SeleniumShell.php --ss-session "'.$sessionName. '" ' . $ssOptions),
+                'test' => $test 
+            );
             unset($tests[$key]);
         }
     }
     
     foreach ($processes as $key => $process) {
-        if (!$process->isRunning()) {
+        if (!$process['command']->isRunning()) {
+            $testUpdates[$process['test']]->setExitcode($process['command']->getExitcode()); 
+            writeTestProgress($testUpdates);
             $finishedProcesses[] = $process;
             unset($processes[$key]);
             $finished ++;
@@ -115,18 +82,18 @@ foreach ($finishedProcesses as $process) {
     //var_dump(stream_get_contents($process->pipes[1]));
     //var_dump(stream_get_contents($process->pipes[0]));
     //var_dump($process->status);
-    if($process->getExitcode() !== 0){
+    if($process['command']->getExitcode() !== 0){
         $exitcode = 1;
     }
 }
-
-
-$resultsPath = dirname(__DIR__ ) . DIRECTORY_SEPARATOR . 'generated' . DIRECTORY_SEPARATOR . 'results' .DIRECTORY_SEPARATOR . $sessionName .DIRECTORY_SEPARATOR;
 $results = file_get_contents($resultsPath . 'results.txt');
 $errors = file_get_contents($resultsPath. 'errors.txt');
 $failures = file_get_contents($resultsPath. 'failures.txt');
 $incompletes = file_get_contents($resultsPath . 'incompletes.txt');
 $skipped = file_get_contents($resultsPath . 'skipped.txt');
+
+
+
 
 $extraInfo = array('Errors' => $errors,'Failures'=>$failures,'Incompletes' => $incompletes, 'Skipped' => $skipped);
         
@@ -144,4 +111,30 @@ $runtimeInSeconds = number_format($totalTime, 2);
 $minutes = floor($runtimeInSeconds / 60);
 $seconds = $runtimeInSeconds % 60;
 echo PHP_EOL . 'Total Runtime: ' . $minutes .' minutes '. $seconds . ' seconds' ; 
+
+
+// delete generated results
+
+//delTree($resultsPath);
+
+exec('closebrowser.vbs');
 exit($exitcode);
+
+
+function writeTestProgress( $testUpdates ){
+    $begin = '<html><head></head><body>';
+    $results = '';
+    $end = '</body></html>';
+    foreach($testUpdates as $htmlTestResult){
+        $results .= $htmlTestResult->toString();
+    }
+    file_put_contents(PROGRESS_PATH, $begin.$results.$end);
+}
+
+function delTree($dir) { 
+   $files = array_diff(scandir($dir), array('.','..')); 
+    foreach ($files as $file) { 
+      (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file"); 
+    } 
+    return rmdir($dir); 
+  } 

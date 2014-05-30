@@ -8,6 +8,7 @@ class AnnotationReader
 {
     private $_annotations;
     private $_soloRun = false;
+    private $_setupBeforeProject = false;
     private $_browsers = array();
     
     public function __construct( $annotations ) {
@@ -35,6 +36,8 @@ class AnnotationReader
                     $browsers = explode(',', $annotationValue);
                     $trimmedBrowsers = array_map('trim', $browsers);
                     $this->_browsers = $trimmedBrowsers;
+                case 'ss-setup-before-project':
+                    $this->_setupBeforeProject = true;
                     break;
             }
         }
@@ -42,6 +45,11 @@ class AnnotationReader
     
     public function hasSoloRun(){
         return $this->_soloRun === true;
+    }
+    
+    public function hasSetupBeforeProject()
+    {
+        return $this->_setupBeforeProject === true;
     }
     
     public function hasBrowser($browser){

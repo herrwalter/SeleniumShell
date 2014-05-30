@@ -35,7 +35,6 @@ class SeleniumShell_TestListener implements PHPUnit_Framework_TestListener
 
     public function __construct()
     {
-        DebugLog::write(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'results.txt');
         $this->log = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'results.txt');
         $this->failLog = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'failures.txt' );
         $this->errorLog = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'errors.txt' );

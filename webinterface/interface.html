@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SeleniumShell Webinterface</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+    </head>
+    <body>
+        <iframe id="progress" src="progress.html" style="padding:0;margin:0;border:0;position:absolute;width:100%;height:100%;top:0;left:0;"></iframe>
+        
+        <div id="results"></div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.js" ></script>
+
+<script type="text/javascript">
+    
+    getProgress = function(){
+        var progressUrl = window.location.href.split('#progressPath=')[1];
+        $('#results').html(window.location.pathname.split( "#progressPath=", "" )[1]);
+        var progressIframe = document.getElementById('progress');
+        progressIframe.src = progressUrl;
+//        console.log(getProgressContents());
+        //$.ajax( { url: 'progress.txt', type: 'get', dataType:'jsonp', success: function(a){updateInterface(a) } });
+    }
+    var getTests = setInterval(getProgress, 400);
+    
+    
+</script>
+    </body>
+</html>

@@ -38,7 +38,10 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
         include( 'bootstrap.php' );
     }
 
-    
+    public function __destruct()
+    {
+        session_destroy();
+    }
     
     public static function suite($suite) {
         self::_bootstrap();

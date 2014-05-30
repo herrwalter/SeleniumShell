@@ -31,11 +31,12 @@ class SeleniumShell_ErrorCatchingOverrides extends SeleniumShell_Asserts {
     {
         try{
             $returnValue = parent::byCssSelector($cssSelector);
-        } catch(PHPUnit_Extensions_Selenium2TestCase_WebDriverException $e ){
+        } catch(Exception $e ){
             switch($e->getCode()){
                 case 7: 
                     throw new ErrorException( 'could not find element(s) with: ' . $cssSelector . ' on page: ' . $this->url() );
                 default:
+                    throw $e;
                     echo '';
                     break;
             }

@@ -236,4 +236,16 @@ class TestClassReader
         return false;
     }
     
+    public function fileHasBeforeProjectSetupAnnotation()
+    {
+        $methods = $this->getTestMethods();
+        foreach( $methods as $method ){
+            $annotation = $method->getAnnotations();
+            if( $method->hasAnnotations() && $annotation->hasSetupBeforeProject() ){
+                return true;
+            }
+        }
+        return false;
+    }
+    
 }
