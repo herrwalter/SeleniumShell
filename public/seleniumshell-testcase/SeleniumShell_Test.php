@@ -81,7 +81,7 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
         $message .= 'Strace: ' . $e->getTraceAsString() . PHP_EOL;
         $message .= PHP_EOL;
         try{
-            mail( 'herrwalter@gmail.com' , $subject, $message, implode("\r\n", $headers));
+            //mail( 'arnoud@trimm.nl' , $subject, $message, implode("\r\n", $headers));
         } catch (Exception $ex) {
             throw new Exception('Could not send the darn mail: ' . $ex->getMessage());;
         }
