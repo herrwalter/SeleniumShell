@@ -1,5 +1,5 @@
 <?php
-
+set_time_limit(0);
 
 $dir = dirname(__DIR__);
 chdir('C:\SeleniumTests\SeleniumShell\core');
@@ -23,34 +23,38 @@ if( isset($options['project']) ){
 }
 $sessionName = trim(date('Y.m.d h.i.s', time()) . $project);
 
+$testUpdates = array();
+file_put_contents(dirname(__FILE__). DIRECTORY_SEPARATOR . 'progress.txt', '');
+
 echo 'Executing SeleniumShell with options: ' . $ssOptions;
 echo 'Sessionname=' . $sessionName;
 
 exec('phpunit SeleniumShell.php ' .$ssOptions. ' --ss-print-tests true --ss-session "'.$sessionName. '"', $tests, $exitcode);
 
+foreach($tests as $test ){
+    $testObject = array(
+        'test' => $test,
+        'exitcode' => -1
+    );
+    $testUpdates[$test] = $testObject;
+}
 $i = 0;
 
-function myFlush() {
-    echo(str_repeat(' ', 256));
-    if (@ob_get_contents()) {
-        @ob_end_flush();
-    }
-    flush();
-}
+file_put_contents(dirname(__FILE__). DIRECTORY_SEPARATOR . 'progress.txt', json_encode($testUpdates));
 
 $processes = array();
 $finishedProcesses = array();
 $start = microtime(true);
 $runningInstances = 0;
 
-file_put_contents(dirname(__FILE__). DIRECTORY_SEPARATOR . 'progress.txt', '');
+$finishedTests = array();
 while (true) {
     $finished = 0;
     
     foreach($tests as $key => $test ){
         if( count($processes) < 30 ){
             $processes[] = array(
-                'command' => new Process('phpunit --filter "' . $test . '" SeleniumShell.php --ss-session "'.$sessionName. '" ' . $ssOptions),
+                'command' => new Process('cd ' . getcwd() . ' & phpunit --strict --filter "' . $test . '" SeleniumShell.php --ss-session "'.$sessionName. '" ' . $ssOptions),
                 'test' => $test 
                 );
             unset($tests[$key]);
@@ -61,8 +65,14 @@ while (true) {
         if (!$process['command']->isRunning()) {
             $finishedProcesses[] = $process;
             
+            $testObject = $testUpdates[$process['test']];
             
-            file_put_contents(dirname(__FILE__). DIRECTORY_SEPARATOR . 'progress.txt', 'Finished test: '. $process['test'] . '<br />', FILE_APPEND);
+            $test = array(
+                'test' => $process['test'],
+                'exitcode' => $process['command']->getExitcode()
+            );
+            $finishedTests[] = $test;
+            file_put_contents(dirname(__FILE__). DIRECTORY_SEPARATOR . 'progress.txt', json_encode($finishedTests));
             
             
             unset($processes[$key]);
@@ -81,7 +91,7 @@ $totalTime = microtime(true) - $start;
 
 $exitcode = 0;
 foreach ($finishedProcesses as $process) {
-    //var_dump(stream_get_contents($process->pipes[1]));
+    //var_dump(stream_get_contents($process['command']->pipes[1]));
     //var_dump(stream_get_contents($process->pipes[0]));
     //var_dump($process->status);
     if($process['command']->getExitcode() !== 0){
