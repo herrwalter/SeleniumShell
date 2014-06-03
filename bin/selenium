@@ -8,7 +8,7 @@ require_once '../core/src/decorators/testresult/TestResult.php';
 require_once '../core/src/decorators/testresult/HtmlTestResult.php';
 
 
-$options = getopt('', array('env:', 'host:', 'port:', 'project:', 'browsers:', 'testsuite:', 'session:', 'ignore-solo-run'));
+$options = getopt('', array('env:', 'host:', 'port:', 'project:', 'browsers:', 'max-sessions:', 'testsuite:', 'session:', 'ignore-solo-run'));
 $ssOptions = '';
 $project = '';
 $processes = array();
@@ -33,7 +33,7 @@ echo 'Executing SeleniumShell with options: ' . $ssOptions . PHP_EOL;
 echo 'Sessionname=' . $sessionName . PHP_EOL;
 
 
-$setupBeforeProject = new Process('phpunit SeleniumShell.php ' .$ssOptions. ' --ss-setup-before-project true');
+$setupBeforeProject = new Process('phpunit -v  SeleniumShell.php ' .$ssOptions. ' --ss-setup-before-project true');
 // wait for process to end..
 while($setupBeforeProject->isRunning()){}
 
@@ -51,11 +51,13 @@ exec('openbrowser.vbs '. $webinterfacePath );
 
 $runningInstances = 0;
 $start = microtime(true);
+$options['max-sessions'] ? $concurrentTests = $options['max-sessions'] : $concurrentTests = 10;
+echo PHP_EOL. 'running selenium-shell in ' . $concurrentTests . ' concurrent tests' . PHP_EOL . PHP_EOL ;
 while (true) {
     $finished = 0;
     
     foreach($tests as $key => $test ){
-        if( count($processes) < 20 ){
+        if( count($processes) < $concurrentTests ){
             $processes[] = array(
                 'command' => new Process('phpunit --filter "' . $test . '" SeleniumShell.php --ss-session "'.$sessionName. '" ' . $ssOptions),
                 'test' => $test 

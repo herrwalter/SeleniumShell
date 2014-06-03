@@ -23,6 +23,7 @@ define('GENERATED_TESTSUITES_PATH', GENERATED_PATH . $sep . 'testsuites' .$sep )
 define('GENERATED_RESULTS_PATH', GENERATED_PATH . $sep . 'results' .$sep );
 define('GENERATED_DEBUG_PATH', GENERATED_PATH . $sep . 'debug' .$sep );
 define('GENERATED_SETUP_BEFORE_PROJECT_PATH', GENERATED_PATH . $sep . 'setup-before-project' .$sep );
+define('COLORCHECKER_PATH', CORE_SRC_PATH . $sep . 'colorchecker' . $sep . 'ColorChecker.js');
 
 
 require_once( FILESCANNERS_PATH . $sep . 'FileScanner.php');
@@ -34,6 +35,7 @@ require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_HelperMethods.php'
 require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_Asserts.php' );
 require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ErrorCatchingOverrides.php' );
 require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_Test.php' );
+require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ColorCheckerTest.php' );
 
 
 function SeleniumShellAutoloadFunction( $className ){

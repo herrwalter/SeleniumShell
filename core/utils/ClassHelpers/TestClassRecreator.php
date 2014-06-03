@@ -67,6 +67,7 @@ class TestClassRecreator {
      * @param type $name
      */
     protected function _changeTestFileClassName( $name ){
+        $name = str_replace(' ', '', $name);
         $this->_file = str_replace(  'class ', 'class '.$this->_projectName.$name, $this->_file );
     }
     
