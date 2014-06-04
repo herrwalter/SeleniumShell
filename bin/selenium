@@ -15,6 +15,43 @@ $processes = array();
 $finishedProcesses = array();
 $testUpdates = array();
 
+if( $argv[1] == 'update'){
+    echo "What is your selenium grid downloadfolder? " . PHP_EOL;
+    $handle = fopen ("php://stdin","r");
+    $line = fgets($handle);
+    if( file_exists(trim($line)) ){
+        $gridPath = trim($line);
+        require_once '../bin/DownloadProcess.php';
+        require_once '../bin/Update.php';
+        $update = new Update();
+        $seleniumInfo = $update->getLastModifiedFeedByKeyContaining('standalone');
+        if( $seleniumInfo ){
+            $standaloneServer = explode('/', $seleniumInfo->Key);
+            $gridPathInfo = pathinfo($gridPath);
+            $gridPath = $gridPathInfo['dirname']. $gridPathInfo['basename'] . DIRECTORY_SEPARATOR;
+            if( !file_exists($gridPath . $standaloneServer[1])){
+                $download = new DownloadProcess(
+                            'http://selenium-release.storage.googleapis.com/' . $seleniumInfo->Key, 
+                            $gridPath . $standaloneServer[1], 
+                            'updating to version: ' . $standaloneServer[1]
+                        );
+                echo PHP_EOL . 'saving file.. ';
+                $download->saveFile();
+            } else {
+                echo PHP_EOL . 'up to date with: ' .$standaloneServer[1];
+            }
+        }
+
+        
+    }
+    die();
+    $server = new DownloadProcess($seleniumStandalone, '', 'downloading selenium-standalone-server');
+    
+}
+
+
+
+die();
 foreach ($options as $key => $value) {
     if (!$value) { $value = 'true'; }
     $ssOptions .= '--ss-' . $key . ' ' . '"' . $value . '" ';

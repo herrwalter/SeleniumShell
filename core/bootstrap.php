@@ -39,6 +39,7 @@ require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ColorCheckerTest.p
 
 
 function SeleniumShellAutoloadFunction( $className ){
+    var_dump($className);
     $backtrace = debug_backtrace();
     if( !isset($backtrace[1]['file']) ){
         return;

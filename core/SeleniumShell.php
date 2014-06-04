@@ -34,7 +34,6 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
      */
     public static function _bootstrap()
     {
-        $rel_path = substr(str_replace('\\', '/', realpath(dirname(__FILE__))), strlen(str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']))));
         include( 'bootstrap.php' );
     }
 
