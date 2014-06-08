@@ -113,7 +113,7 @@ class TestClassReader
             
             if( $class->inClosure() && $tokenRdr->isMethod() && $this->_isTestMethod($this->_tokens[$i+2]) ){
                 $testNr++;
-                $testMethods[$testNr] = new SeleniumShell_TestMethod();
+                $testMethods[$testNr] = new TestMethod();
                 $testMethods[$testNr]->setAnnotations($this->_getPossibleAnnotations($i));
                 $test->startTracking();
             }

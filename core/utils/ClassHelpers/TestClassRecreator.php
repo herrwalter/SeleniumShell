@@ -10,7 +10,7 @@ class TestClassRecreator {
     
     protected $_rapport;
     protected $_file;
-    /** @var SeleniumShell_TestMethod */
+    /** @var TestMethod */
     protected $_testMethods;
     protected $_testClassFile;
     private $_testClassFileName;
@@ -18,15 +18,20 @@ class TestClassRecreator {
     protected $_savePath;
     protected $_projectName = '';
     
-    public function __construct( $testClassFile ){
+    public function __construct( $testClassFile = '' ){
         $this->_savePath = GENERATED_PATH . DIRECTORY_SEPARATOR . 'testsuites' . DIRECTORY_SEPARATOR;
-        
+        if( $testClassFile !== '' ){
+            $this->setTestClassFile($testClassFile);
+        }
+
+    }
+    
+    public function setTestClassFile($testClassFile){
         $testClassReader = new TestClassReader($testClassFile);
         $this->_rapport =  $testClassReader->getFileRapport();
         $this->_testMethods = $testClassReader->getTestMethods();
-        
         $this->_testClassFile = $testClassFile;
-        $this->_testClassFileName = basename($testClassFile);
+        $this->_testClassFileName = basename($testClassFile);        
     }
 
     public function setProjectName( $projectName )
@@ -53,13 +58,14 @@ class TestClassRecreator {
         }
     }
     
-    public function createFileForBrowser( $browser ){
+    public function createFileForBrowser( Browser $browser ){
+        $uniqueBrowserName = $browser->getUniqueName();
         $this->_setFile();
-        $this->_changeTestFileClassName($browser);
-        $this->_setBrowserVariable($browser);
-        $this->_deleteTestsThatShouldNotRunInThisBrowser($browser);
-        $this->_saveFile($browser);
-        return $this->_savePath .$this->_projectName. $browser . $this->_testClassFileName;
+        $this->_changeTestFileClassName($uniqueBrowserName);
+        $this->_setBrowserVariable($uniqueBrowserName);
+        $this->_deleteTestsThatShouldNotRunInThisBrowser($uniqueBrowserName);
+        $this->_saveFile($uniqueBrowserName);
+        return $this->_savePath .$this->_projectName. $uniqueBrowserName . $this->_testClassFileName;
     }
     
     /**

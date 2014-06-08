@@ -39,7 +39,6 @@ require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ColorCheckerTest.p
 
 
 function SeleniumShellAutoloadFunction( $className ){
-    var_dump($className);
     $backtrace = debug_backtrace();
     if( !isset($backtrace[1]['file']) ){
         return;
@@ -95,6 +94,7 @@ function SeleniumShellAutoloadFunction( $className ){
     } else { // find seleniumShell Core.
         // crawl source..
         
+        
         if( scan_folder_for_class(CORE_SRC_PATH, $className) ){} 
         // crawl utils.. 
         else if( scan_folder_for_class(UTILS_PATH, $className) ){}
@@ -107,9 +107,10 @@ function SeleniumShellAutoloadFunction( $className ){
 function scan_folder_for_class( $path, $className ){
     $seleniumSource = new FileScanner( $path );
     foreach( $seleniumSource->getFilesInOneDimensionalArray() as $projectFile ){
-        $explodedProjectFile = explode( DIRECTORY_SEPARATOR, $projectFile);
-        $projectFileName = $explodedProjectFile[count($explodedProjectFile) - 1];
-        $projectFileName = str_replace('.php', '', $projectFileName);
+        $projectFileName = pathinfo($projectFile, PATHINFO_FILENAME);
+        //$explodedProjectFile = explode( DIRECTORY_SEPARATOR, $projectFile);
+        //$projectFileName = $explodedProjectFile[count($explodedProjectFile) - 1];
+        //$projectFileName = str_replace('.php', '', $projectFileName);
         if( strtolower($projectFileName) === strtolower($className) ){
             require_once $projectFile;
             return true;

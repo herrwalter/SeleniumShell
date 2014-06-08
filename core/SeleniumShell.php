@@ -11,14 +11,14 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     /* @var Application */
     private static $_app;
     
-    public function __construct()//$name = NULL, array $data = array(), $dataName = '')
+    public function __construct()
     {
         if( !$this->initialized ){
             $this->_bootstrap();
             $this->_setInitialisation();
         }
         $this->_app = new Application();
-        parent::__construct();//$name, $data, $dataName);
+        parent::__construct();
     }
     
     /**

@@ -62,7 +62,7 @@ class ConfigHandler
     public function getAttribute( $attr, $section = false )
     {
         if( $section && !array_key_exists($section, $this->_config)){
-            throw new ErrorException( 'Section is not found in config or, config is not processed with process_section set to true' );
+            return false;
         } else if( 
             $section && 
             array_key_exists($section, $this->_config) && 
@@ -72,7 +72,7 @@ class ConfigHandler
         } else if( array_key_exists($attr, $this->_config ) ){
             return $this->_config[$attr];
         } else {
-            throwException('Could not find attribute in .ini file.');
+            return false;
         }
     }
     

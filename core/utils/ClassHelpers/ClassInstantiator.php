@@ -38,7 +38,7 @@ class ClassInstantiator
     }
     /**
      * Gets the className form files. 
-     * Will assus you use only one class per file.
+     * Assumes you use only one class per file.
      * @param type $file
      */
     private function _getClassNameFromFile( $file )

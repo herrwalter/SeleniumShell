@@ -12,62 +12,46 @@ class Application
     /** @var SeleniumShell_TestSuite */
     private $_setupSuite;
     private $_sessionId;
-    private $_projects;
+    /** @var Project */
+    private $_project;
 
     public function __construct()
     {
         $this->_setConfig();
         $this->_setSession();
-        $this->_initializeProjects();
+        $this->_setProject();
         $this->_setEnvironmentConstant();
-        $this->_setSetupBeforeProjectsSuite();
         $this->_setSuite();
-        $this->_runBeforeProjectTests();
+    }
+    
+    private function _setSuite(){
+        $sourceRewriter = new SourceRewriter($this->_project, new TestFileScanner(), new TestClassRecreator(), $this->_project->getPath() . '/testsuites' );
+        $sourceFiles = $sourceRewriter->getSources();
+        if( $this->_config->isParameterSet('--ss-testsuite') ){
+            $filter = new TestSourcesFilter($sourceFiles);
+            $sourceFiles = $filter->filterSourcesByClassName($this->_config->getParameter('--ss-testsuite'));
+        }
+        
+        $suiteCreator = new SuiteCreator($sourceFiles);
+        $this->_suite = $suiteCreator->getSuite();
     }
 
     private function _runBeforeProjectTests()
     {
-        if($this->_config->isParameterSet('--ss-setup-before-project')){
-            DebugLog::write('before this');
+        if ($this->_config->isParameterSet('--ss-setup-before-project')) {
             $test = $this->_setupSuite->run(new PHPUnit_Framework_TestResult());
             die();
         }
     }
-    /**
-     * Sets the testsuite
-     * @param type $suite
-     */
-    private function _setSuite()
+
+    
+    private function _setProject()
     {
-        if ($this->_config->isParameterSet('--ss-generate')) {
-            die('Only generated the files. ');
+        if ($this->_config->isParameterSet('--ss-project')) {
+            $this->_project = new Project($this->_config->getParameter('--ss-project'), $this->_config);
+        } else {
+            $this->_project = new Project($this->_config->getAttribute('project'), $this->_config);
         }
-
-        $testsuiteInitiator = new TestSuiteInitiator($this->_projects);
-
-        if ($this->_config->isParameterSet('--ss-print-tests')) {
-            $testsuite = $testsuiteInitiator->getTestSuite();
-            $testClases = $testsuite->tests();
-            foreach ($testClases as $testClass) {
-                $testMethods = $testClass->tests();
-                foreach ($testMethods as $testMethod) {
-                    if (get_class($testMethod) == 'PHPUnit_Framework_TestSuite_DataProvider') {
-                        $testMethodName = explode('::', $testMethod->getName());
-                        $data = PHPUnit_Util_Test::getProvidedData(
-                                        $testClass->getName(), $testMethodName[1]
-                        );
-                        foreach ($data as $key => $value) {
-                            echo $testClass->getName() . '::' . $testMethodName[1] . ' with data set #' . $key . PHP_EOL;
-                        }
-                    } else {
-                        echo $testClass->getName() . '::' . $testMethod->getName() . PHP_EOL;
-                    }
-                }
-            }
-            die();
-        }
-
-        $this->_suite = $testsuiteInitiator->getTestSuite();
     }
 
     private function _setSetupBeforeProjectsSuite()
@@ -107,38 +91,9 @@ class Application
      */
     private function _setConfig()
     {
-        $this->_config = new ConfigHandler(CORE_CONFIG_PATH . '/config.ini');
+        $this->_config = new ConfigHandler(CORE_CONFIG_PATH . '/config.ini', true);
     }
 
-    private function _initializeProjects()
-    {
-        $projects = array();
-        $projectNames = $this->_config->getAttribute('projects');
-        /* if --ss-project parameter is set, initialize that project */
-        /* elseif the seleniumshell config contains the projects parameter,  use those */
-        /* else initialize all projects in the project folder */
-        if ($this->_config->isParameterSet('--ss-project')) {
-            $projectName = $this->_config->getParameter('--ss-project');
-            $projects[$projectName] = new Project($projectName);
-        } elseif ($projectNames) {
-            foreach ($projectNames as $projectName) {
-                $projects[$projectName] = new Project($projectName);
-            }
-        } else {
-            $folder = scandir(PROJECTS_FOLDER);
-            foreach ($folder as $dir) {
-                if (!( $dir == '.' || $dir == '..' ) && !is_file($dir)) {
-                    $projects[$dir] = new Project($dir);
-                }
-            }
-        }
-        $this->_projects = $projects;
-    }
-
-    public function getProjects()
-    {
-        return $this->_projects;
-    }
 
     public function getTestSuite()
     {
@@ -154,7 +109,7 @@ class Application
         $projectConfig = null;
         $project = $this->_config->getParameter('--ss-project');
         if ($project) {
-            $projectConfig = new ConfigHandler(PROJECTS_FOLDER . '\\' . $project . '\\config\\project.ini');
+            $projectConfig = $this->_project->getConfig();
         }
 
         if ($this->_config->isParameterSet('--ss-env')) {
@@ -167,5 +122,42 @@ class Application
             define('SS_ENVIRONMENT', false);
         }
     }
+
+    /**
+     * Sets the testsuite
+     * @param type $suite
+     */
+//    private function _setSuite()
+//    {
+//        if ($this->_config->isParameterSet('--ss-generate')) {
+//            die('Only generated the files. ');
+//        }
+//
+//        $testsuiteInitiator = new TestSuiteInitiator($this->_projects);
+//
+//        if ($this->_config->isParameterSet('--ss-print-tests')) {
+//            $testsuite = $testsuiteInitiator->getTestSuite();
+//            $testClases = $testsuite->tests();
+//            foreach ($testClases as $testClass) {
+//                $testMethods = $testClass->tests();
+//                foreach ($testMethods as $testMethod) {
+//                    if (get_class($testMethod) == 'PHPUnit_Framework_TestSuite_DataProvider') {
+//                        $testMethodName = explode('::', $testMethod->getName());
+//                        $data = PHPUnit_Util_Test::getProvidedData(
+//                                        $testClass->getName(), $testMethodName[1]
+//                        );
+//                        foreach ($data as $key => $value) {
+//                            echo $testClass->getName() . '::' . $testMethodName[1] . ' with data set #' . $key . PHP_EOL;
+//                        }
+//                    } else {
+//                        echo $testClass->getName() . '::' . $testMethod->getName() . PHP_EOL;
+//                    }
+//                }
+//            }
+//            die();
+//        }
+//
+//        $this->_suite = $testsuiteInitiator->getTestSuite();
+//    }
 
 }
