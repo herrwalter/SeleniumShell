@@ -8,6 +8,7 @@ error_reporting(E_ALL);
 define('SELENIUM_SHELL', str_replace('core', '', $rel_path));
 define('CORE_CONFIG_PATH', SELENIUM_SHELL . $sep.'config' );
 define('CORE_PATH', $rel_path . $sep);
+define('BIN_PATH', SELENIUM_SHELL . 'bin');
 define('SELENIUM_SHELL_PUBLIC', SELENIUM_SHELL . 'public' );
 define('SELENIUM_SHELL_TOOLS', SELENIUM_SHELL_PUBLIC. DIRECTORY_SEPARATOR . 'seleniumshell-tools');
 define('SELENIUM_SHELL_TESTCASE', SELENIUM_SHELL_PUBLIC . DIRECTORY_SEPARATOR . 'seleniumshell-testcase');
@@ -22,11 +23,14 @@ define('GENERATED_PATH', SELENIUM_SHELL . 'generated');
 define('GENERATED_TESTSUITES_PATH', GENERATED_PATH . $sep . 'testsuites' .$sep );
 define('GENERATED_RESULTS_PATH', GENERATED_PATH . $sep . 'results' .$sep );
 define('GENERATED_DEBUG_PATH', GENERATED_PATH . $sep . 'debug' .$sep );
+define('GENERATED_SCREENSHOTS_PATH', GENERATED_PATH . $sep . 'screenshots' .$sep );
 define('GENERATED_SETUP_BEFORE_PROJECT_PATH', GENERATED_PATH . $sep . 'setup-before-project' .$sep );
 define('COLORCHECKER_PATH', CORE_SRC_PATH . $sep . 'colorchecker' . $sep . 'ColorChecker.js');
+define('PHPUNIT_PATH', 'C:\php\pear\PHPUnit\Autoload.php');
 
-
+require_once(PHPUNIT_PATH);
 require_once( FILESCANNERS_PATH . $sep . 'FileScanner.php');
+require_once( FILESCANNERS_PATH . $sep . 'ControllerFileScanner.php');
 require_once( FILESCANNERS_PATH . $sep . 'TestFileScanner.php');
 require_once( CORE_HANDLERS_PATH . $sep . 'ConfigHandler.php');
 require_once( UTILS_PATH . $sep . 'DebugLog.php');
@@ -39,6 +43,7 @@ require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ColorCheckerTest.p
 
 
 function SeleniumShellAutoloadFunction( $className ){
+    
     $backtrace = debug_backtrace();
     if( !isset($backtrace[1]['file']) ){
         return;
@@ -61,7 +66,7 @@ function SeleniumShellAutoloadFunction( $className ){
     
     // check if the last function called contains the projects path
     // then we should crawlup that project file..
-    if(stripos( $file, CORE_PATH ) === false ){
+    if(stripos( $file, CORE_PATH ) === false && stripos($file, BIN_PATH) === false ){
         $projectName = $explodedFile[0];
         if( $projectName == session_id() ){
             $projectName = $explodedFile[1];
@@ -131,10 +136,9 @@ if( $projectPath ){
     define('PROJECTS_FOLDER', SELENIUM_SHELL . 'projects');
 }
 
-define( 'PHPUNIT_PATH', $config->getAttribute('phpunit-path'));
 
 try{
-    require_once PHPUNIT_PATH . DIRECTORY_SEPARATOR . 'Autoload.php';
+    //require_once PHPUNIT_PATH . DIRECTORY_SEPARATOR . 'Autoload.php';
 } catch(Exception $e){
     throw new Exception('PHPUNIT path not set in core/config/config.ini. Set it as "phpunit-path". It should be the full path to the location of phpunit');
 }

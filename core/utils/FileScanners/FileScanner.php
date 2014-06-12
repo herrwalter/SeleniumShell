@@ -21,7 +21,12 @@ class FileScanner
         $this->_readDirRecursive($dir);
     }
 
-    private function _readDirRecursive( $dir )
+    protected function validateFile($file)
+    {
+        return true;
+    }
+
+    private function _readDirRecursive($dir)
     {
         $curDirFiles = false;
         if (is_dir($dir)) {
@@ -31,6 +36,7 @@ class FileScanner
         }
         if ($curDirFiles) {
             foreach ($curDirFiles as $file) {
+
                 if (is_dir($file)) {
                     // . and .. skipped
                 } else if (is_file($dir . DIRECTORY_SEPARATOR . $file)) {
@@ -52,7 +58,9 @@ class FileScanner
         $foundFiles = array();
         foreach ($this->_files as $dir => $files) {
             foreach ($files as $file) {
-                $foundFiles[] = $dir . $file;
+                if ($this->validateFile($dir . $file)) {
+                    $foundFiles[] = $dir . $file;
+                }
             }
         }
         return $foundFiles;

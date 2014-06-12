@@ -45,6 +45,7 @@ class SeleniumShell_TestListener implements PHPUnit_Framework_TestListener
 
     public function addError(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
+        
         $this->errorLog->write( $test->getName() . ' got an error: ' . $test->getStatusMessage() . ' ' . $e->getTraceAsString() . PHP_EOL);
     }
 
@@ -65,10 +66,22 @@ class SeleniumShell_TestListener implements PHPUnit_Framework_TestListener
 
     public function endTest(\PHPUnit_Framework_Test $test, $time)
     {
+        try{
+            $this->saveScreenshot($test);
+        } catch (Exception $ex) {
+            DebugLog::write('Could not take screenshot: ' . $ex->getMessage());
+        }
         $currentCount = intval($this->assertions->getLog());
         $newCount = $currentCount + $test->getCount();
         $this->assertions->overwrite($newCount);
         $this->log->write( $test->getStatusRepresentation() );
+    }
+    
+    public function saveScreenshot(SeleniumShell_Test $test)
+    {
+        $session = $test->prepareSession();
+        $screenshot = $session->currentScreenshot();
+        file_put_contents(GENERATED_SCREENSHOTS_PATH . session_id() . DIRECTORY_SEPARATOR . $test->getBrowser() . $test->getName() . '.jpg', $screenshot );
     }
 
     public function endTestSuite(\PHPUnit_Framework_TestSuite $suite)
