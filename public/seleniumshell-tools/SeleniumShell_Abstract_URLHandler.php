@@ -26,7 +26,7 @@ abstract class SeleniumShell_Abstract_URLHandler {
     }
     
     private function _setBaseUrl( $env ){
-        $config = new ConfigHandler( PROJECTS_FOLDER . '/kwt/config/project.ini' );
+        $config = new ConfigHandler( $this->getProjectConfigPath() );
         if( $env ){
             $this->_setBaseUrlByEnvironment( $env );
         } else if($config->getAttribute('project-environment')) {
@@ -47,6 +47,10 @@ abstract class SeleniumShell_Abstract_URLHandler {
         throw new ErrorException( 'page not found in _uris array' );
     }
     
+    /**
+     * @return string path to project.ini config.
+     */
+    abstract protected function getProjectConfigPath();
     /**
      * @return array key should be environment, and value should be the base url.
      */

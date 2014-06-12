@@ -33,7 +33,12 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
         } else {
             return '127.0.0.1';
         }
+        
+        $result = new PHPUnit_Framework_TestResult();
+        $test = new PHPUnit_Framework_Test();
+       
     }
+    
     
     public function getSeleniumPort(){
         if( $this->_config->isParameterSet('--ss-port') ){
