@@ -86,9 +86,9 @@ class Application
     {
         if ($this->_config->isParameterSet('--ss-session')) {
             $sessionId = $this->_config->getParameter('--ss-session');
-            $this->_session = new Session($sessionId);
+            Session::setId($sessionId);
         } else {
-            $this->_session = new Session(time() . '-' . $this->_project->getName());
+            Session::setId(time() . '-' . $this->_project->getName());
         }
     }
 

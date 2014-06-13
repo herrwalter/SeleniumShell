@@ -35,12 +35,12 @@ class SeleniumShell_TestListener implements PHPUnit_Framework_TestListener
 
     public function __construct()
     {
-        $this->log = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'results.txt');
-        $this->failLog = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'failures.txt' );
-        $this->errorLog = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'errors.txt' );
-        $this->skippedLog = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'skipped.txt' );
-        $this->incompleteLog = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'incompletes.txt' );
-        $this->assertions = new Log(GENERATED_RESULTS_PATH . session_id() . DIRECTORY_SEPARATOR . 'assertions.txt' );
+        $this->log = new Log(GENERATED_RESULTS_PATH . Session::getId() . DIRECTORY_SEPARATOR . 'results.txt');
+        $this->failLog = new Log(GENERATED_RESULTS_PATH . Session::getId() . DIRECTORY_SEPARATOR . 'failures.txt' );
+        $this->errorLog = new Log(GENERATED_RESULTS_PATH . Session::getId() . DIRECTORY_SEPARATOR . 'errors.txt' );
+        $this->skippedLog = new Log(GENERATED_RESULTS_PATH . Session::getId() . DIRECTORY_SEPARATOR . 'skipped.txt' );
+        $this->incompleteLog = new Log(GENERATED_RESULTS_PATH . Session::getId() . DIRECTORY_SEPARATOR . 'incompletes.txt' );
+        $this->assertions = new Log(GENERATED_RESULTS_PATH . Session::getId() . DIRECTORY_SEPARATOR . 'assertions.txt' );
     }
 
     public function addError(\PHPUnit_Framework_Test $test, \Exception $e, $time)
@@ -81,7 +81,7 @@ class SeleniumShell_TestListener implements PHPUnit_Framework_TestListener
     {
         $session = $test->prepareSession();
         $screenshot = $session->currentScreenshot();
-        file_put_contents(GENERATED_SCREENSHOTS_PATH . session_id() . DIRECTORY_SEPARATOR . $test->getBrowser() . $test->getName() . '.jpg', $screenshot );
+        file_put_contents(GENERATED_SCREENSHOTS_PATH . Session::getId() . DIRECTORY_SEPARATOR . $test->getBrowser() . $test->getName() . '.jpg', $screenshot );
     }
 
     public function endTestSuite(\PHPUnit_Framework_TestSuite $suite)

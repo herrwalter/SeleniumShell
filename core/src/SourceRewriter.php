@@ -53,7 +53,7 @@ class SourceRewriter
     protected function createTestFileForEveryBrowser( $file )
     {
         $this->_tcr->setTestClassFile($file);
-        $this->_tcr->setSavePath(GENERATED_TESTSUITES_PATH . session_id() . DIRECTORY_SEPARATOR . $this->_project->getName() . DIRECTORY_SEPARATOR);
+        $this->_tcr->setSavePath(GENERATED_TESTSUITES_PATH . Session::getId() . DIRECTORY_SEPARATOR . $this->_project->getName() . DIRECTORY_SEPARATOR);
         $this->_tcr->setProjectName($this->_project->getName());
         foreach ($this->_project->getBrowsers() as $browser) {
             $this->_generatedFiles[] = $this->_tcr->createFileForBrowser($browser);

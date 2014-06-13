@@ -1,21 +1,25 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 class CompareScreenshotsController extends Controller
 {
+
     /** @var ScreenshotSession */
     protected $session1;
+
     /** @var ScreenshotSession */
     protected $session2;
-
+    
+    
+    public function getOptionalArguments()
+    {
+        return array('-path');
+    }
+    
     public function getMandatoryArguments()
     {
+        return array();
     }
+    
 
     public function run()
     {
@@ -26,25 +30,27 @@ class CompareScreenshotsController extends Controller
     protected function compareScreenshotSessions()
     {
         $screenshots = $this->session1->getScreenshots();
-        foreach($screenshots as $name => $screenshot ){
-            if( $this->session2->hasScreenshot($name) ){
+        foreach ($screenshots as $name => $screenshot) {
+            if ($this->session2->hasScreenshot($name)) {
                 echo 'now comparing screenshot' . $name . '.. ' . PHP_EOL;
-                $this->compareScreenshots($screenshot, $this->session2->getScreenshot($name), $name );
+                $this->compareScreenshots($screenshot, $this->session2->getScreenshot($name), $name);
+            } else {
+                echo $name . ' cannot be found in both sessions. ' . PHP_EOL;
             }
-            
         }
     }
-    
-    protected function compareScreenshots(Image $img, Image $img2, $name){
+
+    protected function compareScreenshots(Image $img, Image $img2, $name)
+    {
         $compare = new ImageCompare($img, $img2);
-        if( $compare->getOffsetDimensions() !== null ){
+        if ($compare->getOffsetDimensions() !== null) {
             $slicer = new ImageSlicer($img2, $compare->getOffsetDimensions());
-            imagejpeg($slicer->getSlice(), 'C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name , 100 );
-            echo '   found a differance.. '.PHP_EOL;
-            echo '   location: '.PHP_EOL;
+            imagejpeg($slicer->getSlice(), 'C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name, 100);
+            echo '   found a differance.. ' . PHP_EOL;
+            echo '   location: ' . PHP_EOL;
             echo '       C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name . PHP_EOL;
         } else {
-            echo '   no differances' .PHP_EOL;
+            echo '   no differances' . PHP_EOL;
         }
     }
 
@@ -58,7 +64,11 @@ class CompareScreenshotsController extends Controller
     public function getLastTwoSessions()
     {
         $sessions = array();
-        $foldercontents = array_diff(scandir(GENERATED_SCREENSHOTS_PATH), array('.', '..'));
+        $foldercontents = $this->getSessionFolders();
+        if( count($foldercontents) <= 2 ){
+            throw new ErrorException('Cannot compare screenshots, there are less then 2 sessions available');
+        }
+        $foldercontents = array(array_pop($foldercontents), array_pop($foldercontents));
         foreach ($foldercontents as $filename) {
             $path = GENERATED_SCREENSHOTS_PATH . $filename;
             if (is_dir($path)) {
@@ -67,6 +77,21 @@ class CompareScreenshotsController extends Controller
         }
         ksort($sessions);
         return array(array_pop($sessions), array_pop($sessions));
+    }
+
+    public function getSessionFolders()
+    {
+        $foldercontents = array_diff(scandir(GENERATED_SCREENSHOTS_PATH), array('.', '..'));
+        $validSessions = array();
+        foreach($foldercontents as $sessionName){
+            $sessionTime = $this->getSessionTime($sessionName);
+            // check if time is in the past and after may 13 2014
+            if( $sessionTime < time() && $sessionTime > 1400000000 ){
+                $validSessions[] = $sessionName;
+            }
+        }
+        asort($validSessions);
+        return $validSessions;
     }
 
     public function getSessionTime($sessionName)
@@ -79,5 +104,6 @@ class CompareScreenshotsController extends Controller
     {
         return 'for comparing screenshots of the last two sessions';
     }
+
 
 }

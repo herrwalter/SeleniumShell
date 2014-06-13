@@ -196,7 +196,7 @@ class Project
 //    protected function _deleteGeneratedTestFiles()
 //    {
 //        // delete old testfiles
-//        $fileScanner = new FileScanner(GENERATED_TESTSUITES_PATH . session_id());
+//        $fileScanner = new FileScanner(GENERATED_TESTSUITES_PATH . Session::getId());
 //        $generatedTestFiles = $fileScanner->getFilesInOneDimensionalArray();
 //        foreach ($generatedTestFiles as $testFile) {
 //            if (is_file($testFile)) {
@@ -208,7 +208,7 @@ class Project
 //    protected function _createSetupTestFile($file)
 //    {
 //        $tcr = new SetupBeforeProjectTestClassRecreator($file);
-//        $tcr->setSavePath(GENERATED_SETUP_BEFORE_PROJECT_PATH . session_id() . DIRECTORY_SEPARATOR . $this->_name . DIRECTORY_SEPARATOR);
+//        $tcr->setSavePath(GENERATED_SETUP_BEFORE_PROJECT_PATH . Session::getId() . DIRECTORY_SEPARATOR . $this->_name . DIRECTORY_SEPARATOR);
 //        $tcr->setProjectName($this->_name . '_setup_before_project_');
 //        foreach ($this->_browsers as $browser) {
 //            $this->_generatedSetupBeforeProjectFiles[] = $tcr->createFileForBrowser($browser);
@@ -218,7 +218,7 @@ class Project
 //    protected function _createBrowserTestsForTestFile($file)
 //    {
 //        $tcr = new TestClassRecreator($file);
-//        $tcr->setSavePath(GENERATED_TESTSUITES_PATH . session_id() . DIRECTORY_SEPARATOR . $this->_name . DIRECTORY_SEPARATOR);
+//        $tcr->setSavePath(GENERATED_TESTSUITES_PATH . Session::getId() . DIRECTORY_SEPARATOR . $this->_name . DIRECTORY_SEPARATOR);
 //        $tcr->setProjectName($this->_name);
 //        foreach ($this->_browsers as $browser) {
 //            $this->_generatedFiles[] = $tcr->createFileForBrowser($browser);

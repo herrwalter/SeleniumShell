@@ -1,67 +1,104 @@
 <?php
 
-abstract class Controller
+class Controller
 {
 
-    protected $_validateArgumentCount = true;
     protected $_findUnsupportedArguments = true;
+    protected $_validateMandatoryArguments = true;
     protected $_name = '';
-    protected $_userOptions = array();
-    
+    protected $_arguments;
+
     /** @var ConfigHandler */
     protected $_config;
 
-    public function __construct( $name ='' , $options = array() )
+    public function __construct($name = '')
     {
         $this->_name = $name;
-        $this->_userOptions = $options;
         $this->_config = new ConfigHandler(CORE_CONFIG_PATH . DIRECTORY_SEPARATOR . 'config.ini');
-        $this->validateArgumentCount();
-        $this->findUnsupportedArguments();
-    }
-        
-    private function findUnsupportedArguments()
-    {
-        if( !$this->_findUnsupportedArguments ){
-            return false;
-        }
-        $arguments = $this->_userOptions;
-        $defined = $this->getMandatoryArguments();
-        foreach( $arguments as $argument => $value ){
-            if( !in_array($argument, $defined) ){
-                echo PHP_EOL . $argument . ' is not known as a mandatory argument';
-            }
-        }
-       
+        $this->setArguments();
+        $this->_validateMandatoryArguments();
+        $this->_findUnsupportedArguments();
     }
 
-    private function validateArgumentCount()
+    protected function setArguments()
     {
-        if( !$this->_validateArgumentCount ){
+        $this->_arguments = ArgvHandler::getArgmentValuesByArray($this->getCombinedArguments());
+    }
+
+    protected function getArguments()
+    {
+        return $this->_arguments;
+    }
+
+    protected function getCombinedArguments()
+    {
+        return array_merge($this->getMandatoryArguments(), $this->getOptionalArguments());
+    }
+
+    private function _findUnsupportedArguments()
+    {
+        if (!$this->_findUnsupportedArguments) {
             return false;
         }
-        global $argc;
-        if( count($this->getMandatoryArguments()) !== $argc - 2 ){
-            throw new ErrorException('Command expects ' . count($this->getMandatoryArguments()) . ' arguments' );
+        $defined = $this->getCombinedArguments();
+        $unsupported = ArgvHandler::getUnsupportedArguments($defined);
+        $errors = array();
+        foreach ($unsupported as $argument) {
+            $errors[] = PHP_EOL . $argument . ' is not known as a argument for this command "' . $this->_name . '"';
+        }
+        if (count($errors) > 0) {
+            echo implode(PHP_EOL, $errors) . PHP_EOL;
+        }
+    }
+
+    private function _validateMandatoryArguments()
+    {
+        if (!$this->_validateMandatoryArguments) {
+            return false;
+        }
+        $mandatoryArguments = $this->getMandatoryArguments();
+        $errors = array();
+        foreach ($mandatoryArguments as $argument) {
+            if (!ArgvHandler::getArgumentValue($argument)) {
+                $errors[] = $argument . ' is not provided and is mandatory';
+            }
+        }
+        if (count($errors) > 0) {
+            echo implode(PHP_EOL, $errors) . PHP_EOL;
+            die();
         }
     }
 
     /**
      * @return array with arguments
      */
-    abstract public function getMandatoryArguments();
-    
+    public function getMandatoryArguments()
+    {
+        
+    }
+
+    /**
+     * @return array with optional arguments
+     */
+    public function getOptionalArguments()
+    {
+        
+    }
 
     /**
      * Main method of controller to run. 
      */
-    abstract public function run();
-    
+    public function run()
+    {
+        
+    }
+
     /**
      * @return string
      */
-    abstract public function getHelpDescription();
-    
-    
-    
+    public function getHelpDescription()
+    {
+        
+    }
+
 }

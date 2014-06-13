@@ -12,7 +12,6 @@ class ScreenshotSession
         $this->name = $sessionname;
         $this->path = GENERATED_SCREENSHOTS_PATH . $sessionname;
         $this->setScreenshots();
-        var_dump(count($this->screenshots));
     }
     
     protected function setScreenshots()

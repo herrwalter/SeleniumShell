@@ -4,8 +4,8 @@ $dir = dirname(__DIR__);
 chdir($dir . '/core');
 require_once 'bootstrap.php';
 
-
-$options = getopt('', array('env:', 'host:', 'port:', 'project:', 'browsers:', 'max-sessions:', 'testsuite:', 'session:', 'ignore-solo-run'));
+Session::setId(time().'-'. ArgvHandler::getArgumentValue('-project'));
+$options = ArgvHandler::getArgmentValuesByArray( array('-env', '-host', '-port', '-project', '-browsers', '-max-sessions', '-testsuite', '-session', '--ignore-solo-run'));
 $ssOptions = '';
 $project = '';
 $processes = array();
@@ -35,7 +35,13 @@ if (!array_key_exists('1', $argv)) {
             throw $ex;
         }
     } else {
-
+        
+        $controller = new DefaultController( 'default' );
+        $controller->run();
+        while(!$controller->finished()){
+        }
+            $controller->printResults();
+        die();
         // set options to namespaced seleniumshell options.
         foreach ($options as $key => $value) {
             if (!$value) {
@@ -112,7 +118,6 @@ if (!array_key_exists('1', $argv)) {
                 $finished = 0;
             }
         }
-        $totalTime = microtime(true) - $start;
 
         $exitcode = 0;
         foreach ($finishedProcesses as $process) {
@@ -144,10 +149,8 @@ if (!array_key_exists('1', $argv)) {
             }
         }
 
-        $runtimeInSeconds = number_format($totalTime, 2);
-        $minutes = floor($runtimeInSeconds / 60);
-        $seconds = $runtimeInSeconds % 60;
-        echo PHP_EOL . 'Total Runtime: ' . $minutes . ' minutes ' . $seconds . ' seconds';
+        $totalTime = microtime(true) - $start;
+        
 
 
         // delete generated results

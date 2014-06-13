@@ -4,17 +4,17 @@
 class Process
 {
 
-    public $cmd = '';
-    public $descriptors = array(
+    protected $cmd = '';
+    protected $descriptors = array(
         0 => array('pipe', 'r'),
         1 => array('pipe', 'w'),
         2 => array('pipe', 'a')
     );
-    public $pipes = null;
-    public $desc = '';
+    protected $pipes = null;
+    protected $desc = '';
     private $strt_tm = 0;
-    public $resource = null;
-    public $status = null;
+    protected $resource = null;
+    protected $status = null;
     private $exitcode = null;
 
     function __construct($cmd = '', $desc = '')
@@ -30,7 +30,6 @@ class Process
     public function isRunning()
     {
         $status = proc_get_status($this->resource);
-
         /**
          * proc_get_status will only pull valid exitcode one
          * time after process has ended, so cache the exitcode
@@ -47,6 +46,11 @@ class Process
     public function getExitcode()
     {
         return $this->exitcode;
+    }
+    
+    public function getCommand()
+    {
+        return $this->cmd;
     }
 
     public function get_elapsed()

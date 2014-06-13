@@ -68,7 +68,8 @@ function SeleniumShellAutoloadFunction( $className ){
     // then we should crawlup that project file..
     if(stripos( $file, CORE_PATH ) === false && stripos($file, BIN_PATH) === false ){
         $projectName = $explodedFile[0];
-        if( $projectName == session_id() ){
+        var_dump(ArgvHandler::getArgumentValue('-project'));
+        if( $projectName == ArgvHandler::getArgumentValue('-project') ){
             $projectName = $explodedFile[1];
         }
         if( substr($projectName, -1) == ':' ){
