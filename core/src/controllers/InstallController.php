@@ -21,7 +21,7 @@ class InstallController extends Controller
         }
     }
 
-    public function getHelpDescription()
+    public static function getHelpDescription()
     {
         return 'TBI: For installing selenium shell';
     }

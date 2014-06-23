@@ -14,7 +14,7 @@ class SeleniumShell extends PHPUnit_Extensions_Selenium2TestCase {
     public function __construct()
     {
         if( !$this->initialized ){
-            $this->_bootstrap();
+            //self::_bootstrap();
             $this->_setInitialisation();
         }
         $this->_app = new Application();

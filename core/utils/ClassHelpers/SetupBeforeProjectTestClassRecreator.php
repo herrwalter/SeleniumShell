@@ -11,13 +11,10 @@ class SetupBeforeProjectTestClassRecreator extends TestClassRecreator
 
     protected function _deleteTestsThatShouldNotRunInThisBrowser($browser)
     {
-        $commandChain = new Annotations_ChainOfCommand();
-        $commandChain->addCommand(new Browsers_AnnotationCommand());
-        $commandChain->addCommand(new SetupBeforeProject_AnnotationCommand());
-
-        $testMethods = $this->_testMethods;
-        $testMethods = $commandChain->runCommand('setup-before-project', array('testMethods' => $testMethods));
-        $testMethods = $commandChain->runCommand('browsers', array('testMethods' => $testMethods, 'browser' => $browser));
+        $filterChain = new TestMethodsFilterChain($this->_testMethods, array(
+            new SetupBeforeProjectReversedTestMethodsFilter(),
+            new BrowserTestMethodsFilter(array(), $browser)));
+        $testMethods = $filterChain->getFilteredTestMethods();
 
         foreach ($testMethods as $testMethod) {
             if ($testMethod->getStripMethodState()) {

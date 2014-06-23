@@ -4,193 +4,35 @@ $dir = dirname(__DIR__);
 chdir($dir . '/core');
 require_once 'bootstrap.php';
 
-Session::setId(time().'-'. ArgvHandler::getArgumentValue('-project'));
 $options = ArgvHandler::getArgmentValuesByArray( array('-env', '-host', '-port', '-project', '-browsers', '-max-sessions', '-testsuite', '-session', '--ignore-solo-run'));
-$ssOptions = '';
-$project = '';
-$processes = array();
-$finishedProcesses = array();
-$testUpdates = array();
 $controllers = new ControllerFileScanner( CORE_SRC_PATH . DIRECTORY_SEPARATOR . 'controllers');
 $controlerNames = $controllers->getFileNames();
 $acceptedCommands = array();
-
 foreach ($controlerNames as $name) {
-    $acceptedCommands[] = decamelize(substr($name, 0, strlen($name) - 10));
+    $acceptedCommands[] = HelperFunctions::decamelize(substr($name, 0, strlen($name) - 10));
 }
-
 if (!array_key_exists('1', $argv)) {
     $controller = new HelpController('help', array());
     $controller->run();
 } else {
     $command = $argv[1];
+    
     if (in_array($command, $acceptedCommands)) {
         try {
-            $controllerName = ucfirst(camelize($command)) . 'Controller';
-            $controllerFileName = '/src/controllers/' . $controllerName . '.php';
-            require_once $controllerFileName;
-            $controller = new $controllerName($command, $options);
+            $controllerName = ucfirst(HelperFunctions::camelize($command)) . 'Controller';
+            $controller = new $controllerName($command);
             $controller->run();
         } catch (ErrorException $ex) {
             throw $ex;
         }
     } else {
         
+        Session::setId(time().'-'. ArgvHandler::getArgumentValue('-project'));
         $controller = new DefaultController( 'default' );
         $controller->run();
         while(!$controller->finished()){
         }
-            $controller->printResults();
-        die();
-        // set options to namespaced seleniumshell options.
-        foreach ($options as $key => $value) {
-            if (!$value) {
-                $value = 'true';
-            }
-            $ssOptions .= '--ss-' . $key . ' ' . '"' . $value . '" ';
-        }
-
-        if (isset($options['project'])) {
-            $project = $options['project'];
-        } else {
-            $project = dirname(getcwd());
-        }
-
-        $sessionName = time() . '-' . $project;
-        $resultsPath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'generated' . DIRECTORY_SEPARATOR . 'results' . DIRECTORY_SEPARATOR . $sessionName . DIRECTORY_SEPARATOR;
-        define('RESULTS_PATH', $resultsPath);
-        $progressPath = RESULTS_PATH . 'progress.html';
-        define('PROGRESS_PATH', $progressPath);
-
-        echo 'Executing SeleniumShell with options: ' . $ssOptions . PHP_EOL;
-        echo 'Sessionname=' . $sessionName . PHP_EOL;
-
-
-        $setupBeforeProject = new Process('phpunit -v  SeleniumShell.php ' . $ssOptions . ' --ss-setup-before-project true');
-        // wait for process to end..
-        while ($setupBeforeProject->isRunning()) {
-            
-        }
-
-
-        exec('phpunit SeleniumShell.php ' . $ssOptions . ' --ss-print-tests true --ss-session "' . $sessionName . '"', $tests, $exitcode);
-
-        foreach ($tests as $test) {
-            $testUpdates[$test] = new HtmlTestResult($test, -1);
-        }
-        writeTestProgress($testUpdates);
-        $webinterfacePath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'webinterface' . DIRECTORY_SEPARATOR . 'interface.html#progressPath=' . PROGRESS_PATH;
-
-        exec('openbrowser.vbs ' . $webinterfacePath);
-
-
-        $runningInstances = 0;
-        $start = microtime(true);
-        $options['max-sessions'] ? $concurrentTests = $options['max-sessions'] : $concurrentTests = 10;
-        echo PHP_EOL . 'running selenium-shell in ' . $concurrentTests . ' concurrent tests' . PHP_EOL . PHP_EOL;
-        while (true) {
-            $finished = 0;
-
-            foreach ($tests as $key => $test) {
-                if (count($processes) < $concurrentTests) {
-                    $processes[] = array(
-                        'command' => new Process('phpunit --filter "' . $test . '" SeleniumShell.php --ss-session "' . $sessionName . '" ' . $ssOptions),
-                        'test' => $test
-                    );
-                    unset($tests[$key]);
-                }
-            }
-
-            foreach ($processes as $key => $process) {
-                if (!$process['command']->isRunning()) {
-                    $testUpdates[$process['test']]->setExitcode($process['command']->getExitcode());
-                    writeTestProgress($testUpdates);
-                    $finishedProcesses[] = $process;
-                    unset($processes[$key]);
-                    $finished ++;
-                }
-            }
-
-
-            if (empty($tests) && empty($processes)) {
-                break;
-            } else {
-                $finished = 0;
-            }
-        }
-
-        $exitcode = 0;
-        foreach ($finishedProcesses as $process) {
-            //var_dump(stream_get_contents($process->pipes[1]));
-            //var_dump(stream_get_contents($process->pipes[0]));
-            //var_dump($process->status);
-            if ($process['command']->getExitcode() !== 0) {
-                $exitcode = 1;
-            }
-        }
-        $results = file_get_contents(RESULTS_PATH . 'results.txt');
-        $errors = file_get_contents(RESULTS_PATH . 'errors.txt');
-        $failures = file_get_contents(RESULTS_PATH . 'failures.txt');
-        $incompletes = file_get_contents(RESULTS_PATH . 'incompletes.txt');
-        $skipped = file_get_contents(RESULTS_PATH . 'skipped.txt');
-
-
-
-
-        $extraInfo = array('Errors' => $errors, 'Failures' => $failures, 'Incompletes' => $incompletes, 'Skipped' => $skipped);
-
-        echo $results . PHP_EOL;
-
-        foreach ($extraInfo as $message => $info) {
-            if ($info !== '') {
-                echo PHP_EOL;
-                echo $message . ': ' . PHP_EOL . PHP_EOL;
-                echo $info . PHP_EOL;
-            }
-        }
-
-        $totalTime = microtime(true) - $start;
-        
-
-
-        // delete generated results
-        //delTree($resultsPath);
-
-        exec('closebrowser.vbs');
-        exit($exitcode);
+        $controller->printResults();
+        exit($controller->getExitCode());
     }
 }
-
-function writeTestProgress($testUpdates)
-{
-    $begin = '<html><head></head><body>';
-    $results = '';
-    $end = '</body></html>';
-    foreach ($testUpdates as $htmlTestResult) {
-        $results .= $htmlTestResult->toString();
-    }
-    file_put_contents(PROGRESS_PATH, $begin . $results . $end);
-}
-
-function delTree($dir)
-{
-    $files = array_diff(scandir($dir), array('.', '..'));
-    foreach ($files as $file) {
-        (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file");
-    }
-    return rmdir($dir);
-}
-
-function decamelize($word)
-{
-    return preg_replace(
-            '/(^|[a-z])([A-Z])/e', 'strtolower(strlen("\\1") ? "\\1-\\2" : "\\2")', $word
-    );
-}
-function camelize($word) {
-    return lcfirst(
-      implode( '',  array_map('ucfirst', array_map('strtolower', explode( '-', $word)))));
-  }
-die();
-
-

@@ -14,8 +14,6 @@ class UpdateController extends Controller
         $line = fgets($handle);
         if( file_exists(trim($line)) ){
             $gridPath = trim($line);
-            require_once '../bin/DownloadProcess.php';
-            require_once '../bin/Update.php';
             $update = new Update();
             $seleniumInfo = $update->getLastModifiedFeedByKeyContaining('standalone');
             if( $seleniumInfo ){
@@ -39,7 +37,7 @@ class UpdateController extends Controller
         }
     }
 
-    public function getHelpDescription()
+    public static function getHelpDescription()
     {
         return 'For updating you selenium-shell-standalone-server';
     }

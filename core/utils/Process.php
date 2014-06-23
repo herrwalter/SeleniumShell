@@ -10,7 +10,7 @@ class Process
         1 => array('pipe', 'w'),
         2 => array('pipe', 'a')
     );
-    protected $pipes = null;
+    public $pipes = null;
     protected $desc = '';
     private $strt_tm = 0;
     protected $resource = null;
@@ -21,10 +21,16 @@ class Process
     {
         $this->cmd = $cmd;
         $this->desc = $desc;
-
         $this->resource = proc_open($this->cmd, $this->descriptors, $this->pipes, null, null);
-
         $this->strt_tm = microtime(true);
+    }
+    
+    public function closeProcess()
+    {
+        foreach($this->pipes as $pipe){
+            fclose($pipe);
+        }
+        proc_close($this->resource);
     }
 
     public function isRunning()
@@ -51,11 +57,6 @@ class Process
     public function getCommand()
     {
         return $this->cmd;
-    }
-
-    public function get_elapsed()
-    {
-        return microtime(TRUE) - $this->strt_tm;
     }
 
 }

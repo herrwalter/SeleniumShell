@@ -224,17 +224,6 @@ class TestClassReader
         ); 
     }
     
-    public function fileHasSolorunAnnotation()
-    {
-        $methods = $this->getTestMethods();
-        foreach( $methods as $method ){
-            $annotation = $method->getAnnotations();
-            if( $method->hasAnnotations() && $annotation->hasSoloRun() ){
-                return true;
-            }
-        }
-        return false;
-    }
     
     public function fileHasBeforeProjectSetupAnnotation()
     {

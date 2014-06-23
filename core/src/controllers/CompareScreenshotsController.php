@@ -100,7 +100,7 @@ class CompareScreenshotsController extends Controller
         return (int) $ex[0];
     }
 
-    public function getHelpDescription()
+    public static function getHelpDescription()
     {
         return 'for comparing screenshots of the last two sessions';
     }

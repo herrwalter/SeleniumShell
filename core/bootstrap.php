@@ -9,6 +9,7 @@ define('SELENIUM_SHELL', str_replace('core', '', $rel_path));
 define('CORE_CONFIG_PATH', SELENIUM_SHELL . $sep.'config' );
 define('CORE_PATH', $rel_path . $sep);
 define('BIN_PATH', SELENIUM_SHELL . 'bin');
+define('CONTROLLER_PATH', CORE_PATH . 'src' . $sep . 'controllers');
 define('SELENIUM_SHELL_PUBLIC', SELENIUM_SHELL . 'public' );
 define('SELENIUM_SHELL_TOOLS', SELENIUM_SHELL_PUBLIC. DIRECTORY_SEPARATOR . 'seleniumshell-tools');
 define('SELENIUM_SHELL_TESTCASE', SELENIUM_SHELL_PUBLIC . DIRECTORY_SEPARATOR . 'seleniumshell-testcase');
@@ -43,7 +44,6 @@ require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ColorCheckerTest.p
 
 
 function SeleniumShellAutoloadFunction( $className ){
-    
     $backtrace = debug_backtrace();
     if( !isset($backtrace[1]['file']) ){
         return;
@@ -66,12 +66,14 @@ function SeleniumShellAutoloadFunction( $className ){
     
     // check if the last function called contains the projects path
     // then we should crawlup that project file..
+   // var_dump($className);
     if(stripos( $file, CORE_PATH ) === false && stripos($file, BIN_PATH) === false ){
-        $projectName = $explodedFile[0];
-        var_dump(ArgvHandler::getArgumentValue('-project'));
-        if( $projectName == ArgvHandler::getArgumentValue('-project') ){
-            $projectName = $explodedFile[1];
-        }
+        
+        
+        $projectName = ArgvHandler::getArgumentValue('-project');
+//        if( $projectName == ArgvHandler::getArgumentValue('-project') ){
+//            $projectName = array_pop($explodedFile);
+//        }
         if( substr($projectName, -1) == ':' ){
             scan_folder_for_class(SELENIUM_SHELL_TOOLS, $className);
             return;

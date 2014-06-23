@@ -2,6 +2,7 @@
 
 class DefaultController extends Controller
 {
+    protected $_exitCode = 0;
     protected $_maxSessions = 10;
     protected $_namespacedArguments = '';
     protected $_progressPath = '';
@@ -21,7 +22,7 @@ class DefaultController extends Controller
         return array('-project');
     }
 
-    public function getHelpDescription()
+    public static function getHelpDescription()
     {
         return 'running tests';
     }
@@ -47,21 +48,22 @@ class DefaultController extends Controller
         return $this->_parrallelProcesser->finished();
     }
     
-    public function finishedProcess( $process )
+    public function finishedProcess( Process $process )
     {
-        //echo 'finished command: ' . $process->getCommand();
+        $this->setExitcode( $process->getExitcode() );
+        $process->closeProcess();
+    }
+    
+    protected function setExitcode( $code )
+    {
+        if( (int) $code > $this->_exitCode ){
+            $this->_exitCode = (int) $code;
+        }
     }
     
     public function getExitCode()
     {
-        $finishedProcesses = $this->_parrallelProcesser->getFinishedProcesses();
-        $exitcode = 0;
-        foreach ($finishedProcesses as $process) {
-            if ($process->getExitcode() !== 0) {
-                $exitcode = 1;
-            }
-        }
-        return $exitcode;
+        return $this->_exitCode;
     }
     
     public function printResults()
@@ -80,6 +82,7 @@ class DefaultController extends Controller
                 echo $info . PHP_EOL;
             }
         }
+        echo $this->_parrallelProcesser->printTotalRuntime();
     }
     
     protected function _createTestCommands()
@@ -91,6 +94,7 @@ class DefaultController extends Controller
 
     protected function _echoStartupMessage()
     {
+        echo PHP_EOL;
         echo 'Executing SeleniumShell with options: ' . $this->_namespacedArguments. PHP_EOL;
         echo 'Sessionname=' . Session::getId() . PHP_EOL;
         echo PHP_EOL;

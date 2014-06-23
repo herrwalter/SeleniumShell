@@ -3,22 +3,15 @@
 class HelpController extends Controller
 {
 
-    protected $_validateArgumentCount = false;
     protected $_controllers;
-
-    public function getMandatoryArguments()
-    {
-        return array();
-    }
 
     protected function setControllers()
     {
-        $controllerFiles = new ControllerFileScanner(CORE_SRC_PATH . DIRECTORY_SEPARATOR . 'controllers');
-        $controllerFiles->getFilesInOneDimensionalArray();
         $controllers = array();
+        $controllerFiles = new ControllerFileScanner(CORE_SRC_PATH . DIRECTORY_SEPARATOR . 'controllers');
         $filenames = $controllerFiles->getFileNames();
         foreach ($filenames as $filename) {
-            $controllers[$this->getCommand($filename)] = new $filename;
+            $controllers[$this->getCommand($filename)] = $filename;
         }
         $this->_controllers = $controllers;
     }
@@ -44,7 +37,7 @@ class HelpController extends Controller
         $echo[] = 'SeleniumShell usage: ';
         $echo[] = '';
         foreach ($this->getControllers() as $command => $controller) {
-            $echo[] = $this->addWhitespaceToCommand($command) . $controller->getHelpDescription();
+            $echo[] = $this->addWhitespaceToCommand($command) . $controller::getHelpDescription();
         }
         $echo[] = '';
         echo implode(PHP_EOL, array_map('HelpController::addSpace', $echo));
@@ -80,7 +73,7 @@ class HelpController extends Controller
         return $whitespacedCommand;
     }
 
-    public function getHelpDescription()
+    public static function getHelpDescription()
     {
         return 'for this screen';
     }

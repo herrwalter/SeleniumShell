@@ -6,7 +6,7 @@ class Controller
     protected $_findUnsupportedArguments = true;
     protected $_validateMandatoryArguments = true;
     protected $_name = '';
-    protected $_arguments;
+    private $_arguments;
 
     /** @var ConfigHandler */
     protected $_config;
@@ -15,12 +15,12 @@ class Controller
     {
         $this->_name = $name;
         $this->_config = new ConfigHandler(CORE_CONFIG_PATH . DIRECTORY_SEPARATOR . 'config.ini');
-        $this->setArguments();
+        $this->_setArguments();
         $this->_validateMandatoryArguments();
         $this->_findUnsupportedArguments();
     }
 
-    protected function setArguments()
+    private function _setArguments()
     {
         $this->_arguments = ArgvHandler::getArgmentValuesByArray($this->getCombinedArguments());
     }
@@ -74,7 +74,7 @@ class Controller
      */
     public function getMandatoryArguments()
     {
-        
+        return array();
     }
 
     /**
@@ -82,7 +82,7 @@ class Controller
      */
     public function getOptionalArguments()
     {
-        
+        return array();
     }
 
     /**
@@ -92,13 +92,12 @@ class Controller
     {
         
     }
-
     /**
      * @return string
      */
-    public function getHelpDescription()
+    public static function getHelpDescription()
     {
-        
+        return '';
     }
 
 }
