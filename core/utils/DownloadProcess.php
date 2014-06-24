@@ -32,6 +32,7 @@ class DownloadProcess
     }
     
     public  function saveFile(){
+        echo PHP_EOL . 'Saving file to: ' . $this->_savePath;
         file_put_contents($this->_savePath, $this->_fileContents);
     }
     
@@ -55,6 +56,9 @@ class DownloadProcess
                         $length = (int) (($bytes_transferred / $this->_fileSize) * 100);
                         printf("\r%s %s%%",$this->_outputMessage, $length);
                     }
+                }
+                if( $bytes_transferred == $this->_fileSize ){
+                    echo PHP_EOL;
                 }
                 break;
             default:

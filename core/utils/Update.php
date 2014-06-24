@@ -5,26 +5,48 @@ class Update
 
     public function __construct()
     {
-        $feed = new DownloadProcess('http://selenium-release.storage.googleapis.com/', '', 'looking for updates..');
-        $this->_feed = simplexml_load_string($feed->getContents());
     }
 
     /**
-     * Searches the selenium-release.storage.googleapis.com feed on key
-     * for the latests selenium-standalone version by the name you provide.
+     * 
+     * @return type
      */
-    public function getLastModifiedFeedByKeyContaining($name)
+    public function seleniumStandaloneVersion()
     {
+        $downloadProcess = new DownloadProcess('http://selenium-release.storage.googleapis.com/', '', 'looking for updates..');
+        
+        $feed = simplexml_load_string($downloadProcess->getContents());
         $dateLast = 0;
         $lastVersion = null;
-        foreach ($this->_feed as $info) {
+        foreach ($feed as $info) {
             $date = strtotime($info->LastModified);
-            if (strpos($info->Key, $name) > -1 && $date && $date > $dateLast) {
+            if (strpos($info->Key, 'standalone') > -1 && $date && $date > $dateLast) {
                 $dateLast = $date;
                 $lastVersion = $info;
             }
         }
-        return $lastVersion;
+        if( $lastVersion ){
+            $standaloneServer = explode('/', $seleniumInfo->Key);
+            $gridPathInfo = pathinfo($path);
+            $gridPath = $gridPathInfo['dirname']. $gridPathInfo['basename'] . DIRECTORY_SEPARATOR;
+            if( !file_exists($gridPath . $standaloneServer[1])){
+                $download = new DownloadProcess(
+                            'http://selenium-release.storage.googleapis.com/' . $seleniumUri, 
+                            $gridPath . $standaloneServer[1], 
+                            'updating to version: ' . $standaloneServer[1]
+                        );
+                echo PHP_EOL . 'saving file.. ';
+                $download->saveFile();
+            } else {
+                echo PHP_EOL . 'up to date with: ' .$standaloneServer[1];
+            }
+        }
     }
+    
+    public function downloadLatestSeleniumStandaloneVersion( $seleniumUri )
+    {
+        
+    }
+    
 
 }

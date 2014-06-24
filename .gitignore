@@ -11,3 +11,8 @@ nbproject
 /webinterface/tests.txt
 /webinterface/progress.html
 /generated/screenshots/
+/bin/IEDriverServer.exe
+/bin/chromedriver.exe
+/downloads/chromedriver.zip
+/downloads/IEDriverServer_Win32_2.42.0.zip
+/downloads/

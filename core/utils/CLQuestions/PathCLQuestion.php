@@ -5,24 +5,13 @@ class PathCLQuestion extends CLQuestion
 
     protected function tryAgainMessage()
     {
-        
+        return 'path does not exist, please try again. ';
     }
 
-    protected function autocomplete($response)
-    {
-        if ($response == "\t") {
-            echo 'Tab hitted';
-        } else {
-            echo 'no tab hitted';
-        }
-    }
 
     protected function validateResponse($response)
     {
-        if ($response === "\t") {
-            echo 'Tab hitted';
-        }
-        return false;
+        return file_exists($response);
     }
 
 }

@@ -9,6 +9,7 @@ define('SELENIUM_SHELL', str_replace('core', '', $rel_path));
 define('CORE_CONFIG_PATH', SELENIUM_SHELL . $sep.'config' );
 define('CORE_PATH', $rel_path . $sep);
 define('BIN_PATH', SELENIUM_SHELL . 'bin');
+define('DOWNLOADS_PATH', SELENIUM_SHELL . 'downloads');
 define('CONTROLLER_PATH', CORE_PATH . 'src' . $sep . 'controllers');
 define('SELENIUM_SHELL_PUBLIC', SELENIUM_SHELL . 'public' );
 define('SELENIUM_SHELL_TOOLS', SELENIUM_SHELL_PUBLIC. DIRECTORY_SEPARATOR . 'seleniumshell-tools');
@@ -66,7 +67,6 @@ function SeleniumShellAutoloadFunction( $className ){
     
     // check if the last function called contains the projects path
     // then we should crawlup that project file..
-   // var_dump($className);
     if(stripos( $file, CORE_PATH ) === false && stripos($file, BIN_PATH) === false ){
         
         
