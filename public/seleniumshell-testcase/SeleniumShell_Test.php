@@ -5,7 +5,7 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
 {
     public $projectName;
     
-    public $browser = 'firefox';
+    public $ss_browser_info = array();
     
     /** @var _config ConfigHandler */
     private $_config ;
@@ -17,12 +17,11 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
     public function setUp()
     {
         $this->_config = new ConfigHandler( CORE_CONFIG_PATH . '/config.ini');
-        $this->setBrowser(strtolower($this->browser));
         $this->setBrowserUrl('/');
+        $this->setDesiredCapabilities($this->ss_browser_info);
         $this->setHost($this->getSeleniumHost());
         $this->setPort($this->getSeleniumPort());
         $this->setSeleniumServerRequestsTimeout(5000);
-        $this->setDesiredCapabilities(array());
     }
     
     public function getSeleniumHost(){

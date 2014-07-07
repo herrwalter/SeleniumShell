@@ -26,7 +26,6 @@ if (!array_key_exists('1', $argv)) {
             throw $ex;
         }
     } else {
-        
         Session::setId(time().'-'. ArgvHandler::getArgumentValue('-project'));
         $controller = new DefaultController( 'default' );
         $controller->run();

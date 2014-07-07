@@ -4,6 +4,8 @@ class DefaultController extends Controller
 {
     protected $_exitCode = 0;
     protected $_maxSessions = 10;
+    /** @var ParallelProcesser */
+    protected $_parallelProcesser;
     protected $_namespacedArguments = '';
     protected $_progressPath = '';
     protected $_resultsPath = '';
@@ -45,7 +47,7 @@ class DefaultController extends Controller
     
     public function finished()
     {
-        return $this->_parrallelProcesser->finished();
+        return $this->_parallelProcesser->finished();
     }
     
     public function finishedProcess( Process $process )
@@ -82,7 +84,7 @@ class DefaultController extends Controller
                 echo $info . PHP_EOL;
             }
         }
-        echo $this->_parrallelProcesser->printTotalRuntime();
+        echo $this->_parallelProcesser->printTotalRuntime();
     }
     
     protected function _createTestCommands()
@@ -109,9 +111,9 @@ class DefaultController extends Controller
     
     protected function _runParallelTests()
     {
-        $this->_parrallelProcesser = new ParallelProcesser($this->_maxSessions, $this->_testCommands);
-        $this->_parrallelProcesser->registerCallback($this, 'finishedProcess');
-        $this->_parrallelProcesser->runProcesses();
+        $this->_parallelProcesser = new ParallelProcesser($this->_maxSessions, $this->_testCommands);
+        $this->_parallelProcesser->registerCallback($this, 'finishedProcess');
+        $this->_parallelProcesser->runProcesses();
     }
     
     protected function _setMaxSessions()

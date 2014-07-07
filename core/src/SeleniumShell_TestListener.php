@@ -45,7 +45,6 @@ class SeleniumShell_TestListener implements PHPUnit_Framework_TestListener
 
     public function addError(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
-        
         $this->errorLog->write( $test->getName() . ' got an error: ' . $test->getStatusMessage() . ' ' . $e->getTraceAsString() . PHP_EOL);
     }
 

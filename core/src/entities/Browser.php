@@ -16,6 +16,23 @@ class Browser
         $this->setPlatform($platform);
     }
 
+    public function toString()
+    {
+        $browserArray = 'array(';
+        $browserArray .= '"browserName" => "' . $this->getBrowserName() . '"';
+        $browserArray .= ', "desiredCapabilities" => array(';
+        if ($this->getVersion()) {
+            $browserArray .= '"version" => "' . $this->getVersion(). '"';
+            
+        }
+        if( $this->getPlatform() ){
+            $browserArray .= ', "platform" => "' . $this->getPlatform(). '"';
+        }
+        $browserArray .= ')';
+        $browserArray .= ')';
+        return $browserArray;
+    }
+
     public function setUniqueName($uniqueName)
     {
         $this->uniqueName = $uniqueName;
