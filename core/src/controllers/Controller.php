@@ -3,57 +3,61 @@
 class Controller
 {
 
-    protected $_findUnsupportedArguments = true;
-    protected $_validateMandatoryArguments = true;
-    protected $_name = '';
-    private $_arguments;
+    protected $findUnsupportedArguments = true;
+    protected $validateMandatoryArguments = true;
+    protected $validateMinNrOfArugments = true;
+    protected $name = '';
+    private $arguments;
 
     /** @var ConfigHandler */
     protected $_config;
 
     public function __construct($name = '')
     {
-        $this->_name = $name;
+        $this->name = $name;
         $this->_config = new ConfigHandler(CORE_CONFIG_PATH . DIRECTORY_SEPARATOR . 'config.ini');
-        $this->_setArguments();
-        $this->_validateMandatoryArguments();
-        $this->_findUnsupportedArguments();
+        $this->setArguments();
+        var_dump($this->getArguments());
+        $this->validateMandatoryArguments();
+        $this->findUnsupportedArguments();
+        $this->validateMinNrOfArguments();
     }
 
-    private function _setArguments()
+    private function setArguments()
     {
-        $this->_arguments = ArgvHandler::getArgmentValuesByArray($this->getCombinedArguments());
+        $this->arguments = ArgvHandler::getArgmentValuesByArray($this->getCombinedArguments());
     }
 
     protected function getArguments()
     {
-        return $this->_arguments;
+        return $this->arguments;
     }
 
     protected function getCombinedArguments()
     {
         return array_merge($this->getMandatoryArguments(), $this->getOptionalArguments());
     }
+    
 
-    private function _findUnsupportedArguments()
+    private function findUnsupportedArguments()
     {
-        if (!$this->_findUnsupportedArguments) {
+        if (!$this->findUnsupportedArguments) {
             return false;
         }
         $defined = $this->getCombinedArguments();
         $unsupported = ArgvHandler::getUnsupportedArguments($defined);
         $errors = array();
         foreach ($unsupported as $argument) {
-            $errors[] = PHP_EOL . $argument . ' is not known as a argument for this command "' . $this->_name . '"';
+            $errors[] = PHP_EOL . $argument . ' is not known as a argument for this command "' . $this->name . '"';
         }
         if (count($errors) > 0) {
             echo implode(PHP_EOL, $errors) . PHP_EOL;
         }
     }
 
-    private function _validateMandatoryArguments()
+    private function validateMandatoryArguments()
     {
-        if (!$this->_validateMandatoryArguments) {
+        if (!$this->validateMandatoryArguments) {
             return false;
         }
         $mandatoryArguments = $this->getMandatoryArguments();
@@ -66,6 +70,18 @@ class Controller
         if (count($errors) > 0) {
             echo implode(PHP_EOL, $errors) . PHP_EOL;
             die();
+        }
+    }
+    
+    private function validateMinNrOfArguments(){
+        if( !$this->validateMinNrOfArugments ){
+            return;
+        }
+        
+        if( count($this->getArguments()) < $this->getMinNrOfRequiredArguments() ){
+            throw new ErrorException( 'Controller: ' . $this->name . ' expects'
+                    . ' at least ' . $this->getMinNrOfRequiredArguments() .' arg'
+                    . 'uments' );
         }
     }
 
@@ -85,6 +101,14 @@ class Controller
         return array();
     }
 
+    /**
+     * Set nr of required arguments to validate for.
+     * @return int default 0
+     */
+    protected function getMinNrOfRequiredArguments()
+    {
+        return 0;
+    }
     /**
      * Main method of controller to run. 
      */

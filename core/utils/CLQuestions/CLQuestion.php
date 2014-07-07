@@ -9,13 +9,12 @@ abstract class CLQuestion
     public function __construct($question)
     {
         $this->_question = $question;
-        $this->askQuestion();
-        $this->waitForAwnser();
     }
 
-    protected function askQuestion()
+    public function askQuestion()
     {
         echo PHP_EOL . $this->_question . PHP_EOL;
+        $this->waitForAwnser();
     }
 
     protected function waitForAwnser()
@@ -45,6 +44,11 @@ abstract class CLQuestion
     public function getAwnser()
     {
         return $this->_awnser;
+    }
+    
+    public function setQuestion($question)
+    {
+        $this->_question = $question;
     }
     
     public function getQuestion()

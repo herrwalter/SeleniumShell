@@ -28,7 +28,7 @@ define('GENERATED_DEBUG_PATH', GENERATED_PATH . $sep . 'debug' .$sep );
 define('GENERATED_SCREENSHOTS_PATH', GENERATED_PATH . $sep . 'screenshots' .$sep );
 define('GENERATED_SETUP_BEFORE_PROJECT_PATH', GENERATED_PATH . $sep . 'setup-before-project' .$sep );
 define('COLORCHECKER_PATH', CORE_SRC_PATH . $sep . 'colorchecker' . $sep . 'ColorChecker.js');
-define('PHPUNIT_PATH', 'C:\php\pear\PHPUnit\Autoload.php');
+define('PHPUNIT_PATH', 'C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php');
 
 require_once(PHPUNIT_PATH);
 require_once( FILESCANNERS_PATH . $sep . 'FileScanner.php');

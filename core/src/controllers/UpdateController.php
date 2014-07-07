@@ -8,6 +8,7 @@ class UpdateController extends Controller
     public function run()
     {
         $question = new PathCLQuestion("What is your selenium grid downloadfolder?");
+        $question->askQuestion();
         $this->path = $question->getAwnser();
         $this->updateSeleniumStandaloneServer();
         $this->updateChromeDriver();

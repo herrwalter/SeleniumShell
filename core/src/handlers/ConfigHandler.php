@@ -89,4 +89,35 @@ class ConfigHandler
         return $this->_parameters;
     }
     
+    
+    public function addAttributeValue($attribute, $section = false, $value){
+        if($section && !$this->sectionExists($section)){
+            throw new ErrorException($section . ' does not exist as section in current config');
+            return;
+        }
+        $currentAttributeValues = $this->getAttribute($attribute, $section);
+        $configContents = file_get_contents($this->_path);
+        $configContentLines = explode(PHP_EOL, $configContents);
+        foreach($configContentLines as $index => $line ){
+            if(strpos($line, $attribute.'[]') !== false){
+                array_splice($configContentLines, $index, 0, $attribute.'[] = '.$value);
+                break;
+            }
+        }
+        file_put_contents($this->_path, implode(PHP_EOL, $configContentLines));
+        $this->_setConfig();
+    }
+    
+    public function addSection($section, array $values){
+        if($this->sectionExists($section)){
+            throw new ErrorException($section . ' section allready exists' );
+        }
+        
+        $config = PHP_EOL . '[' . $section . ']' . PHP_EOL;
+        foreach($values as $key => $value ){
+            $config .= $key . ' = ' . $value . PHP_EOL;
+        }
+        file_put_contents($this->_path, $config, FILE_APPEND);
+        $this->_setConfig();
+    }
 }
