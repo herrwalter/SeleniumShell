@@ -17,7 +17,6 @@ class Controller
         $this->name = $name;
         $this->_config = new ConfigHandler(CORE_CONFIG_PATH . DIRECTORY_SEPARATOR . 'config.ini');
         $this->setArguments();
-        var_dump($this->getArguments());
         $this->validateMandatoryArguments();
         $this->findUnsupportedArguments();
         $this->validateMinNrOfArguments();

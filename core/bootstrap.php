@@ -28,9 +28,33 @@ define('GENERATED_DEBUG_PATH', GENERATED_PATH . $sep . 'debug' .$sep );
 define('GENERATED_SCREENSHOTS_PATH', GENERATED_PATH . $sep . 'screenshots' .$sep );
 define('GENERATED_SETUP_BEFORE_PROJECT_PATH', GENERATED_PATH . $sep . 'setup-before-project' .$sep );
 define('COLORCHECKER_PATH', CORE_SRC_PATH . $sep . 'colorchecker' . $sep . 'ColorChecker.js');
-define('PHPUNIT_PATH', 'C:\wamp\bin\php\php5.3.13\pear\PHPUnit\Autoload.php');
 
-require_once(PHPUNIT_PATH);
+
+/**
+ * Load phpunit for a windows system.
+ */
+$wherePHPunit = exec('where phpunit', $output );
+$phpunitBase = str_replace('\phpunit', '',$output[0]);
+if( trim($output[0]) == 'INFO: Could not find files for the given pattern(s).'){
+    throw new ErrorException('could not find phpunit, please install it and add it to you windows env');
+}
+// lets set the current dir to the path of the first phpunit executable we've found
+$curDir = getcwd();
+chdir($phpunitBase);
+// then search for the phpunit autoloader..
+exec('dir /B/S Autoload.php', $autloadfiles);
+foreach($autloadfiles as $file){
+    $basepaths = pathinfo($file, PATHINFO_DIRNAME);
+    $explodedBasepaths = explode('\\', $basepaths);
+    // it will be the one thats in the PHPUnit folder.
+    if(strtolower(array_pop($explodedBasepaths)) == 'phpunit' ){
+        require_once $file;
+        break;
+    }
+}
+// set the dir back to where we where anyway
+chdir($curDir);
+
 require_once( FILESCANNERS_PATH . $sep . 'FileScanner.php');
 require_once( FILESCANNERS_PATH . $sep . 'ControllerFileScanner.php');
 require_once( FILESCANNERS_PATH . $sep . 'TestFileScanner.php');

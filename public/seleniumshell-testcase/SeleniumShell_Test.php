@@ -18,7 +18,8 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
     {
         $this->_config = new ConfigHandler( CORE_CONFIG_PATH . '/config.ini');
         $this->setBrowserUrl('/');
-        $this->setDesiredCapabilities($this->ss_browser_info);
+        $this->setBrowser($this->ss_browser_info['browserName']);
+        $this->setDesiredCapabilities($this->ss_browser_info['desiredCapabilities']);
         $this->setHost($this->getSeleniumHost());
         $this->setPort($this->getSeleniumPort());
         $this->setSeleniumServerRequestsTimeout(5000);
