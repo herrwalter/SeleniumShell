@@ -37,7 +37,26 @@ class SettingsController extends Controller
         $question->askQuestion();
         return $question->getAwnser();
     }
+    
+    public function listCurrentBrowsers()
+    {
+        $this->setCurrentBrowserNames();
+        echo PHP_EOL;
+        foreach($this->currentBrowserNames as $browserName ){
+            $this->outputBrowserSection($browserName);
+        }
+    }
+    
        
+    public function outputBrowserSection( $browserName ){
+        $config = new ConfigHandler(CORE_CONFIG_PATH . '/config.ini', true);
+        $section = $config->getAttribute('browser-' . $browserName);
+            echo $browserName . ': ' . PHP_EOL;
+            foreach($section as $key => $value ){
+                echo ' ' . $key . "\t" . $value . PHP_EOL;  
+            }
+            echo PHP_EOL;
+    }
     
     public function addBrowser()
     {
@@ -70,13 +89,17 @@ class SettingsController extends Controller
                    $this->setCurrentBrowserNames();
                    $this->addBrowser();
                    break;
+               case '--listBrowsers':
+                   $this->listCurrentBrowsers();
+                   break;
            }
         }
     }
     
     public function getOptionalArguments() {
         return array(
-            '--addBrowser'
+            '--addBrowser',
+            '--listBrowsers'
         );
     }
     

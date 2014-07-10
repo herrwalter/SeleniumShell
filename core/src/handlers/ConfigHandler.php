@@ -120,4 +120,10 @@ class ConfigHandler
         file_put_contents($this->_path, $config, FILE_APPEND);
         $this->_setConfig();
     }
+    
+    public function removeSection( $section ){
+        if( $this->sectionExists($section) ){
+            
+        }
+    }
 }

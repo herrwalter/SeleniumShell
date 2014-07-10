@@ -12,13 +12,27 @@ class InstallController extends Controller
 
     public function run()
     {
-        $img = new Image('C:\SeleniumTests\SeleniumShell\generated\screenshots\1402485714\chrometestFooterLinks.jpg');
-        $img2 = new Image('C:\SeleniumTests\SeleniumShell\generated\screenshots\1402485298\chrometestFooterLinks.jpg');
-        $compare = new ImageCompare($img, $img2);
-        if( $compare->getOffsetDimensions() !== null ){
-            $slicer = new ImageSlicer($img2, $compare->getOffsetDimensions());
-            imagejpeg($slicer->getSlice(), 'C:\SeleniumTests\SeleniumShell\generated\screenshots\seriousdif.jpg', 100 );
+        $this->downloadUpdates();
+        $this->isPathVariableSet();
+    }
+    
+    public function isPathVariableSet(){
+        exec('echo ;%PATH%; | find /C /I ";' .BIN_PATH. ';"', $lines, $exitcode);
+        return $exitcode === 0;
+    }
+    
+    public function setPathVariable()
+    {
+        if( $this->isPathVariableSet() ){
+            exec( 'set PATH=%PATH%;' . BIN_PATH );
         }
+    }
+    
+    public function downloadUpdates()
+    {
+        $updateController = new UpdateController();
+        $updateController->run();
+        
     }
 
     public static function getHelpDescription()
