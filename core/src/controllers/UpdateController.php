@@ -29,7 +29,7 @@ class UpdateController extends Controller
         chdir(DOWNLOADS_PATH . DIRECTORY_SEPARATOR);
         exec('"%java_home%\bin\jar" xf chromedriver.zip', $lines, $exitcode);
         if( $exitcode > 0 ){
-            var_dump($lines);
+            throw new ErrorException( 'Could not unzip the files, do you have a JAVA_HOME environemntal variable?' );
         }
         exec('copy chromedriver.exe '.BIN_PATH);
         if(file_exists(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'chromedriver.exe') ){
@@ -72,7 +72,7 @@ class UpdateController extends Controller
         chdir(DOWNLOADS_PATH . DIRECTORY_SEPARATOR);
         exec('"%java_home%\bin\jar" xf '. $standaloneServer[1], $lines, $exitcode);
         if( $exitcode > 0 ){
-            var_dump($lines);
+            throw new ErrorException( 'Could not unzip the files, do you have a JAVA_HOME environemntal variable?' );
         }
         exec('copy IEDriverServer.exe '.BIN_PATH);
         if(file_exists(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'IEDriverServer.exe')){
@@ -85,9 +85,11 @@ class UpdateController extends Controller
     {
         $downloadProcess = new DownloadProcess('http://selenium-release.storage.googleapis.com/', '', 'looking for updates..');
         echo PHP_EOL;
+        // reed the feed that contains the version number of the sss
         $feed = simplexml_load_string($downloadProcess->getContents());
         $dateLast = 0;
         $lastVersion = null;
+        // fetch the latests version by date
         foreach ($feed as $info) {
             $date = strtotime($info->LastModified);
             if (strpos($info->Key, 'standalone') > -1 && $date && $date > $dateLast) {
@@ -106,6 +108,10 @@ class UpdateController extends Controller
                             'updating to version: ' . $standaloneServer[1]
                         );
                 echo PHP_EOL . 'saving file.. ';
+                $download->saveFile();
+                // also save to binpath.
+                chmod(BIN_PATH, '0777');
+                $download->setSavePath(BIN_PATH . DIRECTORY_SEPARATOR . $standaloneServer[1]);
                 $download->saveFile();
             } else {
                 echo PHP_EOL . 'up to date with: ' .$standaloneServer[1];

@@ -52,6 +52,10 @@ class DefaultController extends Controller
     
     public function finishedProcess( Process $process )
     {
+        // update test result to our testUpdates array.
+        $testName = $this->getTestNameFromCommand($process->getCommand());
+        $this->_testUpdates[$testName]->setExitcode( $process->getExitcode() );
+        $this->_writeTestProgress();
         $this->setExitcode( $process->getExitcode() );
         $process->closeProcess();
     }
@@ -61,6 +65,11 @@ class DefaultController extends Controller
         if( (int) $code > $this->_exitCode ){
             $this->_exitCode = (int) $code;
         }
+    }
+    
+    public function getTestNameFromCommand($command){
+        preg_match('/\-\-filter\s"(.*?)"/', $command, $matches);
+        return $matches[1];
     }
     
     public function getExitCode()

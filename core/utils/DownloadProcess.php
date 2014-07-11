@@ -36,6 +36,11 @@ class DownloadProcess
         file_put_contents($this->_savePath, $this->_fileContents);
     }
     
+    public function setSavePath( $path )
+    {
+        $this->_savePath = $path;
+    }
+    
     public function getContents(){
         return $this->_fileContents;
     }
