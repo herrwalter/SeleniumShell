@@ -36,6 +36,8 @@ abstract class SeleniumShell_ColorCheckerTest extends SeleniumShell_Test
             $wrongColorsList .= "\t -".  $color->text() . PHP_EOL;
         }
         
+        $wrongColorsList .= 'checking the following url: ' . $url;
+            
         $this->assertEquals(0, count($wrongColors), $wrongColorsList);
     }
 

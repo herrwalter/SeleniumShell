@@ -32,7 +32,9 @@ class UpdateController extends Controller
             var_dump($lines);
         }
         exec('copy chromedriver.exe '.BIN_PATH);
-        unlink(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'chromedriver.exe');
+        if(file_exists(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'chromedriver.exe') ){
+            unlink(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'chromedriver.exe');
+        }
         chdir($curpath);
     }
     
@@ -73,7 +75,9 @@ class UpdateController extends Controller
             var_dump($lines);
         }
         exec('copy IEDriverServer.exe '.BIN_PATH);
-        unlink(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'IEDriverServer.exe');
+        if(file_exists(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'IEDriverServer.exe')){
+            unlink(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'IEDriverServer.exe');
+        }
         chdir($curpath);       
     }
     
