@@ -40,7 +40,7 @@ class DefaultController extends Controller
         $this->_runBeforeProjectTests();
         $this->_setTestNames();
         $this->_setTestUpdates();
-        //$this->_showWebinterface();
+        $this->_showWebinterface();
         $this->_createTestCommands();
         $this->_runParallelTests();
     }
