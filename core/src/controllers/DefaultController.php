@@ -16,7 +16,7 @@ class DefaultController extends Controller
 
     public function getOptionalArguments()
     {
-        return array('-env', '-host', '-port', '-browsers', '-max-sessions', '-testsuite', '-session', '--ignore-solo-run');
+        return array('-env', '-host', '-port', '-browsers', '-max-sessions', '-testsuite', '-session', '--ignore-solo-run', '--webinterface');
     }
 
     public function getMandatoryArguments()
@@ -40,7 +40,9 @@ class DefaultController extends Controller
         $this->_runBeforeProjectTests();
         $this->_setTestNames();
         $this->_setTestUpdates();
-        $this->_showWebinterface();
+        if( ArgvHandler::getArgumentValue('--webinterface')){
+            $this->_showWebinterface();
+        }
         $this->_createTestCommands();
         $this->_runParallelTests();
     }
