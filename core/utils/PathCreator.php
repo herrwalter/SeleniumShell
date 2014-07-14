@@ -2,18 +2,22 @@
 
 class PathCreator
 {
-    protected $_paths;
+    protected $paths;
     
-    public function __construct( $paths )
+    public function __construct( $paths = array() )
     {
-        $this->_paths = $paths;
-        $this->_createPaths();
-        //$this->_definePaths();
+        $this->paths = $paths;
+        $this->createPaths();
     }
     
-    private function _createPaths()
+    public function setPaths( array $paths ){
+        $this->paths = $paths;
+    }
+    
+    
+    public function createPaths()
     {
-        foreach($this->_paths as $path ){
+        foreach($this->paths as $path ){
             if( !file_exists($path) ){
                 mkdir($path);
             }

@@ -5,6 +5,16 @@
 class InstallController extends Controller 
 {
     
+    protected $generatedFolders = array(
+        GENERATED_PATH,
+        GENERATED_RESULTS_PATH,
+        GENERATED_SETUP_BEFORE_PROJECT_PATH,
+        GENERATED_SCREENSHOTS_PATH,
+        GENERATED_TESTSUITES_PATH,
+        GENERATED_DEBUG_PATH,
+        DOWNLOADS_PATH
+    );
+    
     public function getMandatoryArguments()
     {
         return array();
@@ -12,6 +22,7 @@ class InstallController extends Controller
 
     public function run()
     {
+        $this->createGeneratedFolders();
         $this->downloadUpdates();
         $this->isPathVariableSet();
     }
@@ -26,6 +37,13 @@ class InstallController extends Controller
         if( $this->isPathVariableSet() ){
             exec( 'set PATH=%PATH%;' . BIN_PATH );
         }
+    }
+    
+    public function createGeneratedFolders()
+    {
+        $pathCreator = new PathCreator();
+        $pathCreator->setPaths($this->generatedFolders);
+        $pathCreator->createPaths();
     }
     
     public function downloadUpdates()
