@@ -110,7 +110,7 @@ class UpdateController extends Controller
                 echo PHP_EOL . 'saving file.. ';
                 $download->saveFile();
                 // also save to binpath.
-                chmod(BIN_PATH, '0777');
+                chmod(BIN_PATH, 0777);
                 $download->setSavePath(BIN_PATH . DIRECTORY_SEPARATOR . $standaloneServer[1]);
                 $download->saveFile();
             } else {
