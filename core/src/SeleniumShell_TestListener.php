@@ -44,7 +44,7 @@ class SeleniumShell_TestListener implements PHPUnit_Framework_TestListener
 
     public function addFailure(\PHPUnit_Framework_Test $test, \PHPUnit_Framework_AssertionFailedError $e, $time)
     {
-        $this->failLog->write( $test->getName() . ' failed: ' . $test->getStatusMessage()  . PHP_EOL . $test->getActualOutput() );
+        $this->failLog->write( $test->getName() . ' failed: ' . $test->getStatusMessage()  . PHP_EOL . $test->getActualOutput() . PHP_EOL . $e->getMessage() );
     }
 
     public function addIncompleteTest(\PHPUnit_Framework_Test $test, \Exception $e, $time)
