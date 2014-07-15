@@ -18,3 +18,4 @@ nbproject
 /downloads/
 /bin/selenium-server-standalone-2.42.2.jar
 /config/config.ini
+/core/php_errors.log

@@ -36,7 +36,6 @@ class SeleniumShell_ErrorCatchingOverrides extends SeleniumShell_Asserts {
                 case 7: 
                     throw new ErrorException( 'could not find element(s) with: ' . $cssSelector . ' on page: ' . $this->url() );
                 default:
-                    throw $e;
                     echo '';
                     break;
             }

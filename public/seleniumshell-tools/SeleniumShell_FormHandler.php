@@ -168,17 +168,18 @@ class SeleniumShell_FormHandler {
      * @desc Sets all the elements based on the Name selector, first name to found will be set.
      * @param namesVsValues Array the key needs to be the name , value needs to be the value to set.
      */
-    public function mapValuesToElementsByName( $namesVsValues )
+    public function mapValuesToElementsByName( $namesVsValues, $sleep = 0 )
     {
         foreach( $namesVsValues as $name => $value ){
             $this->_setElementByName( $name );
             $this->_setElementValue( $name, $value );
         }
+        usleep($sleep);
     }
     
-    public function mapValuesToElementsByNameAndId( $arrayWithTwoArraysNamedIdAndName ){
-        $this->mapValuesToElementsById($arrayWithTwoArraysNamedIdAndName['id']);
-        $this->mapValuesToElementsByName($arrayWithTwoArraysNamedIdAndName['name']);
+    public function mapValuesToElementsByNameAndId( $arrayWithTwoArraysNamedIdAndName, $sleep = 0 ){
+        $this->mapValuesToElementsById($arrayWithTwoArraysNamedIdAndName['id'], $sleep);
+        $this->mapValuesToElementsByName($arrayWithTwoArraysNamedIdAndName['name'], $sleep);
     }
     
     /**
