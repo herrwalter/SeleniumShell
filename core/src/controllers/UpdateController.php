@@ -23,7 +23,7 @@ class UpdateController extends Controller
         $chromeZip = new DownloadProcess(
                 'http://chromedriver.storage.googleapis.com/' .$version. '/chromedriver_win32.zip', 
                 DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'chromedriver.zip',
-                'downloading latests chromedriver.zip.. ');
+                'downloading latest chromedriver.zip (version '.$version.') .. ');
         $chromeZip->saveFile();
         $curpath = getcwd();
         chdir(DOWNLOADS_PATH . DIRECTORY_SEPARATOR);
