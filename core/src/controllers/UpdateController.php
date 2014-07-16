@@ -9,16 +9,28 @@ class UpdateController extends Controller
     {
         $question = new PathCLQuestion("What is your selenium grid downloadfolder?");
         $question->askQuestion();
-        $this->path = $question->getAwnser();
+        $this->setPath($question->getAwnser());
         $this->updateSeleniumStandaloneServer();
         $this->updateChromeDriver();
         $this->updateInternetExplorerDriver();
+    }
+    
+    public function setPath( $path ){
+        $lastchar = substr($path, -1);
+        // strip the dir seperator at the end if needed.
+        ($lastchar == DIRECTORY_SEPARATOR) ? $path = substr($path, 0, -1) : $path = $path;
+        // if the path is a file then we will use the dir of the file.
+        if( pathinfo($path, PATHINFO_EXTENSION) !== ''){
+            $path = pathinfo($path, PATHINFO_DIRNAME);
+        }
+        $this->path = $path;
     }
     
     public function updateChromeDriver()
     {
         echo PHP_EOL;
         $chromeUpdate = new DownloadProcess('http://chromedriver.storage.googleapis.com/LATEST_RELEASE', '', 'looking for latest version');
+        echo PHP_EOL;
         $version = $chromeUpdate->getContents();
         $chromeZip = new DownloadProcess(
                 'http://chromedriver.storage.googleapis.com/' .$version. '/chromedriver_win32.zip', 
@@ -31,6 +43,7 @@ class UpdateController extends Controller
         if( $exitcode > 0 ){
             throw new ErrorException( 'Could not unzip the files, do you have a JAVA_HOME environemntal variable?' );
         }
+        exec('copy chromedriver.exe '.$this->path , $lines, $exitcode);
         exec('copy chromedriver.exe '.BIN_PATH);
         if(file_exists(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'chromedriver.exe') ){
             unlink(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'chromedriver.exe');
@@ -40,6 +53,7 @@ class UpdateController extends Controller
     
     public function updateInternetExplorerDriver()
     {
+        echo PHP_EOL;
         $downloadProcess = new DownloadProcess('http://selenium-release.storage.googleapis.com/', '', 'looking for updates..');
         echo PHP_EOL;
         $feed = simplexml_load_string($downloadProcess->getContents());
@@ -54,8 +68,6 @@ class UpdateController extends Controller
         }      
         if( $lastVersion ){
             $standaloneServer = explode('/', $lastVersion->Key);
-            $gridPathInfo = pathinfo($this->path);
-            $gridPath = $gridPathInfo['dirname']. $gridPathInfo['basename'] . DIRECTORY_SEPARATOR;
             if( !file_exists(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . $standaloneServer[1])){
                 $download = new DownloadProcess(
                             'http://selenium-release.storage.googleapis.com/' . $lastVersion->Key, 
@@ -74,6 +86,8 @@ class UpdateController extends Controller
         if( $exitcode > 0 ){
             throw new ErrorException( 'Could not unzip the files, do you have a JAVA_HOME environemntal variable?' );
         }
+        
+        exec('copy IEDriverServer.exe '.$this->path);
         exec('copy IEDriverServer.exe '.BIN_PATH);
         if(file_exists(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'IEDriverServer.exe')){
             unlink(DOWNLOADS_PATH . DIRECTORY_SEPARATOR . 'IEDriverServer.exe');
@@ -83,6 +97,7 @@ class UpdateController extends Controller
     
     public function updateSeleniumStandaloneServer()
     {
+        echo PHP_EOL;
         $downloadProcess = new DownloadProcess('http://selenium-release.storage.googleapis.com/', '', 'looking for updates..');
         echo PHP_EOL;
         // reed the feed that contains the version number of the sss
@@ -99,12 +114,11 @@ class UpdateController extends Controller
         }
         if( $lastVersion ){
             $standaloneServer = explode('/', $lastVersion->Key);
-            $gridPathInfo = pathinfo($this->path);
-            $gridPath = $gridPathInfo['dirname']. $gridPathInfo['basename'] . DIRECTORY_SEPARATOR;
-            if( !file_exists($gridPath . $standaloneServer[1])){
+            
+            if( !file_exists($this->path . DIRECTORY_SEPARATOR . $standaloneServer[1])){
                 $download = new DownloadProcess(
                             'http://selenium-release.storage.googleapis.com/' . $lastVersion->Key, 
-                            $gridPath . $standaloneServer[1], 
+                            $this->path . DIRECTORY_SEPARATOR . $standaloneServer[1], 
                             'updating to version: ' . $standaloneServer[1]
                         );
                 echo PHP_EOL . 'saving file.. ';
