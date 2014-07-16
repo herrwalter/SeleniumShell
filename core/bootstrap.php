@@ -27,8 +27,7 @@ define('GENERATED_RESULTS_PATH', GENERATED_PATH . $sep . 'results' .$sep );
 define('GENERATED_DEBUG_PATH', GENERATED_PATH . $sep . 'debug' .$sep );
 define('GENERATED_SCREENSHOTS_PATH', GENERATED_PATH . $sep . 'screenshots' .$sep );
 define('GENERATED_SETUP_BEFORE_PROJECT_PATH', GENERATED_PATH . $sep . 'setup-before-project' .$sep );
-define('COLORCHECKER_PATH', CORE_SRC_PATH . $sep . 'colorchecker' . $sep . 'ColorChecker.js');
-
+define('COLORCHECKER_PATH', SELENIUM_SHELL . 'library' . $sep . 'colorchecker' . $sep . 'ColorChecker.js');
 
 /**
  * Load phpunit for a windows system.
