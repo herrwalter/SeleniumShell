@@ -17,7 +17,7 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
     public function setUp()
     {
         $this->_config = new ConfigHandler( CORE_CONFIG_PATH . '/config.ini');
-        $this->setBrowserUrl('/');
+        $this->setBrowserUrl('http://www.google.nl');
         $this->setBrowser($this->ss_browser_info['browserName']);
         $this->setDesiredCapabilities($this->ss_browser_info['desiredCapabilities']);
         $this->setHost($this->getSeleniumHost());
@@ -33,10 +33,6 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
         } else {
             return '127.0.0.1';
         }
-        
-        $result = new PHPUnit_Framework_TestResult();
-        $test = new PHPUnit_Framework_Test();
-       
     }
     
     
