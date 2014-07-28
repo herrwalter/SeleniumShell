@@ -1,0 +1,28 @@
+{
+    "core-config": {
+        "browsers": [
+            { "name" : "iexplore",
+              "version" : "11",
+              "platform" : null },
+            { "name" : "chrome",
+              "version" : null,
+              "platform" : null },
+            { "name" : "firefox",
+              "version" : null,
+              "platform" : null }
+        ],
+        "default-environment" : "testing",
+        "host" : "localhost",
+        "port" : "4444", 
+        "project": "example-project",
+        "projects": [
+            { "config-path" : "C:\\SeleniumShell\\documentation\\example-project\\config\\project.json",
+              "name" : "example-project",
+              "path" : "C:\\SeleniumShell\\documentation\\example-project"
+              }
+        ],
+        "projects-path" : "",
+        "selenium-driver-path" : "C:\\SeleniumShell\\bin"
+        
+    }
+}
