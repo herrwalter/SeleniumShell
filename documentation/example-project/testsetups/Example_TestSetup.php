@@ -13,10 +13,11 @@ class Example_TestSetup extends SeleniumShell_Test
      */
     public function setUp()
     {
+        parent::setUp();
         $this->actions = new Example_PageActions( $this );
         
+        $this->setBrowserUrl('/');
         // we will allways need to call the parent of the setup because there
         // are some setup dependancies running here.
-        parent::setUp();
     }
 }

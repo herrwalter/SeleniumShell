@@ -109,7 +109,8 @@ class SettingsController extends Controller
     
     public static function getHelpDescription() {
         return 'Can be used to set settings as: ' . PHP_EOL .
-            ' - browsers' . PHP_EOL;
+            "\t" .' --listBrowsers' . "\t" . "lists all knows browsers" . PHP_EOL .
+            "\t" .' --addBrowsers' . "\t" . "add a new browser setting" . PHP_EOL;
     }
     
 }

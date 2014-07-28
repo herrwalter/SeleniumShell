@@ -10,7 +10,8 @@ class Example_URLHandler extends SeleniumShell_Abstract_URLHandler {
     }
 
     protected function getProjectConfigPath() {
-        return __DIR__ . "..//config//project.ini";
+        $path = __DIR__ . "\\..\\config\\project.ini";
+        return $path;
     }
 
     protected function getUris() {

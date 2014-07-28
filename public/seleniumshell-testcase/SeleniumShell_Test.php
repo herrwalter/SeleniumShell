@@ -17,7 +17,7 @@ class SeleniumShell_Test extends SeleniumShell_ErrorCatchingOverrides
     public function setUp()
     {
         $this->_config = new ConfigHandler( CORE_CONFIG_PATH . '/config.ini');
-        $this->setBrowserUrl('http://www.google.nl');
+        $this->setBrowserUrl('/');
         $this->setBrowser($this->ss_browser_info['browserName']);
         $this->setDesiredCapabilities($this->ss_browser_info['desiredCapabilities']);
         $this->setHost($this->getSeleniumHost());

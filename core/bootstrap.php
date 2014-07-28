@@ -122,6 +122,9 @@ function SeleniumShellAutoloadFunction( $className ){
         // if it isnt in the project folder, we assume the want to use a SeleniumShell Handler..
         scan_folder_for_class(SELENIUM_SHELL_TOOLS, $className);
         
+        // are we playing with the example-project?
+        scan_folder_for_class(SELENIUM_SHELL . DIRECTORY_SEPARATOR . 'documentation' . DIRECTORY_SEPARATOR . 'example-project', $className);
+        
     } else { // find seleniumShell Core.
         // crawl source..
         

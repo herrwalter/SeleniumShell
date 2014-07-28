@@ -8,7 +8,7 @@ class HelpController extends Controller
     protected function setControllers()
     {
         $controllers = array();
-        $controllerFiles = new ControllerFileScanner(CORE_SRC_PATH . DIRECTORY_SEPARATOR . 'controllers');
+        $controllerFiles = new ControllerFileScanner(CONTROLLER_PATH);
         $filenames = $controllerFiles->getFileNames();
         foreach ($filenames as $filename) {
             $controllers[$this->getCommand($filename)] = $filename;

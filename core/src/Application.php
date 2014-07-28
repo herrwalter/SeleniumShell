@@ -26,6 +26,7 @@ class Application
 
     private function _setSuite()
     {
+        
         if ($this->_config->isParameterSet('--ss-setup-before-project')) {
             $setupSourceRewriter = new SourceRewriter($this->_project, new TestFileScanner, new SetupBeforeProjectTestClassRecreator(), $this->_project->getPath() . DIRECTORY_SEPARATOR . 'setup-before-project' );
             $setupSources = $setupSourceRewriter->getSources();
@@ -36,6 +37,7 @@ class Application
         
         $sourceRewriter = new SourceRewriter($this->_project, new TestFileScanner(), new TestClassRecreator(), $this->_project->getPath() . '/testsuites');
         $sourceFiles = $sourceRewriter->getSources();
+        var_dump($sourceFiles);
         if ($this->_config->isParameterSet('--ss-testsuite')) {
             $filter = new TestSourcesFilter($sourceFiles);
             $sourceFiles = $filter->filterSourcesByClassName($this->_config->getParameter('--ss-testsuite'));

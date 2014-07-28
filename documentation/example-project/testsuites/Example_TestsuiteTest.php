@@ -1,6 +1,6 @@
 <?php
 
-class Example_TestSuite extends Example_TestSetup
+class Example_TestsuiteTest extends Example_TestSetup
 {
     
     public function testSearchingGoogle()
