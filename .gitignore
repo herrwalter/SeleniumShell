@@ -3,6 +3,7 @@ core/generated/testsuites/*
 !core/generated/testsuites/mandatory_folder.txt
 
 nbproject
+/nbproject
 /generated/debug/
 /generated/results/
 /generated/setup-before-project/
