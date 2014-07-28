@@ -25,15 +25,15 @@ class AnnotationReader
             $this->_annotations = false;
             return;
         }
-        foreach( $this->_annotations as $annotation ){
+        foreach( $this->_annotations as $name => $value ){
             $annotationName = key($annotation);
             $annotationValue = $annotation[$annotationName];
-            switch( key($annotation) ){
+            switch( $name ){
                 case 'ss-solo-run':
                     $this->_soloRun = true;
                     break;
                 case 'ss-browsers':
-                    $browsers = explode(',', $annotationValue);
+                    $browsers = explode(',', $value);
                     $trimmedBrowsers = array_map('trim', $browsers);
                     $this->_browsers = $trimmedBrowsers;
                 case 'ss-setup-before-project':

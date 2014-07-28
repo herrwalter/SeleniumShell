@@ -10,7 +10,7 @@ define('CORE_CONFIG_PATH', SELENIUM_SHELL . $sep.'config' );
 define('CORE_PATH', $rel_path . $sep);
 define('BIN_PATH', SELENIUM_SHELL . 'bin');
 define('DOWNLOADS_PATH', SELENIUM_SHELL . 'downloads');
-define('CONTROLLER_PATH', CORE_PATH . 'src' . $sep . 'controllers');
+define('CONTROLLER_PATH', CORE_PATH . 'commandline-interface' . $sep . 'controllers');
 define('SELENIUM_SHELL_PUBLIC', SELENIUM_SHELL . 'public' );
 define('SELENIUM_SHELL_TOOLS', SELENIUM_SHELL_PUBLIC. DIRECTORY_SEPARATOR . 'seleniumshell-tools');
 define('SELENIUM_SHELL_TESTCASE', SELENIUM_SHELL_PUBLIC . DIRECTORY_SEPARATOR . 'seleniumshell-testcase');
@@ -58,7 +58,7 @@ require_once( FILESCANNERS_PATH . $sep . 'FileScanner.php');
 require_once( FILESCANNERS_PATH . $sep . 'ControllerFileScanner.php');
 require_once( FILESCANNERS_PATH . $sep . 'TestFileScanner.php');
 require_once( CORE_HANDLERS_PATH . $sep . 'ConfigHandler.php');
-require_once( UTILS_PATH . $sep . 'DebugLog.php');
+require_once( UTILS_PATH . $sep . 'Log' . $sep . 'DebugLog.php');
 require_once( CORE_HANDLERS_PATH . $sep . 'PHPUnitParameterReader.php');
 require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_HelperMethods.php' );
 require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_Asserts.php' );
@@ -129,6 +129,9 @@ function SeleniumShellAutoloadFunction( $className ){
         if( scan_folder_for_class(CORE_SRC_PATH, $className) ){} 
         // crawl utils.. 
         else if( scan_folder_for_class(UTILS_PATH, $className) ){}
+        // crawl entities
+        else if( scan_folder_for_class(CORE_PATH . 'entities', $className) ){}
+        else if( scan_folder_for_class(CONTROLLER_PATH, $className) ){}
         
         else if( scan_folder_for_class(SELENIUM_SHELL_TOOLS, $className)){}
         

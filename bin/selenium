@@ -5,7 +5,7 @@ chdir($dir . '/core');
 require_once 'bootstrap.php';
 
 $options = ArgvHandler::getArgmentValuesByArray( array('-env', '-host', '-port', '-project', '-browsers', '-max-sessions', '-testsuite', '-session', '--ignore-solo-run'));
-$controllers = new ControllerFileScanner( CORE_SRC_PATH . DIRECTORY_SEPARATOR . 'controllers');
+$controllers = new ControllerFileScanner( CONTROLLER_PATH );
 $controlerNames = $controllers->getFileNames();
 $acceptedCommands = array();
 foreach ($controlerNames as $name) {
