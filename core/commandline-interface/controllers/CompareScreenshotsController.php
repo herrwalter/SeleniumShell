@@ -10,6 +10,9 @@ class CompareScreenshotsController extends Controller
     protected $session2;
     
     
+    protected $foundDifferances = 0;
+    
+    
     public function getOptionalArguments()
     {
         return array('-path');
@@ -25,6 +28,7 @@ class CompareScreenshotsController extends Controller
     {
         $this->setCompareSessions();
         $this->compareScreenshotSessions();
+        exit($foundDifferances);
     }
 
     protected function compareScreenshotSessions()
@@ -35,7 +39,7 @@ class CompareScreenshotsController extends Controller
                 echo 'now comparing screenshot' . $name . '.. ' . PHP_EOL;
                 $this->compareScreenshots($screenshot, $this->session2->getScreenshot($name), $name);
             } else {
-                echo $name . ' cannot be found in both sessions. ' . PHP_EOL;
+                echo $name . ' cannot be found in one the sessions. ' . PHP_EOL;
             }
         }
     }
@@ -44,11 +48,12 @@ class CompareScreenshotsController extends Controller
     {
         $compare = new ImageCompare($img, $img2);
         if ($compare->getOffsetDimensions() !== null) {
-            $slicer = new ImageSlicer($img2, $compare->getOffsetDimensions());
-            imagejpeg($slicer->getSlice(), 'C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name, 100);
-            echo '   found a differance.. ' . PHP_EOL;
-            echo '   location: ' . PHP_EOL;
-            echo '       C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name . PHP_EOL;
+            //$slicer = new ImageSlicer($img2, $compare->getOffsetDimensions());
+            //imagejpeg($slicer->getSlice(), 'C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name, 100);
+            echo '   found some differance in name: ' . $name . PHP_EOL;
+            //echo '   location: ' . PHP_EOL;
+            //echo '       C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name . PHP_EOL;
+            $this->foundDifferances++;
         } else {
             echo '   no differances' . PHP_EOL;
         }
