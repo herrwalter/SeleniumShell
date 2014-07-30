@@ -26,8 +26,6 @@ class AnnotationReader
             return;
         }
         foreach( $this->_annotations as $name => $value ){
-            $annotationName = key($annotation);
-            $annotationValue = $annotation[$annotationName];
             switch( $name ){
                 case 'ss-solo-run':
                     $this->_soloRun = true;

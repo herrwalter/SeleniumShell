@@ -37,7 +37,7 @@ class FileScanner
         if ($curDirFiles) {
             foreach ($curDirFiles as $file) {
 
-                if (is_dir($file)) {
+                if ($file == '.' || $file == '..') {
                     // . and .. skipped
                 } else if (is_file($dir . DIRECTORY_SEPARATOR . $file)) {
                     $this->_files[$dir][] = DIRECTORY_SEPARATOR . $file;

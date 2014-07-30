@@ -37,7 +37,6 @@ class Application
         
         $sourceRewriter = new SourceRewriter($this->_project, new TestFileScanner(), new TestClassRecreator(), $this->_project->getPath() . '/testsuites');
         $sourceFiles = $sourceRewriter->getSources();
-        var_dump($sourceFiles);
         if ($this->_config->isParameterSet('--ss-testsuite')) {
             $filter = new TestSourcesFilter($sourceFiles);
             $sourceFiles = $filter->filterSourcesByClassName($this->_config->getParameter('--ss-testsuite'));

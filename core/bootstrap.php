@@ -82,7 +82,6 @@ function SeleniumShellAutoloadFunction( $className ){
     if( isset( $file[0] ) && $file[0] == DIRECTORY_SEPARATOR ){
         $file = substr($file, 1);
     }
-    
     if( !$file ){
         return;
     }
@@ -91,8 +90,6 @@ function SeleniumShellAutoloadFunction( $className ){
     // check if the last function called contains the projects path
     // then we should crawlup that project file..
     if(stripos( $file, CORE_PATH ) === false && stripos($file, BIN_PATH) === false ){
-        
-        
         $projectName = ArgvHandler::getArgumentValue('-project');
 //        if( $projectName == ArgvHandler::getArgumentValue('-project') ){
 //            $projectName = array_pop($explodedFile);
@@ -102,7 +99,7 @@ function SeleniumShellAutoloadFunction( $className ){
             return;
         }
         
-        $projectPath = PROJECTS_FOLDER . DIRECTORY_SEPARATOR . $projectName;
+        $projectPath = PROJECTS_FOLDER  . $projectName;
         $projectScanner = new FileScanner($projectPath);
         $projectTestFileScanner = new TestFileScanner($projectPath);
         $projectTestFiles = $projectTestFileScanner->getFilesInOneDimensionalArray();
@@ -127,8 +124,6 @@ function SeleniumShellAutoloadFunction( $className ){
         
     } else { // find seleniumShell Core.
         // crawl source..
-        
-        
         if( scan_folder_for_class(CORE_SRC_PATH, $className) ){} 
         // crawl utils.. 
         else if( scan_folder_for_class(UTILS_PATH, $className) ){}

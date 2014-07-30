@@ -41,7 +41,6 @@ class SourceRewriter
     {
         $this->_fileScanner->_setDir($this->_sourcePath);
         $this->_sources = $this->_fileScanner->getFilesInOneDimensionalArray();
-        var_dump($this->_sourcePath);
     }
     
     private function _generateTestFiles()
