@@ -28,7 +28,7 @@ class CompareScreenshotsController extends Controller
     {
         $this->setCompareSessions();
         $this->compareScreenshotSessions();
-        exit($foundDifferances);
+        exit($this->foundDifferances);
     }
 
     protected function compareScreenshotSessions()
@@ -36,7 +36,7 @@ class CompareScreenshotsController extends Controller
         $screenshots = $this->session1->getScreenshots();
         foreach ($screenshots as $name => $screenshot) {
             if ($this->session2->hasScreenshot($name)) {
-                echo 'now comparing screenshot' . $name . '.. ' . PHP_EOL;
+                echo 'now comparing screenshot ' . $name . '.. ' . PHP_EOL;
                 $this->compareScreenshots($screenshot, $this->session2->getScreenshot($name), $name);
             } else {
                 echo $name . ' cannot be found in one the sessions. ' . PHP_EOL;
