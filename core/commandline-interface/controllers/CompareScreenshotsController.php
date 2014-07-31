@@ -8,25 +8,25 @@ class CompareScreenshotsController extends Controller
 
     /** @var ScreenshotSession */
     protected $session2;
-    
-    
     protected $foundDifferances = 0;
-    
-    
+    protected $differences = array();
+    protected $projectName;
+
     public function getOptionalArguments()
     {
         return array('-path');
     }
-    
+
     public function getMandatoryArguments()
     {
-        return array();
+        return array('-project');
     }
-    
 
     public function run()
     {
+        $this->projectName = ArgvHandler::getArgumentValue('-project');
         $this->setCompareSessions();
+        $this->createFolderForDifferences();
         $this->compareScreenshotSessions();
         exit($this->foundDifferances);
     }
@@ -48,8 +48,8 @@ class CompareScreenshotsController extends Controller
     {
         $compare = new ImageCompare($img, $img2);
         if ($compare->getOffsetDimensions() !== null) {
-            //$slicer = new ImageSlicer($img2, $compare->getOffsetDimensions());
-            //imagejpeg($slicer->getSlice(), 'C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name, 100);
+            $slicer = new ImageSlicer($img2, $compare->getOffsetDimensions());
+            imagejpeg($slicer->getSlice(), 'C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name, 100);
             echo '   found some differance in name: ' . $name . PHP_EOL;
             //echo '   location: ' . PHP_EOL;
             //echo '       C:\SeleniumTests\SeleniumShell\generated\screenshots\diff-' . $name . PHP_EOL;
@@ -57,6 +57,11 @@ class CompareScreenshotsController extends Controller
         } else {
             echo '   no differances' . PHP_EOL;
         }
+    }
+
+    protected function createFolderForDifferences()
+    {
+        
     }
 
     protected function setCompareSessions()
@@ -70,7 +75,7 @@ class CompareScreenshotsController extends Controller
     {
         $sessions = array();
         $foldercontents = $this->getSessionFolders();
-        if( count($foldercontents) <= 2 ){
+        if (count($foldercontents) <= 2) {
             throw new ErrorException('Cannot compare screenshots, there are less then 2 sessions available');
         }
         $foldercontents = array(array_pop($foldercontents), array_pop($foldercontents));
@@ -84,14 +89,17 @@ class CompareScreenshotsController extends Controller
         return array(array_pop($sessions), array_pop($sessions));
     }
 
-    public function getSessionFolders()
+    protected function getSessionFolders()
     {
         $foldercontents = array_diff(scandir(GENERATED_SCREENSHOTS_PATH), array('.', '..'));
         $validSessions = array();
-        foreach($foldercontents as $sessionName){
+        foreach ($foldercontents as $sessionName) {
             $sessionTime = $this->getSessionTime($sessionName);
+            $sessionProject = $this->getSessionProject($sessionName);
             // check if time is in the past and after may 13 2014
-            if( $sessionTime < time() && $sessionTime > 1400000000 ){
+            if ($sessionTime < time() && 
+                $sessionTime > 1400000000 && 
+                $sessionProject == $this->projectName ) {
                 $validSessions[] = $sessionName;
             }
         }
@@ -99,16 +107,21 @@ class CompareScreenshotsController extends Controller
         return $validSessions;
     }
 
-    public function getSessionTime($sessionName)
+    protected function getSessionTime($sessionName)
     {
         $ex = explode('-', $sessionName);
         return (int) $ex[0];
+    }
+
+    protected function getSessionProject($sessionName)
+    {
+        $ex = explode('-', $sessionName);
+        return $ex[1];
     }
 
     public static function getHelpDescription()
     {
         return 'for comparing screenshots of the last two sessions';
     }
-
 
 }
