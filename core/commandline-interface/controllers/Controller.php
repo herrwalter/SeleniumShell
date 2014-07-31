@@ -24,7 +24,7 @@ class Controller
 
     private function setArguments()
     {
-        $this->arguments = ArgvHandler::getArgmentValuesByArray($this->getCombinedArguments());
+        $this->arguments = ArgvHandler::getArgumentValuesByArray($this->getCombinedArguments());
     }
 
     protected function getArguments()
@@ -80,7 +80,7 @@ class Controller
         if( count($this->getArguments()) < $this->getMinNrOfRequiredArguments() ){
             throw new ErrorException( 'Controller: ' . $this->name . ' expects'
                     . ' at least ' . $this->getMinNrOfRequiredArguments() .' arg'
-                    . 'uments' );
+                    . 'uments' . PHP_EOL );
         }
     }
 

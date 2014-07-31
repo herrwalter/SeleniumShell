@@ -31,7 +31,6 @@ class Session
 
     protected static function createSessionPaths()
     {
-        
         $paths = array(
             'SESSION_TESTSUITES_PATH' => GENERATED_TESTSUITES_PATH . Session::getId(),
             'SESSION_SETUP_BEFORE_PROJECT_PATH' => GENERATED_SETUP_BEFORE_PROJECT_PATH . Session::getId(),

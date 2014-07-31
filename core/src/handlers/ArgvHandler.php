@@ -14,7 +14,7 @@ class ArgvHandler {
         return $key !== false;
     }
     
-    public static function getArgmentValuesByArray( array $options )
+    public static function getArgumentValuesByArray( array $options )
     {
         $foundValues = array();
         foreach($options as $option){

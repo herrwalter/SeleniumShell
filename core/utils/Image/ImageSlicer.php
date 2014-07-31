@@ -4,30 +4,41 @@ class ImageSlicer
 {
 
     /** @var Image */
-    protected $_image;
+    protected $image;
 
     /** @var Dimensions */
-    protected $_dimensions;
-    protected $_slice;
+    protected $dimensions;
+    protected $slice;
+    protected $createdImage;
+    protected $resource;
 
     public function __construct(Image $imgSource, Dimensions $dimensions)
     {
-        $this->_image = $imgSource;
-        $this->_dimensions = $dimensions;
-        $this->_setSlice();
+        $this->image = $imgSource;
+        $this->dimensions = $dimensions;
+        $this->setSlice();
     }
 
-    protected function _setSlice()
+    protected function setSlice()
     {
-        $rescource = imagecreatefromstring(file_get_contents($this->_image->getPath()));
-        $image = imagecreatetruecolor($this->_dimensions->getWidth(), $this->_dimensions->getHeight());
-        imagecopy($image, $rescource, 0, 0, $this->_dimensions->getLeft(), $this->_dimensions->getTop(), $this->_dimensions->getWidth(), $this->_dimensions->getHeight());
-        $this->_slice = $image;
+        $this->resource = imagecreatefromstring(file_get_contents($this->image->getPath()));
+        $this->createdIimage = imagecreatetruecolor($this->dimensions->getWidth(), $this->dimensions->getHeight());
+        imagecopy($this->createdIimage, $this->resource, 0, 0, $this->dimensions->getLeft(), $this->dimensions->getTop(), $this->dimensions->getWidth(), $this->dimensions->getHeight());
+        $this->slice = $this->createdIimage;
     }
 
     public function getSlice()
     {
-        return $this->_slice;
+        if ($this->slice) {
+            return $this->slice;
+        } else {
+            throw new ErrorException('images allready destroyed');
+        }
+    }
+
+    public function destroyImages()
+    {
+        imagedestroy($this->resource);
     }
 
 }

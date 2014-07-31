@@ -19,7 +19,9 @@ class ScreenshotSession
         $files = array_diff(scandir($this->path), array('.', '..'));
         $screenshots = array();
         foreach($files as $screenshot){
-            $screenshots[$screenshot] = new Image($this->path . DIRECTORY_SEPARATOR . $screenshot);
+            if(pathinfo($screenshot, PATHINFO_EXTENSION) == 'jpg'){
+                $screenshots[$screenshot] = new Image($this->path . DIRECTORY_SEPARATOR . $screenshot);
+            }
         }
         $this->screenshots = $screenshots;
     }
