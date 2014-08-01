@@ -1,7 +1,8 @@
 SeleniumShell
 =============
 
-Small framework on Selenium 2 with php
+Small framework on Selenium 2 with php.
+
 Will run tests in parallel by default.
 
 Usage
@@ -102,6 +103,34 @@ Run setup-before-project test
 
 TestHelpers
 =============
+
+ColorTests
+==
+```
+class MyColorTest extends SeleniumShell_ColorCheckerTest
+{
+   public function urlProvider()
+   {
+      return array(
+         'www.google.nl',
+         'www.yahoo.com' 
+      );
+      
+   }
+   
+   
+   public function getAllowedColors()
+   {
+      return array(
+          '#000',
+          'rgb(255,255,255)',
+          '#BADA44'
+      );
+   }
+}
+
+```
+
 
 FormHandler
 =====
