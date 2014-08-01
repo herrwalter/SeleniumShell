@@ -191,7 +191,6 @@ class CompareScreenshotsController extends Controller
             $mail->setSubject('Screenshot compare of project: ' . $this->projectName);
             $mail->setFrom('herrwalter@gmail.com');
             $mail->send();
-            var_dump($mail->getMessage());
         }
     }
 
