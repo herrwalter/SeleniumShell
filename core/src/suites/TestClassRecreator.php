@@ -95,10 +95,11 @@ class TestClassRecreator
             new SoloRunTestMethodsFilter(),
             new BrowserTestMethodsFilter(array(), $browser)
         ));
-
+        
         $testMethods = $filterChain->getFilteredTestMethods();
         foreach ($testMethods as $testMethod) {
             if ($testMethod->getStripMethodState()) {
+                $testMethod->getName();
                 $this->_stripMethod($testMethod->getMethod());
             }
         }

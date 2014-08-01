@@ -16,7 +16,17 @@ class DefaultController extends Controller
 
     public function getOptionalArguments()
     {
-        return array('-env', '-host', '-port', '-browsers', '-max-sessions', '-testsuite', '-session', '--ignore-solo-run', '--webinterface');
+        return array('-env', 
+            '-host', 
+            '-port', 
+            '-browsers', 
+            '-max-sessions', 
+            '-testsuite', 
+            '-session', 
+            '-subpath',
+            '--ignore-solo-run', 
+            '--webinterface', 
+            '--print-tests');
     }
 
     public function getMandatoryArguments()
@@ -39,6 +49,10 @@ class DefaultController extends Controller
         $this->_echoStartupMessage();
         $this->_runBeforeProjectTests();
         $this->_setTestNames();
+        if( ArgvHandler::getArgumentValue('--print-tests') ){
+            $this->printTestNames();
+            die();
+        }
         $this->_setTestUpdates();
         if( ArgvHandler::getArgumentValue('--webinterface')){
             $this->_showWebinterface();
@@ -96,6 +110,13 @@ class DefaultController extends Controller
             }
         }
         echo $this->_parallelProcesser->printTotalRuntime();
+    }
+    
+    protected function printTestNames()
+    {
+        foreach( $this->_testNames as $test ){
+            echo " {$test}\n";
+        }
     }
     
     protected function _createTestCommands()

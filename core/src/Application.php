@@ -26,16 +26,16 @@ class Application
 
     private function _setSuite()
     {
-        
+
         if ($this->_config->isParameterSet('--ss-setup-before-project')) {
-            $setupSourceRewriter = new SourceRewriter($this->_project, new TestFileScanner, new SetupBeforeProjectTestClassRecreator(), $this->_project->getPath() . DIRECTORY_SEPARATOR . 'setup-before-project' );
+            $setupSourceRewriter = new SourceRewriter($this->_project, new TestFileScanner, new SetupBeforeProjectTestClassRecreator(), $this->_project->getPath() . DIRECTORY_SEPARATOR . 'setup-before-project');
             $setupSources = $setupSourceRewriter->getSources();
             $setupSuite = new SuiteCreator($setupSources);
             $setupSuite->getSuite()->run(new PHPUnit_Framework_TestResult());
             die();
         }
-        
-        $sourceRewriter = new SourceRewriter($this->_project, new TestFileScanner(), new TestClassRecreator(), $this->_project->getPath() . '/testsuites');
+
+        $sourceRewriter = new SourceRewriter($this->_project, new TestFileScanner(), new TestClassRecreator(), $this->_project->getPath() . '/testsuites' . $this->getTestsuitesSubPaths());
         $sourceFiles = $sourceRewriter->getSources();
         if ($this->_config->isParameterSet('--ss-testsuite')) {
             $filter = new TestSourcesFilter($sourceFiles);
@@ -44,12 +44,28 @@ class Application
 
 
         $suiteCreator = new SuiteCreator($sourceFiles);
+
         $this->_suite = $suiteCreator->getSuite();
 
         if ($this->_config->isParameterSet('--ss-print-tests')) {
             $this->printGeneratedTests();
             die();
         }
+    }
+
+    public function getTestsuitesSubPaths()
+    {
+        if (!$this->_config->isParameterSet('--ss-subpath')) {
+            return;
+        }
+
+        $subpath = $this->_config->getParameter('--ss-subpath');
+        if ($subpath && in_array($subpath[0], array('/', '\\'))) {
+            return $subpath;
+        } elseif ($subpath) {
+            return DIRECTORY_SEPARATOR . $subpath;
+        }
+        return '';
     }
 
     public function printGeneratedTests()
@@ -61,7 +77,7 @@ class Application
                 if (get_class($testMethod) == 'PHPUnit_Framework_TestSuite_DataProvider') {
                     $testMethodName = explode('::', $testMethod->getName());
                     $data = PHPUnit_Util_Test::getProvidedData(
-                                    $testClass->getName(), $testMethodName[1]
+                            $testClass->getName(), $testMethodName[1]
                     );
                     foreach ($data as $key => $value) {
                         echo $testClass->getName() . '::' . $testMethodName[1] . ' with data set #' . $key . PHP_EOL;
@@ -82,12 +98,11 @@ class Application
         }
     }
 
-
     private function _setSession()
     {
         if ($this->_config->isParameterSet('--ss-session')) {
             $sessionId = $this->_config->getParameter('--ss-session');
-            
+
             DebugLog::write($sessionId);
             Session::setId($sessionId);
         } else {

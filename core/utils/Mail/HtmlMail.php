@@ -37,7 +37,7 @@ class HtmlMail extends Mail
             return "\n--PHP-mixed-{$this->identifier}\n" .
                   "Content-Type: image/jpeg\n" .
                   "Content-Transfer-Encoding: base64\n" .
-                  "Content-ID: <PHP-CID-{$this->identifier}{$name}>\n";
+                  "Content-ID: <PHP-CID-{$this->identifier}{$name}.jpeg>\n";
         } else {
             return '';
         }
@@ -48,7 +48,7 @@ class HtmlMail extends Mail
         if ($this->currentContentType !== 'html') {
             $this->currentContentType = 'html';
             return "\n--PHP-mixed-{$this->identifier}\n"
-                . "Content-Type: text/html; charset=utf-8 \n";
+                . "Content-Type: text/html; charset=iso-8859-1 \n";
         } else {
             return "";
         }
@@ -65,7 +65,7 @@ class HtmlMail extends Mail
         $imgName = str_replace(array('-'), array(''), pathinfo($path, PATHINFO_FILENAME));
         $this->images[$imgName] = chunk_split(base64_encode(file_get_contents($path)));
         
-        $this->message .= "<img src=\""."id:PHP-CID-{$this->identifier}{$imgName}".".jpg\" />";
+        $this->message .= "<img src=\""."id:PHP-CID-{$this->identifier}{$imgName}".".jpeg\" />";
     }
 
     /**
@@ -76,8 +76,8 @@ class HtmlMail extends Mail
         $head = $this->getHtmlContentTypePart();
         $head .= "<html>"
             . "<head>"
-            //. "<meta http-equiv=\"Content-Type\" content=\"multipart/alternative; boundary=\"PHP-mixed-{$this->identifier}\"; charset=utf-8\" />"
-            . "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"
+            . "<meta http-equiv=\"Content-Type\" content=\"multipart/mixed; boundary=\"PHP-mixed-{$this->identifier}\"\" />"
+            //. "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />"
             . "<title>" . $this->getSubject() . "</title>"
             . "</head>"
             . "<body>";
