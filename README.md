@@ -2,7 +2,7 @@ SeleniumShell
 =============
 
 Small framework on Selenium 2 with php
-
+Will run tests in parallel by default.
 
 Usage
 =============
@@ -55,6 +55,11 @@ selenium-shell -project [projectName] -port 4444 -host 127.0.0.1
 Run a maximum of parallel tests
 ```
 selenium-shell -project [projectName] -max-sessions 20
+```
+
+Run serial
+```
+selenium-shell -project [projectName] -max-sessions 1
 ```
 
 Run tests againt a certain environment
