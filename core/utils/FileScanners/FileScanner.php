@@ -3,46 +3,68 @@
 class FileScanner
 {
 
-    protected $_dir;
-    protected $_phpFiles;
-    protected $_files;
+    protected $dir;
+    protected $phpFiles;
+    protected $files;
+
+    /** @var FileScannerFilter */
+    protected $filter;
 
     public function __construct($relativeDir = '')
     {
-        $this->_files = array();
+        $this->files = array();
         if ($relativeDir !== '') {
-            $this->_readDirRecursive($relativeDir);
+            $this->readDirRecursive($relativeDir);
         }
+    }
+
+    public function applyFilter(FileScannerFilter $fileScannerFilter)
+    {
+        $this->filter = $fileScannerFilter;
     }
 
     public function _setDir($dir)
     {
-        $this->_dir = $dir;
-        $this->_readDirRecursive($dir);
+        $this->dir = $dir;
+        $this->readDirRecursive($dir);
     }
 
+    /**
+     * Used as a override to filter a file.
+     * 
+     * @param string $file
+     * @return boolean if file is valid
+     */
     protected function validateFile($file)
     {
         return true;
     }
 
-    private function _readDirRecursive($dir)
+    protected function scanDir($dir)
+    {
+        $files = scandir($dir);
+        if ($this->filter !== null) {
+            $files = $this->filter->filterFiles($files);
+        }
+        return $files;
+    }
+
+    private function readDirRecursive($dir)
     {
         $curDirFiles = false;
         if (is_dir($dir)) {
-            $curDirFiles = scandir($dir);
+            $curDirFiles = $this->scanDir($dir);
         } else {
             DebugLog::write($dir . ' is not a directory. ');
         }
         if ($curDirFiles) {
             foreach ($curDirFiles as $file) {
-
                 if ($file == '.' || $file == '..') {
                     // . and .. skipped
                 } else if (is_file($dir . DIRECTORY_SEPARATOR . $file)) {
-                    $this->_files[$dir][] = DIRECTORY_SEPARATOR . $file;
+                    $this->files[$dir][] = DIRECTORY_SEPARATOR . $file;
                 } else {
-                    $this->_readDirRecursive($dir . DIRECTORY_SEPARATOR . $file);
+                    $this->readDirRecursive($dir . DIRECTORY_SEPARATOR . $file);
                 }
             }
         }
@@ -50,13 +72,13 @@ class FileScanner
 
     public function getFiles()
     {
-        return $this->_files;
+        return $this->files;
     }
 
     public function getFilesInOneDimensionalArray()
     {
         $foundFiles = array();
-        foreach ($this->_files as $dir => $files) {
+        foreach ($this->files as $dir => $files) {
             foreach ($files as $file) {
                 if ($this->validateFile($dir . $file)) {
                     $foundFiles[] = $dir . $file;

@@ -82,7 +82,7 @@ class TestClassReader
     }
     
     protected function _getPossibleAnnotations( $curIndex ){
-        //look back 4 tokens max (doc/whitespace/public/whitespace)
+        // look back 4 tokens max (doc/whitespace/public/whitespace)
         // when it is a test method.. 
         if( $this->_tokens[$curIndex -1][0] == T_WHITESPACE &&
             $this->_tokens[$curIndex -2][0] == T_PUBLIC &&

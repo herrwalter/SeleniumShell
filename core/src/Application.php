@@ -49,16 +49,18 @@ class Application
 
         if ($this->_config->isParameterSet('--ss-print-tests')) {
             $this->printGeneratedTests();
-            die();
+            exit(0);
         }
     }
 
+    /**
+     * @return string Sub path with prepending directory seperator
+     */
     public function getTestsuitesSubPaths()
     {
         if (!$this->_config->isParameterSet('--ss-subpath')) {
             return;
         }
-
         $subpath = $this->_config->getParameter('--ss-subpath');
         if ($subpath && in_array($subpath[0], array('/', '\\'))) {
             return $subpath;

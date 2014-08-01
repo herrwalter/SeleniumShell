@@ -23,7 +23,6 @@ class SourceRewriter
      */
     public function __construct(Project $project, FileScanner $fileScanner, TestClassRecreator $tcr, $sourcePath)
     {
-        var_dump($sourcePath);
         $this->_project = $project;
         $this->_fileScanner = $fileScanner;
         $this->_tcr = $tcr;

@@ -25,7 +25,7 @@ class AnnotationReader
             $this->_annotations = false;
             return;
         }
-        foreach( $this->_annotations as $name => $value ){
+        foreach( $this->_annotations as $name => $value){
             switch( $name ){
                 case 'ss-solo-run':
                     $this->_soloRun = true;
@@ -34,20 +34,23 @@ class AnnotationReader
                     $browsers = explode(',', $value);
                     $trimmedBrowsers = array_map('trim', $browsers);
                     $this->_browsers = $trimmedBrowsers;
+                    break;
                 case 'ss-setup-before-project':
                     $this->_setupBeforeProject = true;
+                    break;
+                default:
                     break;
             }
         }
     }
     
     public function hasSoloRun(){
-        return $this->_soloRun === true;
+        return $this->_soloRun;
     }
     
     public function hasSetupBeforeProject()
     {
-        return $this->_setupBeforeProject === true;
+        return $this->_setupBeforeProject;
     }
     
     public function hasBrowser($browser){

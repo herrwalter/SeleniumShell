@@ -78,7 +78,7 @@ class TokenReader
                     if( count($anno) === 1){
                         $anno[] = true;
                     }
-                    $niceFormat[] = array($anno[0] => $anno[1]);
+                    $niceFormat[$anno[0]] = $anno[1];
                 }
             }
             return $niceFormat;
