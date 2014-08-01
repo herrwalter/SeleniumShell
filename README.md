@@ -57,6 +57,11 @@ Run a maximum of parallel tests
 selenium-shell -project [projectName] -max-sessions 20
 ```
 
+Run tests againt a certain environment
+```
+selenium-shell -project [projectName] -env acceptance
+```
+
 Test Annotations
 =============
 
@@ -73,10 +78,93 @@ Run only one test
 Run test only against certain browser(s)
 ```
 /**
- * @ss-solo-run chrome
+ * @ss-browsers chrome
  */
  public function testSomething(){
  
  }
  ```
 
+Run setup-before-project test
+```
+/**
+ * @ss-setup-before-project
+ */
+ public function testSomething(){
+ 
+ }
+```
+
+TestHelpers
+=============
+
+FormHandler
+=====
+```
+$formHandler = new SeleniumShell_FormHandler($session);
+$formHandler->mapValuesToElementsById(
+   array(
+      'fieldId' => 'the new value'
+      'someSelectbox' => 'value or "random"'
+      'checkbox' => true // selected
+      'elementId' => 'click'
+   )
+);
+$formHandler->submitForm();
+```
+
+ScreenshotHandler
+=====
+```
+$screenshotHandler = new SeleniumShell_ScreenshotHandler( $session, $path, $prefix );
+$screenshotHandler->makeScreenshot( $name );
+```
+
+
+URLHandler
+=====
+```
+class MyUrlHandler extends SeleniumShell_Abstract_URLHandler
+{
+   protected function getProjectConfigPath(){
+      return 'path/to/config.ini';
+   }
+   
+   /**
+    * NOTE: [environment] correspondse with -env parameter or setted default env in either core config or -env on cli
+    */
+   protected function getBaseUrls(){
+      return array(
+         '[environment]' => 'http://testing.google.nl'
+      );
+   }
+   
+   protected function getUris(){
+      return array(
+         'login' => '/login',
+         'search' => '/search'
+      );
+   }
+}
+
+$urlHandler = new MyUrlHandler();
+$urlHanlder->getUrl('login'); // http://testing.google.nl/login
+```
+
+MailInbox
+=====
+```
+// expects imap
+$mailInbox = SeleniumShell_MailInbox($host, $username, $password);
+$inboxes = $mailInbox->getMailboxes();
+$unreadMails = $mailInbox->getUnreadEmails();
+```
+
+
+CSVReader 
+=====
+```
+$cvsReader = new SeleniumShell_CSVReader($fileName, $delimiter);
+$csvReader->getCsvData();
+$csvReader->getHeaders();
+```
