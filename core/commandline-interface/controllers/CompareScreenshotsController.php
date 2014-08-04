@@ -54,7 +54,7 @@ class CompareScreenshotsController extends Controller
     {
         $screenshots = $this->session1->getScreenshots();
         foreach ($screenshots as $name => $screenshot) {
-            if ($this->session2->hasScreenshot($name)) {
+            if ($this->session2->hasScreenshot($name)) { 
                 echo 'now comparing screenshot ' . $name . '.. ' . PHP_EOL;
                 $this->compareScreenshots($screenshot, $this->session2->getScreenshot($name), $name);
             } else {
@@ -71,16 +71,19 @@ class CompareScreenshotsController extends Controller
         $compare = new ImageCompare($img, $img2);
         if ($compare->getOffsetDimensions() !== null) {
             // we found some differances
+            $name = explode('.', $name);
+            $name = $name[0];
             $slicer = new ImageSlicer($img2, $compare->getOffsetDimensions());
-            $diffentImagename = $this->differencesFolder . DIRECTORY_SEPARATOR . 'diff-' . $name;
-            imagejpeg($slicer->getSlice(), $diffentImagename, 100);
-            $slicer->destroyImages();
+            $diffentImagename = $this->differencesFolder . DIRECTORY_SEPARATOR . 'diff-' . $name . '.png';
+            $slicer->saveSlice($diffentImagename);
             $this->differences[$name] = $diffentImagename;
             echo '   found some differance in name: ' . $name . PHP_EOL;
             $this->foundDifferances++;
         } else {
             echo '   no differances' . PHP_EOL;
         }
+        $img->destroy();
+        $img2->destroy();
     }
 
     protected function createFolderForDifferences()
@@ -181,16 +184,34 @@ class CompareScreenshotsController extends Controller
     {
         $email = ArgvHandler::getArgumentValue(self::OPTION_EMAIL);
         if( $email && $this->foundDifferances > 0 ){
-            $mail = new HtmlMail();
-            $mail->addParagraph('We have found: ' . $this->foundDifferances . ' differances');
-            foreach( $this->differences as $name => $image ){
-                $mail->addParagraph($name);
-                $mail->addImage($image);
-            }
-            $mail->addTo($email);
-            $mail->setSubject('Screenshot compare of project: ' . $this->projectName);
+            $mail = new PHPMailer;
+            $mail->isHTML();
+            $mail->addAddress($email);
             $mail->setFrom('herrwalter@gmail.com');
-            $mail->send();
+            
+            $mail->Subject = 'Screenshot compare of project: ' . $this->projectName;
+            $mail->Body = 'We have found: ' . $this->foundDifferances . ' differances';
+            
+            foreach( $this->differences as $name => $image ){
+                $mail->Body .= $name;
+                $mail->addEmbeddedImage($image, $name);
+            }
+            if(!$mail->send()) {
+                echo 'Message could not be sent.';
+                echo 'Mailer Error: ' . $mail->ErrorInfo;
+            } else {
+                echo 'Message has been sent';
+            }
+//            $mail = new HtmlMail();
+//            $mail->addParagraph('We have found: ' . $this->foundDifferances . ' differances');
+//            foreach( $this->differences as $name => $image ){
+//                $mail->addParagraph($name);
+//                $mail->addImage($image);
+//            }
+//            $mail->addTo($email);
+//            $mail->setSubject('Screenshot compare of project: ' . $this->projectName);
+//            $mail->setFrom('herrwalter@gmail.com');
+//            $mail->send();
         }
     }
 

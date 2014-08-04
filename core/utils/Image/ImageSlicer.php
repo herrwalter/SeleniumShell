@@ -22,15 +22,21 @@ class ImageSlicer
     protected function setSlice()
     {
         $this->resource = imagecreatefromstring(file_get_contents($this->image->getPath()));
-        if($this->resource !== false ){
+        if ($this->resource !== false) {
             $this->createdIimage = imagecreatetruecolor($this->dimensions->getWidth(), $this->dimensions->getHeight());
 
             imagecopy($this->createdIimage, $this->resource, 0, 0, $this->dimensions->getLeft(), $this->dimensions->getTop(), $this->dimensions->getWidth(), $this->dimensions->getHeight());
-            imagejpeg($this->createdImage);
             $this->slice = $this->createdIimage;
         } else {
             throw new ErrorException('Something went wrong while creating an image');
         }
+    }
+
+    public function saveSlice($path)
+    {
+        imagepng($this->getSlice(), $path, 0);
+        imagedestroy($this->resource);
+        imagedestroy($this->slice);
     }
 
     public function getSlice()

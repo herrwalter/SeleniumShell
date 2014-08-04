@@ -15,7 +15,6 @@ class Image
         $this->_setResource();
         $this->_setDimensions();
     }
-    
 
     protected function _setResource()
     {
@@ -29,14 +28,26 @@ class Image
         $this->_height = imagesy($this->_resource);
     }
     
-    public function getColorAt($x,$y){
+    public function reinitialize()
+    {
+        $this->_setResource();
+        $this->_setDimensions();
+    }
+
+    public function destroy()
+    {
+        imagedestroy($this->_resource);
+    }
+
+    public function getColorAt($x, $y)
+    {
         $rgb = imagecolorat($this->_resource, $x, $y);
         $r = ($rgb >> 16) & 0xFF;
         $g = ($rgb >> 8) & 0xFF;
         $b = $rgb & 0xFF;
-        return $r.$g.$b;
+        return $r . $g . $b;
     }
-    
+
     public function getResource()
     {
         return $this->_resource;
@@ -56,16 +67,15 @@ class Image
     {
         return $this->_colors;
     }
-    
+
     public function getPath()
     {
         return $this->_path;
     }
-    
+
     public function getUniqueColors()
     {
         return array_unique($this->_colors);
     }
-    
 
 }

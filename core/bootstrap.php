@@ -9,6 +9,7 @@ define('SELENIUM_SHELL', str_replace('core', '', $rel_path));
 define('CORE_CONFIG_PATH', SELENIUM_SHELL . $sep.'config' );
 define('CORE_PATH', $rel_path . $sep);
 define('BIN_PATH', SELENIUM_SHELL . 'bin');
+define('LIBRARY_PATH', SELENIUM_SHELL . 'library');
 define('DOWNLOADS_PATH', SELENIUM_SHELL . 'downloads');
 define('CONTROLLER_PATH', CORE_PATH . 'commandline-interface' . $sep . 'controllers');
 define('SELENIUM_SHELL_PUBLIC', SELENIUM_SHELL . 'public' );
@@ -65,6 +66,7 @@ require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_Asserts.php' );
 require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ErrorCatchingOverrides.php' );
 require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_Test.php' );
 require_once( SELENIUM_SHELL_TESTCASE . $sep . 'SeleniumShell_ColorCheckerTest.php' );
+require_once( LIBRARY_PATH . $sep . 'PHPMailer' . $sep . 'PHPMailerAutoload.php');
 
 
 function SeleniumShellAutoloadFunction( $className ){
@@ -124,14 +126,12 @@ function SeleniumShellAutoloadFunction( $className ){
         
     } else { // find seleniumShell Core.
         // crawl source..
-        if( scan_folder_for_class(CORE_SRC_PATH, $className) ){} 
-        // crawl utils.. 
-        else if( scan_folder_for_class(UTILS_PATH, $className) ){}
-        // crawl entities
-        else if( scan_folder_for_class(CORE_PATH . 'entities', $className) ){}
-        else if( scan_folder_for_class(CONTROLLER_PATH, $className) ){}
-        
-        else if( scan_folder_for_class(SELENIUM_SHELL_TOOLS, $className)){}
+        scan_folder_for_class(CORE_SRC_PATH, $className);
+        scan_folder_for_class(UTILS_PATH, $className);
+        scan_folder_for_class(CORE_PATH . 'entities', $className);
+        scan_folder_for_class(CONTROLLER_PATH, $className);
+        scan_folder_for_class(SELENIUM_SHELL_TOOLS, $className);
+        scan_folder_for_class(LIBRARY_PATH, $className);
         
     }
 }
