@@ -2,46 +2,45 @@
 
 class Image
 {
-
-    protected $_path;
-    protected $_resource;
-    protected $_width;
-    protected $_height;
-    protected $_colors = array();
+    protected $path;
+    protected $resource;
+    protected $width;
+    protected $height;
+    protected $colors = array();
 
     public function __construct($path)
     {
-        $this->_path = $path;
-        $this->_setResource();
-        $this->_setDimensions();
+        $this->path = $path;
     }
 
-    protected function _setResource()
+    protected function setResource()
     {
-        $source = file_get_contents($this->_path);
-        $this->_resource = imagecreatefromstring($source);
+        $source = file_get_contents($this->path);
+        $this->resource = imagecreatefromstring($source);
     }
 
-    protected function _setDimensions()
+    protected function setDimensions()
     {
-        $this->_width = imagesx($this->_resource);
-        $this->_height = imagesy($this->_resource);
+        $this->width = imagesx($this->resource);
+        $this->height = imagesy($this->resource);
     }
     
-    public function reinitialize()
+    public function initialize()
     {
-        $this->_setResource();
-        $this->_setDimensions();
+        if( $this->resource == null ){
+            $this->setResource();
+            $this->setDimensions();
+        }
     }
 
     public function destroy()
     {
-        imagedestroy($this->_resource);
+        imagedestroy($this->resource);
     }
 
     public function getColorAt($x, $y)
     {
-        $rgb = imagecolorat($this->_resource, $x, $y);
+        $rgb = imagecolorat($this->resource, $x, $y);
         $r = ($rgb >> 16) & 0xFF;
         $g = ($rgb >> 8) & 0xFF;
         $b = $rgb & 0xFF;
@@ -50,32 +49,38 @@ class Image
 
     public function getResource()
     {
-        return $this->_resource;
+        $this->initialize();
+        return $this->resource;
     }
+    
 
     public function getWidth()
     {
-        return $this->_width;
+        $this->initialize();
+        return $this->width;
     }
 
     public function getHeight()
     {
-        return $this->_height;
+        $this->initialize();
+        return $this->height;
     }
 
     public function getColors()
     {
-        return $this->_colors;
+        $this->initialize();
+        return $this->colors;
     }
 
     public function getPath()
     {
-        return $this->_path;
+        return $this->path;
     }
 
     public function getUniqueColors()
     {
-        return array_unique($this->_colors);
+        $this->initialize();
+        return array_unique($this->colors);
     }
 
 }

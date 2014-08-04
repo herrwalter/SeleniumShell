@@ -20,7 +20,7 @@ class ScreenshotSession
         $screenshots = array();
         foreach($files as $screenshot){
             if(pathinfo($screenshot, PATHINFO_EXTENSION) == 'jpg'){
-                $screenshots[$screenshot] = new Image($this->path . DIRECTORY_SEPARATOR . $screenshot);
+                $screenshots[$screenshot] = new Image( $this->path . DIRECTORY_SEPARATOR . $screenshot);
             }
         }
         $this->screenshots = $screenshots;

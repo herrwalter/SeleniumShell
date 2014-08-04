@@ -33,6 +33,16 @@ Run screenshots comparisons of last 2 runs
 selenium-shell compare-screenshots -project [projectName]
 ```
 
+Show screenshots results after comparison
+```
+selenium-shell compare-screenshots -project [projectName] -email your@email.com -differance [sliced/highlighted]
+```
+
+List possible screenshot comparison projects
+```
+selenium-shell compare-screenshots --printProjects
+```
+
 Run setup before project run
 ```
 selenium-shell -project [projectName] --setup-before-project

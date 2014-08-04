@@ -1,6 +1,6 @@
 <?php
 
-class ImageSlicer
+class ImageSlicer implements ImageEditor
 {
 
     /** @var Image */
@@ -16,10 +16,10 @@ class ImageSlicer
     {
         $this->image = $imgSource;
         $this->dimensions = $dimensions;
-        $this->setSlice();
+        $this->set();
     }
 
-    protected function setSlice()
+    public function set()
     {
         $this->resource = imagecreatefromstring(file_get_contents($this->image->getPath()));
         if ($this->resource !== false) {
@@ -32,14 +32,14 @@ class ImageSlicer
         }
     }
 
-    public function saveSlice($path)
+    public function save($path)
     {
-        imagepng($this->getSlice(), $path, 0);
+        imagepng($this->get(), $path, 0);
         imagedestroy($this->resource);
         imagedestroy($this->slice);
     }
 
-    public function getSlice()
+    public function get()
     {
         if ($this->slice) {
             return $this->slice;
@@ -48,7 +48,7 @@ class ImageSlicer
         }
     }
 
-    public function destroyImages()
+    public function destroy()
     {
         imagedestroy($this->resource);
     }

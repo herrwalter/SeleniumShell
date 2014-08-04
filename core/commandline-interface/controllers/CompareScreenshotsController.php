@@ -4,6 +4,7 @@ class CompareScreenshotsController extends Controller
 {
 
     const OPTION_PRINT_PROJECTS = '--printProjects';
+    const OPTION_DIFFERANCETYPE = '-differance';
     const OPTION_EMAIL = '-email';
     const OPTION_PROJECTNAME = '-project';
 
@@ -26,7 +27,8 @@ class CompareScreenshotsController extends Controller
         return array(
             self::OPTION_PRINT_PROJECTS,
             self::OPTION_PROJECTNAME,
-            self::OPTION_EMAIL
+            self::OPTION_EMAIL,
+            self::OPTION_DIFFERANCETYPE
         );
     }
 
@@ -42,10 +44,13 @@ class CompareScreenshotsController extends Controller
         if (ArgvHandler::getArgumentValue(self::OPTION_PRINT_PROJECTS)) {
             $this->printAvailableProjects();
         } else if ($this->projectName) {
-            $this->setCompareSessions();
-            $this->createFolderForDifferences();
-            $this->compareScreenshotSessions();
-            $this->sendReport();
+            try{
+                $this->setCompareSessions();
+                $this->compareScreenshotSessions();
+                $this->sendReport();
+            } catch (Exception $ex) {
+                throw $ex;
+            }
         }
         exit(0);
     }
@@ -55,13 +60,10 @@ class CompareScreenshotsController extends Controller
         $screenshots = $this->session1->getScreenshots();
         foreach ($screenshots as $name => $screenshot) {
             if ($this->session2->hasScreenshot($name)) { 
-                echo 'now comparing screenshot ' . $name . '.. ' . PHP_EOL;
+                //echo 'now comparing screenshot ' . $name . '.. ' . PHP_EOL;
                 $this->compareScreenshots($screenshot, $this->session2->getScreenshot($name), $name);
             } else {
-                echo $name . ' cannot be found in one the sessions. ' . PHP_EOL;
-            }
-            if( $this->foundDifferances > 0 ){
-                break;
+                //echo $name . ' cannot be found in one the sessions. ' . PHP_EOL;
             }
         }
     }
@@ -71,19 +73,45 @@ class CompareScreenshotsController extends Controller
         $compare = new ImageCompare($img, $img2);
         if ($compare->getOffsetDimensions() !== null) {
             // we found some differances
-            $name = explode('.', $name);
-            $name = $name[0];
-            $slicer = new ImageSlicer($img2, $compare->getOffsetDimensions());
-            $diffentImagename = $this->differencesFolder . DIRECTORY_SEPARATOR . 'diff-' . $name . '.png';
-            $slicer->saveSlice($diffentImagename);
-            $this->differences[$name] = $diffentImagename;
-            echo '   found some differance in name: ' . $name . PHP_EOL;
+            $name = $this->getImageName($name);
+            $path = $this->createDifferanceImage($img, $compare->getOffsetDimensions(), $name);
+            $this->differences[$name] = $path;
             $this->foundDifferances++;
+            
+            // notify user.
+            echo '   found some differance in name: ' . $name . PHP_EOL;
         } else {
             echo '   no differances' . PHP_EOL;
         }
         $img->destroy();
         $img2->destroy();
+    }
+    
+    protected function getImageName($name){
+        $name = explode('.', $name);
+        return $name[0];
+    }
+    
+    protected function createDifferanceImage(Image $img, Dimensions $dimensions, $name ){
+        if( $this->differencesFolder === null ){
+            $this->createFolderForDifferences();
+        }
+        
+        $imageDifferencePath = $this->differencesFolder . DIRECTORY_SEPARATOR . 'diff-' . $name . '.png';
+        $differanceType = ArgvHandler::getArgumentValue(self::OPTION_DIFFERANCETYPE);
+            switch( $differanceType ){
+                case 'sliced':
+                    $editor = new ImageSlicer($img, $dimensions);
+                    break;
+                case false:
+                    echo 'Could not find difference type; faling back on "highlighted"'. PHP_EOL;
+                case 'highlighted':
+                default: 
+                    $editor = new ImageHighlighter($img, $dimensions);
+                    break;
+            }
+        $editor->save($imageDifferencePath);
+        return $imageDifferencePath;
     }
 
     protected function createFolderForDifferences()
@@ -184,6 +212,7 @@ class CompareScreenshotsController extends Controller
     {
         $email = ArgvHandler::getArgumentValue(self::OPTION_EMAIL);
         if( $email && $this->foundDifferances > 0 ){
+            echo 'Composing email..'; 
             $mail = new PHPMailer;
             $mail->isHTML();
             $mail->addAddress($email);
@@ -193,8 +222,11 @@ class CompareScreenshotsController extends Controller
             $mail->Body = 'We have found: ' . $this->foundDifferances . ' differances';
             
             foreach( $this->differences as $name => $image ){
-                $mail->Body .= $name;
-                $mail->addEmbeddedImage($image, $name);
+                $name = str_replace( array(' ', '#'), array('-', ''), $name);
+                $mail->Body .= '<br />' . $name;
+                $mail->Body .= "<br /><img src=\"cid:{$name}.png\" alt=\"{name}\" />";
+                $mail->addEmbeddedImage($image, $name .'.png');
+                
             }
             if(!$mail->send()) {
                 echo 'Message could not be sent.';
@@ -202,16 +234,6 @@ class CompareScreenshotsController extends Controller
             } else {
                 echo 'Message has been sent';
             }
-//            $mail = new HtmlMail();
-//            $mail->addParagraph('We have found: ' . $this->foundDifferances . ' differances');
-//            foreach( $this->differences as $name => $image ){
-//                $mail->addParagraph($name);
-//                $mail->addImage($image);
-//            }
-//            $mail->addTo($email);
-//            $mail->setSubject('Screenshot compare of project: ' . $this->projectName);
-//            $mail->setFrom('herrwalter@gmail.com');
-//            $mail->send();
         }
     }
 
